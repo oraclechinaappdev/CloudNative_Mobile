@@ -15,13 +15,13 @@ More specifically, following topics are currently included in this project:
 + Cloud Native Apps Development - Building applications with DevOps: using Developer Cloud Service to build a J2EE application and deploying to JCS.
 
 ## Microservices ##
-This lab shows you how to prepare an environment for Microserivces and develop Mircoserivces using Oracle ACCS (Application Container Cloud Serivces). This lab is composed of : 
+[Microservices lab](https://github.com/cholho/APACTestDrive-CloudNative_Mobile/blob/master/Microservices/MicroservicessLab.md) shows you how to prepare an environment for Microserivces and develop Mircoserivces using Oracle ACCS (Application Container Cloud Serivces). This lab is composed of : 
 + Backgrounds on Microservices - What is Microservices?, Why you need Cloud Native Apps?, Examples of Microserivces, About ACCS etc.
 + Prepare environment for Microservices - Set up the infrastructure to run your Microserves : Create an ACCSc instance
 + Develop Microservices - Building Microservices.
 
 ## Integrations ##
-This lab shows you how to prepare an environment for Microserivces and develop Mircoserivces using Oracle ACCS (Application Container Cloud Serivces).
+[Integrations lab](https://github.com/cholho/APACTestDrive-CloudNative_Mobile/blob/master/Integrations/IntegrationsLab.md) shows you how to prepare an environment for Microserivces and develop Mircoserivces using Oracle ACCS (Application Container Cloud Serivces).
 + Backgounds on Integration - Challenges and solutions, Integration patterns, About ICS etc.
 + Create MCS (Mobile Cloud Service) connection
 + Create Sales CS connection
@@ -29,8 +29,8 @@ This lab shows you how to prepare an environment for Microserivces and develop M
 + Create integrations based on connections
 + Creation orchestration
 
-## Mobile Cloud Services ##
-This chapter will help you understand the use of MCS, the Mobile Cloud Service.  As a result, you will develop a simple mobile application and install it on your Mobile phone.
+## Mobile Service and Application ##
+[Mobile Service and Applicaton lab](https://github.com/cholho/APACTestDrive-CloudNative_Mobile/blob/master/Mobile%20Service%20and%20Applications/MobileServiceAndApplicationLab.md) chapter will help you understand the use of MCS, the Mobile Cloud Service.  As a result, you will develop a simple mobile application and install it on your Mobile phone.
 + Backgounds on Mobile Service - Challenges and solutions, About MCS etc.
 + Create Custome API
 + Create Mobile Application
