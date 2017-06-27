@@ -1,4 +1,4 @@
-![](common/images/Oracle Cloud Native Platform.png)
+![](common/images/Oracle Cloud Native Platform.PNG)
 ---
 # ORACLE Cloud Test Drive #
 
