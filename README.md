@@ -9,7 +9,7 @@ This Oracle Cloud project contains the lab materials for the Oracle Cloud Test D
 More specifically, following topics are currently included in this project:
 
 ## Java Apps Lab ##
-This lab is composed of :
+[Java Apps lab](https://github.com/APACTestDrive-CloudNative_Mobile/blob/master/Java Apps/Java Apps.md) is composed of :
 + Backgrounds on Cloud Native Apps - What is Cloud Native Apps?, Why you need Cloud Native Apps?, About JCS, DevCS and DBCS etc.
 + Prepare environment for Cloud Native Apps - Set up the infrastructure to run your applications : Create a JCS Weblogic instance and DBMS (Oracle DBCS)
 + Cloud Native Apps Development - Building applications with DevOps: using Developer Cloud Service to build a J2EE application and deploying to JCS.
