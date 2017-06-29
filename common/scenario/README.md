@@ -7,11 +7,10 @@ Through this Test Drive, we would like to let participants know how easy and fas
 
 ## Backgound on Service Scenario (Loyalty Management) ##
 Nowadays, most of companies are providing (membership) points as a reward to customers who bought products or services. But it is not easy for customers to find when and how they use their points. For companies, accumulated points are debts to customers.That's why companies are looking for a proactive way to clear debts (customer points). We can also think about a situation like that specific products are selling well. In that case, we can design an offer targeted to those specific products. The below picture shows you major challenges and requirements on a proactive and real-time loyalty management.
-![](common/images/OracleCloudNativePlatform.PNG)
-![](common/images/BackgroundOnLoyaltyMgmt.PNG)
----
+
+![](../images/BackgroundOnLoyaltyMgmt.PNG)
 
 ## Overall service flow for Loyalty Managment ##
 The below picture shows you overall service flow for proactive and real-time Loyalty Management. As you can see in the picture, loyalty manager can start the service flow by desinging and creating offers for customers. Customers will get push notification on offer, see the details in offer, and make a decision on whether she/he accept or reject the offer. And we will have offer results stored in CRM (Sales CS) for furthur marketing/sales activities. 
 
-![](common/images/ServiceFlow4LoyaltyMgmt.PNG)
+![](../images/ServiceFlow4LoyaltyMgmt.PNG)
