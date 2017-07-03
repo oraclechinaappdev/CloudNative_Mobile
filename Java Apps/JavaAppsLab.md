@@ -19,74 +19,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 # Lab Exercise:
 
 ## Create Database connectivity for Loyalty Management Application [TBD]
-[Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). Using the dashboard open the Java Cloud Service Console.
-
-![](images/00/00.png)
-
-Click on the hamburger icon located at the right top corner of the service summary. From the 
-menu select Open WebLogic Server Console
-
-![](images/00/01.png)
-
-A new browser opens and you are redirected to the selected console’s log-in page. If the server is protected with a self-signed certificate, you will be warned that this certificate is not trusted. This is the default configuration and you can configure your certification. Select I Understand the Risk, and Add Exception (accept certificate). 
-
-![](images/00/02.png)
-
-When dialog appears select Confirm Security Exception.
-
-![](images/00/03.png)
-
-When the console log-in page appears, enter the log-in credentials you entered for WebLogic Administrator when you created the service instance.
-
-![](images/00/04.png)
-
-After a successful login the WebLogic Server Administration Console is displayed. Click Lock & Edit and Service -> Data Sources. Create New **Generic Data Source**
-
-![](images/00/05.png)
-
-Configure the data source with the following parameters:
-
-+ **Name**: jdbc-OE
-+ **Scope**: Global (default)
-+ **JNDI Name**: jdbc/OE
-+ **Database type**: Oracle (default)
-
-Click Next.
-
-![](images/00/06.png)
-
-Leave the default Database Driver and click Next.
-
-![](images/00/07.png) 
-
-Leave the default Transactions Options and click Next.
-
-![](images/00/08.png)
-
-Configure the database service connection descriptor.
-
-+ **Database Name**: `PDB1.<identitydomain>.oraclecloud.internal`
-+ **Host Name**: the Database Cloud Service [prepared](../dbcs-prepare/README.md) to run sample.  application. If you followed the instructions its name likely is `techcoDB`
-+ **Port**: leave the default 1521
-+ **Database User Name**: oe
-+ **Password**: password you entered for DBA (Database Cloud Service adminsitrator - sys) account
-+ **oracle.jdbc.DRCPConnectionClass**: leave empty
-
-Click Next.
-
-![](images/00/09.png)
-
-Test the data source by click **Test Configuration**
-
-![](images/00/10.png)
-
-Select the servers or clusters to which you want to deploy the application. For this tutorial, choose to deploy the application to all the servers in the cluster, and then click Finish.
-
-![](images/00/11.png)
-
-Activate Changes and check the acknowledgement: `All changes have been activated. No restarts are necessary`
-
-![](images/00/12.png)
+[Click Here.](00.md)
 
 ## Clone loyalty JEE Application project source code from Github to Developer Cloud Service (DevCS)
 
