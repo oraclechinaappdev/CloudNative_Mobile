@@ -15,7 +15,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 ## This tutorial demonstrates how to: 
 
 - *Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console [TBD]
-- Clone loyalty management [Java Enterprise Edition](https://docs.oracle.com/javaee/7/) application project source code from Github to Developer Cloud Service (DevCS)
+- Clone Loyalty Management [Java Enterprise Edition](https://docs.oracle.com/javaee/7/) application project source code from Github to Developer Cloud Service (DevCS)
 - Checkout make code changes in an Integration Development Environment (IDE) - Eclipse
 - Commit and push completed source code from Eclipse IDE back to DevCS
 - Create 'Build' and 'Deploy' configuration and monitor audit trace in DevCS
