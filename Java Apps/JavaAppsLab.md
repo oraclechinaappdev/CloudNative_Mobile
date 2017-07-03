@@ -10,7 +10,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 ## This tutorial demonstrates how to: 
 
 - *Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console [TBD]
-- Clone loyalty JEE Application project source code from Github to Developer Cloud Service (DevCS)
+- Clone loyalty management [Java Enterprise Edition](https://docs.oracle.com/javaee/7/) application project source code from Github to Developer Cloud Service (DevCS)
 - Checkout make code changes in an Integration Development Environment (IDE) - Eclipse
 - Commit and push completed source code from Eclipse IDE back to DevCS
 - Create 'Build' and 'Deploy' configuration and monitor audit trace in DevCS
@@ -23,7 +23,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 
 ## Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console [TBD]
 
-## Create Initial Git Repository
+## Clone loyalty JEE Application project source code from Github to Developer Cloud Service (DevCS)
 
 - Login to Developer Cloud Service if you haven't done so.
 - In the left hand navigation panel, click **Project**
@@ -40,7 +40,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 
 - You have now created a new Git repository stored within the Developer Cloud Service that is based on an existing repository
 
-## Create Default Build and Deployment Process
+## Checkout make code changes in an Integration Development Environment (IDE) - Eclipse
 
 Now that we have the source code in our Developer Cloud Service managed Git Repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will setup a **shell script** build process in this section.
 
@@ -124,9 +124,7 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 		https://offer-{your-identity-domain}.apaas.em3.oraclecloud.comm/ptmgt/v1/offers/10001
 
 
-# Create QR Code Generator Microservice
-
-## Create Initial Git Repository
+## Commit and push completed source code from Eclipse IDE back to DevCS
 
 - Login to Developer Cloud Service if you haven't done so.
 - In the left hand navigation panel, click **Project**
