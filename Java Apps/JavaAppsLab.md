@@ -14,7 +14,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 - Create 'Build' and 'Deploy' configuration and monitor audit trace in DevCS
 
 # Prerequisites
-- The following lab requires an Oracle Public Cloud account that will either be applied by yourself thru [trial registration](https://cloud.oracle.com/en_US/tryit) or supplied by your instructor. You will need to install a [VirtualBox](https://www.virtualbox.org/) Virtual Machine image which consists of a pre-installed Eclipse IDE environment and GIT client in your local lab computer.
+- The following lab requires an Oracle Public Cloud account that will either be applied by yourself thru [trial registration](https://cloud.oracle.com/en_US/tryit) or supplied by your instructor. You will also need to install a [VirtualBox](https://www.virtualbox.org/) and running Virtual Machine image provided by instructor. The image consists of a pre-installed Eclipse IDE Linux environment in your local lab computer.
 
 # Lab Exercise:
 
