@@ -3,7 +3,7 @@ Update: July 3, 2017
 ## Introduction
 
 This lab is part of the APAC Cloud Test Drive and is the 1st lab about creating, building and deploying a JEE Application within an Agile project lifecycle.
-This section describes deploying and undeploying applications to an Oracle Java Cloud Service instance by using the WebLogic Server Administration Console. You cannot deploy and undeploy applications directly through the Oracle Java Cloud Service Console.
+This section describes deploying and undeploying applications to an Oracle Java Cloud Service instance by using the WebLogic Server Administration Console. 
 
 ## Objectives
 
@@ -17,10 +17,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 
 ## Prerequisites
 
-- Prepared Database Cloud Service instance which holds the TechCo Demo application's data.
-- Running Java Cloud Service instance configured to access to the prepared Database Cloud Service
-
-- The following lab requires an Oracle Public Cloud account that will either be applied by yourself or supplied by your instructor. You will need to install an IDE environment and GIT client in your local lab.
+- The following lab requires an Oracle Public Cloud account that will either be applied by yourself thru [trial registration](https://cloud.oracle.com/en_US/tryit) or supplied by your instructor. You will need to install a VirtualBox Virtual Machine image which consists of a pre-installed Eclipse IDE environment and GIT client in your local lab computer.
 
 # Create Offer REST API Microservice
 
