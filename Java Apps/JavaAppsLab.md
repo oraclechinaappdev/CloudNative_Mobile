@@ -1,37 +1,92 @@
 Update: July 3, 2017
 
-
-
 # Introduction
-
 This lab is part of the APAC Cloud Test Drive and is the 1st lab about creating, building and deploying a JEE Application within an Agile project lifecycle.
 This section describes deploying and undeploying applications to an Oracle Java Cloud Service instance by using the WebLogic Server Administration Console. 
 
-
-
 # Objectives
 
-
 ## This tutorial demonstrates how to: 
-
-- *Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console [TBD]
+- *Create Database connectivity Loyalty Management Application [TBD]
 - Clone Loyalty Management [Java Enterprise Edition](https://docs.oracle.com/javaee/7/) application project source code from Github to Developer Cloud Service (DevCS)
 - Checkout make code changes in an Integration Development Environment (IDE) - Eclipse
 - Commit and push completed source code from Eclipse IDE back to DevCS
 - Create 'Build' and 'Deploy' configuration and monitor audit trace in DevCS
 
-
-
 # Prerequisites
-
 - The following lab requires an Oracle Public Cloud account that will either be applied by yourself thru [trial registration](https://cloud.oracle.com/en_US/tryit) or supplied by your instructor. You will need to install a [VirtualBox](https://www.virtualbox.org/) Virtual Machine image which consists of a pre-installed Eclipse IDE environment and GIT client in your local lab computer.
-
-
 
 # Lab Exercise:
 
-## Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console [TBD]
+## Create Database connectivity for Loyalty Management Application [TBD]
+[Sign in](../common/sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). Using the dashboard open the Java Cloud Service Console.
 
+![](images/00.png)
+
+Click on the hamburger icon located at the right top corner of the service summary. From the 
+menu select Open WebLogic Server Console
+
+![](images/01.png)
+
+A new browser opens and you are redirected to the selected console’s log-in page. If the server is protected with a self-signed certificate, you will be warned that this certificate is not trusted. This is the default configuration and you can configure your certification. Select I Understand the Risk, and Add Exception (accept certificate). 
+
+![](images/02.png)
+
+When dialog appears select Confirm Security Exception.
+
+![](images/03.png)
+
+When the console log-in page appears, enter the log-in credentials you entered for WebLogic Administrator when you created the service instance.
+
+![](images/04.png)
+
+After a successful login the WebLogic Server Administration Console is displayed. Click Lock & Edit and Service -> Data Sources. Create New **Generic Data Source**
+
+![](images/05.png)
+
+Configure the data source with the following parameters:
+
++ **Name**: jdbc-OE
++ **Scope**: Global (default)
++ **JNDI Name**: jdbc/OE
++ **Database type**: Oracle (default)
+
+Click Next.
+
+![](images/06.png)
+
+Leave the default Database Driver and click Next.
+
+![](images/07.png) 
+
+Leave the default Transactions Options and click Next.
+
+![](images/08.png)
+
+Configure the database service connection descriptor.
+
++ **Database Name**: `PDB1.<identitydomain>.oraclecloud.internal`
++ **Host Name**: the Database Cloud Service [prepared](../dbcs-prepare/README.md) to run sample.  application. If you followed the instructions its name likely is `techcoDB`
++ **Port**: leave the default 1521
++ **Database User Name**: oe
++ **Password**: password you entered for DBA (Database Cloud Service adminsitrator - sys) account
++ **oracle.jdbc.DRCPConnectionClass**: leave empty
+
+Click Next.
+
+![](images/09.png)
+
+Test the data source by click **Test Configuration**
+
+![](images/10.png)
+
+Select the servers or clusters to which you want to deploy the application. For this tutorial, choose to deploy the application to all the servers in the cluster, and then click Finish.
+
+![](images/11.png)
+
+Activate Changes and check the acknowledgement: `All changes have been activated. No restarts are necessary`
+
+![](images/12.png)
 
 ## Clone loyalty JEE Application project source code from Github to Developer Cloud Service (DevCS)
 
