@@ -9,7 +9,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 ## This tutorial demonstrates how to: 
 - *Create Database connectivity Loyalty Management Application [TBD]
 - Create Oracle Developer Cloud Service (DevCS) Loyalty Management application project using initial [GitHub](https://github.com) repository
-- Checkout make code changes in an Integration Development Environment (IDE) - Eclipse
+- Using Eclipse IDE (Oracle Enterprise Pack for Eclipse) with Oracle Developer Cloud Service
 - Commit and push completed source code from Eclipse IDE back to DevCS
 - Create 'Build' and 'Deploy' configuration and monitor audit trace in DevCS
 
@@ -24,7 +24,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 ## Create Oracle Developer Cloud Service Loyalty Management application project using initial GitHub repository
 [Click Here.](01.md)
 
-## Checkout make code changes in an Integration Development Environment (IDE) - Eclipse
+## Using Eclipse IDE (Oracle Enterprise Pack for Eclipse) with Oracle Developer Cloud Service
 [Click Here.](02.md)
 
 ## Commit and push completed source code from Eclipse IDE back to DevCS
