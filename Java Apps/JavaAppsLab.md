@@ -141,7 +141,7 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 - You have now created a new Git repository stored within the Developer Cloud Service that is based on an existing repository
 
-## Create Default Build and Deployment Process
+## Create 'Build' and 'Deploy' configuration and monitor audit trace in DevCS
 
 Now that we have the source code in our Developer Cloud Service managed Git Repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will setup a **shell script** build process in this section.
 
@@ -224,6 +224,7 @@ Microservice, you can REUSE the same target**.
 
   Be reminded that you will need the REST endpoint and the **offer id** in order to generate a QR code.
 
-  The final URL should looks like this
-		https://qrcodegenerator-{your-identity-domain}.apaas.em3.oraclecloud.comm/ctdqr/v1/offer/10001
+  Finally, you can access to the following deployed application URL to verify build and deployment:
+		https://{Your-JCS-WLS-Address}/loyalty/jsp/welcome.jsp
 
+### [Optional] Create a New Offer Campaign to Target Customer
