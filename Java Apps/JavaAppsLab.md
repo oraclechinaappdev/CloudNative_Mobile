@@ -9,7 +9,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 
 ### This tutorial demonstrates how to: 
 
-- *Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console {TBD}
+- *Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console [TBD]
 - Clone loyalty JEE Application project source code from Github to Developer Cloud Service (DevCS)
 - Checkout make code changes in an Integration Development Environment (IDE) - Eclipse
 - Commit and push completed source code from Eclipse IDE back to DevCS
@@ -19,7 +19,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 
 - The following lab requires an Oracle Public Cloud account that will either be applied by yourself thru [trial registration](https://cloud.oracle.com/en_US/tryit) or supplied by your instructor. You will need to install a [VirtualBox](https://www.virtualbox.org/) Virtual Machine image which consists of a pre-installed Eclipse IDE environment and GIT client in your local lab computer.
 
-# Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console {TBD}
+# Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console [TBD]
 
 ## Create Initial Git Repository
 
