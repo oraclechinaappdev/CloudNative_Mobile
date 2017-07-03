@@ -22,7 +22,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 [Click Here.](00.md)
 
 ## Create Oracle Developer Cloud Service Loyalty Management application project using initial GitHub repository
-[Click Here.] (01.md)
+[Click Here.](01.md)
 
 ## Commit and push completed source code from Eclipse IDE back to DevCS
 
