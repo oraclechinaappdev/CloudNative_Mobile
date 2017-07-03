@@ -1,13 +1,13 @@
 Update: July 3, 2017
 
-## Introduction
+# Introduction
 
 This lab is part of the APAC Cloud Test Drive and is the 1st lab about creating, building and deploying a JEE Application within an Agile project lifecycle.
 This section describes deploying and undeploying applications to an Oracle Java Cloud Service instance by using the WebLogic Server Administration Console. 
 
-## Objectives
+# Objectives
 
-### This tutorial demonstrates how to: 
+## This tutorial demonstrates how to: 
 
 - *Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console [TBD]
 - Clone loyalty JEE Application project source code from Github to Developer Cloud Service (DevCS)
@@ -15,11 +15,13 @@ This section describes deploying and undeploying applications to an Oracle Java 
 - Commit and push completed source code from Eclipse IDE back to DevCS
 - Create 'Build' and 'Deploy' configuration and monitor audit trace in DevCS
 
-## Prerequisites
+# Prerequisites
 
 - The following lab requires an Oracle Public Cloud account that will either be applied by yourself thru [trial registration](https://cloud.oracle.com/en_US/tryit) or supplied by your instructor. You will need to install a [VirtualBox](https://www.virtualbox.org/) Virtual Machine image which consists of a pre-installed Eclipse IDE environment and GIT client in your local lab computer.
 
-# Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console [TBD]
+# Lab Exercise:
+
+## Create Oracle Database connectivity by JDBC DataSource in WebLogic Server (WLS) Admin Console [TBD]
 
 ## Create Initial Git Repository
 
