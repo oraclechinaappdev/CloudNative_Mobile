@@ -20,21 +20,26 @@ This section describes deploying and undeploying applications to an Oracle Java 
 # Lab Exercise:
 
 ## Create Database connectivity for Loyalty Management Application [TBD]
+
 [Click Here.](00.md)
 
 ## Create Oracle Developer Cloud Service Loyalty Management application project using initial GitHub repository
+
 [Click Here.](01.md)
 
 ## Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service
+
 [Click Here.](02.md)
 
 ## Using Eclipse IDE (Oracle Enterprise Pack for Eclipse) with Oracle Developer Cloud Service
+
 [Click Here.](03.md)
 
 ## Commit and push completed source code from Eclipse IDE back to Oracle Developer Cloud Service
+
 [Click Here.](04.md)
 
 ## Monitor Audit Trace for Continuous Integration in Oracle Developer Cloud Service
+
 [Click Here.](05.md)
 
-### [Optional] Create a New Offer Campaign to Target Customer
