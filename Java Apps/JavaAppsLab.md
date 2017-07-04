@@ -10,9 +10,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 - *Create Database connectivity Loyalty Management Application [TBD]
 - Create Oracle Developer Cloud Service (DevCS) Loyalty Management Application Project using Initial [GitHub](https://github.com) repository
 - Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service 
-- Using Eclipse IDE (Oracle Enterprise Pack for Eclipse) with Oracle Developer Cloud Service
-- Commit and push completed source code from Eclipse IDE back to Oracle Developer Cloud Service
-- Monitor Audit Trace for Continuous Integration in Oracle Developer Cloud Service
+- Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service
 
 # Prerequisites
 - The following lab requires an Oracle Public Cloud account that will either be applied by yourself thru [trial registration](https://cloud.oracle.com/en_US/tryit) or supplied by your instructor. You will also need to install a [VirtualBox](https://www.virtualbox.org/) and running Virtual Machine image provided by instructor. The image consists of a pre-installed Eclipse IDE Linux environment.
@@ -31,15 +29,8 @@ This section describes deploying and undeploying applications to an Oracle Java 
 
 [Click Here.](02.md)
 
-## Using Eclipse IDE (Oracle Enterprise Pack for Eclipse) with Oracle Developer Cloud Service
+## Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service
 
 [Click Here.](03.md)
 
-## Commit and push completed source code from Eclipse IDE back to Oracle Developer Cloud Service
-
-[Click Here.](04.md)
-
-## Monitor Audit Trace for Continuous Integration in Oracle Developer Cloud Service
-
-[Click Here.](05.md)
 
