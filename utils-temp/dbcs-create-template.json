@@ -1,0 +1,21 @@
+{
+  "description": "APAC Cloud Test Drive DB",
+  "edition": "EE",
+  "level": "PAAS",
+  "serviceName": "apacctddb",
+  "shape": "oc3",
+  "subscriptionType": "MONTHLY",
+  "version": "12.1.0.2",
+  "vmPublicKeyText": "ssh-rsa AA--your-pub-key--NP",
+  "parameters": [
+    {
+      "type": "db",
+      "usableStorage": "15",
+      "adminPassword": "Welcome_1",
+      "sid": "ORCL",
+      "pdbName": "PDB1",
+      "failoverDatabase": "no",
+      "backupDestination": "NONE"
+    }
+  ]
+}
