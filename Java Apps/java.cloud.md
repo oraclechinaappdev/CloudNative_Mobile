@@ -12,6 +12,6 @@
 
 3. The JCS WebLogic IP Address is shown at the 'Resources' section -> 'Public IP:' like below.
 
-![](images/00/02.png)
+![](images/jcs/02.png)
 
 [Back to JavaAppLab Home](JavaAppsLab.md)
