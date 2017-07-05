@@ -15,19 +15,23 @@ The key features of Oracle Integration Cloud Service include:
 
 Project creation, configuration, and user management
 
-1. Connect
-2. Design
-  * Intuitive Visual Designer and Mobile Ready - Rich Point and click browser-based designer to build integrations anywhere - on your computer or your favorite tablet
-  * Oracle Recommends™ - Smart Data Mapper provides accurate recommendations using Oracle Recommends™
-  * Business User Friendly - Business friendly terminology combined with videos and tutorials for ease of use
-  * API-Ready - Publish your integrations as an API for external consumption
-3. Monitor and Manage
-  * End to End Visibility - Simple and powerful search to help you zero in on transactions of interest. Comprehensive drill-down capabilities for detailed auditing and analysis
-  * Monitor KPIs - Real-time insight into key performance indicators on a high-performance visual dashboard
-  * Robust Error Management - Rapidly detect and diagnose errors for corrective action
-4. ccelerate
-  * Pre-Built Integrations - Portfolio of pre-built integrations available for immediate use as-is, or customizable for your business requirements
-  * Cloud Marketplace - Pre-built adapters and integrations, published by Oracle and Oracle partners
+1. ####Connect####
+    - Auto-Associated SaaS connections
+	- Native SaaS Adaptors
+	- Secure On-Premises Integration
+	- Open Adapter SDK
+2. ####Design####
+    * Intuitive Visual Designer and Mobile Ready - Rich Point and click browser-based designer to build integrations anywhere - on your computer or your favorite tablet
+    * Oracle Recommends™ - Smart Data Mapper provides accurate recommendations using Oracle Recommends™
+    * Business User Friendly - Business friendly terminology combined with videos and tutorials for ease of use
+    * API-Ready - Publish your integrations as an API for external consumption
+3. ####Monitor and Manage####
+    - End to End Visibility - Simple and powerful search to help you zero in on transactions of interest. Comprehensive drill-down capabilities for detailed auditing and analysis
+    - Monitor KPIs - Real-time insight into key performance indicators on a high-performance visual dashboard
+    - Robust Error Management - Rapidly detect and diagnose errors for corrective action
+4. ####Accelerate####
+    - Pre-Built Integrations - Portfolio of pre-built integrations available for immediate use as-is, or customizable for your business requirements
+    - Cloud Marketplace - Pre-built adapters and integrations, published by Oracle and Oracle partners
   
 Oracle Developer Cloud Service is available as a web interface accessible from a web browser and from Integrated Development Environments (IDEs) such as Oracle Enterprise Pack for Eclipse (OEPE), Oracle JDeveloper, and NetBeans IDE.
 
