@@ -76,13 +76,13 @@ This tutorial demonstrates how to:
 The navigation pane provides you with access to all the development features in the Oracle Integration Cloud Service.
 
 
-#### Define Connection for CRM Customer Activity Service and REST Service Exposure ####
+#### Define Connections for CRM Customer Activity Service and REST Service Exposure ####
 
 6. Go to *Connection* Summary Page by click on the `Connection` green icon.
 
 ![](images/00/08.home_conn.png)
 
-Alternative, you can go to *Connection* Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Connections`
+Alternatively, you can go to *Connection* Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Connections`
 
 ![](images/00/09.home_hamburger.png)
 
@@ -90,9 +90,16 @@ Alternative, you can go to *Connection* Summary Page by click the hamburger icon
 
 ![](images/00/11.home_hamburger_connections.png)
 
+7. 
+
+![](images/00/12.connection_create.png)
+
+8. 
+
+![](images/00/13.connection_new.png)
 
 
-#### Create Integration - An Orchestration Integration Flow ####
+#### Create an Integration - An Orchestration Integration Flow ####
 
 
 
