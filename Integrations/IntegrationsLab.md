@@ -15,12 +15,13 @@ The key features of Oracle Integration Cloud Service include:
 
 Project creation, configuration, and user management
 
-+ Connect
-+ Design
-+ Monitor and Manage
-+ Accelerate
-++ Pre-Built Integrations - Portfolio of pre-built integrations available for immediate use as-is, or customizable for your business requirements
-
+1 Connect
+2 Design
+3 Monitor and Manage
+4 Accelerate
+  * Pre-Built Integrations - Portfolio of pre-built integrations available for immediate use as-is, or customizable for your business requirements
+  * Cloud Marketplace - Pre-built adapters and integrations, published by Oracle and Oracle partners
+  
 Oracle Developer Cloud Service is available as a web interface accessible from a web browser and from Integrated Development Environments (IDEs) such as Oracle Enterprise Pack for Eclipse (OEPE), Oracle JDeveloper, and NetBeans IDE.
 
 This tutorial shows how to deploy Loyalty Management application to Java Cloud Services using Oracle Developer Cloud Services.
