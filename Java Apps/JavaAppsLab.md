@@ -1,5 +1,3 @@
-Update: July 3, 2017
-
 # Introduction
 This lab is part of the APAC Cloud Test Drive and is the 1st lab about creating, building and deploying a JEE Application within an Agile project lifecycle.
 This section describes deploying and undeploying applications to an Oracle Java Cloud Service instance by using the WebLogic Server Administration Console. 
