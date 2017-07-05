@@ -53,4 +53,9 @@ This tutorial demonstrates how to:
 
 ![](images/00/01.dashboard.png)
 
-2. If you cannot 
+2. If you cannot find the **integration** services tile, click **Customize Dashboard** button at top right corner of browser, and then select **Show** at the integration section of the **Customize Dashboard** dialog window.
+
+![](images/00/02.dashboard.png)
+
+3. 
+
