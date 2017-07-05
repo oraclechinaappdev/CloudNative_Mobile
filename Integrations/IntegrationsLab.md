@@ -32,27 +32,25 @@ Project creation, configuration, and user management
 4. **Accelerate**
     - Pre-Built Integrations - Portfolio of pre-built integrations available for immediate use as-is, or customizable for your business requirements
     - Cloud Marketplace - Pre-built adapters and integrations, published by Oracle and Oracle partners
-  
-Oracle Developer Cloud Service is available as a web interface accessible from a web browser and from Integrated Development Environments (IDEs) such as Oracle Enterprise Pack for Eclipse (OEPE), Oracle JDeveloper, and NetBeans IDE.
 
-This tutorial shows how to deploy Loyalty Management application to Java Cloud Services using Oracle Developer Cloud Services.
-
-The Loyalty Management application is a JEE web application serving simple JSP pages.
+This tutorial shows how to connect to different applications to serve frontend mobile consumers using Oracle Integration Cloud Service.
 
 This tutorial demonstrates how to:
 
-- Configure Build Job for the Loyalty Management - A JEE application
-- Configure Java Cloud Service - WebLogic Server deployment in Developer Cloud Service
-- Build and Deploy Loyalty Management Application using Developer Cloud Service
+- Configure Connection definiton to a Simple Object Access Protocol (SOAP) based Customer Relationship Management (CRM) service and Expose into Representational State Transfer (REST) based service
+- Configure Integration flow to interconnect service endpoints, mapping request and response data attributes and orchestrate decision logic
+- Monitor integration flow transaction and endpoint status, performance statistics and business identifiers
 
 ### Prerequisites ###
 
-- Oracle Public Cloud Service account including Developer Cloud Service and Java Cloud Service
+- Oracle Public Cloud Service account including Integration Cloud Service
 
 ----
 
-#### Open Oracle Developer Cloud Service Project ####
+#### Open Oracle Integration Cloud Service ####
 
-1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials. After a successful login you will see your Dashboard. Find the Developer services tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
+1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials. After a successful login you will see your Dashboard. Find the *integration* services tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
 
-![](images/02/01.dashboard.png)
+![](images/00/01.dashboard.png)
+
+2. If you cannot 
