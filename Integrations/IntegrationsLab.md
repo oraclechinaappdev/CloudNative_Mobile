@@ -33,7 +33,7 @@ Project creation, configuration, and user management
     - Pre-Built Integrations - Portfolio of pre-built integrations available for immediate use as-is, or customizable for your business requirements
     - Cloud Marketplace - Pre-built adapters and integrations, published by Oracle and Oracle partners
 
-This tutorial shows how to connect to different applications to serve frontend mobile consumers using Oracle Integration Cloud Service.
+This tutorial shows how to connect to different applications to serve frontend mobile consumers using Oracle Integration Cloud Service. Once ICS receives a request from mobile consumer, it routes to CRM to perform customer activity log about acceptance of a product offer, and then it returns QR code image URL if user accepted the offer.
 
 This tutorial demonstrates how to:
 
@@ -47,7 +47,7 @@ This tutorial demonstrates how to:
 
 ----
 
-#### Open Oracle Integration Cloud Service ####
+#### Navigating Oracle Integration Cloud Service ####
 
 1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials. After a successful login you will see your Dashboard. Find the **integration** services tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
 
@@ -57,5 +57,44 @@ This tutorial demonstrates how to:
 
 ![](images/00/02.dashboard.png)
 
-3. 
+3. On Service Console opened, the ICS home page is displayed as following:
+
+![](images/00/03.home.png)
+
+\*Close the `Guide Me` Quick Tour if running by click **Got it!** button at the bottom, we don't need it during the lab exercise.
+
+![](images/00/04.ics_overlays.png)
+
+4. The home page provides links to the primary development features of Oracle Integration Cloud Service: connections, integrations, monitoring, lookups, packages, agents, adapters, and libraries.
+
+![](images/00/05.ics_designer_portal.png)
+
+5. Using the Navigation Pane, click ![](images/00/06.main_hamburger.png) in the upper left corner to show the navigation pane.
+
+![](07.navigation_pane.png)
+
+The navigation pane provides you with access to all the development features in the Oracle Integration Cloud Service.
+
+
+#### Define Connection for CRM Customer Activity Service and REST Service Exposure ####
+
+6. Go to *Connection* Summary Page by click on the `Connection` green icon.
+
+![](images/00/08.home_conn.png)
+
+Alternative, you can go to *Connection* Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Connections`
+
+![](images/00/09.home_hamburger.png)
+
+![](images/00/10.home_hamburger_designer.png)
+
+![](images/00/11.home_hamburger_connections.png)
+
+
+
+#### Create Integration - An Orchestration Integration Flow ####
+
+
+
+#### Testing the service and Monitoring with ICS Dashboards ####
 
