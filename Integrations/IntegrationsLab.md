@@ -61,7 +61,7 @@ This tutorial demonstrates how to:
 
 ![](images/00/03.home.png)
 
-\*Close the `Guide Me` Quick Tour if running by click **Got it!** button at the bottom, we don't need it during the lab exercise.
+  \*Close the `Guide Me` Quick Tour if running by click **Got it!** button at the bottom, we don't need it during the lab exercise.
 
 ![](images/00/04.ics_overlays.png)
 
