@@ -213,7 +213,7 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 ![](images/00/31.integration_editor.png)
 
-29. Now, click `Triggers`, the palette title on the right changed to **Triggers**.  
+29. Now, click `Triggers` at the right side bar, the palette title on the right changed to **Triggers**.  
     Select `REST`, the list of available *REST Trigger Connection* is shown.  
     Drag and Drop your newly created *Trigger Connection* (Our example is 'KD_ICSINTMGT_ProcessOffer'), to the "+" icon of flow diagram inside the big *circle* under *START*.
 
@@ -221,8 +221,8 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 30. The **Configure Oracle REST Endpoint** dialog window is shown. Provide the following information:
     * **What do you want to call your endpoint?** Enter `ProcessOffer`
-	* **What is the endpoint's relative resource URI?** Enter `\/processoffer`
-	* **What action does the endpoint perform?** Select `POST'
+	* **What is the endpoint's relative resource URI?** Enter `/processoffer`
+	* **What action does the endpoint perform?** Select `POST`
 	* Check to select **Configure a request payload for this endpoint**
 	* Check to select **Configure this endpoint to receive the response**
 	* Leave others empty or unselect.
@@ -245,6 +245,47 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 ![](images/00/35.integration_request_json.png)
 
+33. Click `Next` button to proceed next, **Configure the Response Payload** page, check:
+    * **Select the response payload file** `JSON Sample`
+	* **Select the type of payload with which you want the endpoint to reply** `JSON`
+	
+	Click `<<< inline >>>` link next to **--OR-- enter sample JSON**
+
+![](images/00/36.integration_rest_response.png)
+
+34. The **Response Sample Json Payload** page is shown.
+    Copy this text `{   "activityid": "10001-43513-v1.0",   "imgurl": "tmptext" }` to the text area under **Enter Sample JSON**.  
+    Click `OK` button at the bottom.
+
+![](images/00/37.integration_response_json.png)
+
+35. Click `Next` button to proceed next, **Oracle REST Endpoint Configuration Summary** page.  
+    Your setup should look like:
+	
+![](images/00/38.integration_rest_done.png)
+
+36. Back to the *Integration Orchestration Editor*, you can:
+    * Drag and drop to re-arrange each node of integration orchestration flow to different location.
+    * Click `-` or `+` button on top left corner to re-size flow diagram to fit your screen resolution.
+	* As best practice, regularly click `Save` button at the top left corner to store your work from time to time.
+	
+![](images/00/39.integration_half.png)
+
+37. Now, click `Invokes` at the right side bar, the palette title on the right changed to **Invokes**.  
+    Select `SOAP`, the list of available *SOAP Invoke Connection* is shown.  
+    Drag and Drop your newly created *Invoke Connection* (Our example is 'KD_CRM_CustomerService'), to the middle of integration flow, between **ProcessOffer** and **Map to ProcessOffer** activity.
+
+![](images/00/40.integration.invoke.png)
+
+38. The **Configure SOAP Endpoint** dialog window is shown. Provide the following information:
+    * **What do you want to call your endpoint?** Enter `CustomerServiceActivity`
+	* **What does this endpoint do?** Optional
+	* **Do you want to configure this as a callback invoke?** Select `No`
+	
+	Do not change other values, click `Next` -> `Next` -> `Next` and finally `Done` buttons. You should have a similar integration flow as below.  
+	Click the **Map to CustomerServiceActivty** and then further click the `pencil` icon to enter data mapper screen.
+
+![](images/00/41.integration.invoke.map.png)
 
 #### Testing the service and Monitoring with ICS Dashboards ####
 
