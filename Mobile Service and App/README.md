@@ -8,7 +8,7 @@ And mobile application development in businesses is much more of a reality – L
 ## Business Challenges in Mobile ##
 To be more competitive, many enterprises are introducing more and more mobile applications. By the way, there are some of major challenges enterprises are suffering. As you can see in the below picture, Gartner predicts half the apps deployed today will be replaced or rewritten by next year. Overall, more than half are never downloaded. And even if downloaded, 25% are deleted after one use!
 It’s not easy to have successful mobile applications. Which is why we need to build better apps faster in order to keep pace with mobile demands.
-![](common/images/Business_Challenges_in_Mobile.PNG)
+![](common/images/BusinessChallengesMobile.PNG)
 Source: Gartner Presentation, The Current and Future State of mobility, Van L. Baker, Jason Wong, August 2015
 
 ## Technical Challegnes in Mobile ##
