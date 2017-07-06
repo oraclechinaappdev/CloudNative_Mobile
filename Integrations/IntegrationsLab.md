@@ -115,11 +115,41 @@ Now, do a search by entering `SOAP` in the search text box, then click `Select` 
 	
 ![](images/00/15.connection_properties.png)
 
-11. Click `OK` button to save changes made.
+11. Click `OK` button to save changes made.  
+    Scroll down to **Security** section, click `Configure Security` button, the **Credentials** dialog window is shown.  
+    From **Security Policy**, select `No Security Policy` from the drop-down list. Although *Basic Authentication* and *Username Password Token* are supported, we skip to use no security policy which is used by the lab exercise.
 
+![](images/00/16.connection_security.png)
 
+13. Click `OK` button to save changes made.  
+    From the **Connection** main page, click `Test` from top right corner, the test **Confirmation** dialog window is shown.  
+	Click `Validate and Test` button.
 
+![](images/00/17.connection_test.png)
+
+14. You should find a green dialog text area about **Connection was tested successfully**.
+
+![](images/00/18.connection_testresult.png)
+
+15. Next, click `Save` from top right corner again.
+
+![](images/00/19.connection_save.png)
+
+16. Similarly you should find a green dialog text area about **Connection was saved successfully**.  
+    Click `Close` to exit and back to **Connection** Summary Page.
+
+![](images/00/20.connection_saveresult.png)
+
+17. A *SOAP Connection* to CRM Customer Service was made and ready to be \*invoked\*. Now we are going to create another *REST* connection.  
+    However, this time the *Connection* is **NOT** to \*invoke\* any endpoint service, but instead it is a *\*trigger\** which is being called by a front client, i.e. A mobile client *triggers* to this *REST* connection service.  
+	
+	Make sure you are still on **Connection** Summary Page. If not, follow step 6 previously.
+	
+	
 #### Create an Integration - An Orchestration Integration Flow ####
+
+ 
+
 
 
 
