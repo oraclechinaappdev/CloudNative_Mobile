@@ -33,13 +33,13 @@ In summary, Oracle provides end to end solution to give you overcoming notable b
 ## Oracle Mobile Services ##
 Here you can see which mobile services are ready for you through just accessing Oracle MCS (Mobile Cloud Service) as below:
 + Out of the box mobile services: We are providing prebuilt, tested and optimized mobile services like analytics, push notification, offline data synchronization, location, object storage, database, app ploicies, API management, integration management, security and user management, and more features like intelligent bot coming. For client IDE for mobile applications, we can support any IDE as well as Oracle MAX (Low code development), JET (JavaScript-based Hybrid App Dev.) and MAF (Java-based Hybrid App Dev.)
+
 ![](../common/images/Oracle_Mobile_Services.PNG)
 
 If you want to know about more details on the above mobile services, please refer to [the following link](https://docs.oracle.com/en/cloud/paas/mobile-cloud/index.html).
 
 -----
 To demonstrate Oracle's capabilities in mobile development, we will give you below labs to get an understanding of how you can develop mobile applications - better and faster.
-+ Backgounds on Mobile Service - Challenges and solutions, About MCS etc.
 + Set up Push Notification and Send Notification to mobile app
 + Develop Custom APIs and Custom Code to interact external serivces
 + Create Custom Analytics Report to track “Offer Completion by User”
