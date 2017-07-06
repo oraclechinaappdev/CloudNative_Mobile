@@ -112,7 +112,7 @@ Now, do a search by entering `SOAP` in the search text box, then click `Select` 
 10. Scroll down to **Connection Properties** section, click `Configure Connectivity`, the **Connection Properties** dialog is shown. Fill in the **WSDL URL** by providing **Property Value** in the format of:
     - **http://<Your Java Cloud Service Instance IP Address>/crm/CustomerServicePort?WSDL* (If you forget your JCS instance IP address, [click here!](../Java Apps/java.cloud.md))
 	
-![] (images/00/15.connection_properties.png)
+![](images/00/15.connection_properties.png)
 
 
 #### Create an Integration - An Orchestration Integration Flow ####
