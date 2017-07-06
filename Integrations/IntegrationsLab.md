@@ -285,9 +285,11 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 ![](images/00/41.integration.invoke.setup.png)
 	
 39. Do not change other values, click `Next` -> `Next` -> `Next` and finally `Done` buttons. You should have a similar integration flow as below.  
-	Click the **Map to CustomerServiceActivty** and then further click the `pencil` icon to enter data mapper screen.
+	Click the **Map to CustomerServiceActivty** node and then further click on the `pencil` icon to enter data mapper screen.
 
 ![](images/00/42.integration.invoke.map.png)
+
+40. 
 
 #### Testing the service and Monitoring with ICS Dashboards ####
 
