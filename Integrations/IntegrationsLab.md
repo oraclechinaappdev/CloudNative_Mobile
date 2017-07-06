@@ -78,11 +78,11 @@ The navigation pane provides you with access to all the development features in 
 
 #### Define Connections for CRM Customer Activity Service and REST Service Exposure ####
 
-6. Go to **Connection** Summary Page by click on the `Connection` green icon.
+6. Go to **Connections** Summary Page by click on the `Connection` green icon.
 
 ![](images/00/08.home_conn.png)
 
-Alternatively, you can go to **Connection** Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Connections`
+Alternatively, you can go to **Connections** Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Connections`
 
 ![](images/00/09.home_hamburger.png)
 
@@ -90,14 +90,14 @@ Alternatively, you can go to **Connection** Summary Page by click the hamburger 
 
 ![](images/00/11.home_hamburger_connections.png)
 
-7. In the home page of **Connection**, click `Create` button on the top left corner, the **Create Connection - Select Adapter** dialog window is shown.  
+7. In the home page of **Connections**, click `Create` button on the top left corner, the **Create Connection - Select Adapter** dialog window is shown.  
    You could see different types of connection adapters are available, such as *Sales Cloud, E-Business Suite, Twitter, Salesforce and more*. However in this lab exercise, we will create a simple *SOAP* connection to connect a CRM Customer Activity Service interface.  
    Now, do a search by entering `SOAP` in the search text box, then click `Select` button in the **SOAP** adapter connection box like below.
 
 ![](images/00/12.connection_create.png)
 
 8. A new dialog window **Create New Connection** is shown, enter the following information to create our first *SOAP Connection*:
-    * **Name:** Provide an unique and easily identified *Connection* Name, such as <Your Short Name>_<System_Name>_<Service_Name>. In our example, this is **KD_CRM_CustomerService**, while *KD* is short name of *Kelvin Durant*.
+    * **Name:** Provide an unique and easily identified *Connection* Name, such as <Your Short Name\_<System_Name>\_<Service_Name>. In our example, this is **KD_CRM_CustomerService**, while *KD* is short name of *Kelvin Durant*.
 	* **Identifier:** The **Identifier** will be automatically filled-in while you type the **Name** above, however you can provide another unique identifier, suggest include your short name as prefix.
 	* **Role:** Select **Invoke** from the drop-down list. (We are going to *Invoke* this service only)
 	* **Description (Optional):** You can leave it empty or enter any meaningful text to describe this *SOAP Connection*.
@@ -143,7 +143,7 @@ Alternatively, you can go to **Connection** Summary Page by click the hamburger 
 17. A *SOAP Connection* to CRM Customer Service was made and ready to be \*invoked\*. Now we are going to create another *REST* connection.  
     However, this time the *Connection* is **NOT** to \*invoke\* any endpoint service, but instead it is a *\*trigger\** which is being called by a front client, i.e. A mobile client *triggers* to this *REST* connection service.  
 	
-	Make sure you are still on **Connection** Summary Page. If not, follow step 6 previously.  
+	Make sure you are still on **Connections** Summary Page. If not, follow step 6 previously.  
 	
 	Click `Create` button on the top left corner, the **Create Connection - Select Adapter** dialog window is shown.  
 	Enter search text `REST` in the search text box, then click `Select` button in the **REST** adapter connection box like below.
@@ -151,7 +151,7 @@ Alternatively, you can go to **Connection** Summary Page by click the hamburger 
 ![](images/00/21.connection_create1.png)
 
 18. A new dialog window **Create New Connection** is shown, enter the following information to create our *REST Connection*:
-    * **Name:** Provide an unique and easily identified *Connection* Name, such as <Your Short Name>_<System_Name>_<Service_Name>. In our example, this is **KD_ICSINTMGT_ProcessOffer**, while *KD* is short name of *Kelvin Durant*.
+    * **Name:** Provide an unique and easily identified *Connection* Name, such as <Your Short Name>\_<System_Name>\_<Service_Name>. In our example, this is **KD_ICSINTMGT_ProcessOffer**, while *KD* is short name of *Kelvin Durant*.
 	* **Identifier:** The **Identifier** will be automatically filled-in while you type the **Name** above, however you can provide another unique identifier, suggest include your short name as prefix.
 	* **Role:** Select **Trigger** from the drop-down list. (We are going to *Trigger* this service only)
 	* **Description (Optional):** You can leave it empty or enter any meaningful text to describe this *REST Connection*.
@@ -164,7 +164,7 @@ Alternatively, you can go to **Connection** Summary Page by click the hamburger 
 ![](images/00/23.connection_initial1.png)
 
 20. On **Security** section, click `Configure Security` button, the **Credentials** dialog window is shown.  
-    From **Security Policy**, the default and only available option is `Basic Authentication` from the drop-down list. This is the minimal security policy required by ICS. are supported, we skip to use no security policy which is used by the lab exercise.  
+    From **Security Policy**, the default and only available option is `Basic Authentication` from the drop-down list. This is the minimal security policy required by ICS.  
 	Click `OK` button to save changes made.
     
 ![](images/00/24.connection_security1.png)
@@ -185,8 +185,30 @@ Alternatively, you can go to **Connection** Summary Page by click the hamburger 
 
 #### Create an Integration - An Orchestration Integration Flow ####
 
+24. Using the Navigation Pane, click ![](images/00/06.main_hamburger.png) in the upper left corner to show the navigation pane, and then click `Integrations`.
 
+![](images/00/27.home_hamburger_integrations.png)
 
+25. The home page of **Integrations** is shown, click `Create` button on the top left corner.
+
+![](images/00/28.integration_create.png)
+
+26. The **Create Integration - Select a Style\/Pattern** dialog window is shown.  
+   You could see different types of integration are available, including *Orchestration, Map Data, Publish To ICS and Subscribe To ICS*. However in this lab exercise, we will create an *Orchestration* integration.
+
+![](images/00/29.integration_orchestration.png)
+
+27. A new dialog window **Create New Integration** is shown, enter the following information to create our *Integration*:
+    * **What triggers this integration?** Keep the default selected *Application event or business object*.
+    * **What do you want to call your integration?** Provide an unique and easily identified *Integration* Name, such as <Your Short Name>\_<System_Name>\_<Service_Name>. In our example, this is **KD_ICS_INTMGT**, while *KD* is short name of *Kelvin Durant*.
+	* **Identifier** The **Identifier** will be automatically filled-in while you type the **Name** above, however you can provide another unique identifier, suggest include your short name as prefix.
+	* **Version** Select Keep the default value. (Change only if you are going to create a new *versioned* integration)
+	* **What does this integration do? (Optional)** You can leave it empty or enter any meaningful text to describe this *Integration*.
+	* **Which package does this integration belong to? (Optional)** You can leave it empty or enter any meaningful package name to collectively group with other integrations.
+	
+	Click `Create` button, the integration orchestration editor is shown.
+	
+![](images/00/31.integration_editor.png)
 
 
 
