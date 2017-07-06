@@ -284,7 +284,7 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 ![](images/00/41.integration.invoke.setup.png)
 	
-	Do not change other values, click `Next` -> `Next` -> `Next` and finally `Done` buttons. You should have a similar integration flow as below.  
+39. Do not change other values, click `Next` -> `Next` -> `Next` and finally `Done` buttons. You should have a similar integration flow as below.  
 	Click the **Map to CustomerServiceActivty** and then further click the `pencil` icon to enter data mapper screen.
 
 ![](images/00/42.integration.invoke.map.png)
