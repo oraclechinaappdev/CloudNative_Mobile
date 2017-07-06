@@ -260,7 +260,7 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 ![](images/00/37.integration_response_json.png)
 
 35. Click `Next` button to proceed next, **Oracle REST Endpoint Configuration Summary** page.  
-    Your setup should look like:
+    Your setup should look like below, then click `Done` button.
 	
 ![](images/00/38.integration_rest_done.png)
 
@@ -281,11 +281,13 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
     * **What do you want to call your endpoint?** Enter `CustomerServiceActivity`
 	* **What does this endpoint do?** Optional
 	* **Do you want to configure this as a callback invoke?** Select `No`
+
+![](images/00/41.integration.invoke.setup.png)
 	
 	Do not change other values, click `Next` -> `Next` -> `Next` and finally `Done` buttons. You should have a similar integration flow as below.  
 	Click the **Map to CustomerServiceActivty** and then further click the `pencil` icon to enter data mapper screen.
 
-![](images/00/41.integration.invoke.map.png)
+![](images/00/42.integration.invoke.map.png)
 
 #### Testing the service and Monitoring with ICS Dashboards ####
 
