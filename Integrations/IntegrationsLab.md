@@ -98,10 +98,10 @@ Now, do a search by entering `SOAP` in the search text box, then click `Select` 
 ![](images/00/12.connection_create.png)
 
 8. A new dialog window **Create New Connection** is shown, enter the following information to create our first *SOAP Connection*:
-    * **Name:** 
-	* **Identifier:**
-	* **Role:**
-	* **Description (Optional):**
+    - **Name:** 
+	- **Identifier:**
+	- **Role:**
+	- **Description (Optional):**
 
 ![](images/00/13.connection_new.png)
 
