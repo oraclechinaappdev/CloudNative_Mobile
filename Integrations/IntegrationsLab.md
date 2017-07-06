@@ -91,10 +91,8 @@ Alternatively, you can go to *Connection* Summary Page by click the hamburger ic
 ![](images/00/11.home_hamburger_connections.png)
 
 7. In the home page of *Connection*, click `Create` button on the top left corner, the *Create Connection - Select Adapter* dialog window is shown.
-
-  -You could see different types of connection adapters are available, such as Sales Cloud, E-Business Suite, Twitter, Salesforce and more. However in this lab exercise, we will create a simple `SOAP` connection to connect a CRM Customer Activity Service interface.
-
-  -Now, do a search by entering `SOAP` in the search text box, then click `Select` button in the *SOAP* adapter connection box like below.
+You could see different types of connection adapters are available, such as Sales Cloud, E-Business Suite, Twitter, Salesforce and more. However in this lab exercise, we will create a simple `SOAP` connection to connect a CRM Customer Activity Service interface.
+Now, do a search by entering `SOAP` in the search text box, then click `Select` button in the *SOAP* adapter connection box like below.
 
 ![](images/00/12.connection_create.png)
 
