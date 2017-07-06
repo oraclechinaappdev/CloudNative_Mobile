@@ -4,7 +4,7 @@
 
 ## Introduction ##
 
-This Oracle Cloud project contains the lab materials for the Oracle Cloud Test Drive events for Cloud Native Apps and Mobile organized in various locations.  Participants can experiment through these labs with a series of Oracle Cloud Services like JCS (Java Cloud Service), DevCS (Developer Cloud Service), ACCS (Application Container Cloud Service), ICS (Integration Cloud Service) and MCS (Mobile Cloud Service). Thorough this Cloud Native and Mobile Test Drive, participants will have chances to know how they can use Oracle Cloud Services to implement Cloud Native Apps, Microservices, Integrations and Mobile Services. For better understaning on how and when companies can use Oracle Cloud Services, we will use a service scenario called "[loyalty management](https://github.com/APACTestDrive/CloudNative_Mobile/blob/master/common/scenario/README.md)".   
+This Oracle Cloud project contains the lab materials for the Oracle Cloud Test Drive events for Cloud Native Apps and Mobile organized in various locations. Participants can experiment through these labs with a series of Oracle Cloud Services like JCS (Java Cloud Service), DevCS (Developer Cloud Service), ACCS (Application Container Cloud Service), ICS (Integration Cloud Service) and MCS (Mobile Cloud Service). Thorough this Cloud Native and Mobile Test Drive, participants will have chances to know how they can use Oracle Cloud Services to implement Cloud Native Apps, Microservices, Integrations and Mobile Services. For better understaning on how and when companies can use Oracle Cloud Services, we will use a service scenario called "[loyalty management](https://github.com/APACTestDrive/CloudNative_Mobile/blob/master/common/scenario/README.md)".   
 
 More specifically, following topics are currently included in this project:
 
@@ -32,10 +32,14 @@ More specifically, following topics are currently included in this project:
 ## Mobile Service and Application ##
 [Mobile Service and Applicaton lab](https://github.com/APACTestDrive/CloudNative_Mobile/tree/master/Mobile%20Service%20and%20App) chapter will help you understand the use of MCS, the Mobile Cloud Service.  As a result, you will develop a simple mobile application and install it on your Mobile phone.
 + Backgounds on Mobile Service - Challenges and solutions, About MCS etc.
-+ Create Custome API
-+ Create Mobile Application
++ Set up Push Notification and Send Notification to mobile app
++ Develop Custom APIs and Custom Code to interact external serivces
++ Create Custom Analytics Report to track “Offer Completion by User”
+At the end of this lab, we will give you End to End demo on Loyalty Management based on all the labs we’ve done. 
 
-The workshop is intended to work with the Oracle Cloud account information handed out to you during the event.  You will need the following information to start working on these exercises :
+The workshop is intended to work with the Oracle Cloud account information handed out to you during the event. You will need the following information to start working on these exercises :
 
 + Oracle Cloud account **username** and **password**
 + Oracle Cloud **identity domain**
+
+Including above information, we will distribute "Access Document" to give you information on how to access each of Cloud Services for this Cloud Test Drive.
