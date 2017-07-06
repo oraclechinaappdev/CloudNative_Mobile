@@ -71,7 +71,7 @@ This tutorial demonstrates how to:
 
 5. Using the Navigation Pane, click ![](images/00/06.main_hamburger.png) in the upper left corner to show the navigation pane.
 
-![](07.navigation_pane.png)
+![](images/00/07.navigation_pane.png)
 
 The navigation pane provides you with access to all the development features in the Oracle Integration Cloud Service.
 
@@ -90,9 +90,8 @@ Alternatively, you can go to **Connection** Summary Page by click the hamburger 
 
 ![](images/00/11.home_hamburger_connections.png)
 
-7. In the home page of **Connection**, click `Create` button on the top left corner, the **Create Connection - Select Adapter** dialog window is shown.
-You could see different types of connection adapters are available, such as *Sales Cloud, E-Business Suite, Twitter, Salesforce and more*. However in this lab exercise, we will create a simple *SOAP* connection to connect a CRM Customer Activity Service interface.
-
+7. In the home page of **Connection**, click `Create` button on the top left corner, the **Create Connection - Select Adapter** dialog window is shown.  
+You could see different types of connection adapters are available, such as *Sales Cloud, E-Business Suite, Twitter, Salesforce and more*. However in this lab exercise, we will create a simple *SOAP* connection to connect a CRM Customer Activity Service interface.  
 Now, do a search by entering `SOAP` in the search text box, then click `Select` button in the **SOAP** adapter connection box like below.
 
 ![](images/00/12.connection_create.png)
@@ -111,14 +110,14 @@ Now, do a search by entering `SOAP` in the search text box, then click `Select` 
 
 10. Scroll down to **Connection Properties** section, click `Configure Connectivity` button, the **Connection Properties** dialog window is shown. Fill in the **WSDL URL** by providing **Property Value** in the format of:
     * **http://<Your Java Cloud Service Instance IP Address>/crm/CustomerServicePort?WSDL**  
-	*If you forget your JCS instance IP address, [Click Here!](../Java%20%Apps/java.cloud.md)*
-	* Leave other properties **empty** as they are optional and not required in this lab exercise.
+	*If you forget your JCS instance IP address, [Click Here!](../Java%20Apps/java.cloud.md)*  
+	Leave other properties **empty** as they are optional and not required in this lab exercise.
 	
 ![](images/00/15.connection_properties.png)
 
 11. Click `OK` button to save changes made.
 
- 
+
 
 #### Create an Integration - An Orchestration Integration Flow ####
 
