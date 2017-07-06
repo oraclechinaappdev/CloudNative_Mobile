@@ -11,7 +11,9 @@ This lab is part of the APAC Cloud Test Drive and is the 2nd lab about creating 
 
 ## 0.3 Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will either be applied by yourself or supplied by your instructor. You will need to install an IDE environment and GIT client in your local lab.
+- The following lab requires an Oracle Public Cloud account that will either be applied by yourself or supplied by your instructor.
+
+- You will need to install an IDE environment and GIT client in your local computer. The instructions assume you are using the VM provided as part of this workshop. The VM is also used in the [Oracle DevOps Cloud Native Microservice Workshop](https://github.com/oracle-weblogic/cloud-native-XWeeks/blob/master/cloud-native-devops/README.md). You can download the VM [here](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk).
 
 # 1. Create Offer REST API Microservice
 
@@ -607,3 +609,5 @@ Microservice, you can REUSE the same target**.
 ![](images/196.reader.png)
 
 # Congratulation! You've complete the Microservice Lab.
+
+[go back to the Cloud Test Drive Main Page](../README.md)
