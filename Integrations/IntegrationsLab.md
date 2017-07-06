@@ -49,11 +49,11 @@ This tutorial demonstrates how to:
 
 #### Navigating Oracle Integration Cloud Service ####
 
-1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials. After a successful login you will see your Dashboard. Find the **integration** services tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
+1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials. After a successful login you will see your Dashboard. Find the **integration** services tile and click the hamburger icon. In the dropdown menu click `Open Service Console`.
 
 ![](images/00/01.dashboard.png)
 
-2. If you cannot find the **integration** services tile, click **Customize Dashboard** button at top right corner of browser, and then select **Show** at the integration section of the **Customize Dashboard** dialog window.
+2. If you cannot find the **integration** services tile, click `Customize Dashboard` button at top right corner of browser, and then click `Show` button at the integration section of the **Customize Dashboard** dialog window.
 
 ![](images/00/02.dashboard.png)
 
@@ -61,7 +61,7 @@ This tutorial demonstrates how to:
 
 ![](images/00/03.home.png)
 
-  \*Close the `Guide Me` Quick Tour if running by click **Got it!** button at the bottom, we don't need it during the lab exercise.
+  \*Close the **Guide Me** Quick Tour if running by click `Got it!` button at the bottom, we don't need it during the lab exercise.
 
 ![](images/00/04.ics_overlays.png)
 
@@ -78,11 +78,11 @@ The navigation pane provides you with access to all the development features in 
 
 #### Define Connections for CRM Customer Activity Service and REST Service Exposure ####
 
-6. Go to *Connection* Summary Page by click on the `Connection` green icon.
+6. Go to **Connection** Summary Page by click on the `Connection` green icon.
 
 ![](images/00/08.home_conn.png)
 
-Alternatively, you can go to *Connection* Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Connections`
+Alternatively, you can go to **Connection** Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Connections`
 
 ![](images/00/09.home_hamburger.png)
 
@@ -90,13 +90,18 @@ Alternatively, you can go to *Connection* Summary Page by click the hamburger ic
 
 ![](images/00/11.home_hamburger_connections.png)
 
-7. In the home page of *Connection*, click `Create` button on the top left corner, the *Create Connection - Select Adapter* dialog window is shown.
-You could see different types of connection adapters are available, such as Sales Cloud, E-Business Suite, Twitter, Salesforce and more. However in this lab exercise, we will create a simple `SOAP` connection to connect a CRM Customer Activity Service interface.
-Now, do a search by entering `SOAP` in the search text box, then click `Select` button in the *SOAP* adapter connection box like below.
+7. In the home page of **Connection**, click `Create` button on the top left corner, the **Create Connection - Select Adapter** dialog window is shown.
+You could see different types of connection adapters are available, such as *Sales Cloud, E-Business Suite, Twitter, Salesforce and more*. However in this lab exercise, we will create a simple *SOAP* connection to connect a CRM Customer Activity Service interface.
+
+Now, do a search by entering `SOAP` in the search text box, then click `Select` button in the **SOAP** adapter connection box like below.
 
 ![](images/00/12.connection_create.png)
 
-8. 
+8. A new dialog window **Create New Connection** is shown, enter the following information to create our first *SOAP Connection*:
+    * **Name:** 
+	* **Identifier:**
+	* **Role:**
+	* **Description (Optional):**
 
 ![](images/00/13.connection_new.png)
 
