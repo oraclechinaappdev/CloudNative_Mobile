@@ -21,10 +21,10 @@ Project creation, configuration, and user management
 	- Secure On-Premises Integration
 	- Open Adapter SDK
 2. **Design**
-    * Intuitive Visual Designer and Mobile Ready - Rich Point and click browser-based designer to build integrations anywhere - on your computer or your favorite tablet
-    * Oracle Recommends™ - Smart Data Mapper provides accurate recommendations using Oracle Recommends™
-    * Business User Friendly - Business friendly terminology combined with videos and tutorials for ease of use
-    * API-Ready - Publish your integrations as an API for external consumption
+    - Intuitive Visual Designer and Mobile Ready - Rich Point and click browser-based designer to build integrations anywhere - on your computer or your favorite tablet
+    - Oracle Recommends™ - Smart Data Mapper provides accurate recommendations using Oracle Recommends™
+    - Business User Friendly - Business friendly terminology combined with videos and tutorials for ease of use
+    - API-Ready - Publish your integrations as an API for external consumption
 3. **Monitor and Manage**
     - End to End Visibility - Simple and powerful search to help you zero in on transactions of interest. Comprehensive drill-down capabilities for detailed auditing and analysis
     - Monitor KPIs - Real-time insight into key performance indicators on a high-performance visual dashboard
@@ -98,8 +98,8 @@ Now, do a search by entering `SOAP` in the search text box, then click `Select` 
 ![](images/00/12.connection_create.png)
 
 8. A new dialog window **Create New Connection** is shown, enter the following information to create our first *SOAP Connection*:
-    - **Name:** 
-	- **Identifier:**
+    - **Name:** Provide an unique and easily identified *Connection* Name, such as <Your Short Name>_<System_Name>_<Service_Name>. In our example, this is **KD_CRM_CustomerService**, while *KD* is short name of *Kelvin Durant*.
+	- **Identifier:** The **Identifier** will be automatically filled-in while you type the **Name** above, however you can provide an unique identifier, suggest include your short name as prefix.
 	- **Role:**
 	- **Description (Optional):**
 
