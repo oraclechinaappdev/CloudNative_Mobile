@@ -98,10 +98,10 @@ Now, do a search by entering `SOAP` in the search text box, then click `Select` 
 ![](images/00/12.connection_create.png)
 
 8. A new dialog window **Create New Connection** is shown, enter the following information to create our first *SOAP Connection*:
-    - **Name:** Provide an unique and easily identified *Connection* Name, such as <Your Short Name>_<System_Name>_<Service_Name>. In our example, this is **KD_CRM_CustomerService**, while *KD* is short name of *Kelvin Durant*.
-	- **Identifier:** The **Identifier** will be automatically filled-in while you type the **Name** above, however you can provide another unique identifier, suggest include your short name as prefix.
-	- **Role:** Select **Invoke** from the drop-down list. (We are going to *Invoke* this service only)
-	- **Description (Optional):** You can leave it empty or enter any meaningful text to describe this *SOAP Connection*.
+    * **Name:** Provide an unique and easily identified *Connection* Name, such as <Your Short Name>_<System_Name>_<Service_Name>. In our example, this is **KD_CRM_CustomerService**, while *KD* is short name of *Kelvin Durant*.
+	* **Identifier:** The **Identifier** will be automatically filled-in while you type the **Name** above, however you can provide another unique identifier, suggest include your short name as prefix.
+	* **Role:** Select **Invoke** from the drop-down list. (We are going to *Invoke* this service only)
+	* **Description (Optional):** You can leave it empty or enter any meaningful text to describe this *SOAP Connection*.
 
 ![](images/00/13.connection_new.png)
 
@@ -110,7 +110,7 @@ Now, do a search by entering `SOAP` in the search text box, then click `Select` 
 ![](images/00/14.connection_initial.png)
 
 10. Scroll down to **Connection Properties** section, click `Configure Connectivity` button, the **Connection Properties** dialog window is shown. Fill in the **WSDL URL** by providing **Property Value** in the format of:
-    * **http://<Your Java Cloud Service Instance IP Address>/crm/CustomerServicePort?WSDL* (If you forget your JCS instance IP address, [click here!](../Java Apps/java.cloud.md))
+    * **http://<Your Java Cloud Service Instance IP Address>/crm/CustomerServicePort?WSDL** (If you forget your JCS instance IP address, [click here!](../Java Apps/java.cloud.md))
 	* Leave other properties **empty** as they are optional and not required in this lab exercise.
 	Click `OK` button to save changes made.
 	
