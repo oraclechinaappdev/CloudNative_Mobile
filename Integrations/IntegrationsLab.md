@@ -194,7 +194,8 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 ![](images/00/28.integration_create.png)
 
 26. The **Create Integration - Select a Style\/Pattern** dialog window is shown.  
-   You could see different types of integration are available, including *Orchestration, Map Data, Publish To ICS and Subscribe To ICS*. However in this lab exercise, we will create an *Orchestration* integration.
+    You could see different types of integration are available, including *Orchestration, Map Data, Publish To ICS and Subscribe To ICS*. However in this lab exercise, we will create an *Orchestration* integration.  
+    Click `Select` button under *Orchestration* box.   
 
 ![](images/00/29.integration_orchestration.png)
 
@@ -206,10 +207,43 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 	* **What does this integration do? (Optional)** You can leave it empty or enter any meaningful text to describe this *Integration*.
 	* **Which package does this integration belong to? (Optional)** You can leave it empty or enter any meaningful package name to collectively group with other integrations.
 	
-	Click `Create` button, the integration orchestration editor is shown.
+![](images/00/30.integration_new.png)
 	
+28. Click `Create` button, the integration orchestration editor is shown.
+
 ![](images/00/31.integration_editor.png)
 
+29. Now, click `Triggers`, the palette title on the right changed to **Triggers**.  
+    Select `REST`, the list of available *REST Trigger Connection* is shown.  
+    Drag and Drop your newly created *Trigger Connection* (Our example is 'KD_ICSINTMGT_ProcessOffer'), to the "+" icon of flow diagram inside the big *circle* under *START*.
+
+![](images/00/32.integration_start.png)
+
+30. The **Configure Oracle REST Endpoint** dialog window is shown. Provide the following information:
+    * **What do you want to call your endpoint?** Enter `ProcessOffer`
+	* **What is the endpoint's relative resource URI?** Enter `\/processoffer`
+	* **What action does the endpoint perform?** Select `POST'
+	* Check to select **Configure a request payload for this endpoint**
+	* Check to select **Configure this endpoint to receive the response**
+	* Leave others empty or unselect.
+	
+	Click `Next` button.
+
+![](images/00/33.integration_rest.png)
+
+31. The **Configure the Request Payload** page is shown, check:
+    * **Select the request payload file** `JSON Sample`
+	* **Select the type of payload with which you want the endpoint to receive** `JSON`
+	
+	Click `<<< inline >>>` link next to **--OR-- enter sample JSON**
+	
+![](images/00/34.integration_rest_request.png)
+
+32. The **Request Sample Json Payload** page is shown.
+    Copy this text `{   "customerid": 21767684,   "offerid": 49531393,   "productid": 28916305,   "accepted": true }` to the text area under **Enter Sample JSON**.  
+    Click `OK` button at the bottom.
+
+![](images/00/35.integration_request_json.png)
 
 
 #### Testing the service and Monitoring with ICS Dashboards ####
