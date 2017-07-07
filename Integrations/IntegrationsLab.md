@@ -423,7 +423,7 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 63. **(Simple Challenge)**  
     Complete the `Map to ProcessOffer` at the `Otherwise` path. The only different is:  
-	Enter **''** for `imgurl` (Instead of *'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'* at the `IF Accept Offer` path)  
+	Enter **''** for `imgurl` (Instead of *'https://qrcodegenerator-\<Your Application Container Cloud Identity Domain Hostname\>/ctdqr/v1/offer/'* at the `IF Accept Offer` path)  
 	The result should be the same as below.  
     (\*Hints: Repeat step 58 to 62)
 
