@@ -302,15 +302,49 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 ![](images/00/44.integration.map.custpost.png)
 
-42. Next, we want to send text data on the `activityName` field of *addCustomerActivity* target, in the format of: `Offer ID: **\<'offerid' field from Source\>** of acceptance **\<'accepted' field from Source\>**`.  
+42. Next, we want to send text data on the `activityName` field of *addCustomerActivity* target, in the format of: `Offer ID: <'offerid' field from Source> of acceptance <'accepted' field from Source>`.  
     In order to setup, click on the field `activityName` on the **Target** *addCustomerActivity* pane directly. The **Build Mappings** dialog window is shown.
 
 ![](images/00/45.integration.map.activityname.png)
 
 43. Expand `Mapping Components` from the left pane, then expand `String`.  
-    Drag the `**f(x)** concat` from left pane, to the location of `-- Drag and Drop or Type value here...` under *\<activityName\>* in the right pane.
+    Drag the `f(x) concat` from left pane, to the location of `-- Drag and Drop or Type value here...` under <activityName> in the right pane.
 
 ![](images/00/46.integration.activityname.concat.png)
+
+44. Click on `string1`, enter `'Offer ID: '`, then **Enter**.  
+    Expand `Source` from the left pane, drag the `offerid` field and drop it onto `string2`. A string is automatically inserted. \(This is the XSLT variable representation of 'offerid'\)
+
+![](images/00/47.integration.activityname.concat1.png)
+
+45. Select on the last entry of concatenated string list, right click and select `Insert Sibling After`.
+
+![](images/00/48.integration.activityname.concat2.png)
+
+46. Click on the newly added entry `-- Drag and Drop or Type value surrounded with quotes here...`, enter `' of acceptance '`, then **Enter**.  
+    Repeat last step 45 to add one more entry by `Insert Sibling After`.  
+	Expand `Source` from the left pane, drag the `accepted` field and drop it on the last entry `-- Drag and Drop or Type value surrounded with quotes here...`. A string is automatically inserted. \(This is the XSLT variable representation of 'accepted'\)  
+	Click `Save` on the top right corner.
+
+![](images/00/49.integration.activityname.concat3.png)
+
+47. The `activityName` field is defined with **Mapping** `f(x), offerid, of acceptance, accepted`.  
+    Next, click on `activityDetail` link to setup this field.
+
+![](images/00/50.integration.activityname.concat4.png)
+
+48. **(Simple Challenge)**
+    Follow the same steps as what you did to setup `activityName` field, setup the `activityDetail` field in the format of:  
+    `'Offer for product ID: ' + <productid>`
+    Do not forget to click `Save` to save your work, before click `Close` to exit the **Build Mappings** dialog window.
+
+![](images/00/51.integration.activitydetail.png)
+
+49. The `activityDetail` field is defined with **Mapping** `f(x), productid`.  
+    Finally, click `activityDate` field to setup up this field.
+
+![] (images/00/52.integration.activityDate.png)    
+
 
 #### Testing the service and Monitoring with ICS Dashboards ####
 
