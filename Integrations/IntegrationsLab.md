@@ -423,9 +423,9 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 63. **(Simple Challenge)**  
     Complete the `Map to ProcessOffer` at the `Otherwise` path. The only different is:  
-	Enter **''** for `imgurl` (Instead of *'https://qrcodegenerator-\<Your Application Container Cloud Identity Domain Hostname\>/ctdqr/v1/offer/'* at the `IF Accept Offer` path)  
+	Enter **''** for `imgurl` (Instead of *'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname\>/ctdqr/v1/offer/'* at the `IF Accept Offer` path)  
 	The result should be the same as below.  
-    (\*Hints: Repeat step 58 to 62)
+    **(\*Hints: Repeat step 58 to 62)**
 
 ![](images/00/66.integration.otherwise.png)
 	
@@ -433,6 +433,24 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
     However, there is an error showing at the top right corner, telling that **primary business identifier for Tracking** is needed. 
 
 ![](images/00/67.integration.error.png)
+
+65. 
+
+![](images/00/68.integration.tracking.png)
+
+66. 
+
+![](images/00/69.integration.tracking.identifier.png)
+
+67. From the **Integrations** Summary page, click on the **Switch** button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
+    Check `Enable tracing` for testing later, although this is not recommended to turn on serving production traffic.  
+	Click `Activate` button at the bottom.
+
+![](images/00/70.integration.activate.png)
+
+68. Wait for a couple of minutes for the integration activation.  Once it is done, it looks like:
+
+
 	
 #### Testing the service and Monitoring with ICS Dashboards ####
 
