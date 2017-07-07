@@ -363,8 +363,42 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 	- If **true**, means customer accepted the offer, then return the CRM logged *activityId* and the QR code image URL, which is generated based on *offerId*.
 	- If **false**, means customer denied the offer, then return the CRM logged *activityId* (still required as a 'denied' customer action) and an empty QR code image URL, i.e. no QR code image will be displayed.  
 	
+    To do so, click `Actions` on the right side pane, then drag the `Switch` and drop it onto the integration flow, between **CustomerServiceActivity** node and **Map to ProcessOffer** node.
 	
+![](images/00/55.integration.switch.before.png)
+	
+53. You should have a similar flow diagram as below. Adjust node and line position, zoom out or zoom in if necessary.
 
+![](images/00/56.integration.switch.after.png)
+
+54. Click the newly added switch node - `Undefined`, click `Edit`.
+
+![](images/00/57.integration.switch.undefined.png)
+
+55. The **Expression Editor** is shown. Perform the following step to setup a condition:
+    1. Enter `Accept Offer` in the **Expression Name**.  
+	2. Expand **Components** -> `Functions` -> `String`, drag the `fx lower-case` from left pane, and drop it onto the *New Condition* text area at right pane.  
+	3. Expand **Source**, drag the `accepted` field from left pane, and drop it onto the newly added text `fn:lower-case(string)` at right pane.  
+	4. Enter `"true"` in the text area under `=` drop down box.  
+	5. Click `Expression Mode` button on the top left corner.
+
+![](images/00/58.integration.expression.true.png)
+
+56. Verify the content in **Expression** and the **Expression Summary**, click `Validate` on the top left corner.  
+    A green banner `Expression is valid and ready to use` is shown. Click `Close` to back integration flow editor.
+
+![](images/00/59.integration.expression.validate.png)
+
+57. Under *if* or *otherwise* condition, different response data will be returned. Here we delete the default `Map to ProcessOffer` response data mapping.  
+    Click on the `Map to ProcessOffer`, click the hamburger icon and then click `Delete` to remove this node. 
+
+![](images/00/60.integration.delete.png)
+
+58. 
+
+![](images/00/61.integration.if.add.png)
+
+59. 
 
 #### Testing the service and Monitoring with ICS Dashboards ####
 
