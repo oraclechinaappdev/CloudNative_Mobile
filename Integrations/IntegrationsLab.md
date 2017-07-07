@@ -333,9 +333,9 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 ![](images/00/50.integration.activityname.concat4.png)
 
-48. **(Simple Challenge)**
+48. **(Simple Challenge)**  
     Follow the same steps as what you did to setup `activityName` field, setup the `activityDetail` field in the format of:  
-    `'Offer for product ID: ' + <productid>`
+    `'Offer for product ID: ' + <productid>`  
     Do not forget to click `Save` to save your work, before click `Close` to exit the **Build Mappings** dialog window.
 
 ![](images/00/51.integration.activitydetail.png)
@@ -343,7 +343,27 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 49. The `activityDetail` field is defined with **Mapping** `f(x), productid`.  
     Finally, click `activityDate` field to setup up this field.
 
-![] (images/00/52.integration.activityDate.png)    
+![](images/00/52.integration.activityDate.png)
+
+50. The **Build Mappings** dialog window is shown. Expand `Mapping Components` from the left pane, then expand `Date`.  
+    Drag the `f(x) current-date` from left pane, to the location of `-- Drag and Drop or Type value here...` under <activityDate> in the right pane.  
+	Click `Save` to save your work and then click `Close` to exit the **Build Mappings** dialog window.
+
+![](images/00/53.integration.activityDate1.png)
+
+51. The *Data Mapping* for *CustomerService Activity* has just been completed.  
+    Click `Validate`, the green banner `Mapping is valid and ready to use.` appears at the top.  
+	(Optional) You can test the data mapping by click `Test` button on the right. Try it!  
+	Click `Close` to return integration flow editor and click `Save` again to save your work.
+
+![](images/00/54.integration.map.validate.png)
+
+52. Finally, we are going to define how to response data back to client consumer thru this integration flow.  
+    The logic is based on the acceptance - **accepted** field of an offer from customer by:  
+	- If **true**, means customer accepted the offer, then return the CRM logged *activityId* and the QR code image URL, which is generated based on *offerId*.
+	- If **false**, means customer denied the offer, then return the CRM logged *activityId* (still required as a 'denied' customer action) and an empty QR code image URL, i.e. no QR code image will be displayed.  
+	
+	
 
 
 #### Testing the service and Monitoring with ICS Dashboards ####
