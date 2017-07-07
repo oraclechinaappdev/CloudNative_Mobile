@@ -213,7 +213,8 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 ![](images/00/31.integration_editor.png)
 
-29. Now, click `Triggers` at the right side bar, the palette title on the right changed to **Triggers**.  
+29. First of all, we are going to define how this integration flow being exposed to client consumer by setting up a **Trigger**.  
+    Now, click `Triggers` at the right side bar, the palette title on the right changed to **Triggers**.  
     Select `REST`, the list of available *REST Trigger Connection* is shown.  
     Drag and Drop your newly created *Trigger Connection* (Our example is 'KD_ICSINTMGT_ProcessOffer'), to the "+" icon of flow diagram inside the big *circle* under *START*.
 
@@ -260,7 +261,7 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 ![](images/00/37.integration_response_json.png)
 
 35. Click `Next` button to proceed next, **Oracle REST Endpoint Configuration Summary** page.  
-    Your setup should look like below, then click `Done` button.
+    Your setup should look like below, then click `Done` button. We just finish defining a REST **Trigger** to expose this integration flow to client consumer.
 	
 ![](images/00/38.integration_rest_done.png)
 
@@ -271,7 +272,8 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 	
 ![](images/00/39.integration_half.png)
 
-37. Now, click `Invokes` at the right side bar, the palette title on the right changed to **Invokes**.  
+37. Next, we are going to define a service callout, to **Invoke** an endpoint service - CRM Customer Service.  
+    Now, click `Invokes` at the right side bar, the palette title on the right changed to **Invokes**.  
     Select `SOAP`, the list of available *SOAP Invoke Connection* is shown.  
     Drag and Drop your newly created *Invoke Connection* (Our example is 'KD_CRM_CustomerService'), to the middle of integration flow, between **ProcessOffer** and **Map to ProcessOffer** activity.
 
@@ -285,11 +287,30 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 ![](images/00/41.integration.invoke.setup.png)
 	
 39. Do not change other values, click `Next` -> `Next` -> `Next` and finally `Done` buttons. You should have a similar integration flow as below.  
+    We just finish defining an **Invoke** to call a CRM customer service SOAP endpoint.  
+	
+	Now, we are going to define how different data fields are being passed incoming from **Trigger** to outgoing **Invoke*.  
 	Click the **Map to CustomerServiceActivty** node and then further click on the `pencil` icon to enter data mapper screen.
 
 ![](images/00/42.integration.invoke.map.png)
 
-40. 
+40. In the data mapper window, drag the `customerid` radio button on left **Source** pane, and then drop to the `customerId` radio button on right **Target** pane.
+
+![](images/00/43.integration.map.cust.png)
+
+41. A 'Green' line linking source and target customerId is created.
+
+![](images/00/44.integration.map.custpost.png)
+
+42. Next, we want to send text data on the `activityName` field of *addCustomerActivity* target, in the format of: `Offer ID: **\<'offerid' field from Source\>** of acceptance **\<'accepted' field from Source\>**`.  
+    In order to setup, click on the field `activityName` on the **Target** *addCustomerActivity* pane directly. The **Build Mappings** dialog window is shown.
+
+![](images/00/45.integration.map.activityname.png)
+
+43. Expand `Mapping Components` from the left pane, then expand `String`.  
+    Drag the `**f(x)** concat` from left pane, to the location of `-- Drag and Drop or Type value here...` under *\<activityName\>* in the right pane.
+
+![](images/00/46.integration.activityname.concat.png)
 
 #### Testing the service and Monitoring with ICS Dashboards ####
 
