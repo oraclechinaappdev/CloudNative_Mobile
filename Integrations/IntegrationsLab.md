@@ -394,11 +394,45 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 ![](images/00/60.integration.delete.png)
 
-58. 
+58. click `Actions` on the right side pane, then drag the `Map` and drop it onto the integration flow, between **IF Accept Offer** node and the join point of two switch lines, which appears with `+` icon.
 
 ![](images/00/61.integration.if.add.png)
 
-59. 
+59. The **Data Mapping** dialog window is shown.  
+    Expand the **Source** in left pane, drag the `return` field under `$CustomerServiceActivity` -> `addCustomerActivityResponse`, and drop it onto `activityid` in right pane.  
+	Click `imgurl` to proceed advance data mapping.
+    
+![](images/00/62.integration.if.map.png)
 
+60. The **Build Mappings** window dialog is shown.  
+    Expand **Mapping Components** under **Source** in left pane, and then expand `Functions` -> `String`.  
+	Drag the function `fx concat` and drop it onto `- Drag and Drop or Type value here...` under **Mapping** in right pane.  
+	Click `Save`.
+	
+![](images/00/63.integration.if.map1.png)
+
+61. Click on `string1`, enter the QR code URL without the offer id including ' ' sign, i.e. `'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'` (Hostname obtained from 'Microservices' lab)  
+    Next, expand `Source` from the left pane, drag the `offerid` field and drop it onto `string2`. A string is automatically inserted. \(This is the XSLT variable representation of 'offerid'\)  
+	Click `Save`.
+
+![](images/00/64.integration.if.map2.png)
+
+62. *Data Mapping* should be the same as below. Click `Validate` and and then click `Close`.
+
+![](images/00/65.integration.if.map3.png)
+
+63. **(Simple Challenge)**  
+    Complete the `Map to ProcessOffer` at the `Otherwise` path. The only different is:  
+	Enter **''** for `imgurl` (Instead of *'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'* at the `IF Accept Offer` path)  
+	The result should be the same as below.  
+    (\*Hints: Repeat step 58 to 62)
+
+![](images/00/66.integration.otherwise.png)
+	
+64. The *Process Offer* integration flow development is done.  
+    However, there is an error showing at the top right corner, telling that **primary business identifier for Tracking** is needed. 
+
+![](images/00/67.integration.error.png)
+	
 #### Testing the service and Monitoring with ICS Dashboards ####
 
