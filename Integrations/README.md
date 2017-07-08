@@ -5,7 +5,7 @@
 ### About this tutorial ###
 **Oracle Integration Cloud Service (ICS)** is a complete, secure, but lightweight integration solution that enables you to connect your applications in the cloud. It simplifies connectivity between your applications and connects both your applications that live in the cloud and your applications that still live on premises. Oracle Integration Cloud Service provides secure, enterprise-grade connectivity regardless of the applications you are connecting or where they reside.
 
-![](images/00/00.ics.png)
+![](images/00.ics.png)
 
 Oracle Integration Cloud Service provides native connectivity to Oracle Software as a Service (SaaS) applications, such as Oracle Sales Cloud, Oracle RightNow Cloud, and so on. Oracle Integration Cloud Service adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices. You only need to create a connection that provides minimal connectivity information for each system. Finally, the visual data mapper enables you to quickly create direct mappings between the trigger and invoke data structures. From the mapper.
 
@@ -53,15 +53,15 @@ This tutorial demonstrates how to:
 
 ## 302: Define Connections for CRM Customer Activity Service and REST Service Exposure ##
 
-[Click Here.](302-IntegrationLab.md)
+[Click Here.](302-IntegrationsLab.md)
 
 ## 303: Create an Integration - An Orchestration Integration Flow ##
 
-[Click Here.](303-IntegrationLab.md)
+[Click Here.](303-IntegrationsLab.md)
 
 ## 304: Testing the service and Monitoring with ICS Dashboards ##
 
-[Click Here.](304-IntegrationLab.md)
+[Click Here.](304-IntegrationsLab.md)
 
 or
 
