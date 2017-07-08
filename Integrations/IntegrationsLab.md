@@ -434,23 +434,49 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 ![](images/00/67.integration.error.png)
 
-65. 
+65. Click on the hamburger icon next to Error icon and **Last Modified: Just Now** at the top right.
 
 ![](images/00/68.integration.tracking.png)
 
-66. 
+66. The **Business Identifiers for Tracking** dialog window is shown.  
+    Business identifier is required for runtime transaction tracking on messages, espeically when hundreds and thousands of messages running thru ICS.  
+    Now, from the **Source** at left pane, drag the first `customerid` field, and drop it onto the first row of **Tracking Field** at right pane.  
+	Repeat the same for `offerid` field and `productid` field respectively.  The result screen looks like below.
 
 ![](images/00/69.integration.tracking.identifier.png)
 
 67. From the **Integrations** Summary page, click on the **Switch** button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
-    Check `Enable tracing` for testing later, although this is not recommended to turn on serving production traffic.  
+    Check `Enable tracing` and `Include payload` for testing later, although this is not recommended to turn on serving production traffic.  
 	Click `Activate` button at the bottom.
 
 ![](images/00/70.integration.activate.png)
 
-68. Wait for a couple of minutes for the integration activation.  Once it is done, it looks like:
+68. Wait for a couple of minutes for the integration activation.  
+    Once it is done, a green banner telling the integration was activated successfully and the result looks like below:
+
+![](images/00/71.integration.activate.done.png)
+
+69. The integration service is now ready for testing.
 
 
-	
 #### Testing the service and Monitoring with ICS Dashboards ####
 
+70. Previously we have successfully deployed an integration flow which accepts a REST JSON request, route to a SOAP CRM customer service and then reply a REST JSON response. Let's test this service and monitor how it goes.  
+	To do so, start a new browser window and visit to: `https://www.hurl.it/`, provide the following information:
+	- **Destination**: Select `POST` and enter `https://integration-<Your ICS Identity Domain>.integration.us2.oraclecloud.com/integration/flowapi/rest/<Your Integration Service Name>/v01/processoffer`
+	- **Authentication**: Add a new one, select `Basic` and enter your ICS username and password respectively.
+	- **Headers**: Add a new one, enter `Content-Type` and `application/json` respectively.
+	- **Parameters**: Add a new one by (Test 1 or Test 2):
+	- Test 1: `{"customerid": 10001, "offerid": 10001, "productid": 10001, "accepted": true}`
+	- Test 2: `{"customerid": 10001, "offerid": 10001, "productid": 10001, "accepted": false}`
+
+![](images/00/72.testing.hurl.png)
+
+71. Check `I'm not a robot`, and fill-in the required image questions, and then click `Launch Request` button.  
+    On a successful ICS integration flow service setup and test call, you should find HTTP status `200 OK` and the result looks like:
+	
+![](images/00/73.test.result.png)
+
+You have finished this lab.
+
+[Back to Cloud Test Drive Home](../README.md)

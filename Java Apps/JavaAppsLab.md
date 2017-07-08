@@ -31,4 +31,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 
 [Click Here.](03.md)
 
+or
+
+[Back to Cloud Test Drive Home](../README.md)
 
