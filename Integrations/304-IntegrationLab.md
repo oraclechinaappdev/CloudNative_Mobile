@@ -32,8 +32,39 @@
 
 ![](images/00/75.monitoring.dashboard.png)
 
+74. Under `MONITORING`, click on `Integrations`, you can see the recently test messages fired previously.  
+    Now click on `View Messages` icon on the right.
 
+![](images/00/76.monitoring.integration.png)
+
+75. The **Track Instances** flow window for your particular integration is shown.  
+    Click on one of your tested instance like below: 
+
+![](images/00/77.monitoring.trackinstance.png)
+
+76. The flow instance of the specific message transaction is shown.  
+    The green path throughout the flow instance shows the normal/success flow of the message passing thru.  
+	Now click on the hamburger menu icon on top right corner, and then click `Business Identifiers`.
+
+![](images/00/78.monitoring.instance.png)
+
+77. The `Business Identifiers` dialog window is shown.  
+    Notice the values of `customerid`, `offerid` and `productid` of this particular message are logged.  
+	Click `OK`.
+
+![](images/00/79.monitoring.identifier.png)
+
+78. Click on the hamburger menu icon on top right corner, and then click `View Audit Trail`.
+
+![](images/00/80.monitoring.audit.png)
+
+79. Click on the hamburger menu icon at top right corner, click `View Audit Trail`.  
+    The **Audit Trail** of overall activity executed by the integration flow dialog window is shown.  
+    Click `OK` button and then click `Close`.
+
+![](images/00/80.monitoring.audit.png)
+![](images/00/81.monitoring.audit1.png)
 
 You have finished this lab.
 
-[Back to Cloud Test Drive Home](../README.md)
+[Back to Integration Lab Home](README.md)
