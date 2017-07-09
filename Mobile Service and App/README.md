@@ -44,8 +44,7 @@ To demonstrate Oracle's capabilities in mobile development, we will give you bel
 + Develop Custom APIs and Custom Code to interact external serivces
 + Create Custom Analytics Report to track “Offer Completion by User”
 
-At the end of this lab, we will go through End to End demo on Loyalty Management based on all the labs we’ve done. 
-Let's explore the Mobile Service and Application Lab. Please click the below link to start your lab.
+At the end of this lab, we will go through End to End demo on Loyalty Management ("Putting All Together") based on all the labs we’ve done.  Let's explore the Mobile Service and Application Lab. Please click the below link to start your lab.
 
 -----
 [## Start Here ##](MobileServiceAndApp.md)
