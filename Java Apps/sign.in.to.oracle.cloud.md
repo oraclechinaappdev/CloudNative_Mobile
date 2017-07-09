@@ -17,4 +17,4 @@
 5. On the Dashboard there are predefined tiles for different services. If the shortcut doesn't appear for a service click **Customize Dashboard** and mark the service to show on the dashboard.
 ![](images/sign-in/sign.05.dashboard.png)
 
-[Back to JavaAppLab Home](JavaAppsLab.md)
+[Back to JavaAppLab Home](README.md)

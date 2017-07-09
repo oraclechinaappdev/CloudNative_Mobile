@@ -1,11 +1,11 @@
 # ORACLE Cloud Test Drive #
 -----
-## Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service ##
+## 102: Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service ##
 
 ### About this tutorial ###
 **Oracle Developer Cloud Service** is a cloud-based software development Platform as a Service (PaaS) and a hosted environment for your application development infrastructure. It provides an open-source standards-based solution to manage the application development life cycle effectively through integration with Hudson, Git, Maven, issues, and wikis. Using Oracle Developer Cloud Service, you can commit your application source code to the Git repository on the Oracle Cloud, track assigned issues and defects online, share information using wiki pages, peer review the source code, and monitor project builds. After successful testing, you can deploy the project to Oracle Java Cloud Service - SaaS Extension, publicly available Oracle Java Cloud Service instances, Oracle Application Container Cloud Service instances, or to an on-premise production environment.
 
-![](images/02/00.dcs.png)
+![](images/102/00.dcs.png)
 
 The key features of Oracle Developer Cloud Service include:
 
@@ -41,11 +41,11 @@ This tutorial demonstrates how to:
 
 1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in) by provided **Developer Cloud Service \(DevCS\)** identity domain Id and credential. First select your datacenter then provide the identity domain and credentials. After a successful login you will see your Dashboard. Find the Developer Service tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
 
-![](images/02/01.dashboard.png)
+![](images/102/01.dashboard.png)
 
 2. Select your Oracle Developer Cloud Service Project which was created using inital Git repository and contains Loyalty Management application's sources.
 
-![](images/02/20.open.devcs.project.png)
+![](images/102/20.open.devcs.project.png)
 
 ### Configure build job for Loyalty Management application ###
 
@@ -53,35 +53,35 @@ This tutorial demonstrates how to:
 
 4. Select **Build** item on the left side menu and click the **New Job** button.
 
-![alt text](images/02/05.new.job.png "Create new build job")
+![alt text](images/102/05.new.job.png "Create new build job")
 
 5. Enter name *LoyaltyManagementBuild* for the new job. Select the *Create a free-style job* option and save.
 On the Main configuration page of the newly created job make sure **Default (The default Java version in the executing environment)** is the selected JDK.
 
-![alt text](images/02/06.job.main.png "Configure job")
+![alt text](images/102/06.job.main.png "Configure job")
 
 6. Change to the **Source Control** tab and select **Git**. 
 In the git's properties section select the only one available Git repository which is provided in the list.
 In the Branches section, add and select **master** option in the list. This is to make sure only **master** branch version will be used.
 Leave the advanced settings default.
 
-![alt text](images/02/07.job.scm.png "Configure source control")
+![alt text](images/102/07.job.scm.png "Configure source control")
 
 7. Click **Triggers** tab to configure *SCM polling*. Select **Based on SCM polling schedule**. This ensures if any files in the source code repository has changed then the build will be fired.
 
-![alt text](images/02/07.scm.trigger.png "Configure source control")
+![alt text](images/102/07.scm.trigger.png "Configure source control")
 
 8. Change to **Build Steps** tab and add **Maven 3** build step. Enter **clean install** as Goals and **loyalty/pom.xml** to POM File field. (In case if Build Steps tab just shows **Loading...** for a long time, save the Build configuration then re-open and continue.)
 
-![alt text](images/02/08.job.maven.png "Add build step")
+![alt text](images/102/08.job.maven.png "Add build step")
 
 9. Finally change to Post Build tab and check in the **Archive the artifacts** option. Enter **loyalty/target/\*.war** into **Files To Archive** field.
 
-![alt text](images/02/09.job.post.png "Post build")
+![alt text](images/102/09.job.post.png "Post build")
 
 10. Click on **Save** to update the new job configurations. To check the build job click on **Build Now** on the job's detail page. Once the job is done check the archived artifacts. It should be the following: `loyalty.war`
 
-![alt text](images/02/10.build.artifacts.png "Build artifacts")
+![alt text](images/102/10.build.artifacts.png "Build artifacts")
 
 Please note the build job contains an extra build step which packs the master loyalty management webapp source artifact into a JEE Web Application Archive (WAR) file loyalty.war. This archive is the desired format to deploy a Java Web application to JCS.
 
@@ -90,7 +90,7 @@ Please note the build job contains an extra build step which packs the master lo
 11. Now create deployment configuration which enable direct deployment to Java Cloud Service after a successful build job.
 Change to **Deploy** page in DevCS and create **New Configuration** 
 
-![alt text](images/02/11.new.deploy.png "New deploy configuration")
+![alt text](images/102/11.new.deploy.png "New deploy configuration")
 
 12. Set the following properties.
 
@@ -103,9 +103,9 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 - **Job**: The **LoyaltyManagementBuild** Build Step defined in early stage of this lab.
 - **Arifact**: **loyalty/target/loyalty.war**, this is the only option available after **Job** is selected.
 
-![alt text](images/02/12.deploy.config.png "Deployment Configuration")
+![alt text](images/102/12.deploy.config.png "Deployment Configuration")
 
-![alt text](images/02/13.jcs.config.png "JCS Configuration")
+![alt text](images/102/13.jcs.config.png "JCS Configuration")
 
 13. Click **Save**. 
 
@@ -113,35 +113,34 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 
 14. To initiate a deployment to Java Cloud Service now there are two options. You can Start deployment process using the newly created Deployment configuration. Click gear icon and select **Start**.
 
-![alt text](images/02/14.deploy.start.png "Deployment Start")
+![alt text](images/102/14.deploy.start.png "Deployment Start")
 
 15. Other option is to fire a new Build Job execution which will deploy artifact after a successfull build. Go back to **Build** page and click the wrench icon belongs to Loyalty Management application build job.
 
-![alt text](images/02/15.build.now.png "Build Now") 
+![alt text](images/102/15.build.now.png "Build Now") 
 
 16. Both way deploys JEE application on Java Cloud Service. You can check the deployment result on the **Deploy** page. Once the deploy is ready (this may take a while) click the **Deploy to JCS** link.
 
-![alt text](images/02/16.deploy.ready.png "Deploy ready")
+![alt text](images/102/16.deploy.ready.png "Deploy ready")
 
 17. This opens the WebLogic Server Administration Console. Login with provided WebLogic Admin Username and password.
 
-![alt text](images/02/17.jcs.console.png)"WebLogic Console")
+![alt text](images/102/17.jcs.console.png)"WebLogic Console")
 
 18. Once logged on, click **Deployments** on left navigation menu. You should see your Loyalty Management application **loyalty** in the Summary of Deployments list.
 
-![alt text](images/02/17.deployment.png "Deployments")
+![alt text](images/102/17.deployment.png "Deployments")
 
 19. The Loyalty Management application URL should be in the format of:
 https://**JCS WLS instance IP Address**/loyalty/jsp/welcome.jsp, the WLS instance IP address is the same as **Deploy to JCS** target in DevCS.
 
-![alt text](images/02/18.sample.app.png "Loyalty Management Application")
+![alt text](images/102/18.sample.app.png "Loyalty Management Application")
 
-There are many other option to trigger this deploy process. For example build can be triggered by source changes or can be scheduled to specific time of the day.
-
+There are many other option to trigger this deploy process. For example build can be triggered by source changes or can be scheduled to specific time of the day.  
 You have finished this lab section.
 
-[Procced to Next - Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service](03.md)
+[Procced to Next - 103: Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service](103-JavaAppsLab.md)
 
 or
 
-[Back to JavaAppLab Home](JavaAppsLab.md)
+[Back to JavaAppsLab Home](README.md)

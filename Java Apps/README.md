@@ -1,6 +1,6 @@
 # ORACLE Cloud Test Drive #
 -----
-## 1. DevOps - Continuous Integration & Continuous Delivery by Oracle Developer Cloud Service ##
+## 1. DevOps - Continuous Integration & Continuous Delivery of JEE by Oracle Developer Cloud Service ##
 
 ### Introduction
 This lab is part of the APAC Cloud Test Drive and is the 1st lab about creating, building and deploying a JEE Application within an Agile project lifecycle.  
@@ -18,21 +18,21 @@ This section describes deploying and undeploying applications to an Oracle Java 
 
 # Lab Exercise:
 
-## 101: Create Database connectivity for Loyalty Management Application [TBD]
+## 100: Create Database Connectivity for Loyalty Management Application [TBD]
 
-[Click Here.](00.md)
+[Click Here.](100-JavaAppsLab.md)
 
-## 102: Create Oracle Developer Cloud Service Loyalty Management application project using initial GitHub repository
+## 1011: Create Oracle Developer Cloud Service Loyalty Management application project using initial GitHub repository
 
-[Click Here.](01.md)
+[Click Here.](101-JavaAppsLab.md)
 
-## 103: Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service
+## 102: Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service
 
-[Click Here.](02.md)
+[Click Here.](102-JavaAppsLab.md)
 
-## 104: Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service
+## 103: Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service
 
-[Click Here.](03.md)
+[Click Here.](103-JavaAppsLab.md)
 
 or
 
