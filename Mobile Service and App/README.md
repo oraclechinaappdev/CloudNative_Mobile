@@ -41,10 +41,10 @@ If you want to know about more details on the above mobile services, please refe
 -----
 To demonstrate Oracle's capabilities in mobile development, we will give you below labs to get an understanding of how you can develop mobile applications - better and faster.
 + Set up Push Notification and Send Notification to mobile app
-+ Develop Custom APIs and Custom Code to interact external serivces
++ Develop Custom APIs and Custom Code to interact external services
 + Create Custom Analytics Report to track “Offer Completion by User”
 
-At the end of this lab, we will go through End to End demo on Loyalty Management ("Putting All Together") based on all the labs we’ve done.  Let's explore the Mobile Service and Application Lab. Please click the below link to start your lab.
+At the end of this lab, we will go through End to End demo on Loyalty Management ("Putting All Together") based on all the labs we have done.  Let's explore the Mobile Service and Application Lab. Please click the below link to start your lab.
 
 -----
 [## Start Here ##](MobileServiceAndApp.md)
