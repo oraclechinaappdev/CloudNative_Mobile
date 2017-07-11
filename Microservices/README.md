@@ -1,6 +1,6 @@
 # Oracle APAC Cloud Test Drive
 
-Last Update: July 6, 2017
+Last Update: July 10, 2017
 
 ## Microservice Lab
 
@@ -34,7 +34,13 @@ Thus, example requirements for microservice will be,
 
 **Microservice allows companies to develop, deploy and update parts of their application in a faster, more agile way, and thereby react to new market requirements and competition in a more timely and flexible manner.**
 
-[Oracle Application Container Cloud Service](https://cloud.oracle.com/en_US/application-container-cloud)is one of the cloud services in the Oracle AppDev Portfolio which lets you deploy Java SE, Node.js, PHP, Python, and/or Ruby applications to the Oracle Cloud. We will create and deploy 2 microservice in Application Container Cloud in the coming 1 hour :smile:.  
+Microservice architecture (**MSA**) ensures the agile development and deployment of the service. However, there will be different challenges when organization adopting MSA. The following diagram lists a few of such challenges / requirements.
+
+![](images/000.challenges.png)
+
+## Oracle Application Container Cloud Service
+
+[Oracle Application Container Cloud Service](https://cloud.oracle.com/en_US/application-container-cloud) is one of the cloud services in the Oracle AppDev Portfolio which lets you deploy Java SE, Node.js, PHP, Python, and/or Ruby applications to the Oracle Cloud.   
 
 ![](images/000.architecture.png)
 
@@ -47,6 +53,20 @@ Oracle Application Container Cloud Service has these key features:
 - Enterprise-grade support from Oracle.
 - Web-based user interface and REST API.
 
+![](images/000.accs.png)
+
 In addition, you can choose to integrate with other Oracle Cloud services. You can develop your application on your local system, or you can use Oracle Developer Cloud Service.
+
+## Oracle Developer Cloud Service
+
+[Oracle Developer Cloud Service](https://cloud.oracle.com/en_US/application-container-cloud) is a cloud-based development platform that enables agile development methodology and DevOps automation. This hosted team development and delivery platform includes issue tracking, code versioning, wiki, agile-development tools, continuous integration and devliver automation.
+
+![](images/000.devcs.png)
+
+## About the Exercise Today
+
+We will use Developer Cloud Service to create and deploy 2 microservice in Application Container Cloud in the coming 1 hour :smile:.
+
+![](images/000.lab.png)   
 
 ## [Start The Lab](MicroservicesLab.md)
