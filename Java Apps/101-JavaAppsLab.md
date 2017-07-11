@@ -28,6 +28,9 @@ This tutorial demonstrates how to:
 
 - Oracle Public Cloud Service account including Developer Cloud Service (Check with instructor if you don't have one)
 
+### Accomplishment ###
+- Through this lab, you will have a chance to create a new project and clone the java application repository of loyalty management. We will use it for CI/CD on Java Application.
+
 ----
 
 #### Create Oracle Developer Cloud Service project ####
