@@ -131,13 +131,13 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 
 ![alt text](images/102/17.deployment.png "Deployments")
 
-19. The Loyalty Management application URL should be in the format of:
-https://**JCS WLS instance IP Address**/loyalty/jsp/welcome.jsp, the WLS instance IP address is the same as **Deploy to JCS** target in DevCS.
+19. The Loyalty Management application URL should be in the format of:  
+    `https://**<JCS WLS instance IP Address>**/loyalty/jsp/welcome.jsp`, the JCS WLS instance IP address is the same as **Deploy to JCS** target in DevCS at step 12.
 
 ![alt text](images/102/18.sample.app.png "Loyalty Management Application")
 
-There are many other option to trigger this deploy process. For example build can be triggered by source changes or can be scheduled to specific time of the day.  
-You have finished this lab section.
+20. There are many other option to trigger this deploy process. For example build can be triggered by source changes or can be scheduled to specific time of the day.  
+    You have finished this lab section.
 
 [Procced to Next - 103: Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service](103-JavaAppsLab.md)
 

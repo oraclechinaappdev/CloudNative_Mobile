@@ -129,7 +129,9 @@ To what you would like to see on the page. For example:
 
 ![](images/103/22.png)
 
-20. Now check the changes of the home page of the Loyalty Management application. You should see the changes (red text) on the application's home page.
+20. Now check the changes of the home page of the Loyalty Management application. You should see the changes (red text) on the application's home page.  
+    The Loyalty Management application URL should be in the format of:  
+	`https://**<JCS WLS instance IP Adress>**/loyalty/jsp/welcome.jsp`, the JCS WLS instance IP address is the same as **Deploy to JCS** target in DevCS.
 
 ![](images/103/23.png)
 
