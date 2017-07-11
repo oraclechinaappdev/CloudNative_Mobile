@@ -2,6 +2,11 @@
 -----
 ## 3. Rapid Connect Applications by Oracle Integration Cloud Service ##
 
+
+
+## Add Background Information and Objectives
+
+
 ### About this tutorial ###
 **Oracle Integration Cloud Service (ICS)** is a complete, secure, but lightweight integration solution that enables you to connect your applications in the cloud. It simplifies connectivity between your applications and connects both your applications that live in the cloud and your applications that still live on premises. Oracle Integration Cloud Service provides secure, enterprise-grade connectivity regardless of the applications you are connecting or where they reside.
 

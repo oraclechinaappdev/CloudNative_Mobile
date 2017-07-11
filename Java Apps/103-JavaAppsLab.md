@@ -11,6 +11,8 @@ Oracle Developer Cloud Service integration with the Eclipse IDE includes the fol
 + Integration with Oracle Developer Cloud Service and the Mylyn Issues system
 + Source control system integration with the Oracle Developer Cloud Service Git repository
 
+**Take out VirtualBox** 
+
 Instructor should have provided you VirtualBox Installer and the Virtual Machine image which consists of Linux and Eclipse IDE pre-installed.
 You can download the Eclipse IDE from [http://www.eclipse.org/](http://www.eclipse.org/) and OEPE from [http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html).
 
@@ -102,11 +104,11 @@ To what you would like to see on the page. For example:
 
 	<h2>Test Welcome to the Loyalty Manager !!<font color="red">MODIFIED IN OEPE.</font></h2>
 
-![](images/103/16.png)  	
+![](images/103/16.png)
 
 15. Save the changes. To commit and push changes to Git right click on project and select Team -> Commit...
 
-![](images/103/17.png) 
+![](images/103/17.png)
 
 16. Git Staging view is displayed. First make sure the `welcome.jsp` is in the *Staged Changes* area. Type a commit message e.g. 'Updated welcome.jsp'. Optionally enter your name or cloud username and give a (valid or fake) email address in the following format as the screenshot shows. Click **Commit and Push...**
 

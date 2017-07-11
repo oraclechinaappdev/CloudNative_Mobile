@@ -25,7 +25,9 @@ menu select Open WebLogic Server Console
 
 ![](images/100/03.png)
 
-5. When the console log-in page appears, enter the log-in credentials you entered for WebLogic Administrator when you created the service instance.
+5. When the console log-in page appears, enter the log-in credentials you entered for WebLogic Administrator, i.e:
+   -**Username**: `weblogic`
+   -**Password**: `Welcome_1`   
 
 ![](images/100/04.png)
 

@@ -6,6 +6,10 @@
 This lab is part of the APAC Cloud Test Drive and is the 1st lab about creating, building and deploying a JEE Application within an Agile project lifecycle.  
 This section describes deploying and undeploying applications to an Oracle Java Cloud Service instance by using the WebLogic Server Administration Console.
 
+
+## **Add Background Information and Objectives** ##
+
+
 ### This tutorial demonstrates how to:
 - *Create Database connectivity Loyalty Management Application [TBD]
 - Create Oracle Developer Cloud Service (DevCS) Loyalty Management Application Project using Initial [GitHub](https://github.com) repository
@@ -22,7 +26,7 @@ This section describes deploying and undeploying applications to an Oracle Java 
 
 [Click Here.](100-JavaAppsLab.md)
 
-## 1011: Create Oracle Developer Cloud Service Loyalty Management application project using initial GitHub repository
+## 101: Create Oracle Developer Cloud Service Loyalty Management application project using initial GitHub repository
 
 [Click Here.](101-JavaAppsLab.md)
 
