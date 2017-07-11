@@ -14,7 +14,7 @@ This tutorial demonstrates how to:
 
 #### Create Database Connectivity on WebLogic Server ####
 
-1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in) by provided **Java Cloud Service \(JCS\)** identity domain Id and credential. Using the dashboard open the Java Cloud Service Console.
+1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in) by provided **Java Cloud Service \(JCS\)** identity domain Id and credential in the Access Document. Using the dashboard open the Java Cloud Service Console.
 
 ![](images/100/00.png)
 
