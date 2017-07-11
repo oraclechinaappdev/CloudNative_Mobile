@@ -26,6 +26,8 @@ This tutorial demonstrates how to:
 	**Name:** `APAC Cloud Test Drive`
 	**Description:** `APAC Cloud Test Drive project hub`
 
+![](images/101/02.new.project.detail.png)
+
 4. Click **Next** and select *Initial Repository* as template.
 
 ![](images/101/03.select.template.png)
@@ -36,6 +38,9 @@ Enter or copy the *https://github.com/APACTestDrive/LoyaltyManagement.git* repos
 ![](images/101/04.import.repository.png "Import external repository")
 
 6. Now click **Finish** to create the project and to clone the specified repository. You have now created a new Git repository with source code stored within the Developer Cloud Service that is based on an existing repository.
+
+![](images/101/05.new.project.created.png)
+![](images/101/05.new.project.created1.png)
 
 You have finished this lab section.
 
