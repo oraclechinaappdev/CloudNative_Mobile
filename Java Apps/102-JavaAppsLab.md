@@ -2,38 +2,18 @@
 -----
 ## 102: Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service ##
 
-### About this tutorial ###
-**Oracle Developer Cloud Service** is a cloud-based software development Platform as a Service (PaaS) and a hosted environment for your application development infrastructure. It provides an open-source standards-based solution to manage the application development life cycle effectively through integration with Hudson, Git, Maven, issues, and wikis. Using Oracle Developer Cloud Service, you can commit your application source code to the Git repository on the Oracle Cloud, track assigned issues and defects online, share information using wiki pages, peer review the source code, and monitor project builds. After successful testing, you can deploy the project to Oracle Java Cloud Service - SaaS Extension, publicly available Oracle Java Cloud Service instances, Oracle Application Container Cloud Service instances, or to an on-premise production environment.
-
-![](images/102/00.dcs.png)
-
-The key features of Oracle Developer Cloud Service include:
-
-Project creation, configuration, and user management
-
-+ Version control and source code management with Git
-+ Storage of application dependencies and libraries with Maven
-+ Continuous build integration with Hudson
-+ Wiki for document collaboration
-+ Issue tracking system to track tasks, defects, and features
-+ Repository branch merge after code review
-+ Deployment to Oracle Java Cloud Service - SaaS Extension, Oracle Java Cloud Service, and Oracle Application Container Cloud Service
-
-Oracle Developer Cloud Service is available as a web interface accessible from a web browser and from Integrated Development Environments (IDEs) such as Oracle Enterprise Pack for Eclipse (OEPE), Oracle JDeveloper, and NetBeans IDE.
-
-This tutorial shows how to deploy Loyalty Management application to Java Cloud Service using Oracle Developer Cloud Service.
-
-The Loyalty Management application is a JEE web application serving simple JSP pages.
+### About this tutorial section ### 
+This tutorial shows how to deploy Loyalty Management application to Java Cloud Service using Oracle Developer Cloud Service.  
+The Loyalty Management application is a JEE web application serving simple JSP pages.  
 
 This tutorial demonstrates how to:
-
 - Configure Build Job for the Loyalty Management - A JEE application
 - Configure Java Cloud Service - WebLogic Server deployment in Developer Cloud Service
 - Build and Deploy Loyalty Management Application using Developer Cloud Service
 
 ### Prerequisites ###
-
-- Oracle Public Cloud Service account including Developer Cloud Service and Java Cloud Service
++ Oracle Public Cloud Service account including Developer Cloud Service and Java Cloud Service
++ [Create Oracle Developer Cloud Service project for Loyalty Management JEE application](101-JavaAppsLab.md)
 
 ----
 

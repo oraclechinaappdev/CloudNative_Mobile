@@ -2,37 +2,31 @@
 -----
 ## 103: Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service ##
 
-### Introduction ###
-You can access Oracle Developer Cloud Service projects from Integrated Development Environments (IDEs) such as Oracle Enterprise Pack for Eclipse (OEPE), Oracle JDeveloper, and NetBeans IDE. The Eclipse IDE and the Oracle Enterprise Pack for Eclipse (OEPE) includes integration for Oracle Developer Cloud Service, which conveniently exposes the most common Cloud development tasks from within the IDE.
-
-Oracle Developer Cloud Service integration with the Eclipse IDE includes the following:
-
+### About this tutorial section ###
+You can access Oracle Developer Cloud Service projects from Integrated Development Environments (IDEs) such as Oracle Enterprise Pack for Eclipse (OEPE), Oracle JDeveloper, and NetBeans IDE. The Eclipse IDE and the Oracle Enterprise Pack for Eclipse (OEPE) includes integration for Oracle Developer Cloud Service, which conveniently exposes the most common Cloud development tasks from within the IDE. Oracle Developer Cloud Service integration with the IDE includes the following:
 + A dedicated Oracle Cloud view that displays Oracle Developer Cloud Service projects of which you are a member
 + Integration with Oracle Developer Cloud Service and the Mylyn Issues system
 + Source control system integration with the Oracle Developer Cloud Service Git repository
 
-**Take out VirtualBox** 
+**Take out VirtualBox**  
+Instructor should have provided you VirtualBox Installer and the Virtual Machine image which consists of Linux and Eclipse IDE pre-installed. [Click Here for VirtualBox detail](virtualbox.md)  
 
-Instructor should have provided you VirtualBox Installer and the Virtual Machine image which consists of Linux and Eclipse IDE pre-installed.
-You can download the Eclipse IDE from [http://www.eclipse.org/](http://www.eclipse.org/) and OEPE from [http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html).
-
-If you are using the Eclipse IDE, download and install the Oracle Cloud Tools plugin from the Eclipse IDE marketplace. In OEPE, the plugin is installed by default.
-
-### About this tutorial ###
-This tutorial demonstrates how to:
-  
-+ Setup Eclipse IDE (Oracle Enterprise Plugin for Eclipse)
+Alternatively, you can conduct the following lab exercise using the Oracle Enterprise Pack for Eclipse IDE (OEPE) running on your OS directly.  
+You can download OEPE from [http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html).  
+Notice the Oracle Enterprise Pack for Eclipse supported Eclipse Mars and Neon release only.  
+If you are using your own Eclipse IDE [http://www.eclipse.org/](http://www.eclipse.org/), download and install the Oracle Cloud Tools plugin from the Eclipse IDE marketplace. In OEPE, the plugin is installed by default.  
+\*Installation of the Eclipse IDE and Oracle Enterprise Pack are not included as part of lab exercise here. If you are interested, feel free to reach out instructor for more information.  
+\*\*Recommend to use VirtualBox which saves your time.
 
 ### Prerequisites ###
++ [Create Oracle Developer Cloud Service project for Loyalty Management JEE application and deployed to Java Cloud Service WebLogic Server Container](102-JavaAppsLab.md)
++ Installed VirtulBox, Copied VM image from instructor and started the VM. [virtualbox.md]
 
-+ [Create Oracle Developer Cloud Service project for Loyalty Management JEE application](01.md)
-+ Installed VirtulBox, Copied VM image from instructor and started VM. [TBD]
-
-### Steps ###
+----
 
 #### Connect and Obtain Source Code from Developer Cloud Service ####
 
-1. Open OEPE (using desktop icon ![](images/103/01.png)) and set (leave the default, `home/oracle/workspace`) workspace location. Close the Welcome page. To open the *Oracle Cloud* view from the Window menu, click *Show View* and then *Other*.
+1. From your Virtual Machine (or your own OS), open OEPE (using desktop icon ![](images/103/01.png)) and set (leave the default, `home/oracle/workspace`) workspace location. Close the Welcome page. To open the *Oracle Cloud* view from the Window menu, click *Show View* and then *Other*.
 
 ![](images/103/02.png)
 

@@ -2,7 +2,13 @@
 -----
 ## 100: Create Database Connectivity for Loyalty Management Application [TBD] ##
 
-### About this tutorial ###
+### About this tutorial section ###
+This tutorial demonstrates how to:
+- Create Loyalty Management Database Connectivity on WebLogic Server in which associated tables will be used by a JEE Application later.
+
+### Prerequisites ###
+- Oracle Public Cloud Service account including Developer Cloud Service and Java Cloud Service (Check with instructor if you don't have one)
+- [Loyalty Management Database connectivity for WebLogic Server instance in Java Cloud Serivce](100-JavaAppsLab.md)
 
 ----
 
