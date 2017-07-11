@@ -2,7 +2,7 @@
 -----
 ## 100: Create Database Connectivity for Loyalty Management Application [TBD] ##
 
-### About this tutorial section ###
+### About this tutorial ###
 This tutorial demonstrates how to:
 - Create Loyalty Management Database Connectivity on WebLogic Server in which associated tables will be used by a JEE Application later.
 

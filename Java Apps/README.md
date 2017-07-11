@@ -15,8 +15,9 @@ In this exercise, we will use Developer Cloud Service in the coming 1 hour to:
 + Walkthru a simple 'Continuous Integration & Delivery' starting from code change
 
 **Lab Assumption**
-+ You are an 'Application Architect' who makes minor amendment code and provision the change
-+ The Loyalty Management Database, tables and data are ready to be connected and consumed
++ The 'Loyalty Management' Application will be used by Marketing Manager to create campaign offer based on selected group of customers
++ You are an 'Application Architect' who owns this application, and recently makes minor amendment code and provision the change
++ The Loyalty Management Database, tables and data are ready to be connected and consumed by the Application
 + WebLogic Server instance is ready in Java Cloud Service
 
 Modern development teams aim to deliver software in shorter cycles with better quality. Agile development methodologies help address changing business requirements quickly and accelerate turnaround time for delivering working software to customers. The need to streamline software delivery through the development stages popularized techniques such as continuous integration and delivery automation. These techniques are frequently adopted to optimize the overall DevOps cycle.
