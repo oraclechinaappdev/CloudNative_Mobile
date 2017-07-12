@@ -28,7 +28,7 @@ This tutorial demonstrates how to:
 
 - Oracle Public Cloud Service account including Developer Cloud Service (Check with instructor if you don't have one)
 
-#### About the Exercise Today ####
+### About the Exercise Today ###
 
 In this exercise, we will use Developer Cloud Service for:
 + the creation of a new project for the loyalty management Git reppository we prepared for you.
