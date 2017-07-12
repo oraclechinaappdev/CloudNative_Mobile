@@ -2,7 +2,7 @@
 -----
 ## 103: Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service ##
 
-### About this tutorial ###
+### Introduction ###
 You can access Oracle Developer Cloud Service projects from Integrated Development Environments (IDEs) such as Oracle Enterprise Pack for Eclipse (OEPE), Oracle JDeveloper, and NetBeans IDE. The Eclipse IDE and the Oracle Enterprise Pack for Eclipse (OEPE) includes integration for Oracle Developer Cloud Service, which conveniently exposes the most common Cloud development tasks from within the IDE. Oracle Developer Cloud Service integration with the IDE includes the following:
 + A dedicated Oracle Cloud view that displays Oracle Developer Cloud Service projects of which you are a member
 + Integration with Oracle Developer Cloud Service and the Mylyn Issues system

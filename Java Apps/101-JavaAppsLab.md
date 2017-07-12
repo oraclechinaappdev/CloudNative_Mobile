@@ -2,7 +2,7 @@
 -----
 ## 101: Create Oracle Developer Cloud Service Loyalty Management application project using initial GitHub repository ##
 
-### About this tutorial ###
+### Introduction ###
 This tutorial demonstrates how to:
 - Create Oracle Developer Cloud Service project using existing external Git repository - GitHub
 
