@@ -2,7 +2,7 @@
 -----
 ## 301: Rapid Connect Applications by Oracle Integration Cloud Service ##
 
-### About this tutorial ###
+### Introduction ###
 
 #### 301: Navigating Oracle Integration Cloud Service ####
 

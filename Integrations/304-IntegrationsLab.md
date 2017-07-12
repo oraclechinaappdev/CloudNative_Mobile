@@ -2,7 +2,7 @@
 -----
 ## 3. Rapid Connect Applications by Oracle Integration Cloud Service ##
 
-### About this tutorial ###
+### Introduction ###
 
 #### 304: Testing the service and Monitoring with ICS Dashboards ####
 

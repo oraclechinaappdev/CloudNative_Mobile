@@ -2,7 +2,7 @@
 -----
 ## 3. Rapid Connect Applications by Oracle Integration Cloud Service ##
 
-### About this tutorial ###
+### Introduction ###
 
 #### 302: Define Connections for CRM Customer Activity Service and REST Service Exposure ####
 
