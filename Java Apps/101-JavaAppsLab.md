@@ -12,8 +12,6 @@ In this exercise, we will:
 - Create a new Developer Cloud Service Git Repository to store the Loyalty Management Java Application Source Code
 - Clone an external Git repository, which is stored in Github, to the Developer Cloud Service Git Repository create above
 
-At the end of exercise, we will get an idea of how we can easily re-use a base code for extension and further uses.
-
 ### Prerequisites ###
 - Oracle Public Cloud Service account including Developer Cloud Service (Check with instructor if you don't have one)
 
