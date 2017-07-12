@@ -23,7 +23,7 @@ This tutorial demonstrates how to:
 
 ![](images/102/01.dashboard.png)
 
-2. Select your Oracle Developer Cloud Service Project which was created using inital Git repository and contains Loyalty Management application's sources.
+2. Select your Oracle Developer Cloud Service Project which was created using initial Git repository and contains Loyalty Management application's sources.
 
 ![](images/102/20.open.devcs.project.png)
 
@@ -116,7 +116,7 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 
 ![alt text](images/102/18.sample.app.png "Loyalty Management Application")
 
-20. There are many other option to trigger this deploy process. For example build can be triggered by source changes or can be scheduled to specific time of the day.  
+20. There are many other options to trigger this deploy process. For example build can be triggered by source changes or can be scheduled to specific time of the day.  
     You have finished this lab section.
 
 [Procced to Next - 103: Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service](103-JavaAppsLab.md)
