@@ -15,7 +15,7 @@ In this exercise, we will:
 At the end of exercise, we will get an idea of how we can easily re-use a base code for extension and further uses.
 
 ### Prerequisites ###
-- Oracle Public Cloud Service account including Developer Cloud Service and Java Cloud Service (Check with instructor if you don't have one)
+- Oracle Public Cloud Service account including Developer Cloud Service (Check with instructor if you don't have one)
 
 ----
 
