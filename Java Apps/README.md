@@ -43,7 +43,6 @@ DevCS is comprised of various components including Git, Hudson, Maven, browser-b
 All components are available in a project, which is a collection of features and services provided by Oracle Developer Cloud Service.
 
 ### This tutorial demonstrates how to: ###
-- Create Database connectivity Loyalty Management Application [TBD]
 - Create Oracle Developer Cloud Service (DevCS) Loyalty Management Application Project using Initial [GitHub](https://github.com) repository
 - Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service 
 - Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service
@@ -54,10 +53,6 @@ All components are available in a project, which is a collection of features and
 - You will also need to install a [VirtualBox](https://www.virtualbox.org/) and running Virtual Machine image provided by instructor. The image consists of a pre-installed Eclipse IDE in Linux environment. [Click Here for VirtualBox detail](virtualbox.md)  
 
 # Lab Exercise: #
-
-## 100: Create Database Connectivity for Loyalty Management Application [TBD] ##
-
-[Click Here.](100-JavaAppsLab.md)
 
 ## 101: Create Oracle Developer Cloud Service Loyalty Management application project using initial GitHub repository ##
 

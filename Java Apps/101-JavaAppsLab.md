@@ -6,9 +6,16 @@
 This tutorial demonstrates how to:
 - Create Oracle Developer Cloud Service project using existing external Git repository - GitHub
 
+### About the Exercise Today ###
+In this exercise, we will:
+- Create a new Developer Cloud Service Project for the Loyalty Management System
+- Create a new Developer Cloud Service Git Repository to store the Loyalty Management Java Application Source Code
+- Clone an external Git repository, which is stored in Github, to the Developer Cloud Service Git Repository create above
+
+At the end of exercise, we will get an idea of how we can easily re-use a base code for extension and further uses.
+
 ### Prerequisites ###
 - Oracle Public Cloud Service account including Developer Cloud Service and Java Cloud Service (Check with instructor if you don't have one)
-- [Loyalty Management Database connectivity for WebLogic Server instance in Java Cloud Serivce](100-JavaAppsLab.md)
 
 ----
 

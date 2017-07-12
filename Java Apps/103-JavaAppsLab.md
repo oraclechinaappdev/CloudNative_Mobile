@@ -8,7 +8,20 @@ You can access Oracle Developer Cloud Service projects from Integrated Developme
 + Integration with Oracle Developer Cloud Service and the Mylyn Issues system
 + Source control system integration with the Oracle Developer Cloud Service Git repository
 
-**Take out VirtualBox**  
+This tutorial demonstrates how to:
+- Perform a simple continuous integration and delivery using Oracle Developer Cloud Service with Eclipse IDE 
+
+### About the Exercise Today ###
+In this exercise, we will:
+- Connect Oracle Developer Cloud Service from Elipse IDE, checkout and update project source code
+- Commit and push updated source code from Eclipse IDE back to Developer Cloud Service
+- Review the continuous integration and delivery result made by Developer Cloud Service
+
+### Prerequisites ###
++ [Create Oracle Developer Cloud Service project for Loyalty Management JEE application and deployed to Java Cloud Service WebLogic Server Container](102-JavaAppsLab.md)
++ Installed VirtulBox, Copied VM image from instructor and started the VM. [virtualbox.md]
+
+**Using VirtualBox**  
 Instructor should have provided you VirtualBox Installer and the Virtual Machine image which consists of Linux and Eclipse IDE pre-installed. [Click Here for VirtualBox detail](virtualbox.md)  
 
 Alternatively, you can conduct the following lab exercise using the Oracle Enterprise Pack for Eclipse IDE (OEPE) running on your OS directly.  
@@ -17,10 +30,6 @@ Notice the Oracle Enterprise Pack for Eclipse supported Eclipse Mars and Neon re
 If you are using your own Eclipse IDE [http://www.eclipse.org/](http://www.eclipse.org/), download and install the Oracle Cloud Tools plugin from the Eclipse IDE marketplace. In OEPE, the plugin is installed by default.  
 \*Installation of the Eclipse IDE and Oracle Enterprise Pack are not included as part of lab exercise here. If you are interested, feel free to reach out instructor for more information.  
 \*\*Recommend to use VirtualBox which saves your time.
-
-### Prerequisites ###
-+ [Create Oracle Developer Cloud Service project for Loyalty Management JEE application and deployed to Java Cloud Service WebLogic Server Container](102-JavaAppsLab.md)
-+ Installed VirtulBox, Copied VM image from instructor and started the VM. [virtualbox.md]
 
 ----
 

@@ -2,11 +2,13 @@
 -----
 ## 102: Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service ##
 
-### Introduction ### 
-This tutorial shows how to deploy Loyalty Management application to Java Cloud Service using Oracle Developer Cloud Service.  
-The Loyalty Management application is a JEE web application serving simple JSP pages.  
-
+### Introduction ###
 This tutorial demonstrates how to:
+- Deploy Loyalty Management application to Java Cloud Service using Oracle Developer Cloud Service 
+The Loyalty Management application is a JEE web application which is built by simple JSP pages, to serve marketing manager for offer campaign creation.  
+
+### About the Exercise Today ###
+In this exercise, we will:
 - Configure Build Job for the Loyalty Management - A JEE application
 - Configure Java Cloud Service - WebLogic Server deployment in Developer Cloud Service
 - Build and Deploy Loyalty Management Application using Developer Cloud Service
