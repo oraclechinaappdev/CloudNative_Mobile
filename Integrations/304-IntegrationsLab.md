@@ -1,10 +1,21 @@
 # ORACLE Cloud Test Drive #
 -----
-## 3. Rapid Connect Applications by Oracle Integration Cloud Service ##
+## 304: Testing the service and Monitoring with ICS Dashboards ##
 
 ### Introduction ###
+This tutorial demonstrates how to:
+- Consume and monitor a service exposed by Integration Cloud Service (ICS) 
 
-#### 304: Testing the service and Monitoring with ICS Dashboards ####
+### About this tutorial ###
+In this exercise, we will:
+- Test an integration flow with REST trigger connection being exposed
+- Examine test results from varies ICS monitoring facilities
+
+### Prerequisites ###
+- Oracle Public Cloud Service account including Integration Cloud Service
+- SOAP and REST connections and an orchestration flow in ICS already configured (303-IntegrationsLab.md)
+
+#### Testing and Monitoring Your Work on ICS ####
 
 1. Previously we have successfully deployed an integration flow which accepts a REST JSON request, route to a SOAP CRM customer service and then reply a REST JSON response. Let's test this service and monitor how it goes.  
 	To do so, start a new browser window and visit to: `https://www.hurl.it/`, provide the following information:

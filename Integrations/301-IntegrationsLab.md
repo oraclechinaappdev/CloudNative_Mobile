@@ -1,10 +1,19 @@
 # ORACLE Cloud Test Drive #
 -----
-## 301: Rapid Connect Applications by Oracle Integration Cloud Service ##
+## 301: Navigating Oracle Integration Cloud Service ##
 
 ### Introduction ###
+This tutorial demonstrates how to:
+- Navigate in Oracle Integration Cloud Service web-based dashboard
 
-#### 301: Navigating Oracle Integration Cloud Service ####
+### About the Exercise Today ###
+In this exercise, we will:
+- Navigate the web-based Integration Cloud Service (ICS) dashboard to familiar with, and experience initially how it differs from traditional application development.
+
+### Prerequisites ###
+- Oracle Public Cloud Service account including Integration Cloud Service (Check with instructor if you don't have one)
+
+#### Navigating Oracle Integration Cloud Service ####
 
 1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials of **Integration Cloud Service \(ICS\)**. After a successful login you will see your Dashboard. Find the **integration** services tile and click the hamburger icon. In the dropdown menu click `Open Service Console`.
 

@@ -1,10 +1,19 @@
 # ORACLE Cloud Test Drive #
 -----
-## 3. Rapid Connect Applications by Oracle Integration Cloud Service ##
+## 302: Define Connections for CRM Customer Activity Service and REST Service Exposure ##
 
 ### Introduction ###
+This tutorial demonstrates how to:
+- Define ICS connections for a REST trigger service exposure and invoke an external SOAP service
 
-#### 302: Define Connections for CRM Customer Activity Service and REST Service Exposure ####
+### About the Exercise Today ###
+In this exercise, we will:
+- Using the web-based click and configure techniques to define ICS connection resources: **SOAP** and **REST** respectively.
+
+### Prerequisites ###
+- Oracle Public Cloud Service account including Integration Cloud Service
+
+#### Define SOAP Connection for CRM Customer Activity Service ####
 
 1. Go to **Connections** Summary Page by click on the `Connection` green icon.
 
@@ -68,7 +77,11 @@ Alternatively, you can go to **Connections** Summary Page by click the hamburger
 
 ![](images/302/13.connection_saveresult.png)
 
-11. A *SOAP Connection* to CRM Customer Service was made and ready to be \*invoked\*. Now we are going to create another *REST* connection.  
+11. A *SOAP Connection* to CRM Customer Service was made and ready to be \*invoked\*.  
+
+#### Define REST Connection for ICS Service Exposure ####
+
+Now we are going to create another *REST* connection.  
     However, this time the *Connection* is **NOT** to \*invoke\* any endpoint service, but instead it is a *\*trigger\** which is being called by a front client, i.e. A mobile client *triggers* to this *REST* connection service.  
 	
 	Make sure you are still on **Connections** Summary Page. If not, follow step 1 previously.  
