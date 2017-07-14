@@ -4,8 +4,12 @@
 
 ### Introduction ###
 This tutorial demonstrates how to:
-Create MBE (Mobile Back End) to support the mobile application for Loyalty Management. Mobile backends are server-side groupings of APIs and other resources that you create to support a specific set of applications. The mobile application called "Cafe Supremo" will have interactions with the created MEB to get offer push, query offer details and accept or reject the offer. For Cafe Supremo application, you will see how to create the MBE to support APIs for loyalty management and mobile client, etc.
+Create MBE (Mobile Back End) to support the mobile applications. Mobile backends are server-side groupings of APIs and other resources that you create to support a specific set of applications. 
 ![](../common/images/mobile/mcsgs_dt_015_mobile_bkend.png)
+
+### About the Exercise Today ###
+In this exercise, we will:
+Create MBE for a mobile application called "Cafe Supremo" to support APIs for loyalty management and mobile client. By doing this, Cafe Supremo mobile application interacts with the created MBE to get offer push, query offer details and accept or reject the offer.
 
 ### Prerequisites ###
 Oracle Public Cloud Service account for Mobile Cloud Service (Check with instructor if you don't have one)
