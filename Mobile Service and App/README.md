@@ -34,7 +34,7 @@ Here you can see which mobile services are ready for you through just accessing 
 If you want to know about more details on the above mobile services, please refer to [the following link](https://docs.oracle.com/en/cloud/paas/mobile-cloud/index.html).
 
 ### About the Exercise Today ###
-The hard part of mobile development is integration and managing all server-side services. In this exercise, you will see how easily you can develop mobile services like push notification, API creation and integrations with exteranl services to implement a mobile application called "Cafe Supremo" for loyalty managment using Oracle MCS (Mobile Application). 
+The hard part of mobile development is integration and managing all server-side services. In this exercise, you will see how easily you can enable/develop mobile services like push notification, API creation and integrations with exteranl services to implement a mobile application called "Cafe Supremo" for loyalty managment using Oracle MCS (Mobile Cloud Service). 
 
 For the mobile application for loyalty management, you can make it all work and play nicely together using Oracle MCS by doing the below jobs through this lab.
 - Provide a server-side container for groupings of APIs and other resources that you create to support a specific set of applications by just creating a MBE (Mobile Back End).
