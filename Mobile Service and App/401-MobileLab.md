@@ -24,7 +24,7 @@ In this exercise, we will:
 
 To be Described.
 
-[Procced to Next - 402: Develop Custom APIs and Custom Code to interact external services](402-MobileLab.md)
+[Procced to Next - 402: Develop Custom APIs and Custom Code to extend moobile services](402-MobileLab.md)
 
 or
 
