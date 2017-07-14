@@ -3,13 +3,11 @@
 ## 400: Create MBE (Mobile Back End) for mobile applications ##
 
 ### Introduction ###
-This tutorial demonstrates how to:
-Create MBE (Mobile Back End) to support the mobile applications. Mobile backends are server-side groupings of APIs and other resources that you create to support a specific set of applications. 
+This tutorial demonstrates how to create a MBE (Mobile Back End) to support the mobile applications. Mobile backends are server-side groupings of APIs (Platfomr & Custom APIs) and other resources that you create to support a specific set of applications. 
 ![](../common/images/mobile/mcsgs_dt_015_mobile_bkend.png)
 
 ### About the Exercise Today ###
-In this exercise, we will:
-Create MBE for a mobile application called "Cafe Supremo" to support APIs for loyalty management and mobile client. By doing this, Cafe Supremo mobile application interacts with the created MBE to get offer push, query offer details and accept or reject the offer.
+In this exercise, you will create your MBE for a mobile application called "Cafe Supremo" to support APIs for loyalty management and mobile client. By doing this, Cafe Supremo mobile application interacts with the created MBE to get offer push, query offer details and accept or reject the offer.
 
 ### Prerequisites ###
 Oracle Public Cloud Service account for Mobile Cloud Service (Check with instructor if you don't have one)
