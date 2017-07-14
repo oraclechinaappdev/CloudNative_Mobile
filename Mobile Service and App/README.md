@@ -60,7 +60,7 @@ Let's explore the Mobile Service and Application Lab. Please click the below lin
 
 [Click Here.](401-MobileLab.md)
 
-## 402: Develop Custom APIs and Custom Code to interact external services ##
+## 402: Develop Custom APIs and Custom Code to extend mobile services ##
 
 [Click Here.](402-MobileLab.md)
 
