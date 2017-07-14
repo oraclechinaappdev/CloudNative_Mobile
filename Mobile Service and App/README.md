@@ -50,7 +50,7 @@ For the mobile application for loyalty management, you can make it all work and 
 # Lab Exercise: #
 Let's explore the Mobile Service and Application Lab. Please click the below link to start your lab.
 
-## 400: Create MBE (Mobile Back End) as a policy container for a mobile application ##
+## 400: Create MBE (Mobile Back End) for mobile applications ##
 
 [Click Here.](400-MobileLab.md)
 
