@@ -4,7 +4,7 @@
 
 ### Introduction ###
 You can use the Notifications service (part of MCS platform APIs) to send notifications to users of the apps registered in a mobile backend. Once you have the mobile backend set up for notifications, the process of sending the notifications is the same for both iOS, Android, and Windows apps. You set up notifications by obtaining the appropriate vendor certificates and registering them with the app's mobile backend. In addition, you include some code in the app itself to enable it to receive notifications. The notifications themselves can be sent via a third-party server or be triggered by logic in a custom API.
-![](../common/images/mobile/csgs_dt_006_notifications.png)
+![](../common/images/mobile/mcsgs_dt_006_notifications.png)
 
 ### About the Exercise Today ###
 In this exercise, we will:
