@@ -27,7 +27,9 @@ In summary, Oracle provides end to end solution to give you overcoming notable b
 
 ### Oracle Mobile Services ###
 Here you can see which mobile services are ready for you through just accessing Oracle MCS (Mobile Cloud Service) as below:
-+ Out of the box mobile services: We are providing prebuilt, tested and optimized mobile services like analytics, push notification, offline data synchronization, location, object storage, database, app ploicies, API management, integration management, security and user management, and more features like intelligent bot coming. For client IDE for mobile applications, we can support any IDE as well as Oracle MAX (Low code development), JET (JavaScript-based Hybrid App Dev.) and MAF (Java-based Hybrid App Dev.)
++ Out of the box mobile services (Platform APIs): We are providing prebuilt, tested and optimized mobile services like analytics, push notification, offline data synchronization, location, object storage, database, app ploicies, API management, integration management, security and user management, and more features like intelligent bot coming. 
++ In addition to the Platform APIs, you can develop custom APIs and code to extend your mobile services. (e.g. SNS integration, Google Map integration, external system integration, etc.) In other words, mobile applicatons can call custom APIs as wells as platform APIs to interact various data sources.
++ For client IDE for mobile applications, we can support any IDE as well as Oracle MAX (Low code development), JET (JavaScript-based Hybrid App Dev.) and MAF (Java-based Hybrid App Dev.)
 
 ![](../common/images/mobile/Oracle_Mobile_Services.PNG)
 
@@ -36,7 +38,7 @@ If you want to know about more details on the above mobile services, please refe
 ### About the Exercise Today ###
 The hard part of mobile development is integration and managing all server-side services. In this exercise, you will see how easily you can enable/develop mobile services like push notification, API creation and integrations with exteranl services to implement a mobile application called "Cafe Supremo" for loyalty managment using Oracle MCS (Mobile Cloud Service). 
 
-For the mobile application for loyalty management, you can make it all work and play nicely together using Oracle MCS by doing the below jobs through this lab.
+For the mobile application for loyalty management, you can make it all work and play nicely together using platform APIs (out of box mobile services) and custom APIs for external integraitons by doing the below jobs through this lab.
 - Provide a server-side container for groupings of APIs and other resources that you create to support a specific set of applications by just creating a MBE (Mobile Back End).
 - Set up Push Notification to send offer information to the user of the Cafe Supremo mobile applicaion and test Push Notification. In the lab, we are going to support Android to shorten the lab time even though Oracle MCS can support iOS and Windows, too. 
 - Create custom REST APIs and code to build up a library of services for Cafe Supremo mobile application, java application to get offer request, microservices to get QR code, etc. 
