@@ -42,7 +42,7 @@ For the mobile application for loyalty management, you can make it all work and 
 - Provide a server-side container for groupings of APIs and other resources that you create to support a specific set of applications by just creating a MBE (Mobile Back End).
 - Set up Push Notification to send offer information to the user of the Cafe Supremo mobile applicaion and test Push Notification. In the lab, we are going to support Android to shorten the lab time even though Oracle MCS can support iOS and Windows, too. 
 - Create custom REST APIs and code to build up a library of services for Cafe Supremo mobile application, java application to get offer request, microservices to get QR code, etc. 
-- Track customer behaviors like "Offer Completion by users" using custom analytics report.
+- Track customer behaviors like "Offer Accept by users" using custom analytics report.
 
 ### Prerequisites ###
 - Bring your Android phone.
@@ -63,6 +63,10 @@ Let's explore the Mobile Service and Application Lab. Please click the below lin
 ## 402: Develop Custom APIs and Custom Code to interact external services ##
 
 [Click Here.](402-MobileLab.md)
+
+## 403: Track customer behaviors ##
+
+[Click Here.](403-MobileLab.md)
 
 or
 
