@@ -1,10 +1,21 @@
 # ORACLE Cloud Test Drive #
 -----
-## 3. Rapid Connect Applications by Oracle Integration Cloud Service ##
+## 303: Create an Integration - An Orchestration Integration Flow ##
 
-### About this tutorial ###
+### Introduction ###
+This tutorial demonstrates how to:
+- Create an integration flow on Integration Cloud Service (ICS) 
 
-#### 303: Create an Integration - An Orchestration Integration Flow ####
+### About the Exercise Today ###
+In this exercise, we will:
+- Explore and configure ICS Integration flow with REST and SOAP endpoints, and define data mapping along integration flow
+- Using the web-based click, configure, drag and drop techniques to define data mapping and integration integration resources detail on ICS dashboard
+
+### Prerequisites ###
+- Oracle Public Cloud Service account including Integration Cloud Service
+- SOAP and REST Connections in ICS already configured (302-IntegrationsLab.md)
+
+#### Create an 'Orchestration' Integration ####
 
 1. Using the Navigation Pane, click the hamburger menu icon in upper left corner to show the navigation pane, and then click `Integrations`.
 
