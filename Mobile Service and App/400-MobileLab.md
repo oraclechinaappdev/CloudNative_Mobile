@@ -16,16 +16,24 @@ Oracle Public Cloud Service account for Mobile Cloud Service (Check with instruc
 
 #### Create MBE (Mobile Back End) for Cafe Supremo application ####
 
-1. Sign in to Mobile Cloud Service by provided **Mobile Cloud Service \(MCS\)** identity domain Id and credential in the Access Document. Using the dashboard open the Mobile Cloud Service Console.
+1. Sign in to Mobile Cloud Service by provided **Mobile Cloud Service \(MCS\)** identity domain Id and credential in the Access Document. Using the dashboard open the Mobile Cloud Service Console. 
 
-![](put a image file name here)
+2. In the dashboard screen, click on "Mobile Environment Service".
+![](../common/images/mobile/100-MobileEnvService.png)
 
-2. Click on the hamburger icon located at the right top corner of the service summary. From the 
-menu select ~~~
+3. In the service details screen, click on "Service Instance URL".
+![](../common/images/mobile/100-MCS_ServiceInstanceURL.png)
 
-![](put a image file name here)
+4. Click on the hamburger icon located at the left top corner of the service introduction page. From the navigation bar, select “Applications” -> “Mobile Backends” and click on the “+ New Mobile Backend” green button.
+![](../common/images/mobile/100-New_MBE.png)
 
-To be Described based on SCC works.
+5. Configure MBE with the following parameters:
++ **Name**: APAC_Test_Drive_Loyalty_Management_MBE0X (0X is the sequence number assigned to you by instructor.)
++ **Description**: APAC_Test_Drive_Loyalty_Management_MBE0X (Any value is okay.)
+
+6. Check 
+The Mobile Backend is now created and it will bring you to the “Settings” tab of the newly created MBE where you will see the mobile backend ID, client ID, etc, which you will need to use when interacting with the MBE. Click on the two “Show” links to see the “Anonymous Key” and “Client Secret”. **Please take a note on the mobile backend ID, client ID, Anonymous Key and Client Secret for laster use.** You are going to use them for the integration between Java Application to  this mobile service in order to push offer information.
+![](../common/images/mobile/100-MBE_settings.png)
 
 You have finished this lab section.
 
