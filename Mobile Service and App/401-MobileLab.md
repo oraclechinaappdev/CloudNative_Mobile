@@ -8,10 +8,9 @@ You can use the Notifications service (part of MCS platform APIs) to send notifi
 
 ### About the Exercise Today ###
 In this exercise, we will:
-- Set Cafe Supremo application up with Google and Baidu. (Android Only)
+- Set Cafe Supremo application up with Google. (Android Only)
 - Create a notifications profile and register the Cafe Supremo app
 - Prepare the Cafe Supremo application to receive notifications
-- Build and deploy the updated application (We will provide Cafe Supremo applicaition, so you don't need to do it for this lab.)
 - Test Notification
 
 ### Prerequisites ###
@@ -21,9 +20,7 @@ In this exercise, we will:
 
 ----
 
-#### Set Cafe Supremo application up with Google and Baidu ####
-
-##### FCM(Firebase Cloud Messaging by Google)
+#### Set Cafe Supremo application up with Google ####
 To enable Notifications from the Google Network side, you need to have a project ID, Google Firebase Cloud Messaging (GCM) enabled, and an API key.
 
 1. Use your google account to login to firebase https://console.firebase.google.com/ 
@@ -49,6 +46,32 @@ To enable Notifications from the Google Network side, you need to have a project
 8. Switch to “CLOUD MESSAGING” and you will find your API Key(as in Server key) and Sender ID. Please take a note on **API Key** and **Sender ID** for later use. You will use them to configurate the profile of your mobile app in the MCS console.
 ![](../common/images/mobile/401-API_Key_SenderID.png)
 
+#### Create a notifications profile and register the Cafe Supremo app ####
+Next you go back to MCS to associate google credentials with Cafe Supremo mobile application.
+
+1. Create a client (Register the app in MCS as a client) to receive notifications.
+- Navigate through “Applications” -> “Mobile Backends”, select your mobilebackend, and click on “Open” to open your MBE.
+![](../common/images/mobile/401-Select_MBE.png)
+
+- Switch to “Clients” tab and click on “New Client”.
+![](../common/images/mobile/401-Create_Client.png)
+
+-Enter the information as in shown in the picture, change `01` to your assigned postfix by instructor. Click on “Create”. This will bring you to the client settings screen.
+![](../common/images/mobile/401-Create_Client.png)
+
+2. Create and select a profile to store google credentials.
+- On the client settings screen, write down your “Application Key” and choose “Profiles”.
+![](../common/images/mobile/401-Client_Setting_Created.png)
+
+- Click on “New Profile”.
+![](../common/images/mobile/401-Create_New_Profile.png)
+
+- Enter your **API Key** and **Sender ID** that you took a note in the previous section. (Set Cafe Supremo application up with Google) and clieck on “Create”
+
+3. Associate the client with your mobile backend.
+
+#### Prepare the Cafe Supremo application to receive notifications ####
+To make you mobile application get push notificaitons, you need to add some codes or change the metafile (e.g.: main/AndroidManifest.xml file). In this lab, we provide a pre-built mobile application called "Cafe Supremo" for your use to get push notificaitons. So let's kip this one.
 
 
 [Procced to Next - 402: Develop Custom APIs and Custom Code to extend moobile services](402-MobileLab.md)
