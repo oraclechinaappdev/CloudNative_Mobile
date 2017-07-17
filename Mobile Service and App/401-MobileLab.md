@@ -51,7 +51,6 @@ To enable Notifications from the Google Network side, you need to have a project
 
 
 
-
 [Procced to Next - 402: Develop Custom APIs and Custom Code to extend moobile services](402-MobileLab.md)
 
 or
