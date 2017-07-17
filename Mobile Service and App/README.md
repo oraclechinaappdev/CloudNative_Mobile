@@ -40,7 +40,7 @@ The hard part of mobile development is integration and managing all server-side 
 
 For the mobile application for loyalty management, you can make it all work and play nicely together using platform APIs (out of box mobile services) and custom APIs for external integraitons by doing the below jobs through this lab.
 - Provide a server-side container for groupings of APIs and other resources that you create to support a specific set of applications by just creating a MBE (Mobile Back End).
-- Set up Push Notification to send offer information to the user of the Cafe Supremo mobile applicaion and test Push Notification. In the lab, we are going to support Android to shorten the lab time even though Oracle MCS can support iOS and Windows, too. 
+- Set up Push Notification to send offer information to the user of the Cafe Supremo mobile application and test Push Notification. In the lab, we are going to support Android to shorten the lab time even though Oracle MCS can support iOS and Windows, too. 
 - Create custom REST APIs and code to build up a library of services for Cafe Supremo mobile application, java application to get offer request, microservices to get QR code, etc. 
 - Track customer behaviors like "Offer Accept by users" using custom analytics report.
 
