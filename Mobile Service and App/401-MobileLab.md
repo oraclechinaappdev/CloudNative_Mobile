@@ -17,12 +17,40 @@ In this exercise, we will:
 ### Prerequisites ###
 - Cafe Supremo application binary (Will be provided by instructor)
 - Android device to install Cafe Supremo application
+- Your Google account
 
 ----
 
 #### Set Cafe Supremo application up with Google and Baidu ####
 
-To be Described.
+##### FCM(Firebase Cloud Messaging by Google)
+To enable Notifications from the Google Network side, you need to have a project ID, Google Firebase Cloud Messaging (GCM) enabled, and an API key.
+
+1. Use your google account to login to firebase https://console.firebase.google.com/ 
+
+2. Click on “Add project” to add a project 
+![](../common/images/mobile/401-FCM_AddProject.png)
+
+3. Enter a name (i.e. `apac-test-drive-01` or `(Provided by intructor)`) and select your region and confirm with “CREATE PROJECT” button.
+![](../common/images/mobile/401-Google_Project_Creation.png)
+
+4. You will be brought to the project overview page. Select “Add Firebase to your Android app”.
+![](../common/images/mobile/401-Add_Firebase_toApp.png)
+
+5. Enter the package name(i.e. `com.oraclecorp.internal.ent3.apacTestDrv` or `(Provided by intructor)`) of Cafe Supremo app and click on “REGISTER APP”.
+![](../common/images/mobile/401-FCM_Register_App.png)
+
+6. You can download the google-services.json, but we will not be using it so just click on “Skip to the console”.
+![](../common/images/mobile/401-Download_Google_JSON.png)
+
+7. Open settings of the app.
+![](../common/images/mobile/401-Open_App_Settings.png)
+
+8. Switch to “CLOUD MESSAGING” and you will find your API Key(as in Server key) and Sender ID. Please take a note on **API Key** and **Sender ID** for later use. You will use them to configurate the profile of your mobile app in the MCS console.
+![](../common/images/mobile/401-API_Key_SenderID.png)
+
+
+
 
 [Procced to Next - 402: Develop Custom APIs and Custom Code to extend moobile services](402-MobileLab.md)
 
