@@ -67,11 +67,30 @@ Next you go back to MCS to associate google credentials with Cafe Supremo mobile
 ![](../common/images/mobile/401-Create_New_Profile.png)
 
 - Enter your **API Key** and **Sender ID** that you took a note in the previous section. (Set Cafe Supremo application up with Google) and clieck on “Create”
+![](../common/images/mobile/401-Profile Setting.png)
 
-3. Associate the client with your mobile backend.
+- Click on “Select Profile”.
+![](../common/images/mobile/401-Review_MobileApp_Profile.png)
 
 #### Prepare the Cafe Supremo application to receive notifications ####
 To make you mobile application get push notificaitons, you need to add some codes or change the metafile (e.g.: main/AndroidManifest.xml file). In this lab, we provide a pre-built mobile application called "Cafe Supremo" for your use to get push notificaitons. So let's kip this one.
+
+#### Test Notification ####
+- Switch to “Notifications” tab and click on the icon below “4 TEST”.
+![](../common/images/mobile/401-Test_Notification.png)
+
+- Click on "Manage Devices".
+![](../common/images/mobile/401-Test_Manage_Devices.png)
+
+- You shall see devcies that has been registered to this mobile backend. Click on “Close” and go back to the “Test” screen.
+![](../common/images/mobile/401-Manage_Devices.png)
+
+- Enter a notification `You can use your points to buy products! – 10001` with send option `Now` and click on “Send”. Note you will be getting errors if no devices registered yet.
+![](../common/images/mobile/401-Notification_Test_Screen.png)
+
+- If you have one device registered, you shall see a success message pop up on top of the page and the notification shall appear in the notification area of your device.
+![](../common/images/mobile/401-MCS_Notification_Result.png)
+![](../common/images/mobile/401-MobileApp_Notification_Result.png)
 
 
 [Procced to Next - 402: Develop Custom APIs and Custom Code to extend moobile services](402-MobileLab.md)
