@@ -90,8 +90,8 @@ To make you mobile application get push notificaitons, you need to add some code
 
 - If you have one device registered, you shall see a success message pop up on top of the page and the notification shall appear in the notification area of your device.
 ![](../common/images/mobile/401-MCS_Notification_Result.png)
-![](../common/images/mobile/401-MobileApp_Notification_Result.png)
 
+![](../common/images/mobile/401-MobileApp_Notification_Result.png)
 
 [Procced to Next - 402: Develop Custom APIs and Custom Code to extend moobile services](402-MobileLab.md)
 
