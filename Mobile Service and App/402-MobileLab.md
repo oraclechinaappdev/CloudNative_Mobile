@@ -3,10 +3,13 @@
 ## 402: Create Connectors for external services ##
 
 ### Introduction ###
-![](../common/images/mobile/mcsgs_dt_003_customapi.png)
+![](../common/images/mobile/402-Connectors_Overview.png)
 
-You can create custom REST APIs to build up a library of services that can be used by your mobile applications. Custom APIs are particularly useful for aggregating data from other sources, adding any relevant business logic, and returning results in a mobile-friendly way for mobile applications.
-![](../common/images/mobile/mcsgc_dt_004_api.png)
+Connectors allow you to declaratively create APIs that simplify access to and standardize use of backend systems (such as enterprise middleware) and web services. Connector types are available for REST web services, SOAP web services, the Oracle Integration Cloud Service (ICS), and Oracle Cloud applications based on Fusion Applications (FA). For this lab, we are going to use the connectors for the REST web services to integrate ACCS and ICS.
+
+Once you create a connector API to access the service, you can use it in custom APIs (e.g. Loyalty Managment API), which you can then call from your mobile applications using standard REST calls.
+
+![](../common/images/mobile/402-Connectors_Mechanism.png)
 
 ### About the Exercise Today ###
 In this exercise, we will:
@@ -30,7 +33,7 @@ TBD
 ![](../common/images/mobile/402-API_Creation.png)
 
 3. Define endpoints for the Loyalty Management API
-- Select “Endpoints” on the page level navigation pane on the left and click on “+ New Resource”.
+    - Select “Endpoints” on the page level navigation pane on the left and click on “+ New Resource”.
 ![](../common/images/mobile/402-Click_Endpoints.png)
 
 
