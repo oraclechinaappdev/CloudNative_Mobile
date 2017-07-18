@@ -48,19 +48,19 @@ TBD
   	} 
 
 
-#### Associate the APIs with the loyalty management MBE ####
+#### TBD ####
 To be Described.
 
-#### Test the endpoints with mock data ####
+#### TBD ####
 To be Described.
 
-#### Implement the API for loyalty management ####
+#### TBD ####
 To be Described.
 
 #### Test the implementation ####
 To be Described.
 
-[Procced to Next - 403: Track customer behaviors](403-MobileLab.md)
+[Procced to Next - 403: Develop Custom APIs and Custom Code to extend mobile services](403-MobileLab.md)
 
 or
 
