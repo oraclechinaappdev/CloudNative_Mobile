@@ -12,9 +12,7 @@ You can create custom REST APIs to build up a library of services that can be us
 In this exercise, we will:
 - Create the custom API and define its endpoints for loyalty management. We need the custom API with several endpoints for offer information query, QR code creation and offer result (e.g. reject or accept) update.
 - Associate the APIs with the loyalty management MBE.
-- Test the endpoints with mock data. (TBD: Need to provide sample data for APIs with link in the common/assets/mobile folder)
-- Implement the API for loyalty management. (We will provide the code for this here --> put link TBD: Need to provide sample data for APIs with link in the common/assets/mobile folder.)
-- Test the implementation
+- Test the Customer API for loyalty management
 
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab.
@@ -44,10 +42,10 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
     - Adding method: you can see that {id} entered in previous step has be recognized as a URI Resource Path Parameter “id”. Click on “+ Add Method” and select “GET”.
 ![](../common/images/mobile/403-Adding_Method.png)
 
-  - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
+    - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
 ![](../common/images/mobile/403-Adding_Method_Info.png)
 
-  - Adding sample response: MCS will use the below sample body to create a mockup implementation for this endpoint method. This is the one of good features MCS provide **nabling parallel development** of mobile application without external services. In the "Example" text area, paste the following code:
+    - Adding sample response: MCS will use the below sample body to create a mockup implementation for this endpoint method. This is the one of good features MCS provide **nabling parallel development** of mobile application without external services. In the "Example" text area, paste the following code:
 	```
 	{
     	"id": 10001,
@@ -61,10 +59,10 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
     	"productdesc": "The best Android phone in the galaxy"
   	} 
 	```
-  - Scroll to the top of the page and click on “Save”. 
+    - Scroll to the top of the page and click on “Save”. 
 ![](../common/images/mobile/403-Adding_Sample_Response.png)
 
-  - In addition to the above endpoint, we need to create endpoints for QR code creation, offer result update, etc. However we will skip to create them because we have the same steps to create other endpoints. They are included in the custom API we provided. The below is the list of endpoints for your reference.
+    - In addition to the above endpoint, we need to create endpoints for QR code creation, offer result update, etc. However we will skip to create them because we have the same steps to create other endpoints. They are included in the custom API we provided. The below is the list of endpoints for your reference.
 
   | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
   | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
@@ -78,16 +76,26 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
 On page level navigation pane, select “Security”. Click in the Roles box and select the “Default” role. Scroll to the top and click “Save”.
 ![](../common/images/mobile/403-API_Security_Settings.png)
 
+
 #### Associate the APIs with the loyalty management MBE ####
-To be Described.
+Before you can deploy the custom API, it has to be associated with the mobile backend(e.g.: APAC_Test_Drive_Loyalty_Management_MBE01) you created in the previous lab. The mobile backend provides the security context for accessing the API, including the users that have permissions. In this lab, we will assign the complete custom API for "LoyaltyManagementAPI" that we provide.
 
-#### Test the endpoints with mock data ####
-To be Described.
+1. Navigate to the MBE you created, and turn to the “APIs” tab. Click “Select APIs”.
+![](../common/images/mobile/403-Select_API_MBE.png)
 
-#### Implement the API for loyalty management ####
-To be Described.
+2. Enter `LoyaltymanagementAPI` and click one “+” icon to select the one without any suffix, which is the one we’ve provided. This is for the app that provided for the lab to use.
+![](../common/images/mobile/403-Select_Loyalty_API.png)
 
-#### Test the implementation ####
+3. You will see it got added to the right 
+![](../common/images/mobile/403-Added_API_ToMBE.png)
+
+4. Please see the result as below:
+![](../common/images/mobile/403-API_AddToMBE_Result.png)
+
+5. [Optional] Follow the same instruction to add the API (e.g.: LoyaltyManagement01) you’ve just created so that you can test it.
+
+
+#### Test the Customer API for loyalty management ####
 To be Described.
 
 [Procced to Next - 404: Track customer behaviors](404-MobileLab.md)
