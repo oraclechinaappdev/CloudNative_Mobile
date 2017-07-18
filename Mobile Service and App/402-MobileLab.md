@@ -10,7 +10,7 @@ You can create custom REST APIs to build up a library of services that can be us
 
 ### About the Exercise Today ###
 In this exercise, we will:
-- Create custom APIs and define its endpoints for loyalty management. (TBD: Need to provide sample data for APIs with link in the common/assets/mobile folder)
+- Create the custom API and define its endpoints for loyalty management. We need the custom API with several endpoints for offer information query, QR code creation and offer result (e.g. reject or accept) update.
 - Associate the APIs with the loyalty management MBE.
 - Test the endpoints with mock data. (TBD: Need to provide sample data for APIs with link in the common/assets/mobile folder)
 - Implement the API for loyalty management. (We will provide the code for this here --> put link TBD: Need to provide sample data for APIs with link in the common/assets/mobile folder.)
@@ -18,13 +18,30 @@ In this exercise, we will:
 
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab.
-- Mock data and custom code.
+- Complete custome API with all required endpoints for your use. (It is ready for you.)
 
 ----
 
 #### Create custom APIs and define its endpoints for loyalty management ####
-To be Described.
-In this lab, you will create a custom API for loayalty managment. In fact, we need 3 custome APIs like ~~~ for the loyalty management. Creating customer APIs are the same job. So, here you will experience developing one customer API called "--". All other custom APIs are ready and provided for your use in this lab.
+In this lab, you will create a custom API for loayalty managment. In fact, we need to define serveral endpoints for the custome API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. So, here you will create one endpoint for the query of the specific offer information. We will provide the completed custom API with all endpoints for your use in this lab.
+
+
+
+
+
+
+	{
+    "id": 10001,
+    "name": "Samsam Galaxy Offer",
+    "points": 6000,
+    "message": "Exchange 6000 points for 10% discount of Samsam Mobile Phone",
+    "productid": 20001,
+    "productname": "Samsam Galaxy 7",
+    "productprice": 1000,
+    "productimage": "20001.jpg",
+    "productdesc": "The best Android phone in the galaxy"
+  }
+
 
 #### Associate the APIs with the loyalty management MBE ####
 To be Described.
