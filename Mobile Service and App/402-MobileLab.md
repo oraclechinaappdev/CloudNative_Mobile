@@ -1,6 +1,6 @@
 # ORACLE Cloud Test Drive #
 -----
-## 402: Develop Custom APIs and Custom Code to extend mobile services ##
+## 402: Create Connectors for external services ##
 
 ### Introduction ###
 ![](../common/images/mobile/mcsgs_dt_003_customapi.png)
@@ -10,20 +10,15 @@ You can create custom REST APIs to build up a library of services that can be us
 
 ### About the Exercise Today ###
 In this exercise, we will:
-- Create the custom API and define its endpoints for loyalty management. We need the custom API with several endpoints for offer information query, QR code creation and offer result (e.g. reject or accept) update.
-- Associate the APIs with the loyalty management MBE.
-- Test the endpoints with mock data. (TBD: Need to provide sample data for APIs with link in the common/assets/mobile folder)
-- Implement the API for loyalty management. (We will provide the code for this here --> put link TBD: Need to provide sample data for APIs with link in the common/assets/mobile folder.)
-- Test the implementation
+- TBD
 
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab.
-- Complete custome API with all required endpoints for your use. (It is ready for you.)
 
 ----
 
-#### Create custom APIs and define its endpoints for loyalty management ####
-In this lab, you will create a custom API for loayalty managment. In fact, we need to define serveral endpoints for the custome API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. So, here you will create one endpoint for the query of the specific offer information. **Note:**We will provide the completed custom API with all endpoints for your use in this lab.
+#### TBD ####
+TBD
 
 1. From the navigation pane, select “Applications” -> “APIs”, click on “+ New API” and select “API” from the dropdown list.
 ![](../common/images/mobile/402-New_API.png)
