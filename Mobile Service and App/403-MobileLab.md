@@ -76,7 +76,7 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
 On page level navigation pane, select “Security”. Click in the Roles box and select the “Default” role. Scroll to the top and click “Save”.
 ![](../common/images/mobile/403-API_Security_Settings.png)
 
-
+----
 #### Associate the APIs with the loyalty management MBE ####
 Before you can deploy the custom API, it has to be associated with the mobile backend(e.g.: APAC_Test_Drive_Loyalty_Management_MBE01) you created in the previous lab. The mobile backend provides the security context for accessing the API, including the users that have permissions. In this lab, we will assign the complete custom API for "LoyaltyManagementAPI" that we provide.
 
@@ -94,7 +94,7 @@ Before you can deploy the custom API, it has to be associated with the mobile ba
 
 5. [Optional] Follow the same instruction to add the API (e.g.: LoyaltyManagement01) you’ve just created so that you can test it.
 
-
+---
 #### Test the Customer API for loyalty management ####
 To be Described.
 
