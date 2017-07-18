@@ -38,10 +38,10 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
     - Select “Endpoints” on the page level navigation pane on the left and click on “+ New Resource”.
 ![](../common/images/mobile/403-Click_Endpoints.png)
 
-  - Enter `offer/{id}` as the “Resource Path” and `Offer` as the “Display Name” and click on “Methods”. This endpoint (a URI resource) is for getting the specific offer information by offer ID.
+    - Enter `offer/{id}` as the “Resource Path” and `Offer` as the “Display Name” and click on “Methods”. This endpoint (a URI resource) is for getting the specific offer information by offer ID.
 ![](../common/images/mobile/403-New_Resource.png)
 
-  - Adding method: you can see that {id} entered in previous step has be recognized as a URI Resource Path Parameter “id”. Click on “+ Add Method” and select “GET”.
+    - Adding method: you can see that {id} entered in previous step has be recognized as a URI Resource Path Parameter “id”. Click on “+ Add Method” and select “GET”.
 ![](../common/images/mobile/403-Adding_Method.png)
 
   - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
