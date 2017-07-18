@@ -64,19 +64,19 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
 
     - In addition to the above endpoint, we need to create endpoints for QR code creation, offer result update, etc. However we will skip to create them because we have the same steps to create other endpoints. They are included in the custom API we provided. The below is the list of endpoints for your reference.
 
-  | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
-  | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
-  | offer/{id}/qr	    | Offer QR code         | GET    | N/A	        | image/png           |
-  | offer		    | Offers	            | GET    | N/A	        | application/json    |
-  | offer/{id}/accept | Accept an offer       | POST   | application/json | application/json    |
-  | offer/{id}/reject | Reject an offer       | POST   | application/json | application/json    |
-  | offer/notify      | Send noti. of offer   | POST   | application/json | application/json    |
+    | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
+    | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
+    | offer/{id}/qr	| Offer QR code         | GET    | N/A	            | image/png           |
+    | offer		| Offers	        | GET    | N/A	            | application/json    |
+    | offer/{id}/accept | Accept an offer       | POST   | application/json | application/json    |
+    | offer/{id}/reject | Reject an offer       | POST   | application/json | application/json    |
+    | offer/notify      | Send noti. of offer   | POST   | application/json | application/json    |
 
 4. Security Settings: You need to assign a role to access the API. Before that, the API is not accessible by anyone.
 On page level navigation pane, select “Security”. Click in the Roles box and select the “Default” role. Scroll to the top and click “Save”.
 ![](../common/images/mobile/403-API_Security_Settings.png)
 
---
+---
 #### Associate the APIs with the loyalty management MBE ####
 Before you can deploy the custom API, it has to be associated with the mobile backend(e.g.: APAC_Test_Drive_Loyalty_Management_MBE01) you created in the previous lab. The mobile backend provides the security context for accessing the API, including the users that have permissions. In this lab, we will assign the complete custom API for "LoyaltyManagementAPI" that we provide.
 
@@ -94,9 +94,13 @@ Before you can deploy the custom API, it has to be associated with the mobile ba
 
 5. [Optional] Follow the same instruction to add the API (e.g.: LoyaltyManagement01) you’ve just created so that you can test it.
 
---
+---
 #### Test the Customer API for loyalty management ####
-To be Described.
+** To Be Modified **
+Now you can test your custom API. For example, for the “Offers” API, the url will be like
+`https://mcs-gse00011678.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI/offer` where https://mcs-gse00011678.mobileenv.us2.oraclecloud.com is the base url you can find on the settings tab of your mobile backend. “/mobile/custom” is a fix context for custom APIs, “LoyaltyManagementAPI” is the API name of your API. “offer” is the endpoint name. There are 1 mandatory headers for invoking custom API. Oracle-Mobile-Backend-ID 
+Which is the ID of your Mobile Backend. And “Authorization” header for http auth.
+
 
 [Procced to Next - 404: Track customer behaviors](404-MobileLab.md)
 
