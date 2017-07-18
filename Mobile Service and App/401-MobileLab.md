@@ -46,49 +46,52 @@ To enable Notifications from the Google Network side, you need to have a project
 8. Switch to “CLOUD MESSAGING” and you will find your API Key(as in Server key) and Sender ID. Please take a note on **API Key** and **Sender ID** for later use. You will use them to configurate the profile of your mobile app in the MCS console.
 ![](../common/images/mobile/401-API_Key_SenderID.png)
 
+---
 #### Create a notifications profile and register the Cafe Supremo app ####
 Next you go back to MCS to associate google credentials with Cafe Supremo mobile application.
 
 1. Create a client (Register the app in MCS as a client) to receive notifications.
-- Navigate through “Applications” -> “Mobile Backends”, select your mobilebackend, and click on “Open” to open your MBE.
+    - Navigate through “Applications” -> “Mobile Backends”, select your mobilebackend, and click on “Open” to open your MBE.
 ![](../common/images/mobile/401-Select_MBE.png)
 
-- Switch to “Clients” tab and click on “New Client”.
+    - Switch to “Clients” tab and click on “New Client”.
 ![](../common/images/mobile/401-Create_Client.png)
 
--Enter the information as in shown in the picture, change `01` to your assigned postfix by instructor. Click on “Create”. This will bring you to the client settings screen.
+    -Enter the information as in shown in the picture, change `01` to your assigned postfix by instructor. Click on “Create”. This will bring you to the client settings screen.
 ![](../common/images/mobile/401-Create_Client.png)
 
 2. Create and select a profile to store google credentials.
-- On the client settings screen, write down your “Application Key” and choose “Profiles”.
+    - On the client settings screen, write down your “Application Key” and choose “Profiles”.
 ![](../common/images/mobile/401-Client_Setting_Created.png)
 
-- Click on “New Profile”.
+    - Click on “New Profile”.
 ![](../common/images/mobile/401-Create_New_Profile.png)
 
-- Enter your **API Key** and **Sender ID** that you took a note in the previous section. (Set Cafe Supremo application up with Google) and clieck on “Create”
+    - Enter your **API Key** and **Sender ID** that you took a note in the previous section. (Set Cafe Supremo application up with Google) and clieck on “Create”
 ![](../common/images/mobile/401-Profile Setting.png)
 
-- Click on “Select Profile”.
+    - Click on “Select Profile”.
 ![](../common/images/mobile/401-Review_MobileApp_Profile.png)
 
+---
 #### Prepare the Cafe Supremo application to receive notifications ####
 To make you mobile application get push notificaitons, you need to add some codes or change the metafile (e.g.: main/AndroidManifest.xml file). In this lab, we provide a pre-built mobile application called "Cafe Supremo" for your use to get push notificaitons. So let's kip this one.
 
+---
 #### Test Notification ####
-- Switch to “Notifications” tab and click on the icon below “4 TEST”.
+1. Switch to “Notifications” tab and click on the icon below “4 TEST”.
 ![](../common/images/mobile/401-Test_Notification.png)
 
-- Click on "Manage Devices".
+2. Click on "Manage Devices".
 ![](../common/images/mobile/401-Test_Manage_Devices.png)
 
-- You shall see devcies that has been registered to this mobile backend. Click on “Close” and go back to the “Test” screen.
+3. You shall see devcies that has been registered to this mobile backend. Click on “Close” and go back to the “Test” screen.
 ![](../common/images/mobile/401-Manage_Devices.png)
 
-- Enter a notification `You can use your points to buy products! – 10001` with send option `Now` and click on “Send”. Note you will be getting errors if no devices registered yet.
+4. Enter a notification `You can use your points to buy products! – 10001` with send option `Now` and click on “Send”. Note you will be getting errors if no devices registered yet.
 ![](../common/images/mobile/401-Notification_Test_Screen.png)
 
-- If you have one device registered, you shall see a success message pop up on top of the page and the notification shall appear in the notification area of your device.
+5. If you have one device registered, you shall see a success message pop up on top of the page and the notification shall appear in the notification area of your device.
 ![](../common/images/mobile/401-MCS_Notification_Result.png)
 
 ![](../common/images/mobile/401-MobileApp_Notification_Result.png)
