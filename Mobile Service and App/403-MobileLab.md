@@ -83,14 +83,18 @@ Before you can deploy the custom API, it has to be associated with the mobile ba
 1. Navigate to the MBE you created, and turn to the “APIs” tab. Click “Select APIs”.
 ![](../common/images/mobile/403-Select_API_MBE.png)
 
+
 2. Enter `LoyaltymanagementAPI` and click one “+” icon to select the one without any suffix, which is the one we’ve provided. This is for the app that provided for the lab to use.
 ![](../common/images/mobile/403-Select_Loyalty_API.png)
+
 
 3. You will see it got added to the right 
 ![](../common/images/mobile/403-Added_API_ToMBE.png)
 
+
 4. Please see the result as below:
 ![](../common/images/mobile/403-API_AddToMBE_Result.png)
+
 
 5. [Optional] Follow the same instruction to add the API (e.g.: LoyaltyManagement01) you’ve just created so that you can test it.
 
