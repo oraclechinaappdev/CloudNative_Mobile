@@ -105,6 +105,7 @@ Now you can test your custom API. For example, for the “Offers” API, the url
 `https://mcs-gse00011678.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI/offer` where https://mcs-gse00011678.mobileenv.us2.oraclecloud.com is the base url you can find on the settings tab of your mobile backend. “/mobile/custom” is a fix context for custom APIs, “LoyaltyManagementAPI” is the API name of your API. “offer” is the endpoint name. There are 1 mandatory headers for invoking custom API. Oracle-Mobile-Backend-ID 
 Which is the ID of your Mobile Backend. And “Authorization” header for http auth.
 
+[API Testing Tool](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
 
 [Procced to Next - 404: Track customer behaviors](404-MobileLab.md)
 
