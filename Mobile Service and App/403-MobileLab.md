@@ -35,7 +35,7 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
 ![](../common/images/mobile/403-API_Creation.png)
 
 3. Define endpoints for the Loyalty Management API: 
-* Select “Endpoints” on the page level navigation pane on the left and click on “+ New Resource”.
+- Select “Endpoints” on the page level navigation pane on the left and click on “+ New Resource”.
 ![](../common/images/mobile/403-Click_Endpoints.png)
 
 * Enter `offer/{id}` as the “Resource Path” and `Offer` as the “Display Name” and click on “Methods”. This endpoint (a URI resource) is for getting the specific offer information by offer ID.
