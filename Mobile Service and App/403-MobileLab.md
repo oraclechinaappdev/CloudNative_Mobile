@@ -29,13 +29,13 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
 ![](../common/images/mobile/403-New_API.png)
 
 2. Enter name and description and click on “Create” as below:
-	+ **API Display Name**: `Loyalty Management 0X` (0X is the sequence number assigned to you by instructor. - e.g.: 01)
-	+ **API Name**: `LoyaltyManagement0X` 
-	+ **API Short Description**: `Custom API for Loyalty Management`
+  + **API Display Name**: `Loyalty Management 0X` (0X is the sequence number assigned to you by instructor. - e.g.: 01)
+  + **API Name**: `LoyaltyManagement0X` 
+  + **API Short Description**: `Custom API for Loyalty Management`
 ![](../common/images/mobile/403-API_Creation.png)
 
 3. Define endpoints for the Loyalty Management API: 
-	+ Select “Endpoints” on the page level navigation pane on the left and click on “+ New Resource”.
+  + Select “Endpoints” on the page level navigation pane on the left and click on “+ New Resource”.
 ![](../common/images/mobile/403-Click_Endpoints.png)
 
   + Enter `offer/{id}` as the “Resource Path” and `Offer` as the “Display Name” and click on “Methods”. This endpoint (a URI resource) is for getting the specific offer information by offer ID.
@@ -61,10 +61,10 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
     	"productdesc": "The best Android phone in the galaxy"
   	} 
 	```
-	Scroll to the top of the page and click on “Save”. 
+  Scroll to the top of the page and click on “Save”. 
 ![](../common/images/mobile/403-Adding_Sample_Response.png)
 
-	+ In addition to the above endpoint, we need to create endpoints for QR code creation, offer result update, etc. However we will skip to create them because we have the same steps to create other endpoints. They are included in the custom API we provided. The below is the list of endpoints for your reference.
+  + In addition to the above endpoint, we need to create endpoints for QR code creation, offer result update, etc. However we will skip to create them because we have the same steps to create other endpoints. They are included in the custom API we provided. The below is the list of endpoints for your reference.
 
 | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
 | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
