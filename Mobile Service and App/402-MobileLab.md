@@ -29,18 +29,17 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
 
 
 
-
 	{
-    "id": 10001,
-    "name": "Samsam Galaxy Offer",
-    "points": 6000,
-    "message": "Exchange 6000 points for 10% discount of Samsam Mobile Phone",
-    "productid": 20001,
-    "productname": "Samsam Galaxy 7",
-    "productprice": 1000,
-    "productimage": "20001.jpg",
-    "productdesc": "The best Android phone in the galaxy"
-  }
+    	"id": 10001,
+    	"name": "Samsam Galaxy Offer",
+    	"points": 6000,
+    	"message": "Exchange 6000 points for 10% discount of Samsam Mobile Phone",
+    	"productid": 20001,
+    	"productname": "Samsam Galaxy 7",
+    	"productprice": 1000,
+    	"productimage": "20001.jpg",
+    	"productdesc": "The best Android phone in the galaxy"
+  	} 
 
 
 #### Associate the APIs with the loyalty management MBE ####
