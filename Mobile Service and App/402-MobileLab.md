@@ -23,9 +23,20 @@ In this exercise, we will:
 ----
 
 #### Create custom APIs and define its endpoints for loyalty management ####
-In this lab, you will create a custom API for loayalty managment. In fact, we need to define serveral endpoints for the custome API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. So, here you will create one endpoint for the query of the specific offer information. We will provide the completed custom API with all endpoints for your use in this lab.
+In this lab, you will create a custom API for loayalty managment. In fact, we need to define serveral endpoints for the custome API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. So, here you will create one endpoint for the query of the specific offer information. **Note:**We will provide the completed custom API with all endpoints for your use in this lab.
 
+1. From the navigation pane, select “Applications” -> “APIs”, click on “+ New API” and select “API” from the dropdown list.
+![](../common/images/mobile/402-New_API.png)
 
+2. Enter name and description and click on “Create” as below:
++ **API Display Name**: `Loyalty Management 0X` (0X is the sequence number assigned to you by instructor. - e.g.: 01)
++ **API Name**: `LoyaltyManagement0X` 
++ **API Short Description**: `Custom API for Loyalty Management`
+![](../common/images/mobile/402-API_Creation.png)
+
+3. Define endpoints for the Loyalty Management API
+- Select “Endpoints” on the page level navigation pane on the left and click on “+ New Resource”.
+![](../common/images/mobile/402-Click_Endpoints.png)
 
 
 
