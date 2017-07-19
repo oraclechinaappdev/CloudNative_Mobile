@@ -46,7 +46,7 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
     - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
 ![](../common/images/mobile/403-Adding_Method_Info.png)
 
-    - Adding sample response: MCS will use the below sample body to create a mockup implementation for this endpoint method. This is the one of good features MCS provide **nabling parallel development** of mobile application without external services. In the "Example" text area, paste the following code:
+    - Adding sample response: MCS will use the below sample body to create a mockup implementation for this endpoint method. This is the one of good features to enable parallel development of mobile application without external services. In the "Example" text area, paste the following code:
 	```
 	{
     	"id": 10001,
@@ -104,11 +104,10 @@ Before you can deploy the custom API, it has to be associated with the mobile ba
 
 Now you can test your custom API. 
 
-1. Finding your base URI and endpoint URI(e.g.: https://mcs-gse00011678.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI/offer), let’s take `Get offer details` endpoint as an example. https://mcs
+1. Finding your base URI and endpoint URI(e.g.: `https://mcs-gse00011678.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI/offer`), let’s take `Get offer details` endpoint as an example.
 ![](../common/images/mobile/403-Test_Get_URL.png)
 
-2. [Install Postman and use Chrome to access.](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop
-Launch Postman) and launch Postman to test `Get offer details` API.
+2. [Install Postman and use Chrome to access.](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) and launch Postman to test `Get offer details` API.
 ![](../common/images/mobile/403-Test_Postman_UI.png)
 
 3. Change the endpoint URI parameter placeholder with `10001`, as is shown below then choose `Basic Auth` from Authourization type dropdown list.
