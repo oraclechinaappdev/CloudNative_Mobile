@@ -17,6 +17,7 @@ In this exercise, we will:
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab.
 - Complete custome API with all required endpoints for your use. (It is ready for you.)
+- Chrome Postman to test custom APIs
 
 ----
 
@@ -84,7 +85,7 @@ Before you can deploy the custom API, it has to be associated with the mobile ba
 ![](../common/images/mobile/403-Select_API_MBE.png)
 
 
-2. Enter `LoyaltymanagementAPI` and click one “+” icon to select the one without any suffix, which is the one we’ve provided. This is for the app that provided for the lab to use.
+2. Enter `LoyaltymanagementAPI` and click one “+” icon to select the one without any suffix, which is the one we’ve provided. This is for the application that provided for the lab to use.
 ![](../common/images/mobile/403-Select_Loyalty_API.png)
 
 
@@ -100,12 +101,50 @@ Before you can deploy the custom API, it has to be associated with the mobile ba
 
 ---
 #### Test the Customer API for loyalty management ####
-** To Be Modified **
-Now you can test your custom API. For example, for the “Offers” API, the url will be like
+
+Now you can test your custom API. 
+
+1. Finding your base URI and endpoint URI(e.g.: https://mcs-gse00011678.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI/offer), let’s take `Get offer details` endpoint as an example.
+![](../common/images/mobile/403-Test_Get_URL.png)
+
+2. [Install Postman and use Chrome to access.](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop
+Launch Postman) and launch Postman to test `Get offer details` API.
+![](../common/images/mobile/403-Test_Postman_UI.png)
+
+3. Change the endpoint URI parameter placeholder with `10001`, as is shown below then choose `Basic Auth` from Authourization type dropdown list.
+![](../common/images/mobile/403-Test_Postman_Setting.png)
+
+4. Enter MCS username and password (MCS credential in the Access Document). and click on “Update Request”.
+![](../common/images/mobile/403-Test_MCS_Credential.png)
+
+5. Click on “Headers” and you can see the “Authorization” header has been generated for you based on your settings in the “Authorization” tab.
+![](../common/images/mobile/403-Test_Authorization_Header.png)
+
+6. Add 2 headers, one is `Oracle-Mobile-Backend-ID`, value is the actual MBE id that you can find in the settings tab of your MBE. The other one is `Accept`:`application/json`. 
+![](../common/images/mobile/403-MBE_Settings_ID.png)
+
+![](../common/images/mobile/403-Test_Adding_2Headers.png)
+
+7. Click on “Send” and you shall see the response at the bottom of the page as below.
+![](../common/images/mobile/403-Test_Result.png)
+
+
+
+
+
+
+
+
+
+
+For example, for the “Offers” API, the url will be like
 `https://mcs-gse00011678.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI/offer` where https://mcs-gse00011678.mobileenv.us2.oraclecloud.com is the base url you can find on the settings tab of your mobile backend. “/mobile/custom” is a fix context for custom APIs, “LoyaltyManagementAPI” is the API name of your API. “offer” is the endpoint name. There are 1 mandatory headers for invoking custom API. Oracle-Mobile-Backend-ID 
 Which is the ID of your Mobile Backend. And “Authorization” header for http auth.
 
 [API Testing Tool](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
+
+
+You have finished this lab successfully.
 
 [Procced to Next - 404: Track customer behaviors](404-MobileLab.md)
 
