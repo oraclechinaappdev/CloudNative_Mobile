@@ -16,7 +16,7 @@ There are 3 RESTful APIs for offer information query, QR code creation and offer
 
 To create a connector for an ACCS service to get offer information, we will:
 - Create a REST connector API for ACCS service
-- Test the connector API
+- Test the connector API for ACCS service
 
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab.
@@ -36,52 +36,32 @@ In this lab, we will create a connector API to integrate ACCS microservice for o
 ![](../common/images/mobile/402-Connector_Info_Review.png)
 
 4. Enter the URL (It will be provided in the Access Document.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
-![](../common/images/mobile/02-Connector_URL_Setting.png)
+![](../common/images/mobile/402-Connector_URL_Setting.png)
 
-5. TTT
+5. We won’t set any rules here, so just click on “Next Step”.
+![](../common/images/mobile/402-Connector_Rule_Setting.png)
 
+6. MCS supports a wide range of security policies for you to use. For the lab, to make it simple, no security policy setting is required. Just click on “Next Step”.
+![](../common/images/mobile/402-Connector_Security_Setting.png)
 
-
-
-1. From the navigation pane, select “Applications” -> “APIs”, click on “+ New API” and select “API” from the dropdown list.
-![](../common/images/mobile/402-New_API.png)
-
-2. Enter name and description and click on “Create” as below:
-+ **API Display Name**: `Loyalty Management 0X` (0X is the sequence number assigned to you by instructor. - e.g.: 01)
-+ **API Name**: `LoyaltyManagement0X` 
-+ **API Short Description**: `Custom API for Loyalty Management`
-![](../common/images/mobile/402-API_Creation.png)
-
-3. Define endpoints for the Loyalty Management API
-    - Select “Endpoints” on the page level navigation pane on the left and click on “+ New Resource”.
-![](../common/images/mobile/402-Click_Endpoints.png)
+7. Click on “Save” when prompt for confirmation.
+![](../common/images/mobile/402-Connector_Save.png)
 
 
+---
+#### Test the connector API for ACCS service ####
 
-	{
-    	"id": 10001,
-    	"name": "Samsam Galaxy Offer",
-    	"points": 6000,
-    	"message": "Exchange 6000 points for 10% discount of Samsam Mobile Phone",
-    	"productid": 20001,
-    	"productname": "Samsam Galaxy 7",
-    	"productprice": 1000,
-    	"productimage": "20001.jpg",
-    	"productdesc": "The best Android phone in the galaxy"
-  	} 
+1. Now your connector is ready and you can test it. Select `GET` as the HTTP method, enter `/10001` into the “Local resource name” following the “Local URI”.
+![](../common/images/mobile/402-Connector_Test.png)
+
+2. Select your MBE(e.g.: APAC_Test_Drive_Loyalty_Management_MBE01) you created from the dropdown list in the “Authentication” section and you will find the actual url that is getting called at the end in the “Remote URL” field. Click on “Test Endpoint”.
+![](../common/images/mobile/402-Connector_Test_EndPoint.png)
+
+3. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
+![](../common/images/mobile/402-Connector_Test_Result.png)
 
 
-#### TBD ####
-To be Described.
-
-#### TBD ####
-To be Described.
-
-#### TBD ####
-To be Described.
-
-#### Test the implementation ####
-To be Described.
+You have finished this lab successfully.
 
 [Procced to Next - 403: Develop Custom APIs and Custom Code to extend mobile services](403-MobileLab.md)
 
