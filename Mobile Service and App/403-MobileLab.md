@@ -80,7 +80,7 @@ On page level navigation pane, select “Security”. Click in the Roles box and
 #### Associate the APIs with the loyalty management MBE ####
 Before you can deploy the custom API, it has to be associated with the mobile backend(e.g.: APAC_Test_Drive_Loyalty_Management_MBE01) you created in the previous lab. The mobile backend provides the security context for accessing the API, including the users that have permissions. In this lab, we will assign the complete custom API for "LoyaltyManagementAPI" that we provide.
 
-1. Navigate to the MBE you created, and turn to the “APIs” tab. Click “Select APIs”.
+1. Navigate to the MBE(e.g.: APAC_Test_Drive_Loyalty_Management_MBE01) you created, and turn to the “APIs” tab. Click “Select APIs”.
 ![](../common/images/mobile/403-Select_API_MBE.png)
 
 
