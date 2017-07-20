@@ -21,13 +21,13 @@ There are some common use cases to adopt microservice, such as
 
 - extend existing monolithic application by adding microservices on the periphery
 - decompose an existing modular app into microservices-style
-- but net new microservices-style app from ground up
+- build net new microservices-style app from ground up
 
 Thus, example requirements for microservice will be,
 
 - scalable, elastic, polyglot
 - automated DevOps
-- instrument for APM and diagnostic
+- instrument for Application Performance Monitoring and diagnostic
 - containers for simplicity & extensibility
 - API first for service consumption
 - mobile first / modern web UX  
