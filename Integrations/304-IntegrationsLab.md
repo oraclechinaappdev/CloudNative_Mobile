@@ -23,8 +23,10 @@ In this exercise, we will:
 	- **Authentication**: Add a new one, select `Basic` and enter your ICS username and password respectively.
 	- **Headers**: Add a new one, enter `Content-Type` and `application/json` respectively.
 	- **Parameters**: Add a new one by (Test 1 or Test 2):
-	- Test 1: `{"customerid": 10001, "offerid": 10001, "productid": 10001, "accepted": true}`
-	- Test 2: `{"customerid": 10001, "offerid": 10001, "productid": 10001, "accepted": false}`
+	- Test 1: `{"customerid": 30001, "offerid": 10001, "productid": 20001, "accepted": true}`
+	- Test 2: `{"customerid": 30002, "offerid": 10002, "productid": 20002, "accepted": false}`
+	
+	(\*Notice: The tests above are not using real data, it just aims for testing the availability of API on ICS)
 
 ![](images/304/01.testing.hurl.png)
 
