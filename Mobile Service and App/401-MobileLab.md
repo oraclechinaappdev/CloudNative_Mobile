@@ -85,17 +85,17 @@ Next you go back to MCS to associate google credentials with Cafe Supremo mobile
 ![](../common/images/mobile/401-Client_Setting_Created.png)
 
 
-    - Click on “New Profile”.
+   - Click on “New Profile”.
     
 ![](../common/images/mobile/401-Create_New_Profile.png)
 
 
-    - Enter your **API Key** and **Sender ID** that you took a note in the previous section. (Set Cafe Supremo application up with Google) and clieck on “Create”
+   - Enter your **API Key** and **Sender ID** that you took a note in the previous section. (Set Cafe Supremo application up with Google) and clieck on “Create”
     
 ![](../common/images/mobile/401-Profile Setting.png)
 
 
-    - Click on “Select Profile”.
+   - Click on “Select Profile”.
     
 ![](../common/images/mobile/401-Review_MobileApp_Profile.png)
 
