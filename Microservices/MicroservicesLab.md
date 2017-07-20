@@ -13,7 +13,7 @@ This lab is part of the APAC Cloud Test Drive and is the 2nd lab about creating 
 
 - The following lab requires an Oracle Public Cloud account that will either be applied by yourself or supplied by your instructor.
 
-- You will need to install an IDE environment and GIT client in your local computer. The instructions assume you are using the VM provided as part of this workshop. The VM is also used in the [Oracle DevOps Cloud Native Microservice Workshop](https://github.com/oracle-weblogic/cloud-native-XWeeks/blob/master/cloud-native-devops/README.md). You can download the VM [here](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk).
+- You will need to install an IDE environment and GIT client in your local computer. The instructions assume you are using the VM provided as part of this workshop. The VM is also used in the [Oracle DevOps Cloud Native Microservice Workshop](https://github.com/oracle-weblogic/cloud-native-XWeeks/blob/master/cloud-native-devops/README.md). You can download the VM [here](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk). Additional information about the VM can be found [[here](../Java Apps/virtualbox.md)].
 
 # 1. Create Offer REST API Microservice
 
@@ -23,7 +23,11 @@ This lab is part of the APAC Cloud Test Drive and is the 2nd lab about creating 
 
 ![](images/001.dashboard.png)
 
-- In the left hand navigation panel, click **Project**
+- The Developer Cloud Service landing page should show the project we've created in the previous lab. Just click the project name and navigate to the project main page.
+
+![](images/001.landing.png)
+
+- **Just in case you are already in other pages of Developer Cloud Service, you can go to project main page by clicking `Project` in the `left hand navigation panel`**  
 
 ![](images/002.createrepo.png)
 
@@ -152,6 +156,17 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 ![](images/024.deployjobname.png)
 
+- **Check** the `Include ACCS Deployment` box and add the following json.
+
+```json
+{
+	"memory":"1G",
+	"instances":"1"
+}
+```
+
+![](images/024.json.png)
+
 - After fill in the above information, click **Save** button.
 
 ![](images/025.deploysave.png)
@@ -160,7 +175,7 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 ![](images/026.deploystart.png)
 
-- The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment successded**. Ask for help from your instructor if the deployment fails.
+- The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment succeeded**. Ask for help from your instructor if the deployment fails.
 
 ![](images/027.deploysuccess.png)
 
@@ -566,6 +581,17 @@ Microservice, you can REUSE the same target**.
 
 ![](images/188.choosejob.png)
 
+- Check `Include ACCS Deployment` box and enter the following json
+
+```json
+{
+	"memory":"1G",
+	"instances":"1"
+}
+```
+
+![](images/024.json.png)
+
 - After fill in the above information, click **Save** button.
 
 ![](images/189.depsave.png)
@@ -574,7 +600,7 @@ Microservice, you can REUSE the same target**.
 
 ![](images/190.start.png)
 
-- The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment successded**. Ask for help from your instructor if the deployment fails.
+- The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment succeeded**. Ask for help from your instructor if the deployment fails.
 
 ![](images/191.deployed.png)
 
