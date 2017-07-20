@@ -65,16 +65,15 @@ Next you go back to MCS to associate google credentials with Cafe Supremo mobile
 
 1. Create a client (Register the app in MCS as a client) to receive notifications.
     - Navigate through “Applications” -> “Mobile Backends”, select your mobilebackend, and click on “Open” to open your MBE.
-    
 ![](../common/images/mobile/401-Select_MBE.png)
 
 
-    - Switch to “Clients” tab and click on “New Client”.
+   - Switch to “Clients” tab and click on “New Client”.
     
 ![](../common/images/mobile/401-Create_Client.png)
 
 
-    -Enter the information as in shown in the picture, change `01` to your assigned postfix by instructor. Click on “Create”. This will bring you to the client settings screen.
+   - Enter the information as in shown in the picture, change `01` to your assigned postfix by instructor. Click on “Create”. This will bring you to the client settings screen.
     
 ![](../common/images/mobile/401-Create_Client.png)
 
