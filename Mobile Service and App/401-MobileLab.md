@@ -90,7 +90,7 @@ Next you go back to MCS to associate google credentials with Cafe Supremo mobile
 ![](../common/images/mobile/401-Create_New_Profile.png)
 
 
-   - Enter `FCM0X` ((change `0X` to your assigned postfix by instructor, e.g: 01) as the "Name" your **API Key** and **Sender ID** that you took a note in the previous section. (Set Cafe Supremo application up with Google) and clieck on “Create”
+   - Enter `FCM0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Name" your **API Key** and **Sender ID** that you took a note in the previous section. (Set Cafe Supremo application up with Google) and clieck on “Create”
     
 ![](../common/images/mobile/401-Profile_Setting.png)
 
@@ -99,7 +99,7 @@ Next you go back to MCS to associate google credentials with Cafe Supremo mobile
 ![](../common/images/mobile/401-Selected_Profile.png)
 
 
-   - Now your client is ready and with Notifications Enabled.
+   - Now your client is ready. Navigate to "Applications" -> "Mobile Backends" and select your MBE. On the client setting screen, you can see your mobile client with Notifications Enabled.
 ![](../common/images/mobile/401-Review_MobileApp_Profile.png)
 
 ---
