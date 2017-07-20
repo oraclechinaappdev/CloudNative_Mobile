@@ -145,7 +145,7 @@ In this exercise, we will:
 ![](images/303/20.integration.activityname.concat.png)
 
 21. Click on `string1`, enter `'Offer ID: '`, then **Enter**.  
-    (\*Notice: Remember to put **`' '`**, i.e. the single quote to enclose `Offer ID` string)
+    (\*Notice: Remember to put **`' '`**, i.e. the single quote to enclose `Offer ID` string)  
     Expand `Source` from the left pane, drag the `offerid` field and drop it onto `string2`. A string is automatically inserted. \(This is the XSLT variable representation of 'offerid'\)
 
 ![](images/303/21.integration.activityname.concat1.png)
@@ -256,11 +256,15 @@ In this exercise, we will:
 
 40. **(Simple Challenge)**  
     Complete the `Map to ProcessOffer` at the `Otherwise` path. The only different is:  
-	Enter ** '' ** for `imgurl`, such that an empty string will be returned. (Instead of *'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname\>/ctdqr/v1/offer/'* at the `IF Accept Offer` path)  
+	Enter **''** for `imgurl`, i.e. 2 X single quote, such that an empty string will be returned. (Instead of *'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname\>/ctdqr/v1/offer/'* at the `IF Accept Offer` path)  
 	The result should be the same as below.  
-    **(\*Hints: Repeat step 35 to 39)**
+    **(\*Hints: Repeat step 35 to 39, and instructor will give you a quick demo here if needed)**
 
 ![](images/303/40.integration.otherwise.png)
+
+    The result of **Mapping** should look like this:
+	
+![](images/303/40.integration.otherwise.result.png)
 	
 41. The *Process Offer* integration flow development is done.  
     However, there is an error showing at the top right corner, telling that **primary business identifier for Tracking** is needed. 
