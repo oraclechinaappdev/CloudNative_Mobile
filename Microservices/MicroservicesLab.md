@@ -13,7 +13,7 @@ This lab is part of the APAC Cloud Test Drive and is the 2nd lab about creating 
 
 - The following lab requires an Oracle Public Cloud account that will either be applied by yourself or supplied by your instructor.
 
-- You will need to install an IDE environment and GIT client in your local computer. The instructions assume you are using the VM provided as part of this workshop. The VM is also used in the [Oracle DevOps Cloud Native Microservice Workshop](https://github.com/oracle-weblogic/cloud-native-XWeeks/blob/master/cloud-native-devops/README.md). You can download the VM [here](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk). Additional information about the VM can be found [[here](../Java Apps/virtualbox.md)].
+- You will need to install an IDE environment and GIT client in your local computer. The instructions assume you are using the VM provided as part of this workshop. The VM is also used in the [Oracle DevOps Cloud Native Microservice Workshop](https://github.com/oracle-weblogic/cloud-native-XWeeks/blob/master/cloud-native-devops/README.md). You can download the VM [here](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk). Additional information about the VM can be found [here](../Java Apps/virtualbox.md).
 
 # 1. Create Offer REST API Microservice
 
