@@ -73,7 +73,7 @@ Next you go back to MCS to associate google credentials with Cafe Supremo mobile
 ![](../common/images/mobile/401-Create_Client.png)
 
 
-   - Enter `MyAndroidClient0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Client Display Name", `1.0.0` as the "App Version", and `com.oraclecorp.internal.ent3.apacTestDrv` as the "Package Name". Select your MBE and click on “Create”. This will bring you to the client settings screen.
+   - Enter `MyAndroidClient0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Client Display Name", `1.0.0` as the "App Version", and `com.oraclecorp.internal.ent3.apacTestDrv` as the "Package Name". Click on “Create”. This will bring you to the client settings screen.
     
 ![](../common/images/mobile/401-Create_Client.png)
 
