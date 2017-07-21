@@ -32,8 +32,8 @@ Oracle Public Cloud Service account for Mobile Cloud Service (Check with instruc
 ![](../common/images/mobile/400-New_MBE.png)
 
 5. Configure MBE with the following parameters:
-+ **Name**: APAC_Test_Drive_Loyalty_Management_MBE0X (0X is the sequence number assigned to you by instructor.)
-+ **Description**: APAC_Test_Drive_Loyalty_Management_MBE0X (Any value is okay.)
++ **Name**: `APAC_Test_Drive_Loyalty_Management_MBE0X` (0X is the sequence number assigned to you by instructor.)
++ **Description**: `APAC_Test_Drive_Loyalty_Management_MBE0X` (Any value is okay.)
 
 6. Check 
 The Mobile Backend is now created and it will bring you to the “Settings” tab of the newly created MBE where you will see the mobile backend ID, client ID, etc, which you will need to use when interacting with the MBE. Click on the two “Show” links to see the “Anonymous Key” and “Client Secret”. **Please take a note on the mobile backend ID, client ID, Anonymous Key and Client Secret for laster use.** You are going to use them for the integration between Java Application to  this mobile service in order to push offer information.
