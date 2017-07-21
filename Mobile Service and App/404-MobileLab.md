@@ -1,6 +1,6 @@
 # ORACLE Cloud Test Drive #
 -----
-## 404: Track customer behaviors ##
+## 404: Track customer behaviors [Optional] ##
 
 ### Introduction ###
 ![](../common/images/mobile/404-Analytics_Overview.png)
