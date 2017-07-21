@@ -43,7 +43,10 @@ For the mobile application for loyalty management, you can make it all work and 
 - Set up Push Notification to send offer information to the user of the Cafe Supremo mobile application and test Push Notification. In the lab, we are going to support Android to shorten the lab time even though Oracle MCS can support iOS and Windows, too. 
 -Create connectors for customer APIs to integrate external services like QR code creaton and offer information query provided by ACCS as microservices.
 - Create custom REST APIs and code to build up a library of services for Cafe Supremo mobile application, java application to get offer request, microservices to get QR code, etc. 
-- Track customer behaviors like "Offer Accept by users" using custom analytics report.
+- Track customer behaviors like "Offer Accept by users" using custom analytics report. **[Note]** this section is optional. If time is not available, you can skip this part.
+
+![](../common/images/mobile/CTD_About_Lab_Mobile.PNG)
+
 
 ### Prerequisites ###
 - Bring your Android phone.
@@ -69,7 +72,7 @@ Let's explore the Mobile Service and Application Lab. Please click the below lin
 
 [Click Here.](403-MobileLab.md)
 
-## 404: Track customer behaviors ##
+## 404: Track customer behaviors [Optional] ##
 
 [Click Here.](404-MobileLab.md)
 
