@@ -8,7 +8,6 @@ You can use the Notifications service (part of MCS platform APIs) to send notifi
 
 ### About the Exercise Today ###
 In this exercise, we will:
-- Set Cafe Supremo application up with Google. (Android Only)
 - Create a notifications profile and register the Cafe Supremo app
 - Prepare the Cafe Supremo application to receive notifications
 - Test Notification
@@ -16,52 +15,10 @@ In this exercise, we will:
 ### Prerequisites ###
 - Cafe Supremo application binary (Will be provided by instructor)
 - Android device to install Cafe Supremo application
-- Your Google account
 
 ----
-
-#### Set Cafe Supremo application up with Google ####
-To enable Notifications from the Google Network side, you need to have a project ID, Google Firebase Cloud Messaging (GCM) enabled, and an API key.
-
-1. Use your google account to login to firebase https://console.firebase.google.com/ 
-
-2. Click on “Add project” to add a project 
-
-![](../common/images/mobile/401-FCM_AddProject.png)
-
-
-3. Enter a name (i.e. `apac-test-drive-01` or `(Provided by intructor)`) and select your region and confirm with “CREATE PROJECT” button.
-
-![](../common/images/mobile/401-Google_Project_Creation.png)
-
-
-4. You will be brought to the project overview page. Select “Add Firebase to your Android app”.
-
-![](../common/images/mobile/401-Add_Firebase_toApp.png)
-
-
-5. Enter the package name(i.e. `com.oraclecorp.internal.ent3.apacTestDrv` or `(Provided by intructor)`) of Cafe Supremo app and click on “REGISTER APP”.
-
-![](../common/images/mobile/401-FCM_Register_App.png)
-
-
-6. You can download the google-services.json, but we will not be using it so just click on “Skip to the console”.
-
-![](../common/images/mobile/401-Download_Google_JSON.png)
-
-
-7. Open settings of the app.
-
-![](../common/images/mobile/401-Open_App_Settings.png)
-
-
-8. Switch to “CLOUD MESSAGING” and you will find your API Key(as in Server key) and Sender ID. Please take a note on **API Key** and **Sender ID** for later use. You will use them to configurate the profile of your mobile app in the MCS console.
-
-![](../common/images/mobile/401-API_Key_SenderID.png)
-
----
 #### Create a notifications profile and register the Cafe Supremo app ####
-Next you go back to MCS to associate google credentials with Cafe Supremo mobile application.
+In this lab, you will create a notifications profile and register the client application (Cafe Supremo mobile application) to associate google credentials.
 
 1. Create a client (Register the app in MCS as a client) to receive notifications.
     - Navigate through “Applications” -> “Mobile Backends”, select your mobilebackend, and click on “Open” to open your MBE.
@@ -78,7 +35,7 @@ Next you go back to MCS to associate google credentials with Cafe Supremo mobile
 ![](../common/images/mobile/401-Create_Client.png)
 
 
-2. Create and select a profile to store google credentials.
+2. Create and select a profile to store google credentials like API Key and Sender ID.
 
     - On the client settings screen, write down your “Application Key” and choose “Profiles”.
     
@@ -90,7 +47,7 @@ Next you go back to MCS to associate google credentials with Cafe Supremo mobile
 ![](../common/images/mobile/401-Create_New_Profile.png)
 
 
-   - Enter `FCM0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Name" your **API Key** and **Sender ID** that you took a note in the previous section. (Set Cafe Supremo application up with Google) and clieck on “Create”
+   - Enter `FCM0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Name. Paste `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the Sender ID. (We generated them for Cafe Supremo mobile application from Google.) and clieck on “Create”
     
 ![](../common/images/mobile/401-Profile_Setting.png)
 
