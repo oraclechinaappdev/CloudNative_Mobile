@@ -40,6 +40,11 @@ The Mobile Backend is now created and it will bring you to the “Settings” ta
 
 ![](../common/images/mobile/400-MBE_settings.png)
 
+7. Mobile Application Setting for MBE information
+** TBD **
+
+
+
 You have finished this lab section.
 
 [Procced to Next - 401: Set up Push Notification and Test Push Notification to mobile app](401-MobileLab.md)
