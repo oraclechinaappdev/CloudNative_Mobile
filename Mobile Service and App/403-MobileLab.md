@@ -13,6 +13,8 @@ In the previous lab, we've created 3 connector APIs to integrate with external s
 
 In this exercise, we will:
 - Create the custom API and define its endpoints for loyalty management. We need the custom API with several endpoints for offer information query, QR code creation and offer result (e.g. reject or accept) update.
+- Implement the custom API: In this lab, we will provide code snippets for API implementation. Just follow the instructions and you can make it.
+- Set up Security for the custom API
 - Associate the APIs with the loyalty management MBE.
 - Test the Customer API for loyalty management
 
@@ -87,30 +89,29 @@ Click on “Create” on the bottom right.
     | offer/{id}/reject | Reject an offer       | POST   | application/json | application/json    |
     | offer/notify      | Send noti. of offer   | POST   | application/json | application/json    |
 
-5. 
+----
+#### Implement the custom API for the Loyalty Management ####
 
 
 
-
-
-
-4. Security Settings: You need to assign a role to access the API. Before that, the API is not accessible by anyone.
-On page level navigation pane, select “Security”. Click in the Roles box and select the “Default” role. Scroll to the top and click “Save”.
+----
+#### Set up Security for the custom API for the Loyalty Management ####
+You need to assign a role to access the API. Before that, the API is not accessible by anyone. On page level navigation pane, select “Security”. Click in the Roles box and select the “Default” role. Scroll to the top and click “Save”.
 ![](../common/images/mobile/403-API_Security_Settings.png)
 
 ---
 #### Associate the APIs with the loyalty management MBE ####
-Before you can deploy the custom API, it has to be associated with the mobile backend(e.g.: APAC_Test_Drive_Loyalty_Management_MBE01) you created in the previous lab. The mobile backend provides the security context for accessing the API, including the users that have permissions. In this lab, we will assign the complete custom API for "LoyaltyManagementAPI" that we provide.
+Before you can deploy the custom API, it has to be associated with the mobile backend(e.g.: `APAC_Test_Drive_Loyalty_Management_MBE01`) you created in the previous lab. The mobile backend provides the security context for accessing the API, including the users that have permissions. In this lab, we will assign the complete custom API for "LoyaltyManagementAPI" that we provide.
 
 1. Navigate to the MBE(e.g.: APAC_Test_Drive_Loyalty_Management_MBE01) you created, and turn to the “APIs” tab. Click “Select APIs”.
 ![](../common/images/mobile/403-Select_API_MBE.png)
 
 
-2. Enter `LoyaltymanagementAPI` and click one “+” icon to select the one without any suffix, which is the one we’ve provided. This is for the application that provided for the lab to use.
-![](../common/images/mobile/403-Select_Loyalty_API.png)
+2. Enter `LoyaltymanagementAPI0X`(replace **“0X”** with your own postfix)  and and click the  “+” icon to select the API.
+![](../common/images/mobile/403-Select_Your_API.png)
 
 
-3. You will see it got added to the right 
+3. You will see it got added to the right.
 ![](../common/images/mobile/403-Added_API_ToMBE.png)
 
 
@@ -118,14 +119,12 @@ Before you can deploy the custom API, it has to be associated with the mobile ba
 ![](../common/images/mobile/403-API_AddToMBE_Result.png)
 
 
-5. [Optional] Follow the same instruction to add the API (e.g.: LoyaltyManagement01) you’ve just created so that you can test it.
-
 ---
 #### Test the Customer API for loyalty management ####
 
 Now you can test your custom API. 
 
-1. Finding your base URI and endpoint URI(e.g.: `https://mcs-gse00011678.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI/offer`), let’s take `Get offer details` endpoint as an example.
+1. Finding your base URI and endpoint URI(e.g.: `https://mcs-gse00011678.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI01/offer`), let’s take `Get offer details` endpoint as an example.
 ![](../common/images/mobile/403-Test_Get_URL.png)
 
 2. [Install Postman and use Chrome to access.](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) and launch Postman to test `Get offer details` API.
