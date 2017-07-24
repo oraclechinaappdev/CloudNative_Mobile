@@ -9,14 +9,17 @@ You can create custom REST APIs to build up a library of services that can be us
 ![](../common/images/mobile/mcsgc_dt_004_api.png)
 
 ### About the Exercise Today ###
+In the previous lab, we've created 3 connector APIs to integrate with external services for offer information query, QR code creation and offer result update. As you might remember, those connector APIs are not directly exposed to mobile applications. Once you create  connector APIs to access the services, you can use them in custom APIs (e.g. Loyalty Managment API), which you can then call from your mobile applications using standard REST calls. So, in this lab, we will create a custom API for 3 connector APIs.
+
 In this exercise, we will:
 - Create the custom API and define its endpoints for loyalty management. We need the custom API with several endpoints for offer information query, QR code creation and offer result (e.g. reject or accept) update.
 - Associate the APIs with the loyalty management MBE.
 - Test the Customer API for loyalty management
 
 ### Prerequisites ###
-- Loyalty management MBE created in the previous lab.
-- Complete custome API with all required endpoints for your use. (It is ready for you.)
+- Loyalty management MBE created in the previous lab. (400 lab)
+- 3 Connector APIs we created in the previous lab (402 lab)
+- A RAML file for the custome API with some of endpoints for your use. It can be downloaded from [this link](../common/assets/mobile/loyaltymanagementapi.raml)
 - Chrome Postman to test custom APIs
 
 ----
