@@ -132,190 +132,189 @@ In this lab, we will provide the implementation logic for the Loyalty Management
  		* @external ExpressApplicationObject
  		* @see {@link http://expressjs.com/3x/api.html#app}
  		*/
-	```
-/**
- * Mobile Cloud custom code service entry point.
- * @param {external:ExpressApplicationObject}
- * service
- */
-module.exports = function (service) {
+		/**
+		 * Mobile Cloud custom code service entry point.
+ 		* @param {external:ExpressApplicationObject}
+ 		* service
+ 		*/
+		module.exports = function (service) {
 
-    /**
-     *  The file samples.txt in the archive that this file was packaged with contains some example code.
-     */
+    		/**
+    		 *  The file samples.txt in the archive that this file was packaged with contains some example code.
+     		*/
 
-    service.get('/mobile/custom/LoyaltyManagementAPI/offer', function (req, res) {
-        var result = {};
-        var statusCode = 200;
-        if (statusCode == 200) {
-            var acceptType = req.accepts(['application/json']);
-            if (acceptType == 'application/json') {
-                result = [{
-                    "id": 10001,
-                    "name": "Our new aroma roast",
-                    "points": 10000,
-                    "message": "Try special brew today and enjoy 10% off with 10,000 points",
-                    "productid": 20001,
-                    "productname": "Aroma Beans",
-                    "productprice": 21,
-                    "productimage": "20001.jpg",
-                    "productdesc": "Blend of incomparable Balance of sweetness, aroma and body. Composed of 50% Arabica and 50% Robusta."
-                },{
-                    "id": 10002,
-                    "name": "Fresh brewed everyday",
-                    "points": 20000,
-                    "message": "Purchase special brew between 3-5pm and receive 20% off with 20,000 points",
-                    "productid": 20002,
-                    "productname": "Valentine",
-                    "productprice": 20,
-                    "productimage": "20002.jpg",
-                    "productdesc": "Specialty coffee roasted in small batches by people who care. The specialty part means we only choose to roast top-tier, rigorously-graded, traceable coffees."
-                },{
-                    "id": 10003,
-                    "name": "Upgrade your iced coffee",
-                    "points": 5000,
-                    "message": "Stop in today and treat yourself to an upgraded iced coffee with 5,000 points",
-                    "productid": 20003,
-                    "productname": "Coffee Break",
-                    "productprice": 15,
-                    "productimage": "20003.jpg",
-                    "productdesc": "Celebrates the rich flavor of espresso. It is a simple drink, yet we prepare it with care. Baristas pour two espresso shots, and then quickly pour hot water over the top to produce a light layer of crema."
-                }];
-            }
-        }
-        res.status(statusCode).send(result);
-    });
+    		service.get('/mobile/custom/LoyaltyManagementAPI/offer', function (req, res) {
+        		var result = {};
+        		var statusCode = 200;
+        		if (statusCode == 200) {
+            		var acceptType = req.accepts(['application/json']);
+            		if (acceptType == 'application/json') {
+                		result = [{
+                    		"id": 10001,
+				    "name": "Our new aroma roast",
+				    "points": 10000,
+				    "message": "Try special brew today and enjoy 10% off with 10,000 points",
+				    "productid": 20001,
+				    "productname": "Aroma Beans",
+				    "productprice": 21,
+				    "productimage": "20001.jpg",
+				    "productdesc": "Blend of incomparable Balance of sweetness, aroma and body. Composed of 50% Arabica and 50% Robusta."
+				},{
+				    "id": 10002,
+				    "name": "Fresh brewed everyday",
+				    "points": 20000,
+				    "message": "Purchase special brew between 3-5pm and receive 20% off with 20,000 points",
+				    "productid": 20002,
+				    "productname": "Valentine",
+				    "productprice": 20,
+				    "productimage": "20002.jpg",
+				    "productdesc": "Specialty coffee roasted in small batches by people who care. The specialty part means we only choose to roast top-tier, rigorously-graded, traceable coffees."
+				},{
+				    "id": 10003,
+				    "name": "Upgrade your iced coffee",
+				    "points": 5000,
+				    "message": "Stop in today and treat yourself to an upgraded iced coffee with 5,000 points",
+				    "productid": 20003,
+				    "productname": "Coffee Break",
+				    "productprice": 15,
+				    "productimage": "20003.jpg",
+				    "productdesc": "Celebrates the rich flavor of espresso. It is a simple drink, yet we prepare it with care. Baristas pour two espresso shots, and then quickly pour hot water over the top to produce a light layer of crema."
+				}];
+			    }
+			}
+			res.status(statusCode).send(result);
+		    });
 
-    service.get('/mobile/custom/LoyaltyManagementAPI/offer/:id', function (req, res) {
-        req.oracleMobile.connectors.TestDriveACCSPtMgtConnectorAPI.get('/ptmgt/v1/offers/' + req.params.id, { outType: 'stream' })
-            .on('error', function (error) {
-                console.log('Error getting offer details.');
-                res.send(error.status, error.message)
-            })
-            .pipe(res);
-    });
+		    service.get('/mobile/custom/LoyaltyManagementAPI/offer/:id', function (req, res) {
+			req.oracleMobile.connectors.TestDriveACCSPtMgtConnectorAPI.get('/ptmgt/v1/offers/' + req.params.id, { outType: 'stream' })
+			    .on('error', function (error) {
+				console.log('Error getting offer details.');
+				res.send(error.status, error.message)
+			    })
+			    .pipe(res);
+		    });
 
-    service.get('/mobile/custom/LoyaltyManagementAPI/offer/:id/qr', function (req, res) {
-        req.oracleMobile.connectors.TestDriveACCSCtdQRConnectorAPI.get('/ctdqr/v1/offer/' + req.params.id, { outType: 'stream' })
-            .on('error', function (error) {
-                console.log('Error getting offer QR code.');
-                res.send(error.status, error.message)
-            })
-            .pipe(res);
-    });
-    service.post('/mobile/custom/LoyaltyManagementAPI/offer/notify', function (req, res) {
-        var notification = {
-            message: req.body.message + ' - ' + req.body.offerid,
-            users: req.body.users
-        };
-        if (req.body.message.startsWith('Custom')) {
-            notification = req.body;
-        }
+		    service.get('/mobile/custom/LoyaltyManagementAPI/offer/:id/qr', function (req, res) {
+			req.oracleMobile.connectors.TestDriveACCSCtdQRConnectorAPI.get('/ctdqr/v1/offer/' + req.params.id, { outType: 'stream' })
+			    .on('error', function (error) {
+				console.log('Error getting offer QR code.');
+				res.send(error.status, error.message)
+			    })
+			    .pipe(res);
+		    });
+		    service.post('/mobile/custom/LoyaltyManagementAPI/offer/notify', function (req, res) {
+			var notification = {
+			    message: req.body.message + ' - ' + req.body.offerid,
+			    users: req.body.users
+			};
+			if (req.body.message.startsWith('Custom')) {
+			    notification = req.body;
+			}
 
-        req.oracleMobile.notification.post(notification, {
-            mbe: req.oracleMobile.mbe.getMBE().name,
-            version: req.oracleMobile.mbe.getMBE().version
-        }).then(
-            function (result) {
-                res.send(result.statusCode, result.result);
-            },
-            function (error) {
-                res.send(error.statusCode, error.error);
-            });
-    });
+			req.oracleMobile.notification.post(notification, {
+			    mbe: req.oracleMobile.mbe.getMBE().name,
+			    version: req.oracleMobile.mbe.getMBE().version
+			}).then(
+			    function (result) {
+				res.send(result.statusCode, result.result);
+			    },
+			    function (error) {
+				res.send(error.statusCode, error.error);
+			    });
+		    });
 
-    service.post('/mobile/custom/LoyaltyManagementAPI/offer/:id/accept', function (req, res) {
-        var events = [];
-        events.push({
-            name: 'context',
-            type: 'system',
-            timestamp: timestamp()
-        });
-        events.push({
-            name: 'AcceptOffer',
-            type: 'custom',
-            component: 'Offers',
-            timestamp: timestamp(),
-            properties: {
-                offerId: req.params.id
-            }
-        });
-        var acceptReq = {
-            "offerid": req.params.id,
-            "productid": req.body.productid,
-            "accepted": true
-        };
-        processoffer(events, acceptReq, req, res);
-    });
+		    service.post('/mobile/custom/LoyaltyManagementAPI/offer/:id/accept', function (req, res) {
+			var events = [];
+			events.push({
+			    name: 'context',
+			    type: 'system',
+			    timestamp: timestamp()
+			});
+			events.push({
+			    name: 'AcceptOffer',
+			    type: 'custom',
+			    component: 'Offers',
+			    timestamp: timestamp(),
+			    properties: {
+				offerId: req.params.id
+			    }
+			});
+			var acceptReq = {
+			    "offerid": req.params.id,
+			    "productid": req.body.productid,
+			    "accepted": true
+			};
+			processoffer(events, acceptReq, req, res);
+		    });
 
-    service.post('/mobile/custom/LoyaltyManagementAPI/offer/:id/reject', function (req, res) {
-        var events = [];
-        events.push({
-            name: 'context',
-            type: 'system',
-            timestamp: timestamp()
-        });
-        events.push({
-            name: 'RejectOffer',
-            type: 'custom',
-            component: 'Offers',
-            timestamp: timestamp(),
-            properties: {
-                offerId: req.params.id
-            }
-        });
-        var rejectReq = {
-            "offerid": req.params.id,
-            "productid": req.body.productid,
-            "accepted": false
-        };
-        processoffer(events, rejectReq, req, res);
-    });
+		    service.post('/mobile/custom/LoyaltyManagementAPI/offer/:id/reject', function (req, res) {
+			var events = [];
+			events.push({
+			    name: 'context',
+			    type: 'system',
+			    timestamp: timestamp()
+			});
+			events.push({
+			    name: 'RejectOffer',
+			    type: 'custom',
+			    component: 'Offers',
+			    timestamp: timestamp(),
+			    properties: {
+				offerId: req.params.id
+			    }
+			});
+			var rejectReq = {
+			    "offerid": req.params.id,
+			    "productid": req.body.productid,
+			    "accepted": false
+			};
+			processoffer(events, rejectReq, req, res);
+		    });
 
-    var processoffer = function (events, reqBody, req, res) {
-        req.oracleMobile.ums.getUser().then(
-            function (result) {
-                reqBody.customerid = result.result.username;
-                events[1].properties.userName = result.result.username;
-                req.oracleMobile.analytics.postEvent(events).then(function () {
-                    req.oracleMobile.connectors.TestDriveICSConnectorAPI.post('', JSON.stringify(reqBody), { contentType: "application/json", accept: "application/json" }).then(
-                        function (result) {
-                            res.status(result.statusCode).send(result.result);
+		    var processoffer = function (events, reqBody, req, res) {
+			req.oracleMobile.ums.getUser().then(
+			    function (result) {
+				reqBody.customerid = result.result.username;
+				events[1].properties.userName = result.result.username;
+				req.oracleMobile.analytics.postEvent(events).then(function () {
+				    req.oracleMobile.connectors.TestDriveICSConnectorAPI.post('', JSON.stringify(reqBody), { contentType: "application/json", accept: "application/json" }).then(
+					function (result) {
+					    res.status(result.statusCode).send(result.result);
 
-                        }, function (error) {
-                            console.log('Error processing offer.');
-                            res.send(500, error);
-                        }
-                    );
-                });
-            },
-            function (error) {
-                res.send(error.statusCode, error.error);
-            }
-        );
-    };
+					}, function (error) {
+					    console.log('Error processing offer.');
+					    res.send(500, error);
+					}
+				    );
+				});
+			    },
+			    function (error) {
+				res.send(error.statusCode, error.error);
+			    }
+			);
+		    };
 
-    var timestamp = function (date) {
-        var pad = function (amount, width) {
-            var padding = "";
-            while (padding.length < width - 1 && amount < Math.pow(10, width - padding.length - 1))
-                padding += "0";
-            return padding + amount.toString();
-        }
-        date = date ? date : new Date();
-        var offset = date.getTimezoneOffset();
-        return pad(date.getFullYear(), 4)
-            + "-" + pad(date.getMonth() + 1, 2)
-            + "-" + pad(date.getDate(), 2)
-            + "T" + pad(date.getHours(), 2)
-            + ":" + pad(date.getMinutes(), 2)
-            + ":" + pad(date.getSeconds(), 2)
-            + "." + pad(date.getMilliseconds(), 3)
-            + (offset > 0 ? "-" : "+")
-            + pad(Math.floor(Math.abs(offset) / 60), 2)
-            + ":" + pad(Math.abs(offset) % 60, 2);
-    };
-};
+		    var timestamp = function (date) {
+			var pad = function (amount, width) {
+			    var padding = "";
+			    while (padding.length < width - 1 && amount < Math.pow(10, width - padding.length - 1))
+				padding += "0";
+			    return padding + amount.toString();
+			}
+			date = date ? date : new Date();
+			var offset = date.getTimezoneOffset();
+			return pad(date.getFullYear(), 4)
+			    + "-" + pad(date.getMonth() + 1, 2)
+			    + "-" + pad(date.getDate(), 2)
+			    + "T" + pad(date.getHours(), 2)
+			    + ":" + pad(date.getMinutes(), 2)
+			    + ":" + pad(date.getSeconds(), 2)
+			    + "." + pad(date.getMilliseconds(), 3)
+			    + (offset > 0 ? "-" : "+")
+			    + pad(Math.floor(Math.abs(offset) / 60), 2)
+			    + ":" + pad(Math.abs(offset) % 60, 2);
+		    };
+		};
 
 	```
 
