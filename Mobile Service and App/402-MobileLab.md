@@ -35,7 +35,7 @@ In this lab, we will create a connector API to integrate ACCS microservice for o
 3. Review the name/description on the general screen and click on the “Next Step” button (“>” on the top right) to move to the next screen.
 ![](../common/images/mobile/402-Connector_Info_Review.png)
 
-4. Enter the URL (e.g.: https://offer-gse00010885.apaas.em3.oraclecloud.com/ptmgt/v1/offers. It will be provided in the Access Document.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
+4. Enter the URL (e.g.: `https://offer-gse00010885.apaas.em3.oraclecloud.com/ptmgt/v1/offers`. It will be provided in the Access Document.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
 ![](../common/images/mobile/402-Connector_URL_Setting.png)
 
 5. We won’t set any rules here, so just click on “Next Step”.
@@ -69,7 +69,7 @@ In this lab, we will create a connector API to integrate ACCS microservice for Q
 3. Review the name/description on the general screen and click on the “Next Step” button (“>” on the top right) to move to the next screen.
 ![](../common/images/mobile/402-QRCode_Connector_API_Review.png)
 
-4. Enter the URL (e.g: https://qrcodegenerator-gse00010885.apaas.em3.oraclecloud.com/ctdqr/v1/offer. It will be provided in the Access Document.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
+4. Enter the URL (e.g: `https://qrcodegenerator-gse00010885.apaas.em3.oraclecloud.com/ctdqr/v1/offer`. It will be provided in the Access Document.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
 ![](../common/images/mobile/402-QRCode_Connector_URL_Setting.png)
 
 5. We won’t set any rules here, so just click on “Next Step”.
@@ -104,7 +104,7 @@ In this lab, we will create a connector API to integrate ICS microservice for up
 3. Review the name/description on the general screen and click on the “Next Step” button (“>” on the top right) to move to the next screen.
 ![](../common/images/mobile/402-ICS_Connector_API_Review.png)
 
-4. Enter the URL (e.g: https://integration-gse00012012.integration.us2.oraclecloud.com/integration/flowapi/rest/KD_ICS_INTMGT/v01/processoffer. It will be provided in the Access Document.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
+4. Enter the URL (e.g: `https://integration-gse00012012.integration.us2.oraclecloud.com/integration/flowapi/rest/KD_ICS_INTMGT/v01/processoffer`. It will be provided in the Access Document.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
 ![](../common/images/mobile/402-ICS_Connector_URL_Setting.png)
 
 5. We won’t set any rules here, so just click on “Next Step”.
