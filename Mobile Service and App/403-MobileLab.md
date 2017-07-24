@@ -322,8 +322,15 @@ In this lab, we will provide the implementation logic for the Loyalty Management
    
    - Change the connector references in the code
      - Search for `TestDriveICSConnectorAPI` and replace all occurrences with `TestDriveICSConnectorAPI0X`(0X is your own postfix, e.g.: 01).
-     - Search for `TestDriveACCSPtMgtConnectorAPI` and replace all occurrences with `TestDriveACCSPtMgtConnectorAPI01` (01 is your own postfix).
-     - Search for `TestDriveACCSCtdQRConnectorAPI` and replace all occurrences with `TestDriveACCSCtdQRConnectorAPI01`(01 is your own postfix).
+     - Search for `TestDriveACCSPtMgtConnectorAPI` and replace all occurrences with `TestDriveACCSPtMgtConnectorAPI0X` (0X is your own postfix, e.g.: 01).
+     - Search for `TestDriveACCSCtdQRConnectorAPI` and replace all occurrences with `TestDriveACCSCtdQRConnectorAPI0X` (0X is your own postfix, e.g.: 01).
+
+
+5. Repack and upload: Put "pakcage.json" file and `loyaltymanagementapi0X.js`(0X is your own postfix, e.g.: 01) file  back into the original zip pack, then click on “Upload an implementation archive” and select the updated zip pack called `loyaltymanagementapi0X_1.0.zip`. (OX is your postfix. e.g.: 01)
+![](../common/images/mobile/403-Upload_Impl_Pack.png)
+
+6. When successfully done, you shall get a screen like the following:
+![](../common/images/mobile/403-Impl_Upload_Pack_Success.png)
 
 
 ----
