@@ -91,7 +91,240 @@ Click on “Create” on the bottom right.
 
 ----
 #### Implement the custom API for the Loyalty Management ####
+Now that you have the API defined, it's time to implement the API with JavaScript code. You can get started by downloading a scaffold that provides stubs for the functions that you need to implement for each endpoint, as well as some sample code.
 
+1. On page level navigation pane, select “Implementation”. Click on “JavaScript Scaffold” to download the mockup implementation which is a zip file named `loyaltymanagementapi0X_1.0.zip`. (OX is your postfix. e.g.: 01)
+![](../common/images/mobile/403-Impl_JS_Download.png)
+
+2. Unzip the scaffold in your PC, you will see files as below:
+![](../common/images/mobile/403-Impl_JS_Scaffold.png)
+
+Take a look at the file named like `loyaltymanagementapi0X.js` (OX is your postfix. e.g.: 01) and the package.json.
+
+3. Reference Connectors: You will need to reference the connectors in "package.json" file in order to use them in your custom API (`LoyaltyManagementAPI0X`). Add the 3 connectors in "connectors" part of "package.json" file you’ve created in the previous section, as below. **[Note]** Please mind your postfix).
+
+	```
+	"name" : "loyaltymanagementapi01",
+	"version" : "1.0",
+	"description" : "API for Loyalty Management 01.",
+	"main" : "loyaltymanagementapi01.js",
+	"oracleMobile" : {
+	   "dependencies" : {
+		"apis" : { },
+		"connectors" : {
+			"/mobile/connector/TestDriveICSConnectorAPI01":"1.0",
+			"/mobile/connector/TestDriveACCSPtMgtConnectorAPI01":"1.0",
+			"/mobile/connector/TestDriveACCSCtdQRConnectorAPI01":"1.0"
+		}
+	   }
+	}
+
+	```
+
+4. Edit `loyaltymanagementapi0X.js` (OX is your postfix. e.g.: 01) to add implementation logic.
+In this lab, we will provide the implementation logic for the Loyalty Management API for the lab simplicity.
+
+   - Open `loyaltymanagementapi0X.js` (OX is your postfix. e.g.: 01) with your text editor, replace the whole content with the source code below:
+   
+   ```
+   /**
+ * The ExpressJS namespace.
+ * @external ExpressApplicationObject
+ * @see {@link http://expressjs.com/3x/api.html#app}
+ */
+
+/**
+ * Mobile Cloud custom code service entry point.
+ * @param {external:ExpressApplicationObject}
+ * service
+ */
+module.exports = function (service) {
+
+    /**
+     *  The file samples.txt in the archive that this file was packaged with contains some example code.
+     */
+
+    service.get('/mobile/custom/LoyaltyManagementAPI/offer', function (req, res) {
+        var result = {};
+        var statusCode = 200;
+        if (statusCode == 200) {
+            var acceptType = req.accepts(['application/json']);
+            if (acceptType == 'application/json') {
+                result = [{
+                    "id": 10001,
+                    "name": "Our new aroma roast",
+                    "points": 10000,
+                    "message": "Try special brew today and enjoy 10% off with 10,000 points",
+                    "productid": 20001,
+                    "productname": "Aroma Beans",
+                    "productprice": 21,
+                    "productimage": "20001.jpg",
+                    "productdesc": "Blend of incomparable Balance of sweetness, aroma and body. Composed of 50% Arabica and 50% Robusta."
+                },{
+                    "id": 10002,
+                    "name": "Fresh brewed everyday",
+                    "points": 20000,
+                    "message": "Purchase special brew between 3-5pm and receive 20% off with 20,000 points",
+                    "productid": 20002,
+                    "productname": "Valentine",
+                    "productprice": 20,
+                    "productimage": "20002.jpg",
+                    "productdesc": "Specialty coffee roasted in small batches by people who care. The specialty part means we only choose to roast top-tier, rigorously-graded, traceable coffees."
+                },{
+                    "id": 10003,
+                    "name": "Upgrade your iced coffee",
+                    "points": 5000,
+                    "message": "Stop in today and treat yourself to an upgraded iced coffee with 5,000 points",
+                    "productid": 20003,
+                    "productname": "Coffee Break",
+                    "productprice": 15,
+                    "productimage": "20003.jpg",
+                    "productdesc": "Celebrates the rich flavor of espresso. It is a simple drink, yet we prepare it with care. Baristas pour two espresso shots, and then quickly pour hot water over the top to produce a light layer of crema."
+                }];
+            }
+        }
+        res.status(statusCode).send(result);
+    });
+
+    service.get('/mobile/custom/LoyaltyManagementAPI/offer/:id', function (req, res) {
+        req.oracleMobile.connectors.TestDriveACCSPtMgtConnectorAPI.get('/ptmgt/v1/offers/' + req.params.id, { outType: 'stream' })
+            .on('error', function (error) {
+                console.log('Error getting offer details.');
+                res.send(error.status, error.message)
+            })
+            .pipe(res);
+    });
+
+    service.get('/mobile/custom/LoyaltyManagementAPI/offer/:id/qr', function (req, res) {
+        req.oracleMobile.connectors.TestDriveACCSCtdQRConnectorAPI.get('/ctdqr/v1/offer/' + req.params.id, { outType: 'stream' })
+            .on('error', function (error) {
+                console.log('Error getting offer QR code.');
+                res.send(error.status, error.message)
+            })
+            .pipe(res);
+    });
+    service.post('/mobile/custom/LoyaltyManagementAPI/offer/notify', function (req, res) {
+        var notification = {
+            message: req.body.message + ' - ' + req.body.offerid,
+            users: req.body.users
+        };
+        if (req.body.message.startsWith('Custom')) {
+            notification = req.body;
+        }
+
+        req.oracleMobile.notification.post(notification, {
+            mbe: req.oracleMobile.mbe.getMBE().name,
+            version: req.oracleMobile.mbe.getMBE().version
+        }).then(
+            function (result) {
+                res.send(result.statusCode, result.result);
+            },
+            function (error) {
+                res.send(error.statusCode, error.error);
+            });
+    });
+
+    service.post('/mobile/custom/LoyaltyManagementAPI/offer/:id/accept', function (req, res) {
+        var events = [];
+        events.push({
+            name: 'context',
+            type: 'system',
+            timestamp: timestamp()
+        });
+        events.push({
+            name: 'AcceptOffer',
+            type: 'custom',
+            component: 'Offers',
+            timestamp: timestamp(),
+            properties: {
+                offerId: req.params.id
+            }
+        });
+        var acceptReq = {
+            "offerid": req.params.id,
+            "productid": req.body.productid,
+            "accepted": true
+        };
+        processoffer(events, acceptReq, req, res);
+    });
+
+    service.post('/mobile/custom/LoyaltyManagementAPI/offer/:id/reject', function (req, res) {
+        var events = [];
+        events.push({
+            name: 'context',
+            type: 'system',
+            timestamp: timestamp()
+        });
+        events.push({
+            name: 'RejectOffer',
+            type: 'custom',
+            component: 'Offers',
+            timestamp: timestamp(),
+            properties: {
+                offerId: req.params.id
+            }
+        });
+        var rejectReq = {
+            "offerid": req.params.id,
+            "productid": req.body.productid,
+            "accepted": false
+        };
+        processoffer(events, rejectReq, req, res);
+    });
+
+    var processoffer = function (events, reqBody, req, res) {
+        req.oracleMobile.ums.getUser().then(
+            function (result) {
+                reqBody.customerid = result.result.username;
+                events[1].properties.userName = result.result.username;
+                req.oracleMobile.analytics.postEvent(events).then(function () {
+                    req.oracleMobile.connectors.TestDriveICSConnectorAPI.post('', JSON.stringify(reqBody), { contentType: "application/json", accept: "application/json" }).then(
+                        function (result) {
+                            res.status(result.statusCode).send(result.result);
+
+                        }, function (error) {
+                            console.log('Error processing offer.');
+                            res.send(500, error);
+                        }
+                    );
+                });
+            },
+            function (error) {
+                res.send(error.statusCode, error.error);
+            }
+        );
+    };
+
+    var timestamp = function (date) {
+        var pad = function (amount, width) {
+            var padding = "";
+            while (padding.length < width - 1 && amount < Math.pow(10, width - padding.length - 1))
+                padding += "0";
+            return padding + amount.toString();
+        }
+        date = date ? date : new Date();
+        var offset = date.getTimezoneOffset();
+        return pad(date.getFullYear(), 4)
+            + "-" + pad(date.getMonth() + 1, 2)
+            + "-" + pad(date.getDate(), 2)
+            + "T" + pad(date.getHours(), 2)
+            + ":" + pad(date.getMinutes(), 2)
+            + ":" + pad(date.getSeconds(), 2)
+            + "." + pad(date.getMilliseconds(), 3)
+            + (offset > 0 ? "-" : "+")
+            + pad(Math.floor(Math.abs(offset) / 60), 2)
+            + ":" + pad(Math.abs(offset) % 60, 2);
+    };
+};
+
+   ```
+
+   - Change the endpoint url to match your own API: Search for `/mobile/custom/LoyaltyManagementAPI` and replace all occurrences with `/mobile/custom/LoyaltyManagementAPI0X`(0X is your own postfix, e.g.: 01).
+   
+   - Change the connector references in the code
+     - Search for `TestDriveICSConnectorAPI` and replace all occurrences with `TestDriveICSConnectorAPI0X`(0X is your own postfix, e.g.: 01).
+     - Search for `TestDriveACCSPtMgtConnectorAPI` and replace all occurrences with `TestDriveACCSPtMgtConnectorAPI01` (01 is your own postfix).
+     - Search for `TestDriveACCSCtdQRConnectorAPI` and replace all occurrences with `TestDriveACCSCtdQRConnectorAPI01`(01 is your own postfix).
 
 
 ----
