@@ -4,7 +4,7 @@
 
 ### Introduction ###
 This lab is part of the APAC Cloud Test Drive and is the third lab about connecting and integrating CRM application rapidly.  
-This section describes integrating applications via Oracle Integration Cloud Service simply by web-based dashboard.
+This section describes integrating applications via Oracle Integration Cloud Service simply using web-based dashboard.
 
 #### About the Exercise Today ####
 
