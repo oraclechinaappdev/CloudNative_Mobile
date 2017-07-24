@@ -127,12 +127,12 @@ In this lab, we will provide the implementation logic for the Loyalty Management
    - Open `loyaltymanagementapi0X.js` (OX is your postfix. e.g.: 01) with your text editor, replace the whole content with the source code below:
    
 	```
-/**
- * The ExpressJS namespace.
- * @external ExpressApplicationObject
- * @see {@link http://expressjs.com/3x/api.html#app}
- */
-
+		/**
+ 		* The ExpressJS namespace.
+ 		* @external ExpressApplicationObject
+ 		* @see {@link http://expressjs.com/3x/api.html#app}
+ 		*/
+	```
 /**
  * Mobile Cloud custom code service entry point.
  * @param {external:ExpressApplicationObject}
