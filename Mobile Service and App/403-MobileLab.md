@@ -9,7 +9,7 @@ You can create custom REST APIs to build up a library of services that can be us
 ![](../common/images/mobile/mcsgc_dt_004_api.png)
 
 ### About the Exercise Today ###
-In the previous lab, we've created 3 connector APIs to integrate with external services for offer information query, QR code creation and offer result update. As you might remember, those connector APIs are not directly exposed to mobile applications. Once you create  connector APIs to access the services, you can use them in custom APIs (e.g. Loyalty Managment API), which you can then call from your mobile applications using standard REST calls. So, in this lab, we will create a custom API for 3 connector APIs.
+In the previous lab, we've created 3 connector APIs to integrate with external services for offer information query, QR code creation and offer result update. As you might remember, those connector APIs are not directly exposed to mobile applications. Once you create  connector APIs to access the services, you can use them in custom APIs (e.g. Loyalty Managment API), which you can then call from your mobile applications or external systems using standard REST calls. So, in this lab, we will create a custom API for 3 connector APIs.
 
 In this exercise, we will:
 - Create the custom API and define its endpoints for loyalty management. We need the custom API with several endpoints for offer information query, QR code creation and offer result (e.g. reject or accept) update.
@@ -19,28 +19,39 @@ In this exercise, we will:
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab. (400 lab)
 - 3 Connector APIs we created in the previous lab (402 lab)
-- A RAML file for the custome API with some of endpoints for your use. It can be downloaded from [this link](../common/assets/mobile/loyaltymanagementapi.raml)
+- A RAML file for the custome API with some of endpoints for your use. It can be downloaded from [this link](../common/assets/mobile/) for your use in the lab. Go to the link, downloada a file called `loyaltymanagementapi.raml`, and save it to your local PC.
 - Chrome Postman to test custom APIs
+- Any text file editor
 
 ----
-
-#### Create custom APIs and define its endpoints for loyalty management ####
-In this lab, you will create a custom API for loayalty managment. In fact, we need to define serveral endpoints for the custome API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. So, here you will create one endpoint for the query of the specific offer information. **Note:**We will provide the completed custom API with all endpoints for your use in this lab.
+#### Create the custom API and define its endpoints for loyalty management ####
+In this lab, you will create a custom API for loayalty managment. In fact, we need to define serveral endpoints for the custome API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. For your convenience, we will create our own custom API using a RAML file for other endpoints and then manually create one additional endpoint. So, here you will create one endpoint for the query of the specific offer information. 
 
 1. From the navigation pane, select “Applications” -> “APIs”, click on “+ New API” and select “API” from the dropdown list.
 ![](../common/images/mobile/403-New_API.png)
 
-2. Enter name and description and click on “Create” as below:
+2. Click on “Upload a RAML document” link and choose the RAML file (`loyaltymanagementapi.raml`) you download.
+![](../common/images/mobile/403-RAML_upload.png)
+
+3. When uploaded successfully, enter name and description and click on “Create” as below:
     + **API Display Name**: `Loyalty Management 0X` (0X is the sequence number assigned to you by instructor. - e.g.: 01)
     + **API Name**: `LoyaltyManagement0X` 
-    + **API Short Description**: `Custom API for Loyalty Management`
-![](../common/images/mobile/403-API_Creation.png)
+    + **API Short Description**: `Custom API for Loyalty Management 0X`
+Click on “Create” on the bottom right.
 
-3. Define endpoints for the Loyalty Management API: 
-    - Select “Endpoints” on the page level navigation pane on the left and click on “+ New Resource”.
-![](../common/images/mobile/403-Click_Endpoints.png)
+![](../common/images/mobile/403-Create_Custome_API_with_RAML.png)
 
-    - Enter `offer/{id}` as the “Resource Path” and `Offer` as the “Display Name” and click on “Methods”. This endpoint (a URI resource) is for getting the specific offer information by offer ID.
+4. Define additional endpoint for the Loyalty Management API
+   - Now the custom API just created is automatically open for you. Switch to the “Endpoints” tab to define the additional endpoint.
+![](../common/images/mobile/403-Define_Additional_Endpoint.png)
+
+   - Adding resource: Click on “+ New Resource”.
+![](../common/images/mobile/403-Endpoint_Add_Resource.png)
+
+   - The new resource is added to the bottom of the existing endpoints page. Scroll down to the end.
+![](../common/images/mobile/403-Locate_Added_Endpoint.png)
+
+   - Enter `offer/{id}` as the “Resource Path” and `Offer` as the “Display Name” and click on “Methods”. This endpoint (a URI resource) is for getting the specific offer information by offer ID.
 ![](../common/images/mobile/403-New_Resource.png)
 
     - Adding method: you can see that {id} entered in previous step has be recognized as a URI Resource Path Parameter “id”. Click on “+ Add Method” and select “GET”.
@@ -52,21 +63,21 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
     - Adding sample response: MCS will use the below sample body to create a mockup implementation for this endpoint method. This is the one of good features to enable parallel development of mobile application without external services. In the "Example" text area, paste the following code:
 	```
 	{
-    	"id": 10001,
-    	"name": "Samsam Galaxy Offer",
-    	"points": 6000,
-    	"message": "Exchange 6000 points for 10% discount of Samsam Mobile Phone",
-    	"productid": 20001,
-    	"productname": "Samsam Galaxy 7",
-    	"productprice": 1000,
-    	"productimage": "20001.jpg",
-    	"productdesc": "The best Android phone in the galaxy"
-  	} 
+		"id": 10001,
+		"name": "Our new aroma roast",
+		"points": 10000,
+		"message": "Try special brew today and enjoy 10% off with 10,000 points",
+		"productid": 20001,
+		"productname": "Aroma Beans",
+		"productprice": 21,
+		"productimage": "20001.jpg",
+		"productdesc": "Blend of incomparable Balance of sweetness, aroma and body. Composed of 50% Arabica and 50% Robusta."
+	}
 	```
     - Scroll to the top of the page and click on “Save”. 
 ![](../common/images/mobile/403-Adding_Sample_Response.png)
 
-    - In addition to the above endpoint, we need to create endpoints for QR code creation, offer result update, etc. However we will skip to create them because we have the same steps to create other endpoints. They are included in the custom API we provided. The below is the list of endpoints for your reference.
+    - For your information: Now we have created all endpoints for the Loayaly Management Custom APIThe below is the list of endpoints for your reference.
 
     | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
     | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
@@ -75,6 +86,13 @@ In this lab, you will create a custom API for loayalty managment. In fact, we ne
     | offer/{id}/accept | Accept an offer       | POST   | application/json | application/json    |
     | offer/{id}/reject | Reject an offer       | POST   | application/json | application/json    |
     | offer/notify      | Send noti. of offer   | POST   | application/json | application/json    |
+
+5. 
+
+
+
+
+
 
 4. Security Settings: You need to assign a role to access the API. Before that, the API is not accessible by anyone.
 On page level navigation pane, select “Security”. Click in the Roles box and select the “Default” role. Scroll to the top and click “Save”.
