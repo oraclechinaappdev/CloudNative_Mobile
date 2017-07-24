@@ -126,8 +126,8 @@ In this lab, we will provide the implementation logic for the Loyalty Management
 
    - Open `loyaltymanagementapi0X.js` (OX is your postfix. e.g.: 01) with your text editor, replace the whole content with the source code below:
    
-   ```
-   /**
+	```
+/**
  * The ExpressJS namespace.
  * @external ExpressApplicationObject
  * @see {@link http://expressjs.com/3x/api.html#app}
@@ -317,7 +317,7 @@ module.exports = function (service) {
     };
 };
 
-   ```
+	```
 
    - Change the endpoint url to match your own API: Search for `/mobile/custom/LoyaltyManagementAPI` and replace all occurrences with `/mobile/custom/LoyaltyManagementAPI0X`(0X is your own postfix, e.g.: 01).
    
