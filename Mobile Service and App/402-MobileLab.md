@@ -24,7 +24,7 @@ To create the above 3 Connector APIs, we will:
 
 ----
 #### Create "Product Management" API Connector to get offer information ####
-In this lab, we will create a connector API to integrate ACCS microservice for offer information. **[Note]** A connector API is for the custome APIs. It means a connector API doesn't have direct interactions with mobile applications. Mobile applications only interact with custom APIs and custom APIs will use the connector API to interact external services and systems.
+In this lab, we will create a connector API to integrate ACCS microservice for offer information. **[Note]** A connector API is for the custom APIs. It means a connector API doesn't have direct interactions with mobile applications. Mobile applications only interact with custom APIs and custom APIs will use the connector API to interact external services and systems.
 
 1. On the navigation pane, select “Applications” -> “Connectors”. Click on the “+ New Connector” green button and select “REST” from the dropdown list.
 ![](../common/images/mobile/402-New_Connector.png)
