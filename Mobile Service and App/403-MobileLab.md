@@ -79,7 +79,7 @@ Click on “Create” on the bottom right.
     - Scroll to the top of the page and click on “Save”. 
 ![](../common/images/mobile/403-Adding_Sample_Response.png)
 
-    - For your information: Now we have created all endpoints for the Loyalty Management Custom APIThe below is the list of endpoints for your reference.
+    - For your information: Now we have created all endpoints for the Loyalty Management Custom APIs. The below is the list of endpoints for your reference.
 
     | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
     | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
@@ -88,6 +88,8 @@ Click on “Create” on the bottom right.
     | offer/{id}/accept | Accept an offer       | POST   | application/json | application/json    |
     | offer/{id}/reject | Reject an offer       | POST   | application/json | application/json    |
     | offer/notify      | Send noti. of offer   | POST   | application/json | application/json    |
+    | offer/{id}	| Get Offer Details     | GET    | N/A	            | application/json    |
+
 
 ----
 #### Implement the custom API for the Loyalty Management ####
