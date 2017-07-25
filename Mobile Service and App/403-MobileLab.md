@@ -9,7 +9,7 @@ You can create custom REST APIs to build up a library of services that can be us
 ![](../common/images/mobile/mcsgc_dt_004_api.png)
 
 ### About the Exercise Today ###
-In the previous lab, we've created 3 connector APIs to integrate with external services for offer information query, QR code creation and offer result update. As you might remember, those connector APIs are not directly exposed to mobile applications. Once you create  connector APIs to access the services, you can use them in custom APIs (e.g. Loyalty Managment API), which you can then call from your mobile applications or external systems using standard REST calls. So, in this lab, we will create a custom API for 3 connector APIs.
+In the previous lab, we've created 3 connector APIs to integrate with external services for offer information query, QR code creation and offer result update. As you might remember, those connector APIs are not directly exposed to mobile applications. Once you create  connector APIs to access the services, you can use them in custom APIs (e.g. Loyalty Management API), which you can then call from your mobile applications or external systems using standard REST calls. So, in this lab, we will create a custom API for 3 connector APIs.
 
 In this exercise, we will:
 - Create the custom API and define its endpoints for loyalty management. We need the custom API with several endpoints for offer information query, QR code creation and offer result (e.g. reject or accept) update.
@@ -21,13 +21,13 @@ In this exercise, we will:
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab. (400 lab)
 - 3 Connector APIs we created in the previous lab (402 lab)
-- A RAML file for the custome API with some of endpoints for your use. It can be downloaded from [this link](../common/assets/mobile/) for your use in the lab. Go to the link, downloada a file called `loyaltymanagementapi.raml`, and save it to your local PC.
+- A RAML file for the custom API with some of endpoints for your use. It can be downloaded from [this link](../common/assets/mobile/) for your use in the lab. Go to the link, download a file called `loyaltymanagementapi.raml`, and save it to your local PC.
 - Chrome Postman to test custom APIs
 - Any text file editor
 
 ----
 #### Create the custom API and define its endpoints for loyalty management ####
-In this lab, you will create a custom API for loayalty managment. In fact, we need to define serveral endpoints for the custome API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. For your convenience, we will create our own custom API using a RAML file for other endpoints and then manually create one additional endpoint. So, here you will create one endpoint for the query of the specific offer information. 
+In this lab, you will create a custom API for loyalty management. In fact, we need to define serveral endpoints for the custom API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. For your convenience, we will create our own custom API using a RAML file for other endpoints and then manually create one additional endpoint. So, here you will create one endpoint for the query of the specific offer information. 
 
 1. From the navigation pane, select “Applications” -> “APIs”, click on “+ New API” and select “API” from the dropdown list.
 ![](../common/images/mobile/403-New_API.png)
@@ -79,7 +79,7 @@ Click on “Create” on the bottom right.
     - Scroll to the top of the page and click on “Save”. 
 ![](../common/images/mobile/403-Adding_Sample_Response.png)
 
-    - For your information: Now we have created all endpoints for the Loayaly Management Custom APIThe below is the list of endpoints for your reference.
+    - For your information: Now we have created all endpoints for the Loyalty Management Custom APIThe below is the list of endpoints for your reference.
 
     | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
     | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
