@@ -3,7 +3,7 @@
 ## 400: Create MBE (Mobile Back End) for mobile applications ##
 
 ### Introduction ###
-This tutorial demonstrates how to create a MBE (Mobile Back End) to support the mobile applications. Mobile backends are server-side groupings of APIs (Platfomr & Custom APIs) and other resources that you create to support a specific set of applications. 
+This tutorial demonstrates how to create a MBE (Mobile Back End) to support the mobile applications. Mobile backends are server-side groupings of APIs (Platform & Custom APIs) and other resources that you create to support a specific set of applications. 
 
 ![](../common/images/mobile/mcsgs_dt_015_mobile_bkend.png)
 
@@ -39,10 +39,6 @@ Oracle Public Cloud Service account for Mobile Cloud Service (Check with instruc
 The Mobile Backend is now created and it will bring you to the “Settings” tab of the newly created MBE where you will see the mobile backend ID, client ID, etc, which you will need to use when interacting with the MBE. Click on the two “Show” links to see the “Anonymous Key” and “Client Secret”. **Please take a note on the mobile backend ID, client ID, Anonymous Key and Client Secret for laster use.** You are going to use them for the integration between Java Application to  this mobile service in order to push offer information.
 
 ![](../common/images/mobile/400-MBE_settings.png)
-
-7. Mobile Application Setting for MBE information
-** TBD **
-
 
 
 You have finished this lab section.
