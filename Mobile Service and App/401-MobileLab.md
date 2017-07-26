@@ -37,7 +37,21 @@ In this lab, you will create a notifications profile and register the client app
 
 2. Create and select a profile to store google credentials like API Key and Sender ID.
 
-    - On the client settings screen, write down your “Application Key” and choose “Profiles”.
+    - On the client settings screen, **Please copy the values of "Application Key" and replace the value of properties called "applicationKey" in the JSON file with the copied value.** Save the JSON file for later use. You are going to use it in the "Putting All Together" section to create a QR code for the setting of Cafe Supremo mobile application.
+
+```
+{
+      "baseUrl": "https://mcs-gse00011678.mobileenv.us2.oraclecloud.com:443",
+      "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
+            --> Replce the value inside double quotes with the value of "Application Key" in you JSON file.
+      "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
+      "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
+      "API":"LoyaltyManagementAPI",
+      "senderID":"925757644219"
+}
+
+```
+And choose “Profiles”.
     
 ![](../common/images/mobile/401-Client_Setting_Created.png)
 
