@@ -12,7 +12,7 @@ In this exercise, you will create your MBE for a mobile application called "Cafe
 
 ### Prerequisites ###
 - Oracle Public Cloud Service account for Mobile Cloud Service (Check with instructor if you don't have one)
-- Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor to replace some properties such as "baseUrl", "backendId" and "anonymousToken" in the step called "6. Check".
+- Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor to replace some properties such as "baseUrl", "backendId" and "anonymousToken" in below step called "6. Check".
 
 ----
 
