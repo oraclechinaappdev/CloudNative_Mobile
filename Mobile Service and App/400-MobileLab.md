@@ -11,7 +11,8 @@ This tutorial demonstrates how to create a MBE (Mobile Back End) to support the 
 In this exercise, you will create your MBE for a mobile application called "Cafe Supremo" to support APIs for loyalty management and mobile client. By doing this, Cafe Supremo mobile application interacts with the created MBE to get offer push, query offer details and accept or reject the offer.
 
 ### Prerequisites ###
-Oracle Public Cloud Service account for Mobile Cloud Service (Check with instructor if you don't have one)
+- Oracle Public Cloud Service account for Mobile Cloud Service (Check with instructor if you don't have one)
+- Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor to replace some properties such as "baseUrl", "backendId" and "anonymousToken" in [the below section] (https://github.com/APACTestDrive/CloudNative_Mobile/edit/MobileLab-Delta/Mobile%20Service%20and%20App/400-MobileLab.md#L39-40).
 
 ----
 
