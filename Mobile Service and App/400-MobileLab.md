@@ -42,7 +42,7 @@ The Mobile Backend is now created and it will bring you to the “Settings” ta
 
 ![](../common/images/mobile/400-MBE_settings.png)
 
-**Please copy the values of "Mobile Backend ID", "Anonymous Key" and "Base URL", and replace values of properties like "backendId", "anonymousToken" and "baseUrl" in the JSON file with copied values respectively.** And save the JSON file for later use. You are going to use it to create a QR code for the setting of Cafe Supremo mobile application.
+**Please copy the values of "Mobile Backend ID", "Anonymous Key" and "Base URL", and replace values of properties like "backendId", "anonymousToken" and "baseUrl" in the JSON file with copied values respectively.** And save the JSON file for later use. You are going to use it in the "Putting All Together" section to create a QR code for the setting of Cafe Supremo mobile application.
 
 ```
 {
