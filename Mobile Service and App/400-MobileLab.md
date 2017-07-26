@@ -12,7 +12,7 @@ In this exercise, you will create your MBE for a mobile application called "Cafe
 
 ### Prerequisites ###
 - Oracle Public Cloud Service account for Mobile Cloud Service (Check with instructor if you don't have one)
-- Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor to replace some properties such as "baseUrl", "backendId" and "anonymousToken" in the #6 step called "Check".
+- Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor to replace some properties such as "baseUrl", "backendId" and "anonymousToken" in the step called "6. Check".
 
 ----
 
@@ -37,9 +37,24 @@ In this exercise, you will create your MBE for a mobile application called "Cafe
 + **Description**: `APAC_Test_Drive_Loyalty_Management_MBE0X` (Any value is okay.)
 
 6. Check 
-The Mobile Backend is now created and it will bring you to the “Settings” tab of the newly created MBE where you will see the mobile backend ID, client ID, etc, which you will need to use when interacting with the MBE. Click on the two “Show” links to see the “Anonymous Key” and “Client Secret”. **Please take a note on the mobile backend ID, client ID, Anonymous Key and Client Secret for laster use.** You are going to use them for the integration between Java Application to  this mobile service in order to push offer information.
+
+The Mobile Backend is now created and it will bring you to the “Settings” tab of the newly created MBE where you will see the mobile backend ID, client ID, etc, which you will need to use when interacting with the MBE. Click on the two “Show” links to see the “Anonymous Key” and “Client Secret”. 
 
 ![](../common/images/mobile/400-MBE_settings.png)
+
+**Please copy the values of "Mobile Backend ID", "Anonymous Key" and "Base URL", and replace values of properties like "backendId", "anonymousToken" and "baseUrl" in the JSON file with copied values respectively.** And save the JSON file for later use. You are going to use it to create a QR code for the setting of Cafe Supremo mobile application.
+
+```
+{
+      "baseUrl": "https://mcs-gse00011678.mobileenv.us2.oraclecloud.com:443", <- Replace the vaue inside double quotes with the value of "Base URL".
+      "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
+      "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f", <- Replace the value inside double quotes with the value of "Mobile Backend ID".
+      "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=", <- Replace the value inside double quotes with the value of "Anonymous Key". 
+      "API":"LoyaltyManagementAPI",
+      "senderID":"925757644219"
+}
+
+```
 
 
 You have finished this lab section.
