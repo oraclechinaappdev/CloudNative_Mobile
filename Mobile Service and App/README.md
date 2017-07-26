@@ -49,6 +49,7 @@ For the loyalty management mobile application, you can make it all work and play
 ### Prerequisites ###
 - Bring your Android phone.
 - Need to install an mobile application called "Cafe Supremo" on you Android phone. The mobile application will be supplied by your instructor. 
+- During this lab, you need to paste some key values you will create into a JSON file. Please download a JSON file called "Mobile_App_Settings_Sample.json" from [this link](../common/assets/mobile/) for your use in the lab. When you fill out all the information like "baseUrl", "applicationKey", "backendId" and "anonymousToken", you will create a QR code using [a QR code generator](http://www.qr-code-generator.com/). For now, save it to your local PC.
 
 
 # Lab Exercise: #
