@@ -107,3 +107,18 @@ protocols: [HTTPS]
                 "activityid" : "0-79960-v1.0",
                 "imgurl" : "https://qrcodegenerator-gse00010885.apaas.em3.oraclecloud.com/ctdqr/v1/offer/10001"
               }
+              
+/offer/notify:
+  displayName: Send notifications of offer.
+  post:
+    displayName: Send notifications of new offer
+    description: |
+      Send notifications of new offer to customre.
+      
+    protocols: [HTTPS]
+    body:
+      application/json:
+    responses:
+      200:
+        body:
+          application/json:
