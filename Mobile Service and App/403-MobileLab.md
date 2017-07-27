@@ -16,7 +16,7 @@ In this exercise, we will:
 - Implement the custom API: In this lab, we will provide code snippets for API implementation. Just follow the instructions and you can make it.
 - Set up Security for the custom API
 - Associate the APIs with the loyalty management MBE.
-- Test the Customer API for loyalty management
+- Test the Custom API for loyalty management
 
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab. (400 lab)
@@ -361,7 +361,7 @@ Before you can deploy the custom API, it has to be associated with the mobile ba
 
 
 ---
-#### Test the Customer API for loyalty management ####
+#### Test the Custom API for loyalty management ####
 
 Now you can test your custom API. 
 
