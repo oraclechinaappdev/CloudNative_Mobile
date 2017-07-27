@@ -18,7 +18,7 @@ As well as Business Challenges, enterprises have some of difficulties in develop
 ![](../common/images/mobile/Technical_Challenges_in_Mobile.PNG)
 
 ## Oracle Mobile Solution Strategy ##
-To overcome the above challenges, Oracle encourages developers to use any of the popular tools available – whether it’s native development with iOS and Android, to 3rd party and open frameworks like Ionic, Angular, Sencha, and Xamarin. We call it "Mobile Client Agnostic". Oracle also incorporate mobile services that offer data sync, storage, location services, messaging, access to local services like camera, contacts, GPS, etc. There’s a trend towards low code, no code development -  Oracle supports this trendy tool called MAX (Mobile Application Accelerator) as part of MCS.
+To overcome the above challenges, Oracle encourages developers to use any of the popular tools available – whether it’s native development with iOS and Android, to 3rd party and open frameworks like Ionic, Angular, Sencha, and Xamarin. We call it "Mobile Client Agnostic". Oracle also incorporate mobile services that offer data sync, storage, location services, messaging, access to local services like camera, contacts, GPS, etc. There’s a trend towards low code, no code development -  Oracle supports this trendy tool called MAX (Mobile Application Accelerator) as part of Mobile Cloud Service (MCS).
 ![](../common/images/mobile/Oracle_Mobile_Solution_Strategy.PNG)
 
 In summary, Oracle provides end to end solution to give you overcoming notable business and technical challenges.
@@ -39,7 +39,7 @@ The hard part of mobile development is integration and managing all server-side 
 For the loyalty management mobile application, you can make it all work and play nicely together using platform APIs (out of box mobile services) and custom APIs for external integrations by doing the below jobs through this lab.
 - Provide a server-side container for groupings of APIs and other resources that you create to support a specific set of applications by just creating a MBE (Mobile Back End).
 - Set up Push Notification to send offer information to the user of the Cafe Supremo mobile application and test Push Notification. In the lab, we are going to support Android to shorten the lab time even though Oracle MCS can support iOS and Windows, too. 
-- Create connectors for customer APIs to integrate external services like QR code creaton and offer information query provided by ACCS as microservices.
+- Create connectors for custom APIs to integrate external services like QR code creation and offer information query provided by ACCS as microservices.
 - Create custom REST APIs and code to build up a library of services for Cafe Supremo mobile application, java application to get offer request, microservices to get QR code, etc. 
 - Track customer behaviors like "Offer Accept by users" using custom analytics report. **[Note]** this section is optional. If time is not available, you can skip this part.
 
