@@ -35,7 +35,7 @@ In this lab, you will create a notifications profile and register the client app
 ![](../common/images/mobile/401-Client_Settings.png)
 
 
-2. Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor. On the "Settings" screen, **Copy the values of "Application Key" and replace the value of properties called "applicationKey" in the JSON file with the copied value.**  Save the JSON file for later use. You are going to use it in the "Putting All Together" section to create a QR code for the setting of Cafe Supremo mobile application.
+2. On the "Settings" screen, **Copy the values of "Application Key" and replace the value of properties called "applicationKey" in the JSON file called "Mobile_App_Settings_Sample.json" with the copied value.**  Save the JSON file for later use. You are going to use it in the "Putting All Together" section to create a QR code for the setting of Cafe Supremo mobile application.
 
 ```
 {
