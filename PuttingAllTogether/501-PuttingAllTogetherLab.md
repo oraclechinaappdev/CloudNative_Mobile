@@ -27,8 +27,7 @@ In this exercise, we will:
 ![](../common/images/mobile/401-MobileApp_Notification_Result.png)
 
 2. Before running notification test, you were told to prepare a file called **Mobile_App_Settings_Sample.json** like below format:    
-`
-
+```
 {
       "baseUrl": "https://<Your Mobile Cloud Service Identity Domain Name>.mobileenv.us2.oraclecloud.com:443",
       "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
@@ -37,15 +36,14 @@ In this exercise, we will:
       "API":"LoyaltyManagementAPI0X",
       "senderID":"925757644219"
 }
-
-`
+```
 We will use it shortly.
 
-3. From your web browser, go to `http://www.qr-code-generator.com/`, click on `Text` button and the **Free text** textarea is shown.
+3. From your web browser, go to `http://www.qr-code-generator.com/`, click on `Text` button and the **Free text** text area is shown.
 
 ![](images/501/01.qr.site.png)
 
-4. Copy the **Your own** JSON file content like in step 1, paste into the **Free text** textarea, then click `Create QR code` button. A QR code image of will be generated on the right hand side of window.
+4. Copy **Your own** JSON file content from step 2 above, paste it into the **Free text** text area, then click `Create QR code` button. A QR code image will be generated on the right hand side of window.
 
 ![](images/501/02.qr.result.png)
 
@@ -76,7 +74,7 @@ You may need to adjust the distance between your mobile deivce and your screen u
 
 ![](images/501/08.mobile.qr.result.png)
 
-Click `Save settings and logout`. You will then be returned to home screen.
+Click `Save settings and logout` button. You will then be returned to home screen.
 
 11. Enter the mobile app **Username** and **Password** provided by instructor, then click `Login` button.
 
@@ -107,8 +105,7 @@ Make sure your Oracle Enterprise Plugin for Eclipse (OEPE) in VirtualBox VM is r
 ![](images/501/12.java.change.png)
 
 The corresponding values are available from step 2 - **Mobile_App_Settings_Sample.json** in this lab guide above, i.e. 
-`
-
+```
 {
       **"baseUrl": "https://<Your Mobile Cloud Service Identity Domain Name>.mobileenv.us2.oraclecloud.com:443",**
       "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
@@ -117,8 +114,7 @@ The corresponding values are available from step 2 - **Mobile_App_Settings_Sampl
       **"API":"LoyaltyManagementAPI0X",**
       "senderID":"925757644219"
 }
-
-`
+```
 5. Enter `Ctrl` + `S` to save your change.
 
 6. Next, right click on `confirm.jsp` again, then select `Team` button and follow by click `Commit` button.
