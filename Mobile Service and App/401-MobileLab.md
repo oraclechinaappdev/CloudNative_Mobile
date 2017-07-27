@@ -35,9 +35,7 @@ In this lab, you will create a notifications profile and register the client app
 ![](../common/images/mobile/401-Client_Settings.png)
 
 
-2. Create and select a profile to store google credentials like API Key and Sender ID.
-
-    - Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor. On the client settings screen, **Copy the values of "Application Key" and replace the value of properties called "applicationKey" in the JSON file with the copied value.** Save the JSON file for later use. You are going to use it in the "Putting All Together" section to create a QR code for the setting of Cafe Supremo mobile application.
+2. Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor. On the "Settings" screen, **Copy the values of "Application Key" and replace the value of properties called "applicationKey" in the JSON file with the copied value.**  Save the JSON file for later use. You are going to use it in the "Putting All Together" section to create a QR code for the setting of Cafe Supremo mobile application.
 
 ```
 {
@@ -51,13 +49,14 @@ In this lab, you will create a notifications profile and register the client app
 }
 
 ```
-And choose “Profiles”.
-    
-![](../common/images/mobile/401-Client_Setting_Created.png)
+
+![](../common/images/mobile/401-Client_Setting_Tab.png)
 
 
-   - Click on “New Profile”.
-    
+3. Create a profile to store google credentials like API Key and Sender ID.
+
+   - Select the "Profiles" tab and click on "New Profile" to create a profile .
+   
 ![](../common/images/mobile/401-Create_New_Profile.png)
 
 
