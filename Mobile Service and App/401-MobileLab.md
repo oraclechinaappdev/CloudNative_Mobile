@@ -32,7 +32,7 @@ In this lab, you will create a notifications profile and register the client app
 
    - Enter `MyAndroidClient0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Client Display Name", `1.0.0` as the "App Version", and `com.oraclecorp.internal.ent3.apacTestDrv` as the "Package Name". Click on “Create”. This will bring you to the client settings screen.
     
-![](../common/images/mobile/401-Create_Client.png)
+![](../common/images/mobile/401-Client_Settings.png)
 
 
 2. Create and select a profile to store google credentials like API Key and Sender ID.
