@@ -32,7 +32,7 @@ In this lab, you will create a custom API for loyalty management. In fact, we ne
 1. From the navigation pane, select “Applications” -> “APIs”, click on “+ New API” and select “API” from the dropdown list.
 ![](../common/images/mobile/403-New_API.png)
 
-2. Click on “Upload a RAML document” link and choose the RAML file (`loyaltymanagementapi.raml`) you download.
+2. Click on “Upload a RAML document” link and choose the RAML file (`loyaltymanagementapi.raml`) you download. You can download a RAML file [here](../common/assets/mobile/).
 ![](../common/images/mobile/403-RAML_upload.png)
 
 3. When uploaded successfully, enter name and description and click on “Create” as below:
