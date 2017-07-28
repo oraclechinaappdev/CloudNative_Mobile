@@ -17,14 +17,33 @@ In this exercise, we will:
 
 #### Create An Offer from Loyalty Management Application ####
 
-1. From your Virtual Machine (or your own OS), open OEPE (using desktop icon ![](images/103/01.png)) and set (leave the default, `home/oracle/workspace`) workspace location. Close the Welcome page. To open the *Oracle Cloud* view from the Window menu, click *Show View* and then *Other*.
+1. .
 
-![](images/501/xxx.png)
+![](images/502/01.offer.search.png)
 
+![](images/502/02.offer.target.png)
+
+![](images/502/03.offer.create.png)
+
+![](images/502/04.offer.sent.png)
+
+![](images/502/05.offer.receive.png)
+
+![](images/502/06.offer.open.png)
+
+![](images/502/07.offer.accept.png)
+
+![](images/502/08.offer.qr.png)
+
+![](images/502/09.offer.mcs.png)
+
+![](images/502/10.offer.ics.png)
+
+![](images/502/11.offer.flow.png)
 
 #### Respond to Offer from Mobile App ####
 
 
 Congratulations! You have finished this lab section and all workshop exercises of today.
 
-[Back to FinalTestLab Home](README.md)
+[Back to Putting All Together Lab Home](README.md)

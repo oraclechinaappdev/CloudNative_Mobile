@@ -140,4 +140,4 @@ You have finished this lab section.
 
 or
 
-[Back to FinalTestLab Home](README.md)
+[Back to Putting All Together Lab Home](README.md)
