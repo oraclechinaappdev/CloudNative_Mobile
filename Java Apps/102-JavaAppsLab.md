@@ -80,7 +80,7 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 - **Application Name**: application name in JCS. This will determine the application's URL context path - we use **loyalty**.
 - **Deployment Target**: click **New** and select Java Cloud Service and define connection properties such as **Version**, **Protocol**, **Host**, **HTTPS Port** and **credentials**.
   [\(Find out the Java Cloud Service Host and HTTPS Port.\)](java.cloud.md).
-  Java Cloud Service - WebLogic Admin Username and Password should be provided by instructor separately.
+  Java Cloud Service - WebLogic Admin Username and Password, i.e. `weblogic` and `Welcome_1` respectively, or provided by instructor separately.
 - **Type**: select **Automatic** which means auto deploy after a successful execution of the build job. Select your previously created job and its artifact to deploy.
 - **Job**: The **LoyaltyManagementBuild** Build Step defined in early stage of this lab.
 - **Arifact**: **loyalty/target/loyalty.war**, this is the only option available after **Job** is selected.
@@ -105,7 +105,7 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 
 ![alt text](images/102/16.deploy.ready.png "Deploy ready")
 
-17. This opens the WebLogic Server Administration Console. Login with provided WebLogic Admin Username and password.
+17. This opens the WebLogic Server Administration Console. Login with provided WebLogic Admin Username and password, i.e. `weblogic` and `Welcome_1` respectively.
 
 ![alt text](images/102/17.jcs.console.png)"WebLogic Console")
 
