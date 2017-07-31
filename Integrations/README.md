@@ -3,8 +3,8 @@
 ## 3. Rapid Connect Applications by Oracle Integration Cloud Service ##
 
 ### Introduction ###
-This lab is part of the APAC Cloud Test Drive and is the third lab about connecting and integrating a JEE Application within an Agile project lifecycle.  
-This section describes deploying and undeploying applications to an Oracle Java Cloud Service instance by using the WebLogic Server Administration Console.
+This lab is part of the APAC Cloud Test Drive and is the third lab about connecting and integrating CRM application rapidly.  
+This section describes integrating applications via Oracle Integration Cloud Service simply using web-based dashboard.
 
 #### About the Exercise Today ####
 

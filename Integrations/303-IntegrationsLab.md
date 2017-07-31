@@ -139,12 +139,13 @@ In this exercise, we will:
 
 ![](images/303/19.integration.map.activityname.png)
 
-20. Expand `Mapping Components` from the left pane, then expand `String`.  
+20. Expand `Mapping Components` from the left pane, then expand `Functions` -> `String`.  
     Drag the `f(x) concat` from left pane, to the location of `-- Drag and Drop or Type value here...` under <activityName> in the right pane.
 
 ![](images/303/20.integration.activityname.concat.png)
 
 21. Click on `string1`, enter `'Offer ID: '`, then **Enter**.  
+    (\*Notice: Remember to put **`' '`**, i.e. the single quote to enclose `Offer ID` string)  
     Expand `Source` from the left pane, drag the `offerid` field and drop it onto `string2`. A string is automatically inserted. \(This is the XSLT variable representation of 'offerid'\)
 
 ![](images/303/21.integration.activityname.concat1.png)
@@ -156,7 +157,7 @@ In this exercise, we will:
 23. Click on the newly added entry `-- Drag and Drop or Type value surrounded with quotes here...`, enter `' of acceptance '`, then **Enter**.  
     Repeat last step 22 to add one more entry by `Insert Sibling After`.  
 	Expand `Source` from the left pane, drag the `accepted` field and drop it on the last entry `-- Drag and Drop or Type value surrounded with quotes here...`. A string is automatically inserted. \(This is the XSLT variable representation of 'accepted'\)  
-	Click `Save` on the top right corner.
+	Click `Save` on the top right corner to save your work, then click `Close` at the bottom to exit the **Build Mappings** window.
 
 ![](images/303/23.integration.activityname.concat3.png)
 
@@ -168,7 +169,7 @@ In this exercise, we will:
 25. **(Simple Challenge)**  
     Follow the same steps as what you did to setup `activityName` field, setup the `activityDetail` field in the format of:  
     `'Offer for product ID: ' + <productid>`  
-    Do not forget to click `Save` to save your work, before click `Close` to exit the **Build Mappings** dialog window.
+    Do not forget to click `Save` to save your work, before click `Close` at the bottom to exit the **Build Mappings** dialog window.
 
 ![](images/303/25.integration.activitydetail.png)
 
@@ -222,7 +223,7 @@ In this exercise, we will:
 ![](images/303/33.integration.expression.validate.png)
 
 34. Under *if* or *otherwise* condition, different response data will be returned. Here we delete the default `Map to ProcessOffer` response data mapping.  
-    Click on the `Map to ProcessOffer`, click the hamburger icon and then click `Delete` to remove this node. 
+    Click on the `Map to ProcessOffer`, click the hamburger icon, then click `Delete` to remove this node and confirm deletion on pop-up dialog.
 
 ![](images/303/34.integration.delete.png)
 
@@ -245,7 +246,7 @@ In this exercise, we will:
 
 38. Click on `string1`, enter the QR code URL without the offer id including ' ' sign, i.e. `'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'` (Hostname obtained from 'Microservices' lab)  
     Next, expand `Source` from the left pane, drag the `offerid` field and drop it onto `string2`. A string is automatically inserted. \(This is the XSLT variable representation of 'offerid'\)  
-	Click `Save`.
+	Click `Save`, and then click `Close` button at the bottom to return previous screen.
 
 ![](images/303/38.integration.if.map2.png)
 
@@ -255,11 +256,15 @@ In this exercise, we will:
 
 40. **(Simple Challenge)**  
     Complete the `Map to ProcessOffer` at the `Otherwise` path. The only different is:  
-	Enter **''** for `imgurl` (Instead of *'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname\>/ctdqr/v1/offer/'* at the `IF Accept Offer` path)  
+	Enter **''** for `imgurl`, i.e. 2 X single quote, such that an empty string will be returned. (Instead of *'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname\>/ctdqr/v1/offer/'* at the `IF Accept Offer` path)  
 	The result should be the same as below.  
-    **(\*Hints: Repeat step 35 to 39)**
+    **(\*Hints: Repeat step 35 to 39, and instructor will give you a quick demo here if needed)**
 
 ![](images/303/40.integration.otherwise.png)
+
+    The result of **Mapping** should look like this:
+	
+![](images/303/40.integration.otherwise.result.png)
 	
 41. The *Process Offer* integration flow development is done.  
     However, there is an error showing at the top right corner, telling that **primary business identifier for Tracking** is needed. 
@@ -273,7 +278,8 @@ In this exercise, we will:
 43. The **Business Identifiers for Tracking** dialog window is shown.  
     Business identifier is required for runtime transaction tracking on messages, espeically when hundreds and thousands of messages running thru ICS.  
     Now, from the **Source** at left pane, drag the first `customerid` field, and drop it onto the first row of **Tracking Field** at right pane.  
-	Repeat the same for `offerid` field and `productid` field respectively.  The result screen looks like below.
+	Repeat the same for `offerid` field and `productid` field respectively.  The result screen looks like below.  
+	Click `Done` button at the bottom on completion of tracking setup, and then click `Close` to go back to ICS dashboard main screen.
 
 ![](images/303/43.integration.tracking.identifier.png)
 
