@@ -136,7 +136,7 @@ Your Loyalty Management JEE Application is now ready to create campaign offer an
 
 You have finished this lab section.
 
-[Procced to Next - 502: End-to-End Testing](502-PuttingAllTogetherLab)
+[Procced to Next - 502: End-to-End Testing](502-PuttingAllTogetherLab.md)
 
 or
 
