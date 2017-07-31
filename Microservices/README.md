@@ -65,8 +65,15 @@ In addition, you can choose to integrate with other Oracle Cloud services. You c
 
 ## About the Exercise Today
 
-We will use Developer Cloud Service to create and deploy 2 microservice in Application Container Cloud in the coming 1 hour :smile:.
+We will use Developer Cloud Service to create and deploy 2 microservices in Application Container Cloud in the coming 1 hour :smile:.
+- Leverage existing 3rd party Git Repository
+- Create build and deploy jobs in Developer Cloud Service
+- Use IDE with Developer Cloud Service
+- Leverage Database Cloud Service in your applications
+- Deploy on Application Container Cloud Service
 
-![](images/000.lab.png)   
+![](images/000.todaylab.png)   
+
+
 
 ## [Start The Lab](MicroservicesLab.md)
