@@ -15,15 +15,15 @@ In this exercise, we will conduct several tasks to complete cloud native and mob
 - End-to-end testing on everything built today
 
 **Lab Assumption**
-+ Your first role is an 'Application Architect' who makes further code changes to wire up mobile application
-+ Your second role is a 'Marketing Manager' who creates a new campaign offer based on selected group of customers
-+ Your third role is a 'Customer' who receives mobile app push notification, explore the offer detail and respond to to offer from mobile app
++ Your first role is an 'Application Architect' or 'Developer' who makes further code changes to wire up mobile application.
++ Your second role is a 'Marketing Manager' who creates a new campaign offer based on selected group of customers.
++ Your third role is a 'Customer' who receives mobile app push notification, explore the offer detail and respond to offer from mobile app.
 
 ### This tutorial demonstrates how to: ###
 - Walkthru another iteration of 'Continuous Integration & Delivery' code change to send push notification from JEE application to Mobile Cloud Service
 - Create a new offer from Loyalty Management Application
 - Receive offer from mobile device, accept or decline the offer and monitor the result
-At the end of this workshop, you will have a basic understand of how Oracle Cloud helps you to:
+At the end of this workshop, you will have a basic understanding of how Oracle Cloud helps you to:
 - Bring Agile application development with continuous integration and continuous delivery automation
 - 'Lift-and-Shift' traditional monolith Java EE application into cloud
 - Build cloud native 'polyglot' microservices on cloud
@@ -31,8 +31,8 @@ At the end of this workshop, you will have a basic understand of how Oracle Clou
 
 ### Prerequisites ###
 - Completion of all previous 4 lab exercises: [Java Apps](../Java%20Apps/README.md), [Microservices](../Microservices/README.md), [Integration](../Integrations/README.md) and [Mobile](Mobile%20Service%20and%20App/README.md)
-- Running running Virtual Machine image used previously in Java Apps and Microservices labs
-- An Andriod OS Device (mobile phone or tablet) with an active Google Account, or check with intructor if you don't
+- Running Virtual Machine image used previously in Java Apps and Microservices labs
+- An Android OS Device (mobile phone or tablet) with an active Google Account, or check with instructor if you don't.
 
 # Lab Exercise: #
 

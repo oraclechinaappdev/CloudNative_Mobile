@@ -19,13 +19,13 @@ In this exercise, we will:
 
 1. Go to home page of the Loyalty Management application. The Loyalty Management application URL should be in the format of:  
 `https://**<JCS WLS instance IP Adress>**/loyalty/jsp/welcome.jsp`  
-Provide an integer value for **Input Offer Criteria**, enter `10000` in this example represent any customer who has 10000 points or above to match offer criteria.  
+Provide an integer value for **Input Offer Criteria**, enter `10000` in this example representing any customer who has 10000 points or above to match offer criteria.  
 Select a **Target Product**, `Festival Blend` is chosen in this example.  
 Then click `Search` button.
 
 ![](images/502/01.offer.search.png)
 
-2. The number of total customers who match the offer critieria is shown, click `Next` button.
+2. The number of total customers who match the offer criteria is shown, click `Next` button.
 
 ![](images/502/02.offer.target.png)
 
@@ -42,6 +42,11 @@ Then click `Create Offer` button.
 
 ![](images/502/04.offer.sent.png)
 
+** What has just happened? **
+On previous lab: [501: Update Source Code for Sending Push Notification from JEE Application to Mobile Cloud Service](501-PuttingAllTogetherLab.md), we modified some code in *confirm.jsp* under loyalty management JEE application leveraging Developer and Java Cloud Service, such that the application can call Mobile Cloud Service push notification REST API, followed by MCS exchanging with Google Firebase to deliver the push notification towards the registered Android device.
+
+![](images/502/jcs2mcs.png)
+
 #### Respond to Offer from Mobile App ####
 
 5. In a couple of seconds, an app push notification should be arrived at your Android device with offer message provided previously.
@@ -52,13 +57,23 @@ Then click `Create Offer` button.
 
 ![](images/502/06.offer.open.png)
 
-7. The offer detail about the drink product image, description and offer respond 'accept/decline' buttons are shown, click on either `accept` or `decline` button to procced. 
+7. The offer detail about the drink product image, description and offer respond 'accept/decline' buttons are shown, click on either `Accept` or `Decline` button to procced. 
 
 ![](images/502/07.offer.accept.png)
+
+** What has just happened? **
+On early integration lab: [3. Rapid Connect Applications by Oracle Integration Cloud Service](../Integrations/README.md), we have setup an integration flow which wired up a CRM customer activity log SOAP API and exposed as REST API on the Integration Cloud Service, allowing mobile user action can be logged and process offer result.
+
+![](images/502/mcs2ics.png)
 
 8. The offer with QR code image and drink product description. Optionally you can use a QR scanner to open the offer URL.
 
 ![](images/502/08.offer.qr.png)
+
+** What has just happened? **
+On early [Microservice Lab](../Microservices/README.md), we have deployed 2 microservices - Offer and QR respectively leveraging Developer and Application Container Cloud Service. Upon 'Accept' offer by customer, the result offer detail and QR image will be displayed on mobile device.
+
+![](images/502/mcs2acc.png)
 
 9. From MCS dashboard, go to `Applications` -> `Mobile Backends` -> `Your Loyalty Management API`, you should be able to find the recent API calls from mobile and average response time. For more about MCS monitoring, please refer to [404: Track customer behaviors](../Mobile%20Service%20and%20App/404-MobileLab.md)
 

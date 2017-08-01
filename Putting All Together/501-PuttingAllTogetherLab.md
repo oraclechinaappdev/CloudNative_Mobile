@@ -21,7 +21,7 @@ In this exercise, we will:
 
 #### Prepare Mobile Device to Receive Push Notification ####
 
-1. By the end of previous lab [401: Set up Push Notification and Test Push Notification to mobile app](../Mobile Service and App/401-MobileLab.md), you should be able to receive notification message pop-up from your mobile device upon **Test Notifications** from MCS like below. (Please check with intructor if you cannot complete lab exercise 401)
+1. By the end of previous lab [401: Set up Push Notification and Test Push Notification to mobile app](../Mobile Service and App/401-MobileLab.md), you should be able to receive notification message pop-up from your mobile device upon **Test Notifications** from MCS like below. (Please check with instructor if you cannot complete lab exercise 401)
 
 ![](../common/images/mobile/401-MCS_Notification_Result.png)
 ![](../common/images/mobile/401-MobileApp_Notification_Result.png)
@@ -66,7 +66,7 @@ You can keep this browser open, or save the image for later use.
 ![](images/501/06.mobile.qr.png)
 
 9. When the QR scanner running, face your mobile device towards the QR code image (from step 4).  
-You may need to adjust the distance between your mobile deivce and your screen until the scanner camera can recognize the QR image.
+You may need to adjust the distance between your mobile device and your screen until the scanner camera can recognize the QR image.
 
 ![](images/501/07.mobile.cam.png)
 
@@ -130,7 +130,7 @@ Enter a short description on the textarea at right side and then click `Commit a
 
 ![](images/501/15.java.complete.png)
 
-\*Optional Step: Refer to [Java Apps Lab 103](../Java%20Apps/103-JavaAppsLab.md) - step 18 and onwards to verify source code being provisioned automatically under the scene, i.e. **Continuous Integration and Continuous Devlivery**
+\*Optional Step: Refer to [Java Apps Lab 103](../Java%20Apps/103-JavaAppsLab.md) - step 18 and onwards to verify source code being provisioned automatically under the scene, i.e. **Continuous Integration and Continuous Delivery**
 
 Your Loyalty Management JEE Application is now ready to create campaign offer and notify customer mobile device.
 
