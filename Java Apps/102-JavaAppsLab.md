@@ -5,7 +5,7 @@
 ### Introduction ###
 This tutorial demonstrates how to:
 - Deploy Loyalty Management application to Java Cloud Service using Oracle Developer Cloud Service 
-The Loyalty Management application is a JEE web application which is built by simple JSP pages, to serve marketing manager for offer campaign creation.  
+The Loyalty Management application is a JEE web application built with simple JSP pages, for enabling marketing manager to create offer campaigns.  
 
 ### About the Exercise Today ###
 In this exercise, we will:
