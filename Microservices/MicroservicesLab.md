@@ -161,7 +161,16 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 ```json
 {
 	"memory":"1G",
-	"instances":"1"
+	"instances":"1",
+	"services": [
+	{
+	  "identifier": "DBService",
+	  "type": "DBAAS",
+	  "name": "apacctddb",
+	  "username": "loyalty",
+	  "password": "Welcome_1"
+	}
+	]
 }
 ```
 
@@ -193,7 +202,7 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 ![](images/030.accsconsole.png)
 
-## 1.4 Create ACCS Service Binding to DBCS
+## 1.4 CHECK ACCS Service Binding to DBCS
 
 - Click the **[ Offer ]** to see the ACCS application Details
 
@@ -308,7 +317,7 @@ https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/pt
 
 ![](images/114.opennew.png)
 
-- Black in **Developer Cloud Service**, in your **QRCodeMicroservice Git Repository**. Click **HTTP** to display the Git HTTP URL, click the **Copy** button to copy the URL.
+- Back in **Developer Cloud Service**, in your **QRCodeMicroservice Git Repository**. Click **HTTP** to display the Git HTTP URL, click the **Copy** button to copy the URL.
 
 ![](images/115.copyurl.png)
 
