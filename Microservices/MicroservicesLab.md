@@ -212,7 +212,7 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 ![](images/032.bindings.png)
 
-- In the **Service Bindings** section, you SHOUD see the database binding. **You do NOT need to change anything.**
+- In the **Service Bindings** section, you SHOULD see the database binding. **You do NOT need to change anything.**
 
 ![](images/033.addbinding.png)
 
