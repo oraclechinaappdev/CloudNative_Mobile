@@ -22,7 +22,7 @@ In this exercise, we will:
 + Installed VirtulBox, Copied VM image from instructor and started the VM. [virtualbox.md]
 
 **Using VirtualBox**  
-Instructor should have provided you VirtualBox Installer and the Virtual Machine image which consists of Linux and Eclipse IDE pre-installed. [Click Here for VirtualBox detail](virtualbox.md)  
+Instructor should have provided you VirtualBox Installer and the Virtual Machine image (or your can download the VM image [HERE](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk)) which consists of Linux and Eclipse IDE pre-installed. [Click Here for VirtualBox detail](virtualbox.md)  
 
 Alternatively, you can conduct the following lab exercise using the Oracle Enterprise Pack for Eclipse IDE (OEPE) running on your OS directly.  
 You can download OEPE from [http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html).  
