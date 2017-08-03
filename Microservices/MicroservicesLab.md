@@ -161,7 +161,16 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 ```json
 {
 	"memory":"1G",
-	"instances":"1"
+	"instances":"1",
+	"services": [
+	{
+	  "identifier": "DBService",
+	  "type": "DBAAS",
+	  "name": "apacctddb",
+	  "username": "loyalty",
+	  "password": "Welcome_1"
+	}
+	]
 }
 ```
 
@@ -193,43 +202,20 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 ![](images/030.accsconsole.png)
 
-## 1.4 Create ACCS Service Binding to DBCS
+## 1.4 CHECK ACCS Service Binding to DBCS
 
 - Click the **[ Offer ]** to see the ACCS application Details
 
 ![](images/031.accsoffer.png)
 
-- Click the 2nd Tab, **Deployments**
+- Check the 2nd Tab, **Deployments**
 
 ![](images/032.bindings.png)
 
-- In the **Service Bindings** section, click **[Add]** button
+- In the **Service Bindings** section, you SHOULD see the database binding. **You do NOT need to change anything.**
 
 ![](images/033.addbinding.png)
 
-- Enter the following information
-
-  **Service Type:** `Database Cloud Service`
-
-	**Service Name:** `apacctddb`
-
-	**Username:** `loyalty`
-
-	**Password:** `the database password`, e.g. Welcome_1
-
- Click **[Save]** button.
-
-![](images/034.addandsave.png)
-
-- Notice that the change is not applied yet. In the **Deployments** dialog, click the **[Apply Edits]** button.
-
-![](images/035.apply.png)
-
-- The change requires redeploying of application. You can navigate back to **Overview** tab and/or use **Refresh** button to check the progress.
-
-![](images/036.redeploying.png)
-
-- Wait until the offer application finish redeployment.
 
 ## 1.5 Verify the Working Service
 
@@ -308,7 +294,7 @@ https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/pt
 
 ![](images/114.opennew.png)
 
-- Black in **Developer Cloud Service**, in your **QRCodeMicroservice Git Repository**. Click **HTTP** to display the Git HTTP URL, click the **Copy** button to copy the URL.
+- Back in **Developer Cloud Service**, in your **QRCodeMicroservice Git Repository**. Click **HTTP** to display the Git HTTP URL, click the **Copy** button to copy the URL.
 
 ![](images/115.copyurl.png)
 
@@ -386,7 +372,7 @@ https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/pt
 
 ![](images/132.newbranch.png)
 
-### 2.2.4 create Merge Request in Developer Cloud Service to uptake the code
+### 2.2.4 Create Merge Request in Developer Cloud Service to uptake the code
 
 - In Developer Cloud Service, click on **Code** tab. If you are not viewing the QRCodeMicroservice repo, change to the QRCode Repo.  
 
@@ -622,7 +608,7 @@ Microservice, you can REUSE the same target**.
 
   The final URL should looks like this
 
-	https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.comm/ctdqr/v1/offer/10001
+	https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ctdqr/v1/offer/10001
 
 ![](images/194.qrurl.png)		
 
@@ -634,6 +620,6 @@ Microservice, you can REUSE the same target**.
 
 ![](images/196.reader.png)
 
-# Congratulation! You've complete the Microservice Lab.
+# Congratulation! You've completed the Microservice Lab.
 
 [go back to the Cloud Test Drive Main Page](../README.md)
