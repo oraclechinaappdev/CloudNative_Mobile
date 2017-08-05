@@ -89,6 +89,12 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 
 ![alt text](images/102/13.jcs.config.png "JCS Configuration")
 
+![alt text](images/102/13.cert.png "Certificate Warning")   
+  If you see the certificate warning, **Check** `Accept this certificate when connecting to this JCS instance` and click [**OK**]
+
+![alt text](images/102/13.cluster.png "deploy to cluster")   
+  **Check** `ctdCluster` and click [**OK**] to deploy the application to the Java Cloud Service cluster
+
 13. Click **Save**. 
 
 ### Build and deploy the Loyalty Management Application ###
