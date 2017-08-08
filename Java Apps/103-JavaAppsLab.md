@@ -93,9 +93,10 @@ Click Finish.
 
 13. The project hosted on Oracle Developer Cloud Service has build job which ensures that new application build and deployment to Java Cloud Service happens when any developer push code changes to Git repository.
 
-In the Project Explorer area find the *loyalty* project and expand the navigation tree to locate and open the **Java Resources -> loyalty -> src.main.webapp.jsp -> welcome.jsp**
+In the Project Explorer area find the *loyalty* project and expand the navigation tree to locate and open the **src -> main -> webapp -> jsp -> welcome.jsp**
 
-![](images/103/14.png)
+![](images/103/14a.png)
+![](images/103/14b.png)
 
 14. Modify the following part:
 
