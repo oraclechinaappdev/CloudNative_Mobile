@@ -17,32 +17,51 @@ In this exercise, we will:
 
 ----
 
+#### Sign In to Oracle Cloud ####
+
+1. Open a browser and go to [cloud.oracle.com](https://cloud.oracle.com). Click **Sign In**.
+![cloud.oracle.com](images/sign-in/sign.01.cloud.oracle.com.png)
+
+2. Select `Traditional Cloud Account`, then select `Public Cloud Service - EMEA` for the datacenter below and click **My Services** button.
+![](images/sign-in/sign.02.select.datacenter1.png)
+
+3. Enter the **Developer Cloud Service \(DevCS\)** identity domain and click **Go**. The identity domain and associated credential should be provided by instructor.
+![](images/sign-in/sign.03.identity.domain.png)
+
+4. Enter the DevCS username and password of user with Service Administrator role. Click **Sign In**.
+![](images/sign-in/sign.04.credentials.png)
+
+5. After a successful login you will see your Dashboard.  
+On the Dashboard there are predefined tiles for different services. If the **Developer Cloud Service** tile doesn't appear, click **Customize Dashboard** and mark the **developer** service to show on the dashboard.
+![](images/sign-in/sign.05.dashboard.new.png)
+![](images/sign-in/sign.06.customize.png)
+
 #### Create Oracle Developer Cloud Service project ####
 
-1. Sign in to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in) by provided **Developer Cloud Service \(DevCS\)** identity domain Id and credential. First select your datacenter then provide the identity domain and credentials. After a successful login you will see your Dashboard. Find the Developer Service tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
+6. Now, find the Developer Service tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
 
-![](images/101/01.dashboard.png)
+![](images/101/01.dashboard.new.png)
 
-2. Log in to Oracle Developer Cloud Service and create a new project.
+7. Log in to Oracle Developer Cloud Service and create a new project.
 
 ![alt text](images/101/02.new.project.png)
 
-3. Enter the name of the project and set the desired properties.
+8. Enter the name of the project and set the desired properties.
 	**Name:** `APAC Cloud Test Drive`
 	**Description:** `APAC Cloud Test Drive project hub`
 
 ![](images/101/02.new.project.detail.png)
 
-4. Click **Next** and select *Initial Repository* as template.
+9. Click **Next** and select *Initial Repository* as template.
 
 ![](images/101/03.select.template.png)
 
-5. Click **Next** and on the Properties page select *Import existing repository*.
+10. Click **Next** and on the Properties page select *Import existing repository*.
 Enter or copy the *https://github.com/APACTestDrive/LoyaltyManagement.git* repository address.
 
 ![](images/101/04.import.repository.png "Import external repository")
 
-6. Now click **Finish** to create the project and to clone the specified repository. You have now created a new Git repository with source code stored within the Developer Cloud Service that is based on an existing repository.
+11. Now click **Finish** to create the project and to clone the specified repository. You have now created a new Git repository with source code stored within the Developer Cloud Service that is based on an existing repository.
 
 ![](images/101/05.new.project.created.png)
 ![](images/101/05.new.project.created1.png)
