@@ -211,7 +211,9 @@ In this exercise, we will:
 32. The **Expression Editor** is shown. Perform the following step to setup a condition:
     1. Enter `Accept Offer` in the **Expression Name**.  
 	2. Expand **Components** -> `Functions` -> `String`, drag the `fx lower-case` from left pane, and drop it onto the *New Condition* text area at right pane.  
-	3. Expand **Source**, drag the `accepted` field from left pane, and drop it onto the newly added text `fn:lower-case(string)` at right pane.  
+	3. Expand **Source**, drag the `accepted` field from left pane, and drop it to replace the 'string' in newly added function `fn:lower-case(string)` at right pane.  
+	It should become or similar to `fn:lower-case(/nssrcmpr:execute/nsmpr2:request-wrapper/nsmpr2:accepted)`  
+	*(Namespace may be different)  
 	4. Enter `"true"` in the text area under `=` drop down box.  
 	5. Click `Expression Mode` button on the top left corner.
 
