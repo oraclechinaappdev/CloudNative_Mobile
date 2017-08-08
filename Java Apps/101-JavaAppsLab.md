@@ -33,7 +33,8 @@ In this exercise, we will:
 
 5. After a successful login you will see your Dashboard.  
 On the Dashboard there are predefined tiles for different services. If the **Developer Cloud Service** tile doesn't appear, click **Customize Dashboard** and mark the **developer** service to show on the dashboard.
-![](images/sign-in/sign.05.dashboard.png)
+![](images/sign-in/sign.05.dashboard.new.png)
+![](images/sign-in/sign.06.customize.png)
 
 #### Create Oracle Developer Cloud Service project ####
 
