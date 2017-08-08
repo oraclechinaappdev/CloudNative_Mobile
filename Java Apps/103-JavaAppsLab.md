@@ -114,7 +114,7 @@ To what you would like to see on the page. For example:
 
 ![](images/103/17.png)
 
-16. Git Staging view is displayed. First make sure the `welcome.jsp` is in the *Staged Changes* area. Type a commit message e.g. 'Updated welcome.jsp'. Optionally enter your name or cloud username and give a (valid or fake) email address in the following format as the screenshot shows. Click **Commit and Push...**
+16. Git Staging view is displayed. First make sure the `welcome.jsp` is in the *Staged Changes* area (i.e. Drag the file `welcome.jsp` from `Unstaged Changes` to `Staged Changes`). Type a commit message e.g. 'Updated welcome.jsp'. Optionally enter your name or cloud username and give a (valid or fake) email address in the following format as the screenshot shows. Click **Commit and Push...**
 
 ![](images/103/18.png)
 ![](images/103/19.png)
