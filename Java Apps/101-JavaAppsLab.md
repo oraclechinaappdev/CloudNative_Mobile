@@ -40,7 +40,7 @@ On the Dashboard there are predefined tiles for different services. If the **Dev
 
 6. Now, find the Developer Service tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
 
-![](images/101/01.dashboard.png)
+![](images/101/01.dashboard.new.png)
 
 7. Log in to Oracle Developer Cloud Service and create a new project.
 
