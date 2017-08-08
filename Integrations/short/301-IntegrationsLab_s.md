@@ -43,8 +43,8 @@ After a successful login you will see your Dashboard. Find the **integration** s
 
 The navigation pane provides you with access to all the development features in the Oracle Integration Cloud Service.
 
-[Procced to Next - 302: Define Connections for CRM Customer Activity Service and REST Service Exposure](302-IntegrationsLab.md)
+[Procced to Next - 302: Import and Define Connections for CRM Customer Activity Service and REST Service Exposure](302-IntegrationsLab_s.md)
 
 or
 
-[Back to Integrations Lab Home](README.md)
+[Back to Integrations Lab Home](README_s.md)

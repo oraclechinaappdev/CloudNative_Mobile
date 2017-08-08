@@ -123,8 +123,8 @@ Now we are going to create another *REST* connection.
 
 17. Two *Connections* are just made ready, the **SOAP Connection - \*Invoke\* to CRM Customer Service** and **REST Connection - \*Trigger\* to ICS for Process Offer** respectively.
 
-[Procced to Next - 303: Create an Integration - An Orchestration Integration Flow](303-IntegrationsLab.md)
+[Procced to Next - 303: Complete an Integration - An Orchestration Integration Flow](303-IntegrationsLab_s.md)
 
 or
 
-[Back to Integrations Lab Home](README.md)
+[Back to Integrations Lab Home](README_s.md)

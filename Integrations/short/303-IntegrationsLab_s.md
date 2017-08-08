@@ -13,7 +13,7 @@ In this exercise, we will:
 
 ### Prerequisites ###
 - Oracle Public Cloud Service account including Integration Cloud Service
-- SOAP and REST Connections in ICS already configured (302-IntegrationsLab.md)
+- SOAP and REST Connections in ICS already configured (302-IntegrationsLab_s.md)
 
 #### Create an 'Orchestration' Integration ####
 
@@ -298,8 +298,8 @@ In this exercise, we will:
 
 46. The integration service is now ready for testing.
 
-[Procced to Next - 304: Testing the service and Monitoring with ICS Dashboards](304-IntegrationsLab.md)
+[Procced to Next - 304: Testing the service and Monitoring with ICS Dashboards](304-IntegrationsLab_s.md)
 
 or
 
-[Back to Integrations Lab Home](README.md)
+[Back to Integrations Lab Home](README_s.md)

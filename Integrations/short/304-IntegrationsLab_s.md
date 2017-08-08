@@ -86,4 +86,4 @@ In this exercise, we will:
 
 You have finished this lab.
 
-[Back to Integrations Lab Home](README.md)
+[Back to Integrations Lab Home](README_s.md)

@@ -2,8 +2,6 @@
 -----
 ## 3. Rapid Connect Applications by Oracle Integration Cloud Service ##
 
-**\* This is a simplified version on length of ~45 to 60 minutes. If you are interested, feel free to explore the complete version [HERE](../README.md)
-
 ### Introduction ###
 This lab is part of the APAC Cloud Test Drive and is the third lab about connecting and integrating CRM application rapidly.  
 This section describes integrating applications via Oracle Integration Cloud Service simply using web-based dashboard.
