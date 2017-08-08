@@ -22,8 +22,8 @@ In this exercise, we will:
 1. Open a browser and go to [cloud.oracle.com](https://cloud.oracle.com). Click **Sign In**.
 ![cloud.oracle.com](images/sign-in/sign.01.cloud.oracle.com.png)
 
-2. Select the datacenter and click **My Services**.
-![](images/sign-in/sign.02.select.datacenter.png)
+2. Select `Traditional Cloud Account`, then select `Public Cloud Service - EMEA` for the datacenter below and click **My Services** button.
+![](images/sign-in/sign.02.select.datacenter1.png)
 
 3. Enter the **Developer Cloud Service \(DevCS\)** identity domain and click **Go**. The identity domain and associated credential should be provided by instructor.
 ![](images/sign-in/sign.03.identity.domain.png)
