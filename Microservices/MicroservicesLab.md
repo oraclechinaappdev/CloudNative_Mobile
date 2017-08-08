@@ -576,7 +576,7 @@ Microservice, you can REUSE the same target**.
 }
 ```
 
-![](images/024.json.png)
+![](images/024.json.11.png)
 
 - After fill in the above information, click **Save** button.
 
