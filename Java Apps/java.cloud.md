@@ -1,8 +1,8 @@
 # ORACLE Cloud Test Drive #
 -----
-## Create Database connectivity for Loyalty Management Application [TBD] ##
+## Obtain IP Address of WebLogic Server instance in Java Cloud Service ##
 
-1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). Using the dashboard open the Java Cloud Service Console.
+1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in) by provided Java Cloud Service \(JCS\) identity domain Id and credential. Using the dashboard open the Java Cloud Service Console.
 
 ![](images/jcs/00.png)
 
@@ -14,4 +14,4 @@
 
 ![](images/jcs/02.png)
 
-[Back to JavaAppLab Home](JavaAppsLab.md)
+[Back to JavaAppLab Home](README.md)
