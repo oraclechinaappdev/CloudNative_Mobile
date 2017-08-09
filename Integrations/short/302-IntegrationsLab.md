@@ -12,7 +12,7 @@ In this exercise, we will:
 
 ### Prerequisites ###
 - Oracle Public Cloud Service account including Integration Cloud Service
-- A Java Archive File (JAR) name as `XX_ICS_CC_ICS_INTMGT_01_lab.iar` distributed by instructor
+- A Java Archive File (JAR) name as `XXX_ICS_INTMGT_01_lab.iar` distributed by instructor
 
 #### Import Integration Cloud Service Project Artifact ####
 
@@ -40,7 +40,7 @@ Alternatively, you can go to **Integrations** Summary Page by click the hamburge
 
 ![](images/302/02.integration_import2.png)
 
-You have successfully imported a partial pre-built artifact. We will walkthru what has been built and complete the remaining part.  
+You have successfully imported a set of partial pre-built artifacts. We will walk-thru what has been built and complete the remaining part.  
 
 #### Define SOAP Connection for CRM Customer Activity Service ####
 
@@ -66,7 +66,7 @@ You have successfully imported a partial pre-built artifact. We will walkthru wh
 
 10. The **Connection Properties** dialog window is shown. Fill in the **WSDL URL** by providing **Property Value** in the format of:
     * **http://\<Your Java Cloud Service Instance IP Address\>/crm/CustomerServicePort?WSDL**  
-	*\*If you forget your JCS instance IP address, [Click Here!](../Java%20Apps/java.cloud.md)*  
+	*\*If you forget your JCS instance IP address, [Click Here!](../../Java%20Apps/java.cloud.md)*  
 	Leave other properties **empty** as they are optional and not required in this lab exercise.
 	
 ![](images/302/08.connection_properties.png)
@@ -74,10 +74,7 @@ You have successfully imported a partial pre-built artifact. We will walkthru wh
 11. Leave other property settings unchanged. Click `OK` button to save changes made.  
 Notice that `No Security Policy` is selected as this is required by the endpoint interface.  
 
-![](images/302/09.connection_security.png)
-
-12. Click `OK` button to save changes made.  
-    From the top of **SOAP Connection** page, click `Test` from top right corner, the test **Confirmation** dialog window is shown.  
+12. From the top of **SOAP Connection** page, click `Test` from top right corner, the test **Confirmation** dialog window is shown.  
 	Click `Validate and Test` button.
 
 ![](images/302/10.connection_test.png)
@@ -128,7 +125,7 @@ Similarly, the **Save Changes?** dialog window appears to warn about reactivatin
 22. You should find a green dialog text area about **Connection was saved successfully**.  
     Click `Close` to exit and back to **Connection** Summary Page.
 
-[](images/302/19.connection_save1.png)
+![](images/302/19.connection_save1.png)
 
 23. Two *Connections* are just made ready, the **SOAP Connection - \*Invoke\* to CRM Customer Service** and **REST Connection - \*Trigger\* to ICS for Process Offer** respectively.
 
