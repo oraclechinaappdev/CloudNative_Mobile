@@ -1,6 +1,6 @@
 # ORACLE Cloud Test Drive #
 -----
-## 302: Define Connections for CRM Customer Activity Service and REST Service Exposure ##
+## 302: Import and Define Connections for CRM Customer Activity Service and REST Service Exposure ##
 
 ### Introduction ###
 This tutorial demonstrates how to:
@@ -12,18 +12,32 @@ In this exercise, we will:
 
 ### Prerequisites ###
 - Oracle Public Cloud Service account including Integration Cloud Service
+- A Java Archive File (JAR) name as `XX_ICS_CC_ICS_INTMGT_01_lab.iar` distributed by instructor
 
-#### Define SOAP Connection for CRM Customer Activity Service ####
+#### Import Integration Cloud Service Project Artifact ####
 
-1. Go to **Connections** Summary Page by click on the `Connection` green icon.
+1. Go to **Integrations** Summary Page by click on the `Integrations` blue icon.
 
-![](images/302/01.home_conn.png)
+![](images/302/01.home_integrate.png)
 
-Alternatively, you can go to **Connections** Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Connections`
+Alternatively, you can go to **Integrations** Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Integrations`.
 
 ![](images/302/02.home_hamburger.png)
 
 ![](images/302/03.home_hamburger_designer.png)
+
+![](images/302/01.home_hamburger_integrate.png)
+
+2. 
+
+
+#### Define SOAP Connection for CRM Customer Activity Service ####
+
+1. Go to **Connections** Summary Page by click on the `Connections` green icon.
+
+![](images/302/01.home_conn.png)
+
+Alternatively, you can go to **Connections** Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Connections`.
 
 ![](images/302/04.home_hamburger_connections.png)
 
