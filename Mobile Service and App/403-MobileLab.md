@@ -106,8 +106,8 @@ Click on “Create” on the bottom right.
 
     | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
     | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
-    | offer/{id}/qr	    | Offer QR code         | GET    | N/A	         | image/png           |
-    | offer	            | Offers	            | GET    | N/A	         | application/json    |
+    | offer/{id}/qr	    | Offer QR code         | GET    | N/A	        | image/png           |
+    | offer	            | Offers	            | GET    | N/A	        | application/json    |
     | offer/{id}/accept | Accept an offer       | POST   | application/json | application/json    |
     | offer/{id}/reject | Reject an offer       | POST   | application/json | application/json    |
     | offer/notify      | Send noti. of offer   | POST   | application/json | application/json    |
