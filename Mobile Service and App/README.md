@@ -45,29 +45,36 @@ For the loyalty management mobile application, you can make it all work and play
 
 ### Prerequisites ###
 - Bring your Android phone.
-- During this lab, you need to paste some key values you will create into a JSON file. Please download a JSON file called "Mobile_App_Settings_Sample.json". It can be downloaded by right clicking on [this link](../common/assets/mobile/) and select "Save link as..." for your use in the lab. When you fill out all the information like "baseUrl", "applicationKey", "backendId" and "anonymousToken", you will create a QR code using [a QR code generator](http://www.qr-code-generator.com/). For now, save it to your local PC.
-- Need to install an mobile application called "Cafe Supremo.apk" on you Android phone. You can download it by right clicking on [this link](../common/assets/mobile/). Select "Save link as..." to download and save it to your local PC. Follow below instructions to install the mobile application.
-1. Connect your device to your computer and copy an Android APK file called “Café Supremo.apk” to SD card or internal storage of your device. 
+- During this lab, you need to paste some key values you will create into a JSON file. Please download a JSON file called "Mobile_App_Settings_Sample.json". It can be downloaded by right clicking on [this link](../common/assets/mobile/Mobile_App_Settings_Sample.json) and select "Save link as..." for your use in the lab. When you fill out all the information like "baseUrl", "applicationKey", "backendId" and "anonymousToken", you will create a QR code using [a QR code generator](http://www.qr-code-generator.com/). For now, save it to your local PC.
+- Need to install an mobile application called "Cafe Supremo.apk" on you Android phone. You can download it by right clicking on [this link](../common/assets/mobile/Cafe Supremo.apk). Select "Save link as..." to download and save it to your local PC. Follow below instructions to install the mobile application.
+
+1. Connect your device to your computer and copy an Android APK file called “Café Supremo.apk” to SD card or internal storage of your device.
+
 ![](../common/images/mobile/401-Install_App_1.png)
 
 2. Enable Unknown Sources in your Android device: Go to "Settings" >>" Security ">> Check the box "Unknown sources". (FYI, the menu will be slightly different by Android versions.)
+
 ![](../common/images/mobile/401-Install_App_2.png)
 
 3. Open a file manager on your Android device. 
+
 ![](../common/images/mobile/401-Install_App_3.png)
 
 4. Go to the same location where you put the “Café Supremo.apk” file and Click the file to install. The below image shows Android APK files in case you put them in the folder called “Download”.
+
 ![](../common/images/mobile/401-Install_App_4.png)
 
 5. Press “Install” button.
+
 ![](../common/images/mobile/401-Install_App_5.png)
 
 
 6. Allow all permissions the “Café Supremo” mobile application requires by clicking “CONFIRM” button. Now you have finished the installation of the mobile application.
+
 ![](../common/images/mobile/401-Install_App_6.png)
 
 
-
+---
 # Lab Exercise: #
 Let's explore the Mobile Service and Application Lab. Please click the below link to start your lab.
 
