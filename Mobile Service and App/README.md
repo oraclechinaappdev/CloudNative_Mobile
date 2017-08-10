@@ -45,8 +45,11 @@ For the loyalty management mobile application, you can make it all work and play
 
 ### Prerequisites ###
 - Bring your Android phone.
-- During this lab, you need to paste some key values you will create into a JSON file. Please download a JSON file called "Mobile_App_Settings_Sample.json". It can be downloaded by right clicking on [this link](../common/assets/mobile/Mobile_App_Settings_Sample.json) and select "Save link as..." for your use in the lab. When you fill out all the information like "baseUrl", "applicationKey", "backendId" and "anonymousToken", you will create a QR code using [a QR code generator](http://www.qr-code-generator.com/). For now, save it to your local PC.
-- Need to install an mobile application called "Cafe Supremo.apk" on you Android phone. You can download it by right clicking on [this link](../common/assets/mobile/Cafe Supremo.apk). Select "Save link as..." to download and save it to your local PC. Follow below instructions to install the mobile application.
+- During this lab, you need to paste some key values you will create into a JSON file. 
+Please download a JSON file called "Mobile_App_Settings_Sample.json". It can be downloaded by right clicking on [this link](../common/assets/mobile/Mobile_App_Settings_Sample.json) and select "Save link as..." for your use in the lab. When you fill out all the information like "baseUrl", "applicationKey", "backendId" and "anonymousToken", you will create a QR code using [a QR code generator](http://www.qr-code-generator.com/). For now, save it to your local PC.
+- A mobile application called "Cafe Supremo.apk" on you Android phone. 
+You can download it by right clicking on [this link](../common/assets/mobile/Cafe Supremo.apk). Select "Save link as..." to download and save it to your local PC. Follow below instructions to install the mobile application.
+
 
 1. Connect your device to your computer and copy an Android APK file called “Café Supremo.apk” to SD card or internal storage of your device.
 
