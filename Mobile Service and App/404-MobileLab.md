@@ -95,7 +95,7 @@ We will use it shortly.
 
 3. From your web browser, go to `http://www.qr-code-generator.com/`, click on `Text` button and the **Free text** text area is shown.
 
-![](../Putting All Together/images/501/01.qr.site.png)
+![](../../Putting All Together/images/501/01.qr.site.png)
 
 4. Copy **Your own** JSON file content from step 2 above, paste it into the **Free text** text area, then click `Create QR code` button. A QR code image will be generated on the right hand side of window.
 
