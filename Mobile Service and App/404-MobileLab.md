@@ -21,7 +21,7 @@ In this exercise, we will:
 In this lab, you will create a notifications profile and register the client application (Cafe Supremo mobile application) to associate google credentials.
 
 1. Create a client (Register the app in MCS as a client) to receive notifications.
-    - Navigate through “Applications” -> “Mobile Backends”, select your mobilebackend, and click on “Open” to open your MBE.
+    - Navigate through “Applications” -> “Mobile Backends”, select your mobile backend, and click on “Open” to open your MBE.
 ![](../common/images/mobile/401-Select_MBE.png)
 
 
@@ -55,12 +55,12 @@ In this lab, you will create a notifications profile and register the client app
 
 3. Create a profile to store google credentials like API Key and Sender ID.
 
-   - Select the "Profiles" tab and click on "New Profile" to create a profile .
+   - Select the "Profiles" tab and click on "New Profile" to create a profile.
 
 ![](../common/images/mobile/401-Create_New_Profile.png)
 
 
-   - Enter `FCM0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Name. Paste `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the Sender ID. (We generated them for Cafe Supremo mobile application from Google.) and click on “Create”
+   - Enter `FCM0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Name. Paste `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the Sender ID. (We generated them for Cafe Supremo mobile application from Google.), and click on “Create”
 
 ![](../common/images/mobile/401-Profile_Setting.png)
 
@@ -73,14 +73,9 @@ In this lab, you will create a notifications profile and register the client app
 ![](../common/images/mobile/401-Review_MobileApp_Profile.png)
 
 ---
-#### Prepare Mobile Device to Receive Push Notification ####
+#### Prepare the Cafe Supremo application to receive notifications ####
 
-1. By the end of previous lab [401: Set up Push Notification and Test Push Notification to mobile app](../Mobile Service and App/401-MobileLab.md), you should be able to receive notification message pop-up from your mobile device upon **Test Notifications** from MCS like below. (Please check with instructor if you cannot complete lab exercise 401)
-
-![](../common/images/mobile/401-MCS_Notification_Result.png)
-![](../common/images/mobile/401-MobileApp_Notification_Result.png)
-
-2. Before running notification test, you were told to prepare a file called **Mobile_App_Settings_Sample.json** like below format:    
+1. Before running notification test, you were told to prepare a file called **Mobile_App_Settings_Sample.json** like below format:    
 ```
 {
       "baseUrl": "https://<Your Mobile Cloud Service Identity Domain Name>.mobileenv.us2.oraclecloud.com:443",
@@ -93,48 +88,48 @@ In this lab, you will create a notifications profile and register the client app
 ```
 We will use it shortly.
 
-3. From your web browser, go to `http://www.qr-code-generator.com/`, click on `Text` button and the **Free text** text area is shown.
+2. From your web browser, go to `http://www.qr-code-generator.com/`, click on `Text` button and the **Free text** text area is shown.
 
 ![](../Putting All Together/images/501/01.qr.site.png)
 
-4. Copy **Your own** JSON file content from step 2 above, paste it into the **Free text** text area, then click `Create QR code` button. A QR code image will be generated on the right hand side of window.
+3. Copy **your own** JSON file content from step 2 above, paste it into the **Free text** text area, then click `Create QR code` button. A QR code image will be generated on the right hand side of window.
 
 ![](images/501/02.qr.result.png)
 
 You can keep this browser open, or save the image for later use.
 
-5. From your mobile device, open the app 'Supremo'.
+4. From your mobile device, open the app 'Cafe Supremo'.
 
 ![](images/501/03.mobile.app.png)
 
-6. On app started and login page shown, click on the hamburger menu on top left corner.
+5. Once app started and login page shown, click on the hamburger menu on top left corner.
 
 ![](images/501/04.mobile.menu.png)
 
-7. On expanded menu, click `Settings`
+6. On expanded menu, click `Settings`
 
 ![](images/501/05.mobile.settings.png)
 
-8. On Settings page opened, click `Read Settings from QRCode` button at middle.
+7. On Settings page opened, click `Read Settings from QRCode` button at middle.
 
 ![](images/501/06.mobile.qr.png)
 
-9. When the QR scanner running, face your mobile device towards the QR code image (from step 4).  
+8. When the QR scanner running, face your mobile device towards the QR code image (from step 4).  
 You may need to adjust the distance between your mobile device and your screen until the scanner camera can recognize the QR image.
 
 ![](images/501/07.mobile.cam.png)
 
-10. On successful QR scanning, all property settings in your JSON file will be automatically filled into the mobile app Setting page like below. (You may need to expand `MCS Mobile Backend Preferences`)
+9. On successful QR scanning, all property settings in your JSON file will be automatically filled into the mobile app Setting page like below. (You may need to expand `MCS Mobile Backend Preferences`)
 
 ![](images/501/08.mobile.qr.result.png)
 
 Click `Save settings and logout` button. You will then be returned to home screen.
 
-11. Enter the mobile app **Username** and **Password** provided by instructor, then click `Login` button.
+10. Enter the mobile app **Username** and **Password** provided by instructor, then click `Login` button.
 
 ![](images/501/09.mobile.login.png)
 
-12. Upon successful login, the welcome page is shown. Your mobile device is now ready to receive push notification of campaign offer.
+11. Upon successful login, the welcome page is shown. Your mobile device is now ready to receive push notification of campaign offer.
 
 ![](images/501/10.mobile.welcome.png)
 
@@ -150,7 +145,7 @@ Click `Save settings and logout` button. You will then be returned to home scree
 ![](../common/images/mobile/401-Test_Manage_Devices.png)
 
 
-3. You shall see devcies that has been registered to this mobile backend. Click on “Close” and go back to the “Test” screen.
+3. You shall see devices that has been registered to this mobile backend. Click on “Close” and go back to the “Test” screen.
 
 ![](../common/images/mobile/401-Manage_Devices.png)
 
@@ -172,4 +167,4 @@ Click `Save settings and logout` button. You will then be returned to home scree
 
 or
 
-[Back to Mobile Serivce and Application Home](README.md)
+[Back to Mobile Service and Application Home](README.md)
