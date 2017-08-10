@@ -266,7 +266,7 @@ In this exercise, we will:
 
     The result of **Mapping** should look like this:
 	
-![](images/303/40.integration.otherwise.result.png)
+![](images/303/40.integration.otherwise.result1.png)
 	
 41. The *Process Offer* integration flow development is done.  
     However, there is an error showing at the top right corner, telling that **primary business identifier for Tracking** is needed. 
