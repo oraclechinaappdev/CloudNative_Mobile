@@ -9,7 +9,7 @@ You can create custom REST APIs to build up a library of services that can be us
 ![](../common/images/mobile/mcsgc_dt_004_api.png)
 
 ### About the Exercise Today ###
-In the previous lab, we've created 3 connector APIs to integrate with external services for offer information query, QR code creation and offer result update. As you might remember, those connector APIs are not directly exposed to mobile applications. Once you create  connector APIs to access the services, you can use them in custom APIs (e.g. Loyalty Management API), which you can then call from your mobile applications or external systems using standard REST calls. So, in this lab, we will create a custom API for 3 connector APIs.
+In the previous lab, we've created 3 connector APIs to integrate with external services for offer information query, QR code creation and offer result update. As you might remember, those connector APIs are not directly exposed to mobile applications. Once you create connector APIs to access the services, you can use them in custom APIs (e.g. Loyalty Management API), which you can then call from your mobile applications or external systems using standard REST calls. So, in this lab, we will create a custom API for 3 connector APIs.
 
 In this exercise, we will:
 - Create the custom API and define its endpoints for loyalty management. We need the custom API with several endpoints for offer information query, QR code creation and offer result (e.g. reject or accept) update.
@@ -27,7 +27,7 @@ In this exercise, we will:
 
 ----
 #### Create the custom API and define its endpoints for loyalty management ####
-In this lab, you will create a custom API for loyalty management. In fact, we need to define serveral endpoints for the custom API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. For your convenience, we will create our own custom API using a RAML file for other endpoints and then manually create one additional endpoint. So, here you will create one endpoint for the query of the specific offer information.
+In this lab, you will create a custom API for loyalty management. In fact, we need to define several endpoints for the custom API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. For your convenience, we will create our own custom API using a RAML file for other endpoints and then manually create one additional endpoint. So, here you will create one endpoint for the query of the specific offer information.
 
 1. From the navigation pane, select “Applications” -> “APIs”, click on “+ New API” and select “API” from the dropdown list.
 ![](../common/images/mobile/403-New_API.png)
@@ -52,7 +52,7 @@ Click on “Create” on the bottom right.
       "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
       "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
       "API":"LoyaltyManagementAPI0X",
-            --> Replce the value inside double quotes with the value of "API Name" in previous step.
+            --> Replace the value inside double quotes with the value of "API Name" in previous step.
       "senderID":"925757644219"
 }
 
@@ -107,18 +107,18 @@ Click on “Create” on the bottom right.
     | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
     | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
     | offer/{id}/qr	| Offer QR code         | GET    | N/A	            | image/png           |
-    | offer		| Offers	        | GET    | N/A	            | application/json    |
+    | offer	        | Offers	        | GET    | N/A	            | application/json    |
     | offer/{id}/accept | Accept an offer       | POST   | application/json | application/json    |
     | offer/{id}/reject | Reject an offer       | POST   | application/json | application/json    |
     | offer/notify      | Send noti. of offer   | POST   | application/json | application/json    |
-    | offer/{id}	| Get Offer Details     | GET    | N/A	            | application/json    |
+    | offer/{id}        | Get Offer Details     | GET    | N/A	            | application/json    |
 
 
 ----
 #### Implement the custom API for the Loyalty Management ####
 Now that you have the API defined, it's time to implement the API with JavaScript code. You can get started by downloading a scaffold that provides stubs for the functions that you need to implement for each endpoint, as well as some sample code.
 
-1. Downlaod prebuilt implementation: We've provided a prebuilt implementation package for you which you can download by right clicking  [loyaltymanagementapi_1.0.zip](../raw/master/common/assets/mobile/loyaltymanagementapi_1.0.zip) and select "Save link as...".
+1. Download prebuilt implementation: We've provided a prebuilt implementation package for you which you can download by right clicking [loyaltymanagementapi_1.0.zip](../raw/master/common/assets/mobile/loyaltymanagementapi_1.0.zip) and select "Save link as...".
 
 2. Unzip the package, edit `/loyaltymanagementapi/package.json`, add your postfix the "name" and the "TestDriveACCSPtMgtConnectorAPI" to match your custom API name and the Product Information API connector name, such as
 ![](../common/images/mobile/403-Editing_Package_Json.png)
@@ -146,13 +146,13 @@ You need to assign a role to access the API. Before that, the API is not accessi
 
 ---
 #### Associate the APIs with the loyalty management MBE ####
-Before you can deploy the custom API, it has to be associated with the mobile backend(e.g.: `APAC_Test_Drive_Loyalty_Management_MBE01`) you created in the previous lab. The mobile backend provides the security context for accessing the API, including the users that have permissions. In this lab, we will assign the complete custom API for "LoyaltyManagementAPI" that we provide.
+Before you can deploy the custom API, it has to be associated with the mobile backend (e.g.: `LoyaltyMgmt_MBE01`) you created in the previous lab. The mobile backend provides the security context for accessing the API, including the users that have permissions. In this lab, we will assign the complete custom API for "LoyaltyManagementAPI" that we provide.
 
-1. Navigate to the MBE(e.g.: APAC_Test_Drive_Loyalty_Management_MBE01) you created, and turn to the “APIs” tab. Click “Select APIs”.
+1. Navigate to the MBE (e.g.: `LoyaltyMgmt_MBE01`) you created, and turn to the “APIs” tab. Click “Select APIs”.
 ![](../common/images/mobile/403-Select_API_MBE.png)
 
 
-2. Enter `LoyaltymanagementAPI0X`(replace **“0X”** with your own postfix)  and and click the  “+” icon to select the API.
+2. Enter `LoyaltymanagementAPI0X`(replace **“0X”** with your own postfix)  and click the  “+” icon to select the API.
 ![](../common/images/mobile/403-Select_Your_API.png)
 
 
@@ -175,10 +175,10 @@ Now you can test your custom API.
 2. [Install Postman and use Chrome to access.](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) and launch Postman to test `Get offer details` API.
 ![](../common/images/mobile/403-Test_Postman_UI.png)
 
-3. Change the endpoint URI parameter placeholder with `10001`, as is shown below then choose `Basic Auth` from Authourization type dropdown list.
+3. Change the endpoint URI parameter placeholder with `10001`, as is shown below then choose `Basic Auth` from Authorization type dropdown list.
 ![](../common/images/mobile/403-Test_Postman_Setting.png)
 
-4. Enter MCS username and password (MCS credential in the Access Document). and click on “Update Request”.
+4. Enter MCS username and password (MCS credential in the Access Document), and click on “Update Request”.
 ![](../common/images/mobile/403-Test_MCS_Credential.png)
 
 5. Click on “Headers” and you can see the “Authorization” header has been generated for you based on your settings in the “Authorization” tab.
@@ -199,4 +199,4 @@ You have finished this lab successfully.
 
 or
 
-[Back to Mobile Serivce and Application Home](README.md)
+[Back to Mobile Service and Application Home](README.md)
