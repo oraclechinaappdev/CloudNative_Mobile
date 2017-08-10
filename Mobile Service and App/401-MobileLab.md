@@ -40,7 +40,7 @@ In this exercise, you will create your MBE for a mobile application called "Cafe
 
 6. Check
 
-The Mobile Backend is now created and it will bring you to the “Settings” tab of the newly created MBE where you will see the mobile backend ID, etc, which you will need to use when interacting with the MBE. Click on the two “Show” links to see the “Anonymous Key”.
+The Mobile Backend is now created and it will bring you to the “Settings” tab of the newly created MBE where you will see the mobile backend ID, etc., which you will need to use when interacting with the MBE. Click on the two “Show” links to see the “Anonymous Key”.
 
 ![](../common/images/mobile/400-MBE_settings.png)
 
@@ -64,7 +64,7 @@ Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text ed
 
 You have finished this lab section.
 
-[Procced to Next - 401: Set up Push Notification and Test Push Notification to mobile app](402-MobileLab.md)
+[Procced to Next - 402: Create Connectors for external services](402-MobileLab.md)
 
 or
 
