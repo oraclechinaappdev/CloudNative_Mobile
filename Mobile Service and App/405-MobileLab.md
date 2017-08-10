@@ -24,7 +24,7 @@ In this exercise, we will:
 ----
 
 #### How to raise events from mobile applications ####
-In this lab, you will not code for mobile application to create events. However, we'd like to give some ideas of how you can develop mobile application to create custome events. Oracle provides Event APIs as part of client SDK to create events upon offer accept/reject to raise events. The name of events could be any string you like, and you can add your custom attributes into the “properties” field which will be visible in the report creation wizard in MCS. Please refer to the below snippet of mobile client code to get an idea of how you can raise events from mobile applications.
+In this lab, you will not code for mobile application to create events. However, we'd like to give some ideas of how you can develop mobile application to create custom events. Oracle provides Event APIs as part of client SDK to create events upon offer accept/reject to raise events. The name of events could be any string you like, and you can add your custom attributes into the “properties” field which will be visible in the report creation wizard in MCS. Please refer to the below snippet of mobile client code to get an idea of how you can raise events from mobile applications.
 
     ```
     service.post('/mobile/custom/LoyaltyManagementAPI/offer/:id/accept', function (req, res) {
@@ -110,4 +110,4 @@ While MCS displays data gathered from all of the mobile backends by default, you
 
 Congratulation! You have finished this lab section.
 
-[Back to Mobile Serivce and Application Home](README.md)
+[Back to Mobile Service and Application Home](README.md)
