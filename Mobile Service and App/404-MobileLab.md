@@ -90,48 +90,49 @@ We will use it shortly.
 
 2. From your web browser, go to `http://www.qr-code-generator.com/`, click on `Text` button and the **Free text** text area is shown.
 
-![](../Putting All Together/images/501/01.qr.site.png)
+![](../common/images/mobile/01.qr.site.png)
 
 3. Copy **your own** JSON file content from step 2 above, paste it into the **Free text** text area, then click `Create QR code` button. A QR code image will be generated on the right hand side of window.
 
-![](images/501/02.qr.result.png)
+![](../common/images/mobile/02.qr.result.png)
+
 
 You can keep this browser open, or save the image for later use.
 
 4. From your mobile device, open the app 'Cafe Supremo'.
 
-![](images/501/03.mobile.app.png)
+![](../common/images/mobile/03.mobile.app.png)
 
 5. Once app started and login page shown, click on the hamburger menu on top left corner.
 
-![](images/501/04.mobile.menu.png)
+![](../common/images/mobile/04.mobile.menu.png)
 
 6. On expanded menu, click `Settings`
 
-![](images/501/05.mobile.settings.png)
+![](../common/images/mobile/05.mobile.settings.png)
 
 7. On Settings page opened, click `Read Settings from QRCode` button at middle.
 
-![](images/501/06.mobile.qr.png)
+![](../common/images/mobile/06.mobile.qr.png)
 
 8. When the QR scanner running, face your mobile device towards the QR code image (from step 4).  
 You may need to adjust the distance between your mobile device and your screen until the scanner camera can recognize the QR image.
 
-![](images/501/07.mobile.cam.png)
+![](../common/images/mobile/07.mobile.cam.png)
 
 9. On successful QR scanning, all property settings in your JSON file will be automatically filled into the mobile app Setting page like below. (You may need to expand `MCS Mobile Backend Preferences`)
 
-![](images/501/08.mobile.qr.result.png)
+![](../common/images/mobile/08.mobile.qr.result.png)
 
 Click `Save settings and logout` button. You will then be returned to home screen.
 
 10. Enter the mobile app **Username** and **Password** provided by instructor, then click `Login` button.
 
-![](images/501/09.mobile.login.png)
+![](../common/images/mobile/09.mobile.login.png)
 
 11. Upon successful login, the welcome page is shown. Your mobile device is now ready to receive push notification of campaign offer.
 
-![](images/501/10.mobile.welcome.png)
+![](../common/images/mobile/10.mobile.welcome.png)
 
 ---
 #### Test Notification ####
