@@ -1,3 +1,4 @@
+
 # ORACLE Cloud Test Drive #
 -----
 ## 402: Create Connectors for external services ##
@@ -7,7 +8,7 @@
 
 Connectors allow you to declaratively create APIs that simplify access to and standardize use of backend systems (such as enterprise middleware) and web services. Connector types are available for REST web services, SOAP web services, the Oracle Integration Cloud Service (ICS), and Oracle Cloud applications based on Fusion Applications (FA). For this lab, we are going to use the connectors for the REST web services to integrate ACCS and ICS.
 
-Once you create a connector API to access the service, you can use it in custom APIs (e.g. Loyalty Managment API), which you can then call from your mobile applications using standard REST calls.
+Once you create a connector API to access the service, you can use it in custom APIs (e.g. Loyalty Management API), which you can then call from your mobile applications using standard REST calls.
 
 ![](../common/images/mobile/402-Connectors_Mechanism.png)
 
@@ -47,7 +48,7 @@ In this lab, we will create a connector API to integrate ACCS microservice for o
 8. Now your connector is ready and you can test it. Select `GET` as the HTTP method, enter `/ptmgt/v1/offers/10001` into the “Local resource name” following the “Local URI”.
 ![](../common/images/mobile/402-Connector_Test.png)
 
-9. Select your MBE(e.g.: APAC_Test_Drive_Loyalty_Management_MBE01) you created from the dropdown list in the “Authentication” section and you will find the actual url that is getting called at the end in the “Remote URL” field. Click on “Test Endpoint”.
+9. Select your MBE (e.g.: `LoyaltyMgmt_MBE01`) you created from the dropdown list in the “Authentication” section and you will find the actual URL that is getting called at the end in the “Remote URL” field. Click on “Test Endpoint”.
 ![](../common/images/mobile/402-Connector_Test_EndPoint.png)
 
 10. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
@@ -63,4 +64,4 @@ You have finished this lab successfully.
 
 or
 
-[Back to Mobile Serivce and Application Home](README.md)
+[Back to Mobile Service and Application Home](README.md)
