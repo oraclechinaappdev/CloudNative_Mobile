@@ -51,7 +51,7 @@ Please download a JSON file called "Mobile_App_Settings_Sample.json". It can be 
 You can download it by right clicking on [this link](../common/assets/mobile/Cafe_Supremo.apk). Select "Save link as..." to download and save it to your local PC. Follow below instructions to install the mobile application.
 
 
-1. Connect your device to your computer and copy an Android APK file called “Café Supremo.apk” to SD card or internal storage of your device.
+1. Connect your device to your computer and copy an Android APK file called “Cafe_Supremo.apk” to SD card or internal storage of your device.
 
 ![](../common/images/mobile/401-Install_App_1.png)
 
@@ -63,7 +63,7 @@ You can download it by right clicking on [this link](../common/assets/mobile/Caf
 
 ![](../common/images/mobile/401-Install_App_3.png)
 
-4. Go to the same location where you put the “Café Supremo.apk” file and Click the file to install. The below image shows Android APK files in case you put them in the folder called “Download”.
+4. Go to the same location where you put the “Cafe_Supremo.apk” file and Click the file to install. The below image shows Android APK files in case you put them in the folder called “Download”.
 
 ![](../common/images/mobile/401-Install_App_4.png)
 
