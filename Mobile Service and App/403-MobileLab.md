@@ -21,7 +21,7 @@ In this exercise, we will:
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab. (400 lab)
 - 3 Connector APIs we created in the previous lab (402 lab)
-- A RAML file for the custom API with some of endpoints for your use. It can be downloaded by right clicking on [this link](../raw/master/common/assets/mobile/loyaltymanagementapi.raml) and select "Save link as..." for your use in the lab.
+- A RAML file for the custom API with some of endpoints for your use. It can be downloaded by right clicking on [this link](../common/assets/mobile/loyaltymanagementapi.raml) and select "Save link as..." for your use in the lab.
 - Chrome Postman to test custom APIs
 - Any text file editor
 
