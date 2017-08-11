@@ -71,21 +71,22 @@ Click on “Create” on the bottom right.
    - Enter `offer/{id}` as the “Resource Path” and `Offer` as the “Display Name” and click on “Methods”. This endpoint (a URI resource) is for getting the specific offer information by offer ID.
 ![](../common/images/mobile/403-New_Resource.png)
 
-    - Adding method: you can see that {id} entered in previous step has be recognized as a URI Resource Path Parameter “id”. Click on “+ Add Method” and select “GET”.
+   - Adding method: you can see that {id} entered in previous step has be recognized as a URI Resource Path Parameter “id”. Click on “+ Add Method” and select “GET”.
 ![](../common/images/mobile/403-Adding_Method.png)
 
-    - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
+   - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
 ![](../common/images/mobile/403-Adding_Method_Info.png)
 
-    - Adding response: Click on "Responses" and the "Add Response"
+   - Adding response: Click on "Responses" and the "Add Response"
 ![](../common/images/mobile/403-Adding_Response.png)
 
 ![](../common/images/mobile/403-Adding_Response_Add.png)
 
-    - Adding response media type: Click on "Add Media Type"
-![](../common/images/mobile/403-Adding_Response.png)
+   - Adding response media type: Click on "Add Media Type"
+![](../common/images/mobile/403-Adding_Response_info.png)
 
-    - Adding sample response: MCS will to create a mockup implementation for this endpoint method using the sample body when provided. This is the one of good features to enable parallel development of mobile application without external services. Make sure the "Media Type" dropdown is set to "application/json" and then in the "Example" text area, paste the following code:
+   - Adding sample response: MCS will to create a mockup implementation for this endpoint method using the sample body when provided. This is the one of good features to enable parallel development of mobile application without external services. Make sure the "Media Type" dropdown is set to "application/json" and then in the "Example" text area, paste the following code:
+   
 	```
 	{
 		"id": 10001,
@@ -99,10 +100,11 @@ Click on “Create” on the bottom right.
 		"productdesc": "Blend of incomparable Balance of sweetness, aroma and body. Composed of 50% Arabica and 50% Robusta."
 	}
 	```
+	
     - Scroll to the top of the page and click on “Save”.
 ![](../common/images/mobile/403-Adding_Sample_Response.png)
 
-    - For your information: Now we have created all endpoints for the Loyalty Management Custom APIs. The below is the list of endpoints for your reference.
+   - For your information: Now we have created all endpoints for the Loyalty Management Custom APIs. The below is the list of endpoints for your reference.
 
     | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
     | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
