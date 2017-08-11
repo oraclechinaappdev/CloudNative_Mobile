@@ -118,7 +118,7 @@ Click on “Create” on the bottom right.
 #### Implement the custom API for the Loyalty Management ####
 Now that you have the API defined, it's time to implement the API with JavaScript code. You can get started by downloading a scaffold that provides stubs for the functions that you need to implement for each endpoint, as well as some sample code.
 
-1. Download prebuilt implementation: We've provided a prebuilt implementation package for you which you can download by right clicking [loyaltymanagementapi_1.0.zip](../raw/master/common/assets/mobile/loyaltymanagementapi_1.0.zip) and select "Save link as...".
+1. Download prebuilt implementation: We've provided a prebuilt implementation package for you which you can download by right clicking [loyaltymanagementapi_1.0.zip](../common/assets/mobile/loyaltymanagementapi_1.0.zip) and select "Save link as...".
 
 2. Unzip the package, edit `/loyaltymanagementapi/package.json`, add your postfix the "name" and the "TestDriveACCSPtMgtConnectorAPI" to match your custom API name and the Product Information API connector name, such as
 ![](../common/images/mobile/403-Editing_Package_Json.png)
