@@ -77,12 +77,12 @@ Click on “Create” on the bottom right.
    - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
 ![](../common/images/mobile/403-Adding_Method_Info.png)
 
-    - Adding response: Click on "Responses" and the "Add Response"
+    - Adding response: Click on "Responses" and the "Add Response".
 ![](../common/images/mobile/403-Adding_Response.png)
 
 ![](../common/images/mobile/403-Adding_Response_Add.png)
 
-   - Adding response media type: Click on "Add Media Type".
+    - Adding response media type: Click on "Add Media Type".
 ![](../common/images/mobile/403-Adding_Response_Add_Media_Type.png)
 
     - Adding sample response: MCS will to create a mockup implementation for this endpoint method using the sample body when provided. This is the one of good features to enable parallel development of mobile application without external services. Make sure the "Media Type" dropdown is set to "application/json" and then in the "Example" text area, paste the following code:
