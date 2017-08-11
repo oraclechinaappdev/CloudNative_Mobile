@@ -4,11 +4,11 @@
 
 ### Introduction ###
 This tutorial demonstrates how to:
-- Define ICS connections for a REST trigger service exposure and invoke an external SOAP service
+- Import and define ICS connections for a REST trigger service exposure and invoke an external SOAP service
 
 ### About the Exercise Today ###
 In this exercise, we will:
-- Using the web-based click and configure techniques to define ICS connection resources: **SOAP** and **REST** respectively.
+- Using the web-based click and configure techniques to import and define ICS connection resources: **SOAP** and **REST** respectively.
 
 ### Prerequisites ###
 - Oracle Public Cloud Service account including Integration Cloud Service
