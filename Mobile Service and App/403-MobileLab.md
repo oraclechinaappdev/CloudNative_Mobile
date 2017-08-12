@@ -25,6 +25,10 @@ In this exercise, we will:
 - Chrome Postman to test custom APIs
 - Any text file editor
 
+[test1](../raw/master/common/assets/mobile/loyaltymanagementapi.raml)
+[test2](https://raw.githubusercontent.com/APACTestDrive/CloudNative_Mobile/MobileLab-short-delta-only/common/assets/mobile/loyaltymanagementapi.raml)
+
+
 ----
 #### Create the custom API and define its endpoints for loyalty management ####
 In this lab, you will create a custom API for loyalty management. In fact, we need to define several endpoints for the custom API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. For your convenience, we will create our own custom API using a RAML file for other endpoints and then manually create one additional endpoint. So, here you will create one endpoint for the query of the specific offer information.
