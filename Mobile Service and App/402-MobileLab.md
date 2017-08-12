@@ -21,39 +21,48 @@ For the above 3 Connector APIs, we will guide you through creating the "Product 
 - Loyalty management MBE created in the previous lab.
 
 ----
-#### Create "Product Management" API Connector to get offer information ####
-In this lab, we will create a connector API to integrate ACCS microservice for offer information. **[Note]** A connector API is for the custom APIs. It means a connector API doesn't have direct interactions with mobile applications. Mobile applications only interact with custom APIs and custom APIs will use the connector API to interact external services and systems.
+#### Create "Process Offer" API Connector to update offer result ####
+In this lab, we will create a connector API to integrate ICS microservice for updating offer result. **[Note]** A connector API is for the custom APIs. It means a connector API doesn't have direct interactions with mobile applications. Mobile applications only interact with custom APIs and custom APIs will use the connector API to interact external services and systems.
 
 1. On the navigation pane, select “Applications” -> “Connectors”. Click on the “+ New Connector” green button and select “REST” from the dropdown list.
 ![](../common/images/mobile/402-New_Connector.png)
 
-2. Enter `Test Drive ACCS Product Management Connector API 0X`(0X is the sequence number assigned to you by instructor. - e.g.: 01) as the "Display API Name" and short description for this connector. The API name should be changed manually to `TestDriveACCSPtMgtConnectorAPI0X` in order to match the value used in Lab 403. Note that the “API Name” will be used in custom API implementation coding thus is must meet JavaScript variable naming standards. Click on “Create” on the bottom right when you are done. 
-
-![](../common/images/mobile/402-New_Connector_Info.png)
+2. Enter `Test Drive ICS Connector API 0X`(0X is the sequence number assigned to you by instructor. - e.g.: 01) as a name for this connector. The API name will be automatically generated for you while you type in the Display API Name. Note that the “API Name” will be used in custom API implementation coding thus is must meet JavaScript variable naming standards. Click on “Create” on the bottom right when you are done.
+![](../common/images/mobile/402-ICS_Connector_API.png)
 
 3. Review the name/description on the general screen and click on the “Next Step” button (“>” on the top right) to move to the next screen.
-![](../common/images/mobile/402-Connector_Info_Review.png)
+![](../common/images/mobile/402-ICS_Connector_API_Review.png)
 
-4. Enter the URL (e.g.: `https://offer-gse00010885.apaas.em3.oraclecloud.com`. This is the endpoint CREATED by you in the Microservice Lab.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
-![](../common/images/mobile/402-Connector_URL_Setting.png)
+4. Enter the URL (e.g: `https://integration-gse00012012.integration.us2.oraclecloud.com/integration/flowapi/rest/KD_ICS_INTMGT/v01/processoffer`. This is the endpoint CREATED by you in the Integrations Lab.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
+![](../common/images/mobile/402-ICS_Connector_URL_Setting.png)
 
 5. We won’t set any rules here, so just click on “Next Step”.
-![](../common/images/mobile/402-Connector_Rule_Setting.png)
+![](../common/images/mobile/402-ICS_Connector_Rule_Setting.png)
 
-6. MCS supports a wide range of security policies for you to use. For the lab, to make it simple, no security policy setting is required. Just click on “Next Step”.
-![](../common/images/mobile/402-Connector_Security_Setting.png)
+6. MCS supports a wide range of security policies for you to use. For the lab, we will use http basic authentication for security policy setting. Select “oracle/http_basic_auth_over_ssl_client_policy” from “Available Policies” on the left and use the “>” button in the middle to move it to “Selected Policies” on the right.
+![](../common/images/mobile/402-ICS_Connector_Security_Setting.png)
 
-7. Click on “Save” when prompt for confirmation.
+7. Open CSF-Key dialog for security policy setting: MCS uses the Credential Store Framework (CSF) to manage credentials in a secure form. CSF lets you store, retrieve, update, and delete credentials for a web service and other apps. CSF keys are credentials that certify the authority of users and system components that are used during authentication and authorization. A CSF key uses basic authentication (user name and password) to generate a unique key value.
+![](../common/images/mobile/402-Open_CSF_Key_Dialog.png)
+
+8. Add CSF-Key: On the popup, click on “Add” and create your own csf-key, enter unique value (e.g.: `ICS_GSE 0X`, 0X is the sequence number assigned to you by instructor. - e.g.: 01) as the "Key Name". Enter "User Name" and "Password". (Thery are provided in the Access Document or by the instructor), and click “Save”. 
+
+![](../common/images/mobile/402-ICS_Add_CSF_Key.png)
+
+9. Select CSF-Key you created: Then click “Select” and it will bring you back to the main screen. 
+![](../common/images/mobile/402-ICS_Select_CSF_Key.png)
+
+10. Your newly created csf-key will appear in the csf-key textbox. Click on “Next Step” to move to the next.
+![](../common/images/mobile/402-ICS_CSF_Key_NextStep.png)
+
+11. Click on “Save” when prompt for confirmation.
 ![](../common/images/mobile/402-Connector_Save.png)
 
-8. Now your connector is ready and you can test it. Select `GET` as the HTTP method, enter `/ptmgt/v1/offers/10001` into the “Local resource name” following the “Local URI”.
-![](../common/images/mobile/402-Connector_Test.png)
+12. Now your connector is ready and you can test it. Select `POST` as the HTTP method, enter `{"customerid": 66890169,  "offerid": 10001,  "productid": 20001,  "accepted": false}` into the "HTTP Body". Select your mobile backend (e.g.: `LoyaltyMgmt_MBE01`) you created from the dropdown list in the “Authentication” section, and click on “Test Endpoint”.
+![](../common/images/mobile/402-ICS_Connector_Test.png)
 
-9. Select your MBE (e.g.: `LoyaltyMgmt_MBE01`) you created from the dropdown list in the “Authentication” section and you will find the actual URL that is getting called at the end in the “Remote URL” field. Click on “Test Endpoint”.
-![](../common/images/mobile/402-Connector_Test_EndPoint.png)
-
-10. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
-![](../common/images/mobile/402-Connector_Test_Result.png)
+13. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
+![](../common/images/mobile/402-ICS_Connector_Test_Result.png)
 
 ---
 
