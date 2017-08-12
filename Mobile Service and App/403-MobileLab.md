@@ -19,7 +19,7 @@ In this exercise, we will:
 - Test the Custom API for loyalty management
 
 ### Prerequisites ###
-- Loyalty management MBE created in the previous lab. (400 lab)
+- Loyalty management MBE created in the previous lab. (401 lab)
 - 3 Connector APIs we created in the previous lab (402 lab)
 - A RAML file for the custom API with some of endpoints for your use. It can be downloaded by right clicking on [this link](../common/assets/mobile/loyaltymanagementapi.raml) and select "Save link as..." for your use in the lab.
 - Chrome Postman to test custom APIs
@@ -36,9 +36,9 @@ In this lab, you will create a custom API for loyalty management. In fact, we ne
 ![](../common/images/mobile/403-RAML_upload.png)
 
 3. When uploaded successfully, enter name and description and click on “Create” as below:
-    + **API Display Name**: `Loyalty Management 0X` (0X is the sequence number assigned to you by instructor. - e.g.: 01)
-    + **API Name**: `LoyaltyManagement0X`
-    + **API Short Description**: `Custom API for Loyalty Management 0X`
+    + **API Display Name**: `Loyalty Management API 0X` (0X is the sequence number assigned to you by instructor. - e.g.: 01)
+    + **API Name**: `LoyaltyManagementAPI0X`
+    + **API Short Description**: `Custom API for Loyalty Management API 0X`
 Click on “Create” on the bottom right.
 
 ![](../common/images/mobile/403-Create_Custome_API_with_RAML.png)
@@ -124,8 +124,10 @@ Now that you have the API defined, it's time to implement the API with JavaScrip
 
 1. Download prebuilt implementation: We've provided a prebuilt implementation package for you which you can download by right clicking [loyaltymanagementapi_1.0.zip](../common/assets/mobile/loyaltymanagementapi_1.0.zip) and select "Save link as...".
 
-2. Unzip the package, edit `/loyaltymanagementapi/package.json`, add your postfix the "name" and the "TestDriveACCSPtMgtConnectorAPI" to match your custom API name and the Product Information API connector name, such as
+2. Unzip the package. Edit `/loyaltymanagementapi/package.json` to add your postfix (e.g.: 01) into the "name" and the "TestDriveACCSPtMgtConnectorAPI" to match your custom API name and the Product Information API connector name as shown in the below diagram.
+
 ![](../common/images/mobile/403-Editing_Package_Json.png)
+
 
 3. Edit the implementation.
    - Open `/loyaltymanagementapi/loyaltymanagementapi.js` with your text editor, replace the whole content with the source code below:
@@ -136,7 +138,8 @@ Now that you have the API defined, it's time to implement the API with JavaScrip
      - Search for `TestDriveACCSPtMgtConnectorAPI` and replace all occurrences with `TestDriveACCSPtMgtConnectorAPI0X` (0X is your own postfix, e.g.: 01).
 
 
-4. Repack and upload: Put "pakcage.json" file and `loyaltymanagementapi.js` file back into the original zip pack, then click on “Upload an implementation archive” and select the updated zip pack `loyaltymanagementapi_1.0.zip`.
+4. Repack and upload: Put `package.json` file and `loyaltymanagementapi.js` file back into the original zip pack, navigate to the 'Implementation' tab of the current custom API, then click on “Upload an implementation archive” and select the updated zip pack `loyaltymanagementapi_1.0.zip`.
+
 ![](../common/images/mobile/403-Upload_Impl_Pack.png)
 
 6. When successfully done, you shall get a screen like the following:
