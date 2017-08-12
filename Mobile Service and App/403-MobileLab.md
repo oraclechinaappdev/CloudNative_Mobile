@@ -147,8 +147,8 @@ Now that you have the API defined, it's time to implement the API with JavaScrip
 
 
 ----
-#### Set up Security for the custom API for the Loyalty Management ####
-You need to assign a role to access the API. Before that, the API is not accessible by anyone. On page level navigation pane, select “Security”. Click in the Roles box and select the “Default” role. Scroll to the top and click “Save”.
+#### Allow anonymous access to the custom API for the Loyalty Management ####
+You need to change the security policy to allow anonymous access to the API. Before that, the API is not accessible by anyone. On page level navigation pane, select “Security”. Switch off the 'Login Required' option to allow anonymous access and click “Save”.
 ![](../common/images/mobile/403-API_Security_Settings.png)
 
 ---
