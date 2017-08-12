@@ -44,7 +44,7 @@ The Mobile Backend is now created and it will bring you to the “Settings” ta
 
 ![](../common/images/mobile/400-MBE_settings.png)
 
-Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor. **Copy the values of "Mobile Backend ID", "Anonymous Key" and "Base URL", and replace values of properties like "backendId", "anonymousToken" and "baseUrl" in the JSON file with copied values respectively.** And save the JSON file for later use. You are going to use it in the "404: Set up Push Notification and Test Push Notification to mobile app " as well as "Putting All Together" section to create a QR code for the setting of Cafe Supremo mobile application.
+Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor. **Copy the values of "Mobile Backend ID", "Anonymous Key" and "Base URL", and replace values of properties like "backendId", "anonymousToken" and "baseUrl" in the JSON file with copied values respectively.** And save the JSON file for later use. You are going to use it in the "404: Set up Push Notification and Test Push Notification to mobile app" to create a QR code for the setting of Cafe Supremo mobile application.
 
 ```
 {
