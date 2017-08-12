@@ -25,7 +25,8 @@ In this exercise, we will:
 - Chrome Postman to test custom APIs
 - Any text file editor
 
-[test1](../raw/master/common/assets/mobile/loyaltymanagementapi.raml)
+[test1](../raw/master/MobileLab-short-delta-only/common/assets/mobile/loyaltymanagementapi.raml)
+
 [test2](https://raw.githubusercontent.com/APACTestDrive/CloudNative_Mobile/MobileLab-short-delta-only/common/assets/mobile/loyaltymanagementapi.raml)
 
 
