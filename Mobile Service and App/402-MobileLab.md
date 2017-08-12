@@ -27,7 +27,8 @@ In this lab, we will create a connector API to integrate ACCS microservice for o
 1. On the navigation pane, select “Applications” -> “Connectors”. Click on the “+ New Connector” green button and select “REST” from the dropdown list.
 ![](../common/images/mobile/402-New_Connector.png)
 
-2. Enter `Test Drive ACCS Product Management Connector API 0X`(0X is the sequence number assigned to you by instructor. - e.g.: 01) as the name and short description for this connector. The API name will be automatically generated for you while you type in the Display API Name. Note that the “API Name” will be used in custom API implementation coding thus is must meet JavaScript variable naming standards. Click on “Create” on the bottom right when you are done.
+2. Enter `Test Drive ACCS Product Management Connector API 0X`(0X is the sequence number assigned to you by instructor. - e.g.: 01) as the "Display API Name" and short description for this connector. The API name should be changed manually to `TestDriveACCSPtMgtConnectorAPI0X` in order to match the value used in Lab 403. Note that the “API Name” will be used in custom API implementation coding thus is must meet JavaScript variable naming standards. Click on “Create” on the bottom right when you are done. 
+
 ![](../common/images/mobile/402-New_Connector_Info.png)
 
 3. Review the name/description on the general screen and click on the “Next Step” button (“>” on the top right) to move to the next screen.
