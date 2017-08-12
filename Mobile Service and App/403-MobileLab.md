@@ -21,7 +21,7 @@ In this exercise, we will:
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab. (401 lab)
 - 3 Connector APIs we created in the previous lab (402 lab)
-- A RAML file for the custom API with some of endpoints for your use. It can be downloaded by right clicking on [this link](../common/assets/mobile/loyaltymanagementapi.raml) and select "Save link as..." for your use in the lab.
+- A RAML file for the custom API with some of endpoints for your use. It can be downloaded by right clicking on [this link](..../raw/MobileLab-short-delta-only/common/assets/mobile/loyaltymanagementapi.raml) and select "Save link as..." for your use in the lab.
 - Chrome Postman to test custom APIs
 - Any text file editor
 
@@ -122,7 +122,7 @@ Click on “Create” on the bottom right.
 #### Implement the custom API for the Loyalty Management ####
 Now that you have the API defined, it's time to implement the API with JavaScript code. You can get started by downloading a scaffold that provides stubs for the functions that you need to implement for each endpoint, as well as some sample code.
 
-1. Download prebuilt implementation: We've provided a prebuilt implementation package for you which you can download by right clicking [loyaltymanagementapi_1.0.zip](../common/assets/mobile/loyaltymanagementapi_1.0.zip) and select "Save link as...".
+1. Download prebuilt implementation: We've provided a prebuilt implementation package for you which you can download by right clicking [loyaltymanagementapi_1.0.zip](../raw/MobileLab-short-delta-only/common/assets/mobile/loyaltymanagementapi_1.0.zip) and select "Save link as...".
 
 2. Unzip the package. Edit `/loyaltymanagementapi/package.json` to add your postfix (e.g.: 01) into the "name" and the "TestDriveACCSPtMgtConnectorAPI" to match your custom API name and the Product Information API connector name as shown in the below diagram.
 
