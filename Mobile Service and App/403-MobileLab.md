@@ -77,9 +77,7 @@ Click on “Create” on the bottom right.
    - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
 ![](../common/images/mobile/403-Adding_Method_Info.png)
 
-   - Adding response: Click on "Responses" and the "Add Response".
-   ![](../common/images/mobile/403-Adding_Response.png)
-
+   - Adding response: Click on "Add Response".
    ![](../common/images/mobile/403-Adding_Response_Add.png)
 
     - Adding response media type: Click on "Add Media Type".
