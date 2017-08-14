@@ -15,14 +15,85 @@ Once you create a connector API to access the service, you can use it in custom 
 ### About the Exercise Today ###
 There are 3 Connector APIs for offer information query, QR code creation and offer result (e.g. reject or accept) update from external systems like ACCS (Application Container Cloud Service) and ICS (Integration Cloud Service) that we need to access in this lab.
 
-For the above 3 Connector APIs, we will guide you through creating the "Product Management" API Connector to get offer information using an ACCS microservice and the rest 2 have already been created for you to use in the MCS instance.
+To create the above 3 Connector APIs, we will:
+- Create "Product Management" API Connector to get offer information using an ACCS microservice
+- Create "QR Code" API Connector to generate QR codes using an ACCS microservice
+- Create "Process Offer" API Connector to update offer result using an ICS microservice
 
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab.
 
+#### Create "Product Management" API Connector to get offer information ####
+In this lab, we will create a connector API to integrate ACCS microservice for offer information. **[Note]** A connector API is for the custom APIs. It means a connector API doesn't have direct interactions with mobile applications. Mobile applications only interact with custom APIs and custom APIs will use the connector API to interact external services and systems.
+
+1. On the navigation pane, select “Applications” -> “Connectors”. Click on the “+ New Connector” green button and select “REST” from the dropdown list.
+![](../common/images/mobile/402-New_Connector.png)
+
+2. 2. Enter `Test Drive ACCS PtMgt Connector API 0X`(0X is the sequence number assigned to you by instructor. - e.g.: 01) as the name and short description for this connector. The API name will be automatically generated for you while you type in the Display API Name. Note that the “API Name” will be used in custom API implementation coding thus is must meet JavaScript variable naming standards. Click on “Create” on the bottom right when you are done.
+![](../common/images/mobile/402-New_Connector_Info.png)
+
+3. Review the name/description on the general screen and click on the “Next Step” button (“>” on the top right) to move to the next screen.
+![](../common/images/mobile/402-Connector_Info_Review.png)
+
+4. Enter the URL (e.g.: `https://offer-<YOUR_DOMAIN_NAME>.apaas.em3.oraclecloud.com`. This is the endpoint CREATED by you in the Microservice Lab.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
+![](../common/images/mobile/402-Connector_URL_Setting.png)
+
+5. We won’t set any rules here, so just click on “Next Step”.
+![](../common/images/mobile/402-Connector_Rule_Setting.png)
+
+6. MCS supports a wide range of security policies for you to use. For the lab, to make it simple, no security policy setting is required. Just click on “Next Step”.
+![](../common/images/mobile/402-Connector_Security_Setting.png)
+
+7. Click on “Save” when prompt for confirmation.
+![](../common/images/mobile/402-Connector_Save.png)
+
+8. Now your connector is ready and you can test it. Select `GET` as the HTTP method, enter `/ptmgt/v1/offers/10001` into the “Local resource name” following the “Local URI”.
+![](../common/images/mobile/402-Connector_Test.png)
+
+9. Select your MBE(e.g.: LoyaltyMgmt_MBE01) you created from the dropdown list in the “Authentication” section and you will find the actual url that is getting called at the end in the “Remote URL” field. Click on “Test Endpoint”.
+![](../common/images/mobile/402-Connector_Test_EndPoint.png)
+
+10. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
+![](../common/images/mobile/402-Connector_Test_Result.png)
+
+---
+#### Create "QR Code" API Connector to generate QR codes ####
+In this lab, we will create a connector API to integrate ACCS microservice for QR code generation. The whole process is almost same to the above.
+
+1. On the navigation pane, select “Applications” -> “Connectors”. Click on the “+ New Connector” green button and select “REST” from the dropdown list.
+![](../common/images/mobile/402-New_Connector.png)
+
+2. Enter `Test Drive ACCS CtdQR ConnectorAPI 0X`(0X is the sequence number assigned to you by instructor. - e.g.: 01) as a name for this connector. The API name will be automatically generated for you while you type in the Display API Name. Note that the “API Name” will be used in custom API implementation coding thus is must meet JavaScript variable naming standards. Click on “Create” on the bottom right when you are done.
+![](../common/images/mobile/402-QRCode_Connector_API.png)
+
+3. Review the name/description on the general screen and click on the “Next Step” button (“>” on the top right) to move to the next screen.
+![](../common/images/mobile/402-QRCode_Connector_API_Review.png)
+
+4. Enter the URL (e.g: `https://qrcodegenerator-<YOUR_DOMAIN_NAME>.apaas.em3.oraclecloud.com`. This is the endpoint CREATED by you in the Microservice Lab.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
+![](../common/images/mobile/402-QRCode_Connector_URL_Setting.png)
+
+5. We won’t set any rules here, so just click on “Next Step”.
+![](../common/images/mobile/402-QRCdoe_Connector_Rule_Setting.png)
+
+6. MCS supports a wide range of security policies for you to use. For the lab, to make it simple, no security policy setting is required. Just click on “Next Step”.
+![](../common/images/mobile/402-QRCdoe_Connector_Security_Setting.png)
+
+7. Click on “Save” when prompt for confirmation.
+![](../common/images/mobile/402-Connector_Save.png)
+
+8. Now your connector is ready and you can test it. Select `GET` as the HTTP method, enter `/ctdqr/v1/offer/10001` into the “Local resource name” following the “Local URI”.
+![](../common/images/mobile/402-QRCode_Connector_Test.png)
+
+9. Select your MBE(e.g.: `LoyaltyMgmt_MBE01`) you created from the dropdown list in the “Authentication” section and you will find the actual url that is getting called at the end in the “Remote URL” field. Click on “Test Endpoint”.
+![](../common/images/mobile/402-QRCode_Connector_Test_EndPoint.png)
+
+10. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
+![](../common/images/mobile/402-QRCode_Connector_Test_Result.png)
+
+
 ----
 #### Create "Process Offer" Connector API to update offer result ####
-In this lab, we will create a connector API to integrate ICS microservice for updating offer result. **[Note]** A connector API is for the custom APIs. It means a connector API doesn't have direct interactions with mobile applications. Mobile applications only interact with custom APIs and custom APIs will use the connector API to interact external services and systems.
+In this lab, we will create a connector API to integrate ICS microservice for updating offer result. The whole process is almost same to the above.
 
 1. On the navigation pane, select “Applications” -> “Connectors”. Click on the “+ New Connector” green button and select “REST” from the dropdown list.
 ![](../common/images/mobile/402-New_Connector.png)
@@ -64,14 +135,6 @@ In this lab, we will create a connector API to integrate ICS microservice for up
 13. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
 ![](../common/images/mobile/402-ICS_Connector_Test_Result.png)
 
-----
-#### Create "Product Management" and "QR Code" Connector APIs ####
-Repeat the above steps to create another two connector APIs to integrate with the "Product Management" and "QR Code" microservices you created in the microservices lab. Since security is not implemented for these two microservices, you don't need to configure security policy for these two new connector APIs. Instead, you can simply create two REST connector APIs with the following informatoin. **[Note]** Remember to replace the '0X' in the API name, select 'I don't have a descriptor, only the REST service URL' in the 'Descriptor' step, and provide the Remote URL that you created for your microservices.
-
-| Display API Name, API Name, Short Description | Remote URL                                                                                            |
-|-----------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| TestDriveACCSPtMgtConnectorAPI0X              | HOST URL of your product management service, i.e. https://offer-gse00000423.apaas.em2.oraclecloud.com |
-| TestDriveACCSCtdQRConnectorAPI0X              | HOST URL of your QR Code service, i.e. https://qrcodegenerator-gse00000423.apaas.em2.oraclecloud.com  |
 
 You have finished this lab successfully.
 
