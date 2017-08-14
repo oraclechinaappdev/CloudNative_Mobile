@@ -68,11 +68,10 @@ In this lab, we will create a connector API to integrate ICS microservice for up
 #### Create "Product Management" and "QR Code" Connector APIs ####
 Repeat the above steps to create another two connector APIs to integrate with the "Product Management" and "QR Code" microservices you created in the microservices lab. Since security is not implemented for these two microservices, you don't need to configure security policy for these two new connector APIs. Instead, you can simply create two REST connector APIs with the following informatoin. **[Note]** Remember to replace the '0X' in the API name, select 'I don't have a descriptor, only the REST service URL' in the 'Descriptor' step, and provide the Remote URL that you created for your microservices.
 
-    | Display API Name, API Name, Short Description | Remote URL |
-    | --------------------------------------------- | ---------- |
-    | TestDriveACCSPtMgtConnectorAPI0X | HOST URL of your product management service, i.e. https://offer-gse00000423.apaas.em2.oraclecloud.com |
-    | TestDriveACCSCtdQRConnectorAPI0X | HOST URL of your QR Code service, i.e. https://qrcodegenerator-gse00000423.apaas.em2.oraclecloud.com |
-
+| Display API Name, API Name, Short Description | Remote URL                                                                                            |
+|-----------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| TestDriveACCSPtMgtConnectorAPI0X              | HOST URL of your product management service, i.e. https://offer-gse00000423.apaas.em2.oraclecloud.com |
+| TestDriveACCSCtdQRConnectorAPI0X              | HOST URL of your QR Code service, i.e. https://qrcodegenerator-gse00000423.apaas.em2.oraclecloud.com  |
 
 You have finished this lab successfully.
 
