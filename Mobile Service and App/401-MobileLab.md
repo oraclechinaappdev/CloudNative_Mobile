@@ -1,114 +1,71 @@
 # ORACLE Cloud Test Drive #
 -----
-## 401: Set up Push Notification and Test Push Notification to mobile app ##
+## 401: Create MBE (Mobile Back End) for mobile applications ##
 
 ### Introduction ###
-You can use the Notifications service (part of MCS platform APIs) to send notifications to users of the apps registered in a mobile backend. Once you have the mobile backend set up for notifications, the process of sending the notifications is the same for both iOS, Android, and Windows apps. You set up notifications by obtaining the appropriate vendor certificates and registering them with the app's mobile backend. In addition, you include some code in the app itself to enable it to receive notifications. The notifications themselves can be sent via a third-party server or be triggered by logic in a custom API.
-![](../common/images/mobile/mcsgs_dt_006_notifications.png)
+This tutorial demonstrates how to create a MBE (Mobile Back End) to support the mobile applications. Mobile backends are server-side groupings of APIs (Platform & Custom APIs) and other resources that you create to support a specific set of applications.
+
+![](../common/images/mobile/mcsgs_dt_015_mobile_bkend.png)
 
 ### About the Exercise Today ###
-In this exercise, we will:
-- Create a notifications profile and register the Cafe Supremo app
-- Prepare the Cafe Supremo application to receive notifications
-- Test Notification
+In this exercise, you will create your MBE for a mobile application called "Cafe Supremo" to support APIs for loyalty management and mobile client. By doing this, Cafe Supremo mobile application interacts with the created MBE to get offer push, query offer details and accept or reject the offer.
 
 ### Prerequisites ###
-- Cafe Supremo application binary (Will be provided by instructor)
-- Android device to install Cafe Supremo application
+- Oracle Public Cloud Service account for Mobile Cloud Service (Check with instructor if you don't have one)
+- Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor to replace some properties such as "baseUrl", "backendId" and "anonymousToken" in below step called "6. Check".
 
 ----
-#### Create a notifications profile and register the Cafe Supremo app ####
-In this lab, you will create a notifications profile and register the client application (Cafe Supremo mobile application) to associate google credentials.
 
-1. Create a client (Register the app in MCS as a client) to receive notifications.
-    - Navigate through “Applications” -> “Mobile Backends”, select your mobilebackend, and click on “Open” to open your MBE.
-![](../common/images/mobile/401-Select_MBE.png)
+#### Create MBE (Mobile Back End) for Cafe Supremo application ####
 
+1. Sign in to Mobile Cloud Service by provided **Mobile Cloud Service \(MCS\)** identity domain Id and credential in the Access Document. Using the dashboard open the Mobile Cloud Service Console.
 
-   - Switch to “Clients” tab and click on “New Client”.
-    
-![](../common/images/mobile/401-Create_Client.png)
+2. In the dashboard screen, click on "Mobile Environment Service".
 
+![](../common/images/mobile/400-MobileEnvService.png)
 
-   - Enter `MyAndroidClient0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Client Display Name", `1.0.0` as the "App Version", and `com.oraclecorp.internal.ent3.apacTestDrv` as the "Package Name". Click on “Create”. This will bring you to the client settings screen.
-    
-![](../common/images/mobile/401-Client_Settings.png)
+3. In the service details screen, click on "Service Instance URL".
 
+![](../common/images/mobile/400-MCS_ServiceInstanceURL.png)
 
-2. On the "Settings" screen, **Copy the values of "Application Key" and replace the value of properties called "applicationKey" in the JSON file called "Mobile_App_Settings_Sample.json" with the copied value.**  Save the JSON file for later use. You are going to use it in the "Putting All Together" section to create a QR code for the setting of Cafe Supremo mobile application.
+4. Click on the hamburger icon located at the left top corner of the service introduction page. From the navigation bar, select “Applications” -> “Mobile Backends” and click on the “+ New Mobile Backend” green button.
+
+![](../common/images/mobile/400-New_MBE.png)
+
+5. Configure MBE with the following parameters:
++ **Name**: `LoyaltyMgmt_MBE0X` (0X is the sequence number assigned to you by instructor.)
++ **Description**: `LoyaltyMgmt_MBE0X` (Any value is okay.)
+
+![](../common/images/mobile/400-New_MBE_name_desc.png)
+
+6. Check
+
+The Mobile Backend is now created and it will bring you to the “Settings” tab of the newly created MBE where you will see the mobile backend ID, etc., which you will need to use when interacting with the MBE. Click on the two “Show” links to see the “Anonymous Key”.
+
+![](../common/images/mobile/400-MBE_settings.png)
+
+Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text editor. **Copy the values of "Mobile Backend ID", "Anonymous Key" and "Base URL", and replace values of properties like "backendId", "anonymousToken" and "baseUrl" in the JSON file with copied values respectively.** And save the JSON file for later use. You are going to use it in the "404: Set up Push Notification and Test Push Notification to mobile app" to create a QR code for the setting of Cafe Supremo mobile application.
 
 ```
 {
       "baseUrl": "https://mcs-gse00011678.mobileenv.us2.oraclecloud.com:443",
+            --> Replace the vaue inside double quotes with the value of "Base URL".
       "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
-            --> Replce the value inside double quotes with the value of "Application Key" in you JSON file.
-      "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
+      "backendId": "2879cc11-97de-485a-bced-8476b91196f3",
+            --> Replace the value inside double quotes with the value of "Mobile Backend ID".
       "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
+            --> Replace the value inside double quotes with the value of "Anonymous Key".
       "API":"LoyaltyManagementAPI",
       "senderID":"925757644219"
 }
 
 ```
 
-![](../common/images/mobile/401-Client_Setting_Tab.png)
 
+You have finished this lab section.
 
-3. Create a profile to store google credentials like API Key and Sender ID.
-
-   - Select the "Profiles" tab and click on "New Profile" to create a profile .
-   
-![](../common/images/mobile/401-Create_New_Profile.png)
-
-
-   - Enter `FCM0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Name. Paste `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the Sender ID. (We generated them for Cafe Supremo mobile application from Google.) and click on “Create”
-    
-![](../common/images/mobile/401-Profile_Setting.png)
-
-
-   - Click on “Select Profile”.
-![](../common/images/mobile/401-Selected_Profile.png)
-
-
-   - Now your client is ready. Navigate to "Applications" -> "Mobile Backends" and select your MBE. On the client setting screen, you can see your mobile client with Notifications Enabled.
-![](../common/images/mobile/401-Review_MobileApp_Profile.png)
-
----
-#### Prepare the Cafe Supremo application to receive notifications ####
-To make you mobile application get push notificaitons, you need to add some codes or change the metafile (e.g.: main/AndroidManifest.xml file). In this lab, we provide a pre-built mobile application called "Cafe Supremo" for your use to get push notificaitons. So let's skip this one.
-
----
-#### Test Notification ####
-1. Switch to “Notifications” tab and click on the icon below “4 TEST”.
-
-![](../common/images/mobile/401-Test_Notification.png)
-
-
-2. Click on "Manage Devices".
-
-![](../common/images/mobile/401-Test_Manage_Devices.png)
-
-
-3. You shall see devcies that has been registered to this mobile backend. Click on “Close” and go back to the “Test” screen.
-
-![](../common/images/mobile/401-Manage_Devices.png)
-
-
-4. Enter a notification `You can use your points to buy products! – 10001` with send option `Now` and click on “Send”. Note you will be getting errors if no devices registered yet.
-
-![](../common/images/mobile/401-Notification_Test_Screen.png)
-
-
-5. If you have one device registered, you shall see a success message pop up on top of the page and the notification shall appear in the notification area of your device.
-
-![](../common/images/mobile/401-MCS_Notification_Result.png)
-
-
-![](../common/images/mobile/401-MobileApp_Notification_Result.png)
-
-
-[Procced to Next - 402: Develop Custom APIs and Custom Code to extend moobile services](402-MobileLab.md)
+[Procced to Next - 402: Create Connectors for external services](402-MobileLab.md)
 
 or
 
 [Back to Mobile Serivce and Application Home](README.md)
-

@@ -21,66 +21,16 @@ In this exercise, we will:
 
 #### Prepare Mobile Device to Receive Push Notification ####
 
-1. By the end of previous lab [401: Set up Push Notification and Test Push Notification to mobile app](../Mobile Service and App/401-MobileLab.md), you should be able to receive notification message pop-up from your mobile device upon **Test Notifications** from MCS like below. (Please check with instructor if you cannot complete lab exercise 401)
+1. By the end of previous lab [404: Set up Push Notification and Test Push Notification to mobile app](../Mobile Service and App/404-MobileLab.md), you should be able to receive notification message pop-up from your mobile device upon **Test Notifications** from MCS like below. (Please check with instructor if you cannot complete lab exercise 404)
 
 ![](../common/images/mobile/401-MCS_Notification_Result.png)
 ![](../common/images/mobile/401-MobileApp_Notification_Result.png)
 
-2. Before running notification test, you were told to prepare a file called **Mobile_App_Settings_Sample.json** like below format:    
-```
-{
-      "baseUrl": "https://<Your Mobile Cloud Service Identity Domain Name>.mobileenv.us2.oraclecloud.com:443",
-      "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
-      "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
-      "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
-      "API":"LoyaltyManagementAPI0X",
-      "senderID":"925757644219"
-}
-```
-We will use it shortly.
-
-3. From your web browser, go to `http://www.qr-code-generator.com/`, click on `Text` button and the **Free text** text area is shown.
-
-![](images/501/01.qr.site.png)
-
-4. Copy **Your own** JSON file content from step 2 above, paste it into the **Free text** text area, then click `Create QR code` button. A QR code image will be generated on the right hand side of window.
-
-![](images/501/02.qr.result.png)
-
-You can keep this browser open, or save the image for later use.
-
-5. From your mobile device, open the app 'Supremo'.
-
-![](images/501/03.mobile.app.png)
-
-6. On app started and login page shown, click on the hamburger menu on top left corner.
-
-![](images/501/04.mobile.menu.png)
-
-7. On expanded menu, click `Settings`
-
-![](images/501/05.mobile.settings.png)
-
-8. On Settings page opened, click `Read Settings from QRCode` button at middle.
-
-![](images/501/06.mobile.qr.png)
-
-9. When the QR scanner running, face your mobile device towards the QR code image (from step 4).  
-You may need to adjust the distance between your mobile device and your screen until the scanner camera can recognize the QR image.
-
-![](images/501/07.mobile.cam.png)
-
-10. On successful QR scanning, all property settings in your JSON file will be automatically filled into the mobile app Setting page like below. (You may need to expand `MCS Mobile Backend Preferences`)
-
-![](images/501/08.mobile.qr.result.png)
-
-Click `Save settings and logout` button. You will then be returned to home screen.
-
-11. Enter the mobile app **Username** and **Password** provided by instructor, then click `Login` button.
+2. Launch the mobile app and enter the **Username** and **Password** provided by instructor, then click `Login` button.
 
 ![](images/501/09.mobile.login.png)
 
-12. Upon successful login, the welcome page is shown. Your mobile device is now ready to receive push notification of campaign offer.
+3. Upon successful login, the welcome page is shown. Your mobile device is now ready to receive push notification of campaign offer.
 
 ![](images/501/10.mobile.welcome.png)
 
