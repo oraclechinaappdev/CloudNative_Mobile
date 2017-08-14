@@ -71,7 +71,7 @@ Do not change anything and click `Cancel` button at top right corner to return t
 ![](images/303/06.integration.map.png)
 
 12. The **Map to CustomerServiceActivity** page is shown.  
-Notice that there are green tick radio buttons on some of fields in **Source** tree at left hand side, and some of fields in **Target** tree at right hand side. It means mapping has been configured and used between these field entities. (Already done during import)  
+Notice that there are some green tick radio buttons on some of fields in **Source** tree at left hand side, and on some of fields in **Target** tree at right hand side. It means mappings have been configured and used between these source to target field entities. (Already done during import)  
 For example, the `customerId` under **Target** tree has been mapped with the same name field entity `customerId` from **Source** tree.  
 Now, let's explore the second field `activityName` under **Target**, click the text named `f(x), offerid, of acceptance, accepted` under **Mapping** column like below.
 
@@ -79,7 +79,7 @@ Now, let's explore the second field `activityName` under **Target**, click the t
 
 13. The **Build Mappings** dialog window is shown. The mapping has been imported and done with the following mapping:  
 `<xsl:value-of select = 'concat("Offer ID: ", /nssrcmpr:execute/nsmpr0:request-wrapper/nsmpr0:offerid, " of acceptance ", /nssrcmpr:execute/nsmpr0:request-wrapper/nsmpr0:accepted)`  
-What does it mean? This mapping will take the `offerid` and `accepted` fields from request payload, alter and concatenate string into a sample string like `Offer ID: 10001 of acceptance true`  
+What does it mean? This mapping will take the `offerid` and `accepted` fields from request payload, alter and concatenate strings into a sample string like `Offer ID: 10001 of acceptance true`  
 Once review is done, click `Close` button at the bottom right corner.
 
 ![](images/303/06.integration.map2.png)
@@ -123,7 +123,7 @@ Simply review this page and click `Cancel` button at top right corner.
 ![](images/303/08.integration.if.png)
 
 22. The **Accept Offer** page is shown. Notice a logic decision `lower-case(accepted) = "true"` has been provided in the text area and there is a green tick radio button next to `accepted` field under **Source** on the left.  
-This function evaluates to return true or false based on the lower case string value of `accepted`.  
+This function evaluates to return result true or false based on the lower case string value of `accepted`, in which the result is used to determine how message flow towards **IF** or **ELSE** path.  
 On review done, click `Close` at top right corner.
 
 ![](images/303/08.integration.logic.png)
@@ -152,7 +152,7 @@ Click `Actions` on the right side pane, then drag the `Map` and drop it onto the
 	
 ![](images/303/37.integration.if.map1.png)
 
-27. Click on `string1`, enter the QR code URL without the offer id including ' ' sign, i.e. `'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'` (Hostname obtained from 'Microservices' lab)  
+27. Click on `string1`, enter the QR code URL without the offer id including ' ' sign, i.e. `'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'`, notice don't forget to put the single quote in the front and the end of the URL. (Hostname obtained from 'Microservices' lab)  
     Next, expand `Source` from the left pane, drag the `offerid` field and drop it onto `string2`. A string is automatically inserted. \(This is the XSLT variable representation of 'offerid'\)  
 	Click `Save`, and then click `Close` button at the bottom to return previous screen.
 
@@ -173,9 +173,11 @@ Click `Actions` on the right side pane, then drag the `Map` and drop it onto the
 31. The **Business Identifiers for Tracking** dialog window is shown.  
     Business identifier is required for runtime transaction tracking on messages, espeically when hundreds and thousands of messages running thru ICS.  
     Notice the tracking business identifiers: `customerid`, `offerid` and `productid` have already been mapped. The screen looks like below.  
-	Click `Done` or `Cancel` button at the bottom on review completion of tracking setup to close the dialog, and then click `Save` and `Close` buttons respectively to go back to ICS dashboard main screen.
+	Click `Cancel` button at the bottom on review completion of tracking setup to close the dialog, and then click `Save` and `Close` buttons respectively to go back to ICS dashboard main screen.
 
 ![](images/303/43.integration.tracking.identifier1.png)
+
+![](images/303/43.integration.edit.done.png)
 
 32. From the **Integrations** Summary page, click on the **Switch** button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
     Check `Enable tracing` and `Include payload` for testing later, although this is not recommended to turn on serving production traffic.  
