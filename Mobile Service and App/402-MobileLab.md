@@ -21,7 +21,7 @@ For the above 3 Connector APIs, we will guide you through creating the "Product 
 - Loyalty management MBE created in the previous lab.
 
 ----
-#### Create "Process Offer" API Connector to update offer result ####
+#### Create "Process Offer" Connector API to update offer result ####
 In this lab, we will create a connector API to integrate ICS microservice for updating offer result. **[Note]** A connector API is for the custom APIs. It means a connector API doesn't have direct interactions with mobile applications. Mobile applications only interact with custom APIs and custom APIs will use the connector API to interact external services and systems.
 
 1. On the navigation pane, select “Applications” -> “Connectors”. Click on the “+ New Connector” green button and select “REST” from the dropdown list.
@@ -64,8 +64,14 @@ In this lab, we will create a connector API to integrate ICS microservice for up
 13. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
 ![](../common/images/mobile/402-ICS_Connector_Test_Result.png)
 
----
+----
+#### Create "Product Management" and "QR Code" Connector APIs ####
+Repeat the above steps to create another two connector APIs to integrate with the "Product Management" and "QR Code" microservices you created in the microservices lab. Since security is not implemented for these two microservices, you don't need to configure security policy for these two new connector APIs. Instead, you can simply create two REST connector APIs with the following informatoin. **[Note]** Remember to replace the '0X' in the API name, select 'I don't have a descriptor, only the REST service URL' in the 'Descriptor' step, and provide the Remote URL that you created for your microservices.
 
+    | Display API Name, API Name, Short Description | Remote URL |
+    | --------------------------------------------- | ---------- |
+    | TestDriveACCSPtMgtConnectorAPI0X | HOST URL of your product management service, i.e. https://offer-gse00000423.apaas.em2.oraclecloud.com |
+    | TestDriveACCSCtdQRConnectorAPI0X | HOST URL of your QR Code service, i.e. https://qrcodegenerator-gse00000423.apaas.em2.oraclecloud.com |
 
 
 You have finished this lab successfully.
