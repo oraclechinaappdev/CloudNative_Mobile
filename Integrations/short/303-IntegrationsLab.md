@@ -26,75 +26,177 @@ Locate the entity named **XXX_ICS_INTMGT (1.0)** from the list, click the hambur
 
 ![](images/303/02.integration_edit.png)
 
-3. The integration orchestration editor of the previous imported integration flow **XXX_ICS_INTMGT (1.0)** is shown.
+3. The integration orchestration editor of the previous imported integration flow **XXX_ICS_INTMGT (1.0)** is shown. This is an incompleted flow in which the following subsequent steps will complete the remaining part.
 
 ![](images/303/03.integration_existing.png)
 
+4. Before making any changes, let's review what has been pre-built during import.  
+Click to select the first node named **ProcessOrder**, and then click `Edit` 'pen' button in the pop-up menu.
 
-**** Section to add review only ****
+![](images/303/04.integration.processoffer.png)
 
+5. The **Configure Oracle REST Endpoint** dialog window is shown.  
+This page summarizes the interface of the imported integration flow, i.e. how to interact with this process via REST request and response with appropriate JSON format.  
+Click `< Back` button on the top right to review remaining detail.
 
-34. Under *if* or *otherwise* condition, different response data will be returned. 
+![](images/303/05.integration.rest.summary.png)
+
+6. This page summarizes the response payload detail, feel free to explore the detail on this page without making any changes. Click `<<< inline >>>` link in the middle.
+
+![](images/303/05.integration.rest.response.payload.png)
+
+7. The form of **Response Sample Json Payload** is shown. Notice the sample response payload already provided during import in the format of:  
+`
+
+{   "activityid": "elit aliqua aliquip",   "imgurl": "minim ipsum" }
+
+`  
+Click `Cancel` button at bottom to return.
+
+![](images/303/05.integration.rest.response.payload1.png)
+
+8. Click `< Back` button on the top right to review remaining detail.
+
+![](images/303/05.integration.rest.response.png)
+
+9. This page summarizes the request payload detail, feel free to explore the detail on this page without making any changes. Notice the sample request payload already provided during import in the format of:  
+`
+
+{   "customerid": 21767684,   "offerid": 49531393,   "productid": 28916305,   "accepted": true }
+
+`  
+Click `< Back` button on the top right to review remaining detail.
+
+![](images/303/05.integration.rest.request.png)
+
+10. Finally, the **Welcome to the Oracle REST Endpoint Configuration Wizard** page is shown and summaries the overall setup of this REST endpoint interface.  
+Do not change anything and click `Cancel` button at top right corner to return the orchestration flow.
+
+![](images/303/05.integration.rest.endpoint.png)
+
+11. Click to select the second node named **Map to CustomerSer...**, and then click `Edit` 'pen' button in the pop-up menu.
+
+![](images/303/06.integration.map.png)
+
+12. The **Map to CustomerServiceActivity** page is shown.  
+Notice that there are green tick radio buttons on some of fields in **Source** tree at left hand side and some of fields in **Target** tree at right hand side. It means mapping has been configured and used between these field entities. (Already done during import)  
+For example, the `customerId` under **Target** tree has been mapped with the same name field entity `customerId` from **Source** tree.  
+Now, let's explore the second field `activityName` under **Target**, click the text named `f(x), offerid, of acceptance, accepted` under **Mapping** column like below.
+
+![](iamges/303/06.integration.map1.png)
+
+13. The **Build Mappings** dialog window is shown. The mapping has been imported and done with the following mapping:  
+`<xsl:value-of select = 'concat("Offer ID: ", /nssrcmpr:execute/nsmpr0:request-wrapper/nsmpr0:offerid, " of acceptance ", /nssrcmpr:execute/nsmpr0:request-wrapper/nsmpr0:accepted)`  
+What does it mean? This mapping will take the `offerid` and `accepted` fields from request payload, alter and concatenate string into a sample string like `Offer ID: 10001 of acceptance true`  
+Once review is done, click `Close` button at the bottom right corner.
+
+![](images/303/06.integration.map2.png)
+
+14. Back to the **Map to CustomerServiceActivity** page screen, click the text named `f(x), productid` under **Mapping** column like below.
+
+![](images/303/06.integration.map3a.png)
+
+15. The **Build Mappings** dialog window is shown with the imported mapping:  
+`<xsl:value-of select = 'concat("Offer for product ID: ", /nssrcmpr:execute/nsmpr0:request-wrapper/nsmpr0:productid)'>`  
+Once review is done, click `Close` button at the bottom right corner.
+
+![](images/303/06.integration.map3.png)
+
+16. Back to the **Map to CustomerServiceActivity** page screen, click the last field text named `f(x)` under **Mapping** column like below.
+
+![](images/303/06.integration.map4a.png)
+
+17. The **Build Mappings** dialog window is shown with the imported mapping:  
+`<xsl:value-of select = 'fn:current-data()'>`  
+This is an out-of-the-box function provided by Integration Cloud Service, feel free to locate this function (under Functions->Date category) and many other functions by expand the **Mapping Component** tree at the bottom left corner.  
+Once review is done, click `Close` button at the bottom right corner.
+
+![](images/303/06.integration.map4.png)
+
+18. Back to the **Map to CustomerServiceActivity** page screen, click `Close` button on the top right corner.
+
+![](images/303/06.integration.map5.png)
+
+19. Back to orchestration flow, click to select the third node named **CustomerServiceActivity**, and then click `Edit` 'pen' button in the pop-up menu.
+
+![](images/303/07.integration.soap.png)
+
+20. The **Configure SOAP Endpoint** dialog window is shown. Due to the nature of SOAP based interface, there is no additional pages available to be configured. 
+Simply review this page and click `Cancel` button at top right corner.
+
+![](images/303/07.integration.soap1.png)
+
+21. Back to orchestration flow, click to select the forth node named **IF Accept Offer**, and then click `Edit` 'pen' button in the pop-up menu.
+
+![](images/303/08.integration.if.png)
+
+22. The **Accept Offer** page is shown. Notice a logic decision `lower-case(accepted) = "true"` has been provided in the text area and there is a green tick radio button next to `accepted` field under **Source** on the left.  
+This function evaluates to return true or false based on the lower case string value of `accepted`.  
+On review done, click `Close` at top right corner.
+
+![](images/303/08.integration.logic.png)
+
+23. Under *if* or *otherwise* condition, different response data will be returned. Now, there is an one task remaining in the *if* path to complete the entire integration flow.
 
 ![](images/303/34.integration.if.difference.png)
 
-35. In order to handle proper response when customer *accept* an offer, we need to confirgure the missing **Map** of response data on the *if* path.  
+24. In order to handle proper response when customer *accept* an offer, we need to confirgure the missing **Map** of response data on the *if* path.  
 Click `Actions` on the right side pane, then drag the `Map` and drop it onto the integration flow, between **IF Accept Offer** node and the join point of two switch lines, which appears with `+` icon like below.
 
 ![](images/303/35.integration.if.add1.png)
 
 ![](images/303/35.integration.if.add2.png)
 
-36. Once the `Map` is properly dropped, the **Data Mapping** dialog window is shown.  
+25. Once the `Map` is properly dropped, the **Data Mapping** dialog window is shown.  
     Expand the **Source** in left pane, drag the `return` field under `$CustomerServiceActivity` -> `addCustomerActivityResponse`, and drop it onto `activityid` in right pane.  
 	Click `imgurl` to proceed advance data mapping.
     
 ![](images/303/36.integration.if.map.png)
 
-37. The **Build Mappings** window dialog is shown.  
+26. The **Build Mappings** window dialog is shown.  
     Expand **Mapping Components** under **Source** in left pane, and then expand `Functions` -> `String`.  
 	Drag the function `fx concat` and drop it onto `- Drag and Drop or Type value here...` under **Mapping** in right pane.  
 	Click `Save`.
 	
 ![](images/303/37.integration.if.map1.png)
 
-38. Click on `string1`, enter the QR code URL without the offer id including ' ' sign, i.e. `'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'` (Hostname obtained from 'Microservices' lab)  
+27. Click on `string1`, enter the QR code URL without the offer id including ' ' sign, i.e. `'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'` (Hostname obtained from 'Microservices' lab)  
     Next, expand `Source` from the left pane, drag the `offerid` field and drop it onto `string2`. A string is automatically inserted. \(This is the XSLT variable representation of 'offerid'\)  
 	Click `Save`, and then click `Close` button at the bottom to return previous screen.
 
 ![](images/303/38.integration.if.map2.png)
 
-39. *Data Mapping* should be the same as below. Click `Validate` and and then click `Close`.
+28. *Data Mapping* should be the same as below. Click `Validate` and and then click `Close`.
 
 ![](images/303/39.integration.if.map3.png)
 
-41. The *Process Offer* integration flow development is done.  
+29. The *Process Offer* integration flow development is done.  
 
 ![](images/303/40.integration.flow.complete.png)
 
-42. Click on the hamburger icon and then select `Tracking` at the top right corner.
+30. Click on the hamburger icon and then select `Tracking` at the top right corner.
 
 ![](images/303/42.integration.tracking.png)
 
-43. The **Business Identifiers for Tracking** dialog window is shown.  
+31. The **Business Identifiers for Tracking** dialog window is shown.  
     Business identifier is required for runtime transaction tracking on messages, espeically when hundreds and thousands of messages running thru ICS.  
     Notice the tracking business identifiers: `customerid`, `offerid` and `productid` have already been mapped. The screen looks like below.  
 	Click `Done` or `Cancel` button at the bottom on review completion of tracking setup to close the dialog, and then click `Save` and `Close` buttons respectively to go back to ICS dashboard main screen.
 
 ![](images/303/43.integration.tracking.identifier1.png)
 
-44. From the **Integrations** Summary page, click on the **Switch** button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
+32. From the **Integrations** Summary page, click on the **Switch** button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
     Check `Enable tracing` and `Include payload` for testing later, although this is not recommended to turn on serving production traffic.  
 	Click `Activate` button at the bottom.
 
 ![](images/303/44.integration.activate.png)
 
-45. Wait for a couple of minutes for the integration activation.  
+33. Wait for a couple of minutes for the integration activation.  
     Once it is done, a green banner telling the integration was activated successfully and the result looks like below:
 
 ![](images/303/45.integration.activate.done.png)
 
-46. The integration service is now ready for testing.
+34. The integration service is now ready for testing.
 
 [Procced to Next - 304: Testing the service and Monitoring with ICS Dashboards](304-IntegrationsLab.md)
 
