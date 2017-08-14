@@ -46,11 +46,7 @@ Click `< Back` button on the top right to review remaining detail.
 ![](images/303/05.integration.rest.response.payload.png)
 
 7. The form of **Response Sample Json Payload** is shown. Notice the sample response payload already provided during import in the format of:  
-`
-
-{   "activityid": "elit aliqua aliquip",   "imgurl": "minim ipsum" }
-
-`  
+`{"activityid": "elit aliqua aliquip", "imgurl": "minim ipsum"}`  
 Click `Cancel` button at bottom to return.
 
 ![](images/303/05.integration.rest.response.payload1.png)
@@ -60,11 +56,7 @@ Click `Cancel` button at bottom to return.
 ![](images/303/05.integration.rest.response.png)
 
 9. This page summarizes the request payload detail, feel free to explore the detail on this page without making any changes. Notice the sample request payload already provided during import in the format of:  
-`
-
-{   "customerid": 21767684,   "offerid": 49531393,   "productid": 28916305,   "accepted": true }
-
-`  
+`{"customerid": 21767684, "offerid": 49531393, "productid": 28916305,   "accepted": true}`  
 Click `< Back` button on the top right to review remaining detail.
 
 ![](images/303/05.integration.rest.request.png)
@@ -79,11 +71,11 @@ Do not change anything and click `Cancel` button at top right corner to return t
 ![](images/303/06.integration.map.png)
 
 12. The **Map to CustomerServiceActivity** page is shown.  
-Notice that there are green tick radio buttons on some of fields in **Source** tree at left hand side and some of fields in **Target** tree at right hand side. It means mapping has been configured and used between these field entities. (Already done during import)  
+Notice that there are green tick radio buttons on some of fields in **Source** tree at left hand side, and some of fields in **Target** tree at right hand side. It means mapping has been configured and used between these field entities. (Already done during import)  
 For example, the `customerId` under **Target** tree has been mapped with the same name field entity `customerId` from **Source** tree.  
 Now, let's explore the second field `activityName` under **Target**, click the text named `f(x), offerid, of acceptance, accepted` under **Mapping** column like below.
 
-![](iamges/303/06.integration.map1.png)
+![](images/303/06.integration.map1.png)
 
 13. The **Build Mappings** dialog window is shown. The mapping has been imported and done with the following mapping:  
 `<xsl:value-of select = 'concat("Offer ID: ", /nssrcmpr:execute/nsmpr0:request-wrapper/nsmpr0:offerid, " of acceptance ", /nssrcmpr:execute/nsmpr0:request-wrapper/nsmpr0:accepted)`  
@@ -121,7 +113,7 @@ Once review is done, click `Close` button at the bottom right corner.
 
 ![](images/303/07.integration.soap.png)
 
-20. The **Configure SOAP Endpoint** dialog window is shown. Due to the nature of SOAP based interface, there is no additional pages available to be configured. 
+20. The **Configure SOAP Endpoint** dialog window is shown. Due to the nature of SOAP based interface, there is no additional pages available to be configured.  
 Simply review this page and click `Cancel` button at top right corner.
 
 ![](images/303/07.integration.soap1.png)
