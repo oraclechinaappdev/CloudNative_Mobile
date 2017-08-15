@@ -41,13 +41,13 @@ In this lab, you will create a custom API for loyalty management. In fact, we ne
     + **API Short Description**: `Custom API for Loyalty Management API 0X`
 Click on “Create” on the bottom right.
 
-![](../common/images/mobile/403-Create_Custome_API_with_RAML.png)
+![](../common/images/mobile/403-Create_Custom_API_with_RAML.png)
 
 4. **Copy the values of "API Name" and replace the value of properties called "API" in the "Mobile_App_Settings_Sample.json" file from Lab 401.**  Save the JSON file for later use.
 
 ```
 {
-      "baseUrl": "https://mcs-gse00011678.mobileenv.us2.oraclecloud.com:443",
+      "baseUrl": "https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com:443",
       "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
       "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
       "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
@@ -180,7 +180,7 @@ Before you can deploy the custom API, it has to be associated with the mobile ba
 
 Now you can test your custom API.
 
-1. Finding your base URI and endpoint URI(e.g.: `https://mcs-gse00011678.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI01/offer`), let’s take `Get offer details` endpoint as an example.
+1. Finding your base URI and endpoint URI(e.g.: `https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI01/offer`), let’s take `Get offer details` endpoint as an example.
 ![](../common/images/mobile/403-Test_Get_URL.png)
 
 2. [Install Postman and use Chrome to access.](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) and launch Postman to test `Get offer details` API.

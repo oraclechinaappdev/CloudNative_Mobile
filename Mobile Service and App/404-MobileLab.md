@@ -39,7 +39,7 @@ In this lab, you will create a notifications profile and register the client app
 
 ```
 {
-      "baseUrl": "https://mcs-gse00011678.mobileenv.us2.oraclecloud.com:443",
+      "baseUrl": "https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com:443",
       "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
             --> Replce the value inside double quotes with the value of "Application Key" in you JSON file.
       "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
@@ -78,7 +78,7 @@ In this lab, you will create a notifications profile and register the client app
 1. Before running notification test, you were told to prepare a file called **Mobile_App_Settings_Sample.json** like below format:    
 ```
 {
-      "baseUrl": "https://<Your Mobile Cloud Service Identity Domain Name>.mobileenv.us2.oraclecloud.com:443",
+      "baseUrl": "https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com:443",
       "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
       "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
       "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
