@@ -22,7 +22,11 @@ In this exercise, we will:
 1. Open a browser and go to [cloud.oracle.com](https://cloud.oracle.com). Click **Sign In**.
 ![cloud.oracle.com](images/sign-in/sign.01.cloud.oracle.com.png)
 
-2. Select `Traditional Cloud Account`, then select `Public Cloud Service - EMEA` for the datacenter below and click **My Services** button.
+2. Select `Traditional Cloud Account`, then select    
+    `Public Cloud Service - EMEA`   
+or    
+    `Public Cloud Servce - US`    
+according to the datacenter of your environment.  Click **My Services** button.
 ![](images/sign-in/sign.02.select.datacenter1.png)
 
 3. Enter the **Developer Cloud Service \(DevCS\)** identity domain and click **Go**. The identity domain and associated credential should be provided by instructor.
@@ -46,25 +50,41 @@ On the Dashboard there are predefined tiles for different services. If the **Dev
 
 ![alt text](images/101/02.new.project.png)
 
-8. Enter the name of the project and set the desired properties.
-	**Name:** `APAC Cloud Test Drive`
-	**Description:** `APAC Cloud Test Drive project hub`
+8. Enter the name of the project and set the desired properties.   
+	**Name:** `APAC Cloud Test Drive`   
+	**Description:** `APAC Cloud Test Drive project hub`   
+	and click **Next**
 
 ![](images/101/02.new.project.detail.png)
 
-9. Click **Next** and select *Initial Repository* as template.
+9. Select *Empty Project* as template and click **Next**
 
-![](images/101/03.select.template.png)
+![](images/101/03.emptyproject.png)
 
-10. Click **Next** and on the Properties page select *Import existing repository*.
-Enter or copy the *https://github.com/APACTestDrive/LoyaltyManagement.git* repository address.
+10. Choose `MARKDOWN` as Wiki Markup and click **Finish**
 
-![](images/101/04.import.repository.png "Import external repository")
+![](images/101/04.finish.png)
 
-11. Now click **Finish** to create the project and to clone the specified repository. You have now created a new Git repository with source code stored within the Developer Cloud Service that is based on an existing repository.
+11. **Wait** for the Developer Cloud Service Project got provisioned.
 
-![](images/101/05.new.project.created.png)
-![](images/101/05.new.project.created1.png)
+![](images/101/05.wait.png)
+
+12. You will see the project main screen once the project is ready. In the right hand pane, make sure you are in the `Repositories` tab. Click the [ **+ New Repository** ] button to create a new Git repository.
+
+![](images/101/06.newrepo.png)
+
+13. Enter the following information for the New Repository   
+   Name: `LoyaltyManagement`   
+	 Initial content: select `Import existing repository`   
+   Enter or copy the `https://github.com/APACTestDrive/LoyaltyManagement.git` as the repository address.   
+Click the [ **Create** ] button
+
+![](images/101/07.repoinfo.png)
+
+14. You have now created a new Git repository with source code stored within the Developer Cloud Service that is based on an existing repository.
+
+![](images/101/08.repocreated.png)
+
 
 You have finished this lab section.
 
