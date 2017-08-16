@@ -48,7 +48,7 @@ Please open a JSON file called "Mobile_App_Settings_Sample.json" using a text ed
 
 ```
 {
-      "baseUrl": "https://mcs-gse00011678.mobileenv.us2.oraclecloud.com:443",
+      "baseUrl": "https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com:443",
             --> Replace the vaue inside double quotes with the value of "Base URL".
       "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
       "backendId": "2879cc11-97de-485a-bced-8476b91196f3",

@@ -41,13 +41,13 @@ In this lab, you will create a custom API for loyalty management. In fact, we ne
     + **API Short Description**: `Custom API for Loyalty Management API 0X`
 Click on “Create” on the bottom right.
 
-![](../common/images/mobile/403-Create_Custome_API_with_RAML.png)
+![](../common/images/mobile/403-Create_Custom_API_with_RAML.png)
 
 4. **Copy the values of "API Name" and replace the value of properties called "API" in the "Mobile_App_Settings_Sample.json" file from Lab 401.**  Save the JSON file for later use.
 
 ```
 {
-      "baseUrl": "https://mcs-gse00011678.mobileenv.us2.oraclecloud.com:443",
+      "baseUrl": "https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com:443",
       "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
       "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
       "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
@@ -77,9 +77,7 @@ Click on “Create” on the bottom right.
    - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
 ![](../common/images/mobile/403-Adding_Method_Info.png)
 
-   - Adding response: Click on "Responses" and the "Add Response".
-   ![](../common/images/mobile/403-Adding_Response.png)
-
+   - Adding response: Click on "Add Response".
    ![](../common/images/mobile/403-Adding_Response_Add.png)
 
     - Adding response media type: Click on "Add Media Type".
@@ -124,7 +122,7 @@ Now that you have the API defined, it's time to implement the API with JavaScrip
 
 1. Download prebuilt implementation: We've provided a prebuilt implementation package for you which you can download by right clicking [loyaltymanagementapi_1.0.zip](https://github.com/APACTestDrive/CloudNative_Mobile/blob/MobileLab-short-delta-only/common/assets/mobile/loyaltymanagementapi_1.0.zip?raw=true) and select "Save link as...".
 
-2. Unzip the package. Edit `/loyaltymanagementapi/package.json` to add your postfix (e.g.: 01) into the "name" and the "TestDriveACCSPtMgtConnectorAPI" to match your custom API name and the Product Information API connector name as shown in the below diagram.
+2. Unzip the package. Edit `/loyaltymanagementapi/package.json` to add your postfix (e.g.: 01) into the "name", the "TestDriveICSConnectorAPI", "TestDriveACCSPtMgtConnectorAPI", "TestDriveACCSCtdQRConnectorAPI" to match your custom API name and the connector API names as shown in the below diagram.
 
 ![](../common/images/mobile/403-Editing_Package_Json.png)
 
@@ -134,8 +132,14 @@ Now that you have the API defined, it's time to implement the API with JavaScrip
 
    - Change the endpoint url to match your own API: Search for `/mobile/custom/LoyaltyManagementAPI` and replace all occurrences with `/mobile/custom/LoyaltyManagementAPI0X`(0X is your own postfix, e.g.: 01).
 
-   - Change the product information connector references in the code
+   - Change the Product Management connector references in the code
      - Search for `TestDriveACCSPtMgtConnectorAPI` and replace all occurrences with `TestDriveACCSPtMgtConnectorAPI0X` (0X is your own postfix, e.g.: 01).
+     
+   - Change the QR Code connector references in the code
+     - Search for `TestDriveACCSCtdQRConnectorAPI` and replace all occurrences with `TestDriveACCSCtdQRConnectorAPI0X` (0X is your own postfix, e.g.: 01).
+     
+   - Change the Process Offer connector references in the code
+     - Search for `TestDriveICSConnectorAPI` and replace all occurrences with `TestDriveICSConnectorAPI0X` (0X is your own postfix, e.g.: 01).
 
 
 4. Repack and upload: Put `package.json` file and `loyaltymanagementapi.js` file back into the original zip pack, navigate to the 'Implementation' tab of the current custom API, then click on “Upload an implementation archive” and select the updated zip pack `loyaltymanagementapi_1.0.zip`.
@@ -176,7 +180,7 @@ Before you can deploy the custom API, it has to be associated with the mobile ba
 
 Now you can test your custom API.
 
-1. Finding your base URI and endpoint URI(e.g.: `https://mcs-gse00011678.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI01/offer`), let’s take `Get offer details` endpoint as an example.
+1. Finding your base URI and endpoint URI(e.g.: `https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI01/offer`), let’s take `Get offer details` endpoint as an example.
 ![](../common/images/mobile/403-Test_Get_URL.png)
 
 2. [Install Postman and use Chrome to access.](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) and launch Postman to test `Get offer details` API.
