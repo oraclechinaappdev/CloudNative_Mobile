@@ -48,7 +48,7 @@ For the loyalty management mobile application, you can make it all work and play
 - During this lab, you need to paste some key values you will create into a JSON file. 
 Please download a JSON file called "Mobile_App_Settings_Sample.json". It can be downloaded by right clicking on [this link](../common/assets/mobile/Mobile_App_Settings_Sample.json) and select "Save link as..." for your use in the lab. When you fill out all the information like "baseUrl", "applicationKey", "backendId" and "anonymousToken", you will create a QR code using [a QR code generator](http://www.qr-code-generator.com/). For now, save it to your local PC.
 - A mobile application called "Cafe_Supremo.apk" on you Android phone. 
-You can download it by right clicking on [this link](../common/assets/mobile/Cafe_Supremo.apk). Select "Save link as..." to download and save it to your local PC. 
+You can download it by right clicking on [this link](https://github.com/APACTestDrive/CloudNative_Mobile/blob/master/common/assets/mobile/Cafe_Supremo.apk?raw=true). Select "Save link as..." to download and save it to your local PC. 
 If you have an QR code scanner on your phone, you can install the mobile application by by scanning QRcode from the Android phone. The QR code for the mobile application will be provided by the instructor. Or, follow below instructions to install the mobile application.
 
 
