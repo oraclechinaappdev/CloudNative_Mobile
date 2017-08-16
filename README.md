@@ -22,7 +22,7 @@ More specifically, following topics are currently included in this project:
 + Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Services.
 
 ## Integrations ##
-[Integrations lab](https://github.com/APACTestDrive/CloudNative_Mobile/tree/master/Integrations) shows you how to connect to backend application and serve frontend mobile consumer request using Oracle Integration Cloud Services (ICS). This lab is composed of: 
+[Integrations lab](https://github.com/APACTestDrive/CloudNative_Mobile/tree/master/Integrations/short) shows you how to connect to backend application and serve frontend mobile consumer request using Oracle Integration Cloud Services (ICS). This lab is composed of: 
 + Backgrounds on Integration - About Oracle Integration Cloud Service (ICS).
 + Configure Connection definition to a Simple Object Access Protocol (SOAP) based Customer Relationship Management (CRM) service and Expose into Representational State Transfer (REST) based service to process offer results.
 + Configure Integration flow to interconnect service endpoints, mapping request and response data attributes and orchestrate decision logic.
