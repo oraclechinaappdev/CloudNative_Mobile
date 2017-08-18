@@ -118,7 +118,7 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 
 You have finished this lab section.
 
-[Procced to Next - 103: Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service](103-JavaAppsLab.md)
+[Procced to Next - 103: Continuous Integration & Delivery (CICD): Using Brackets, Commit and Push Code Changes to Oracle Developer Cloud Service](103-JavaAppsLab.md)
 
 or
 
