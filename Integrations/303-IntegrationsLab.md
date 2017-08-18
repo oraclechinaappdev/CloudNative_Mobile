@@ -148,7 +148,6 @@ Click `Actions` on the right side pane, then drag the `Map` and drop it onto the
 26. The **Build Mappings** window dialog is shown.  
     Expand **Mapping Components** under **Source** in left pane, and then expand `Functions` -> `String`.  
 	Drag the function `fx concat` and drop it onto `- Drag and Drop or Type value here...` under **Mapping** in right pane.  
-	Click `Save`.
 	
 ![](images/303/37.integration.if.map1.png)
 
