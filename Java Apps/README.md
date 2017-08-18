@@ -49,8 +49,9 @@ All components are available in a project, which is a collection of features and
 
 ### Prerequisites ###
 
-- The following lab requires an Oracle Public Cloud account that will either be applied by yourself thru [trial registration](https://cloud.oracle.com/en_US/tryit) or supplied by your instructor.  
-- You will also need to install a [VirtualBox](https://www.virtualbox.org/) and running Virtual Machine image provided by instructor. The image consists of a pre-installed Eclipse IDE in Linux environment. [Click Here for VirtualBox detail](virtualbox.md)  
+- The following lab requires Oracle Public Cloud account that will be supplied by instructor.  
+- You will also need to install a lightweight IDE - [Brackets](http://brackets.io/). Brackets installer will be provided by instructor or you can download from [GitHub HERE](https://github.com/adobe/brackets/releases).  
+*[Click HERE for Brackets installation detail](brackets.md)
 
 # Lab Exercise: #
 
