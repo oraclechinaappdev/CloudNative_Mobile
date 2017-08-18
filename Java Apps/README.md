@@ -38,14 +38,14 @@ The key features of Oracle Developer Cloud Service include:
 + Repository branch merge after code review
 + Deployment to Oracle Java Cloud Service - SaaS Extension, Oracle Java Cloud Service, and Oracle Application Container Cloud Service
 
-Oracle Developer Cloud Service is available as a web interface accessible from a web browser and from Integrated Development Environments (IDEs) such as Oracle Enterprise Pack for Eclipse (OEPE), Oracle JDeveloper, and NetBeans IDE.  
+Oracle Developer Cloud Service is available as a web interface accessible from a web browser and from Integrated Development Environments (IDEs) such as Brackets, Oracle Enterprise Pack for Eclipse (OEPE), Oracle JDeveloper, and NetBeans IDE.  
 DevCS is comprised of various components including Git, Hudson, Maven, browser-based IDE, issue tracker, wiki, snippets, and code review.  
 All components are available in a project, which is a collection of features and services provided by Oracle Developer Cloud Service.
 
 ### This tutorial demonstrates how to: ###
 - Create Oracle Developer Cloud Service (DevCS) Loyalty Management Application Project using Initial [GitHub](https://github.com) repository
 - Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service 
-- Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service
+- Continuous Integration & Delivery (CICD): Using Brackets, Commit and Push Code Change to Oracle Developer Cloud Service
 
 ### Prerequisites ###
 
@@ -63,7 +63,7 @@ All components are available in a project, which is a collection of features and
 
 [Click Here.](102-JavaAppsLab.md)
 
-## 103: Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service ##
+## 103: Continuous Integration & Delivery (CICD): Using Brackets, Commit and Push Code Change to Oracle Developer Cloud Service ##
 
 [Click Here.](103-JavaAppsLab.md)
 
