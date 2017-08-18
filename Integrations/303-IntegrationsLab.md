@@ -173,24 +173,28 @@ Click `Actions` on the right side pane, then drag the `Map` and drop it onto the
 31. The **Business Identifiers for Tracking** dialog window is shown.  
     Business identifier is required for runtime transaction tracking on messages, espeically when hundreds and thousands of messages running thru ICS.  
     Notice the tracking business identifiers: `customerid`, `offerid` and `productid` have already been mapped. The screen looks like below.  
-	Click `Cancel` button at the bottom on review completion of tracking setup to close the dialog, and then click `Save` and `Close` buttons respectively to go back to ICS dashboard main screen.
+	Click `Cancel` button at the bottom on review completion of tracking setup to close the dialog.
 
 ![](images/303/43.integration.tracking.identifier1.png)
 
+32. Click `Save` and `Close` buttons respectively to go back to ICS dashboard main screen.
+
 ![](images/303/43.integration.edit.done.png)
 
-32. From the **Integrations** Summary page, click on the **Switch** button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
-    Check `Enable tracing` and `Include payload` for testing later, although this is not recommended to turn on serving production traffic.  
+33. From the **Integrations** Summary page, click on the **Switch** button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
+    Check `Enable tracing` and `Include payload` for testing later, although this is not recommended to turn on when serving production traffic.  
 	Click `Activate` button at the bottom.
 
 ![](images/303/44.integration.activate.png)
 
-33. Wait for a couple of minutes for the integration activation.  
+34. Wait for a couple of minutes for the integration activation.  
     Once it is done, a green banner telling the integration was activated successfully and the result looks like below:
 
 ![](images/303/45.integration.activate.done.png)
 
-34. The integration service is now ready for testing.
+35. Save or copy into clipboard from your browser the unique URL: `https://integration-xxxxxxxxxxx.integration.xxx.oraclecloud.com:443/integration/flowapi/rest/XXX_ICS_INTMGT/`
+
+36. The integration service is now ready for testing.
 
 [Procced to Next - 304: Testing the service and Monitoring with ICS Dashboards](304-IntegrationsLab.md)
 
