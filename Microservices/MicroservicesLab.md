@@ -13,7 +13,7 @@ This lab is part of the APAC Cloud Test Drive and is the 2nd lab about creating 
 
 - The following lab requires an Oracle Public Cloud account that will either be applied by yourself or supplied by your instructor.
 
-- You will need to install an IDE environment and GIT client in your local computer. The instructions assume you are using the VM provided as part of this workshop. The VM is also used in the [Oracle DevOps Cloud Native Microservice Workshop](https://github.com/oracle-weblogic/cloud-native-XWeeks/blob/master/cloud-native-devops/README.md). You can download the VM [here](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk).
+- You will need to install an IDE environment and GIT client in your local computer. The instructions assume you are using the VM provided as part of this workshop. The VM is also used in the [Oracle DevOps Cloud Native Microservice Workshop](https://github.com/oracle-weblogic/cloud-native-XWeeks/blob/master/cloud-native-devops/README.md). You can download the VM [here](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk). Additional information about the VM can be found [here](../Java%20Apps/virtualbox.md).
 
 # 1. Create Offer REST API Microservice
 
@@ -23,7 +23,11 @@ This lab is part of the APAC Cloud Test Drive and is the 2nd lab about creating 
 
 ![](images/001.dashboard.png)
 
-- In the left hand navigation panel, click **Project**
+- The Developer Cloud Service landing page should show the project we've created in the previous lab. Just click the project name and navigate to the project main page.
+
+![](images/001.landing.png)
+
+- **Just in case you are already in other pages of Developer Cloud Service, you can go to project main page by clicking `Project` in the `left hand navigation panel`**  
 
 ![](images/002.createrepo.png)
 
@@ -152,6 +156,26 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 ![](images/024.deployjobname.png)
 
+- **Check** the `Include ACCS Deployment` box and add the following json.
+
+```json
+{
+	"memory":"1G",
+	"instances":"1",
+	"services": [
+	{
+	  "identifier": "DBService",
+	  "type": "DBAAS",
+	  "name": "apacctddb",
+	  "username": "loyalty",
+	  "password": "Welcome_1"
+	}
+	]
+}
+```
+
+![](images/024.json.png)
+
 - After fill in the above information, click **Save** button.
 
 ![](images/025.deploysave.png)
@@ -160,7 +184,7 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 ![](images/026.deploystart.png)
 
-- The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment successded**. Ask for help from your instructor if the deployment fails.
+- The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment succeeded**. Ask for help from your instructor if the deployment fails.
 
 ![](images/027.deploysuccess.png)
 
@@ -178,43 +202,20 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 ![](images/030.accsconsole.png)
 
-## 1.4 Create ACCS Service Binding to DBCS
+## 1.4 CHECK ACCS Service Binding to DBCS
 
 - Click the **[ Offer ]** to see the ACCS application Details
 
 ![](images/031.accsoffer.png)
 
-- Click the 2nd Tab, **Deployments**
+- Check the 2nd Tab, **Deployments**
 
 ![](images/032.bindings.png)
 
-- In the **Service Bindings** section, click **[Add]** button
+- In the **Service Bindings** section, you SHOULD see the database binding. **You do NOT need to change anything.**
 
 ![](images/033.addbinding.png)
 
-- Enter the following information
-
-  **Service Type:** `Database Cloud Service`
-
-	**Service Name:** `apacctddb`
-
-	**Username:** `loyalty`
-
-	**Password:** `the database password`, e.g. Welcome_1
-
- Click **[Save]** button.
-
-![](images/034.addandsave.png)
-
-- Notice that the change is not applied yet. In the **Deployments** dialog, click the **[Apply Edits]** button.
-
-![](images/035.apply.png)
-
-- The change requires redeploying of application. You can navigate back to **Overview** tab and/or use **Refresh** button to check the progress.
-
-![](images/036.redeploying.png)
-
-- Wait until the offer application finish redeployment.
 
 ## 1.5 Verify the Working Service
 
@@ -293,7 +294,7 @@ https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/pt
 
 ![](images/114.opennew.png)
 
-- Black in **Developer Cloud Service**, in your **QRCodeMicroservice Git Repository**. Click **HTTP** to display the Git HTTP URL, click the **Copy** button to copy the URL.
+- Back in **Developer Cloud Service**, in your **QRCodeMicroservice Git Repository**. Click **HTTP** to display the Git HTTP URL, click the **Copy** button to copy the URL.
 
 ![](images/115.copyurl.png)
 
@@ -371,7 +372,7 @@ https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/pt
 
 ![](images/132.newbranch.png)
 
-### 2.2.4 create Merge Request in Developer Cloud Service to uptake the code
+### 2.2.4 Create Merge Request in Developer Cloud Service to uptake the code
 
 - In Developer Cloud Service, click on **Code** tab. If you are not viewing the QRCodeMicroservice repo, change to the QRCode Repo.  
 
@@ -566,6 +567,17 @@ Microservice, you can REUSE the same target**.
 
 ![](images/188.choosejob.png)
 
+- Check `Include ACCS Deployment` box and enter the following json
+
+```json
+{
+	"memory":"1G",
+	"instances":"1"
+}
+```
+
+![](images/024.json.11.png)
+
 - After fill in the above information, click **Save** button.
 
 ![](images/189.depsave.png)
@@ -574,7 +586,7 @@ Microservice, you can REUSE the same target**.
 
 ![](images/190.start.png)
 
-- The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment successded**. Ask for help from your instructor if the deployment fails.
+- The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment succeeded**. Ask for help from your instructor if the deployment fails.
 
 ![](images/191.deployed.png)
 
@@ -596,7 +608,7 @@ Microservice, you can REUSE the same target**.
 
   The final URL should looks like this
 
-	https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.comm/ctdqr/v1/offer/10001
+	https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ctdqr/v1/offer/10001
 
 ![](images/194.qrurl.png)		
 
@@ -608,6 +620,6 @@ Microservice, you can REUSE the same target**.
 
 ![](images/196.reader.png)
 
-# Congratulation! You've complete the Microservice Lab.
+# Congratulation! You've completed the Microservice Lab.
 
 [go back to the Cloud Test Drive Main Page](../README.md)

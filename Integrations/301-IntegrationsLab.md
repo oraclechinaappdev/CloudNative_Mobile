@@ -15,7 +15,9 @@ In this exercise, we will:
 
 #### Navigating Oracle Integration Cloud Service ####
 
-1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credentials of **Integration Cloud Service \(ICS\)**. After a successful login you will see your Dashboard. Find the **integration** services tile and click the hamburger icon. In the dropdown menu click `Open Service Console`.
+1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credential of **Integration Cloud Service \(ICS\)**.  
+(**\*Notice**: The identity domain and credential of this Integrations Lab should be **DIFFERENT** from those you were using in JavaApps Lab and Microservices Lab previously. Please check with detail provided by instructor)  
+After a successful login you will see your Dashboard. Find the **integration** services tile and click the hamburger icon. In the dropdown menu click `Open Service Console`.
 
 ![](images/301/01.dashboard.png)
 

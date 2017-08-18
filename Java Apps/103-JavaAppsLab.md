@@ -22,7 +22,7 @@ In this exercise, we will:
 + Installed VirtulBox, Copied VM image from instructor and started the VM. [virtualbox.md]
 
 **Using VirtualBox**  
-Instructor should have provided you VirtualBox Installer and the Virtual Machine image which consists of Linux and Eclipse IDE pre-installed. [Click Here for VirtualBox detail](virtualbox.md)  
+Instructor should have provided you VirtualBox Installer and the Virtual Machine image (or your can download the VM image [HERE](https://drive.google.com/drive/folders/0B0MXC4qaECO6RHBWMEttdW9fOVk)) which consists of Linux and Eclipse IDE pre-installed. [Click Here for VirtualBox detail](virtualbox.md)  
 
 Alternatively, you can conduct the following lab exercise using the Oracle Enterprise Pack for Eclipse IDE (OEPE) running on your OS directly.  
 You can download OEPE from [http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html).  
@@ -93,9 +93,10 @@ Click Finish.
 
 13. The project hosted on Oracle Developer Cloud Service has build job which ensures that new application build and deployment to Java Cloud Service happens when any developer push code changes to Git repository.
 
-In the Project Explorer area find the *loyalty* project and expand the navigation tree to locate and open the **Java Resources -> loyalty -> src.main.webapp.jsp -> welcome.jsp**
+In the Project Explorer area find the *loyalty* project and expand the navigation tree to locate and open the **src -> main -> webapp -> jsp -> welcome.jsp**
 
-![](images/103/14.png)
+![](images/103/14a.png)
+![](images/103/14b.png)
 
 14. Modify the following part:
 
@@ -113,7 +114,7 @@ To what you would like to see on the page. For example:
 
 ![](images/103/17.png)
 
-16. Git Staging view is displayed. First make sure the `welcome.jsp` is in the *Staged Changes* area. Type a commit message e.g. 'Updated welcome.jsp'. Optionally enter your name or cloud username and give a (valid or fake) email address in the following format as the screenshot shows. Click **Commit and Push...**
+16. Git Staging view is displayed. First make sure the `welcome.jsp` is in the *Staged Changes* area (i.e. Drag the file `welcome.jsp` from `Unstaged Changes` to `Staged Changes`). Type a commit message e.g. 'Updated welcome.jsp'. Optionally enter your name or cloud username and give a (valid or fake) email address in the following format as the screenshot shows. Click **Commit and Push...**
 
 ![](images/103/18.png)
 ![](images/103/19.png)
