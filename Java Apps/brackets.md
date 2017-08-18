@@ -1,6 +1,6 @@
 # ORACLE Cloud Test Drive #
 -----
-## Installation and Usage of Brackets for Cloud Test Drive ##
+## Installation of Brackets for Cloud Test Drive ##
 
 Brackets is a modern text editor that makes it easy to design in the browser with focused visual tools and preprocessor support. It's crafted from the ground up for web designers and front-end developers. Brackets is an open-source project, supported by an active and passionate community. For detail, you can go to [Brackets.io](http://brackets.io/)
 
@@ -16,7 +16,7 @@ This lab guide assumes the following:
 
 ![](images/brackets/00.brackets.download.png)
 
-2. This guideline assumes `Windows hosts` as example, but it should be similar on other OS.  
+2. This guideline assumes **Microsoft Windows hosts** as example, but it should be similar on other OS.  
 Select to save the installer executable on your harddisk destination.
 
 ![](images/brackets/01.brackets.save.png)
@@ -30,17 +30,17 @@ Select your target Brackets Destination Folder, and then click `Next` button.
 
 ![](images/brackets/03.brackets.install1.png)
 
-5. The Brackets installation should be done in a minute, click `Finish`.
+5. The Brackets installation should be done in a minute, click `Finish` button to finish installation.
 
 ![](images/brackets/04.brackets.install2.png)
 
-6. From the Brackets installed location or Search Windows (on Win10), run the `Brackets.exe`.
+6. From the Brackets installed location or *Search Windows* (on Win10), run the `Brackets.exe`.
 
 ![](images/brackets/05.brackets.start.png)
 
 7. The Brackets should be started like below.
 
-![](images/brackets/06.brackets.started)
+![](images/brackets/06.brackets.started.png)
 
 8. At the upper right corner, click on the `Extension Manager` icon.
 
@@ -62,7 +62,7 @@ Select your target Brackets Destination Folder, and then click `Next` button.
 
 ![](images/brackets/11.brackets.restart1.png)
 
-12. You have successfully installed Brackets with Git capability.
+12. You have successfully installed Brackets with Git exchange capability.
 
 ![](images/brackets/12.brackets.done.png)
 
