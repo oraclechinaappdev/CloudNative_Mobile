@@ -16,7 +16,7 @@ In this exercise, we will:
 
 ### Prerequisites ###
 + [Create Oracle Developer Cloud Service project for Loyalty Management JEE application and deployed to Java Cloud Service WebLogic Server Container](102-JavaAppsLab.md)
-+ Installed Brackets and Git extension. [brackets.md]
++ [Installed Brackets and Git extension](brackets.md)
 
 ----
 
