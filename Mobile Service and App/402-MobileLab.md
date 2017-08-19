@@ -1,144 +1,206 @@
-
 # ORACLE Cloud Test Drive #
 -----
-## 402: Create Connectors for external services ##
+## 402: Verify customer APIs and implementation ##
 
 ### Introduction ###
-![](../common/images/mobile/402-Connectors_Overview.png)
+![](../common/images/mobile/mcsgs_dt_003_customapi.png)
 
-Connectors allow you to declaratively create APIs that simplify access to and standardize use of backend systems (such as enterprise middleware) and web services. Connector types are available for REST web services, SOAP web services, the Oracle Integration Cloud Service (ICS), and Oracle Cloud applications based on Fusion Applications (FA). For this lab, we are going to use the connectors for the REST web services to integrate ACCS and ICS.
-
-Once you create a connector API to access the service, you can use it in custom APIs (e.g. Loyalty Management API), which you can then call from your mobile applications using standard REST calls.
-
-![](../common/images/mobile/402-Connectors_Mechanism.png)
+You can create custom REST APIs to build up a library of services that can be used by your mobile applications. Custom APIs are particularly useful for aggregating data from other sources, adding any relevant business logic, and returning results in a mobile-friendly way for mobile applications.
+![](../common/images/mobile/mcsgc_dt_004_api.png)
 
 ### About the Exercise Today ###
-There are 3 Connector APIs for offer information query, QR code creation and offer result (e.g. reject or accept) update from external systems like ACCS (Application Container Cloud Service) and ICS (Integration Cloud Service) that we need to access in this lab.
+In the previous lab, we've created 3 connectors to integrate with external services, including the microservices on ACCS to query offers and generate QR code, and the service on ICS to accept or reject offer and update the existing CRM. As you might remember, those connectors are not directly exposed to mobile applications. Once you create connectors to access the services, you can use them in custom APIs (e.g. LoyaltyMgmt API), which you can then call from your mobile applications or external systems using standard REST calls. Custom API 'LoyaltyMgmtXX' has been imported into MCS already in previous lab.
 
-To create the above 3 Connector APIs, we will:
-- Create "Product Management" API Connector to get offer information using an ACCS microservice
-- Create "QR Code" API Connector to generate QR codes using an ACCS microservice
-- Create "Process Offer" API Connector to update offer result using an ICS microservice
+In this lab, we will:
+- Verify and definition of the custom API
+- Test the custom API
 
 ### Prerequisites ###
-- Loyalty management MBE created in the previous lab.
+- The MBE Package has been imported successfully in previous lab (Lab 401)
+- The 3 Connectors have been configured correctly in previous lab (Lab 401)
 
-#### Create "Product Management" API Connector to get offer information ####
-In this lab, we will create a connector API to integrate ACCS microservice for offer information. **[Note]** A connector API is for the custom APIs. It means a connector API doesn't have direct interactions with mobile applications. Mobile applications only interact with custom APIs and custom APIs will use the connector API to interact external services and systems.
+----
+#### Create the custom API and define its endpoints for loyalty management ####
+In this lab, you will create a custom API for loyalty management. In fact, we need to define several endpoints for the custom API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. For your convenience, we will create our own custom API using a RAML file for other endpoints and then manually create one additional endpoint. So, here you will create one endpoint for the query of the specific offer information.
 
-1. On the navigation pane, select “Applications” -> “Connectors”. Click on the “+ New Connector” green button and select “REST” from the dropdown list.
-![](../common/images/mobile/402-New_Connector.png)
+1. From the navigation pane, select “Applications” -> “APIs”, click on “+ New API” and select “API” from the dropdown list.
+![](../common/images/mobile/403-New_API.png)
 
-2. 2. Enter `Test Drive ACCS PtMgt Connector API 0X`(0X is the sequence number assigned to you by instructor. - e.g.: 01) as the name and short description for this connector. The API name will be automatically generated for you while you type in the Display API Name. Note that the “API Name” will be used in custom API implementation coding thus is must meet JavaScript variable naming standards. Click on “Create” on the bottom right when you are done.
-![](../common/images/mobile/402-New_Connector_Info.png)
+2. Click on “Upload a RAML document” link and choose the RAML file (`loyaltymanagementapi.raml`) you downloaded in the Prerequisites section.
+![](../common/images/mobile/403-RAML_upload.png)
 
-3. Review the name/description on the general screen and click on the “Next Step” button (“>” on the top right) to move to the next screen.
-![](../common/images/mobile/402-Connector_Info_Review.png)
+3. When uploaded successfully, enter name and description and click on “Create” as below:
+    + **API Display Name**: `Loyalty Management API 0X` (0X is the sequence number assigned to you by instructor. - e.g.: 01)
+    + **API Name**: `LoyaltyManagementAPI0X`
+    + **API Short Description**: `Custom API for Loyalty Management API 0X`
+Click on “Create” on the bottom right.
 
-4. Enter the URL (e.g.: `https://offer-<YOUR_ACCS_DOMAIN_NAME>.apaas.em3.oraclecloud.com`. This is the endpoint CREATED by you in the Microservice Lab.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
-![](../common/images/mobile/402-Connector_URL_Setting.png)
+![](../common/images/mobile/403-Create_Custom_API_with_RAML.png)
 
-5. We won’t set any rules here, so just click on “Next Step”.
-![](../common/images/mobile/402-Connector_Rule_Setting.png)
+4. **Copy the values of "API Name" and replace the value of properties called "API" in the "Mobile_App_Settings_Sample.json" file from Lab 401.**  Save the JSON file for later use.
 
-6. MCS supports a wide range of security policies for you to use. For the lab, to make it simple, no security policy setting is required. Just click on “Next Step”.
-![](../common/images/mobile/402-Connector_Security_Setting.png)
+```
+{
+      "baseUrl": "https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com:443",
+      "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
+      "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
+      "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
+      "API":"LoyaltyManagementAPI0X",
+            --> Replace the value inside double quotes with the value of "API Name" in previous step.
+      "senderID":"925757644219"
+}
 
-7. Click on “Save” when prompt for confirmation.
-![](../common/images/mobile/402-Connector_Save.png)
+```
 
-8. Now your connector is ready and you can test it. Select `GET` as the HTTP method, enter `/ptmgt/v1/offers/10001` into the “Local resource name” following the “Local URI”.
-![](../common/images/mobile/402-Connector_Test.png)
+5. Define additional endpoint for the Loyalty Management API
+   - Now the custom API just created is automatically open for you. Switch to the “Endpoints” tab to define the additional endpoint.
+![](../common/images/mobile/403-Define_Additional_Endpoint.png)
 
-9. Select your MBE(e.g.: LoyaltyMgmt_MBE01) you created from the dropdown list in the “Authentication” section and you will find the actual url that is getting called at the end in the “Remote URL” field. Click on “Test Endpoint”.
-![](../common/images/mobile/402-Connector_Test_EndPoint.png)
+   - Adding resource: Click on “+ New Resource”.
+![](../common/images/mobile/403-Endpoint_Add_Resource.png)
 
-10. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
-![](../common/images/mobile/402-Connector_Test_Result.png)
+   - The new resource is added to the bottom of the existing endpoints page. Scroll down to the end.
+![](../common/images/mobile/403-Locate_Added_Endpoint.png)
 
----
-#### Create "QR Code" API Connector to generate QR codes ####
-In this lab, we will create a connector API to integrate ACCS microservice for QR code generation. The whole process is almost same to the above.
+   - Enter `offer/{id}` as the “Resource Path” and `Offer` as the “Display Name” and click on “Methods”. This endpoint (a URI resource) is for getting the specific offer information by offer ID.
+![](../common/images/mobile/403-New_Resource.png)
 
-1. On the navigation pane, select “Applications” -> “Connectors”. Click on the “+ New Connector” green button and select “REST” from the dropdown list.
-![](../common/images/mobile/402-New_Connector.png)
+   - Adding method: you can see that {id} entered in previous step has be recognized as a URI Resource Path Parameter “id”. Click on “+ Add Method” and select “GET”.
+![](../common/images/mobile/403-Adding_Method.png)
 
-2. Enter `Test Drive ACCS CtdQR ConnectorAPI 0X`(0X is the sequence number assigned to you by instructor. - e.g.: 01) as a name for this connector. The API name will be automatically generated for you while you type in the Display API Name. Note that the “API Name” will be used in custom API implementation coding thus is must meet JavaScript variable naming standards. Click on “Create” on the bottom right when you are done.
-![](../common/images/mobile/402-QRCode_Connector_API.png)
+   - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
+![](../common/images/mobile/403-Adding_Method_Info.png)
 
-3. Review the name/description on the general screen and click on the “Next Step” button (“>” on the top right) to move to the next screen.
-![](../common/images/mobile/402-QRCode_Connector_API_Review.png)
+   - Adding response: Click on "Add Response".
+   ![](../common/images/mobile/403-Adding_Response_Add.png)
 
-4. Enter the URL (e.g: `https://qrcodegenerator-<YOUR_ACCS_DOMAIN_NAME>.apaas.em3.oraclecloud.com`. This is the endpoint CREATED by you in the Microservice Lab.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
-![](../common/images/mobile/402-QRCode_Connector_URL_Setting.png)
+    - Adding response media type: Click on "Add Media Type".
+   ![](../common/images/mobile/403-Adding_Response_Add_Media_Type.png)
 
-5. We won’t set any rules here, so just click on “Next Step”.
-![](../common/images/mobile/402-QRCdoe_Connector_Rule_Setting.png)
+    - Adding sample response: MCS will to create a mockup implementation for this endpoint method using the sample body when provided. This is the one of good features to enable parallel development of mobile application without external services. Make sure the "Media Type" dropdown is set to "application/json" and then in the "Example" text area, paste the following code:
+   
+   ```
+	{
+		"id": 10001,
+		"name": "Our new aroma roast",
+		"points": 10000,
+		"message": "Try special brew today and enjoy 10% off with 10,000 points",
+		"productid": 20001,
+		"productname": "Aroma Beans",
+		"productprice": 21,
+		"productimage": "20001.jpg",
+		"productdesc": "Blend of incomparable Balance of sweetness, aroma and body. Composed of 50% Arabica and 50% Robusta."
+	}
+	
+   ```
 
-6. MCS supports a wide range of security policies for you to use. For the lab, to make it simple, no security policy setting is required. Just click on “Next Step”.
-![](../common/images/mobile/402-QRCdoe_Connector_Security_Setting.png)
+    - Scroll to the top of the page and click on “Save”.
+    
+     ![](../common/images/mobile/403-Adding_Sample_Response.png)
 
-7. Click on “Save” when prompt for confirmation.
-![](../common/images/mobile/402-Connector_Save.png)
+    - For your information: Now we have created all endpoints for the Loyalty Management Custom APIs. The below is the list of endpoints for your reference.
 
-8. Now your connector is ready and you can test it. Select `GET` as the HTTP method, enter `/ctdqr/v1/offer/10001` into the “Local resource name” following the “Local URI”.
-![](../common/images/mobile/402-QRCode_Connector_Test.png)
-
-9. Select your MBE(e.g.: `LoyaltyMgmt_MBE01`) you created from the dropdown list in the “Authentication” section and you will find the actual url that is getting called at the end in the “Remote URL” field. Click on “Test Endpoint”.
-![](../common/images/mobile/402-QRCode_Connector_Test_EndPoint.png)
-
-10. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
-![](../common/images/mobile/402-QRCode_Connector_Test_Result.png)
+    | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
+    | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
+    | offer/{id}/qr	    | Offer QR code         | GET    | N/A	        | image/png           |
+    | offer	            | Offers	            | GET    | N/A	        | application/json    |
+    | offer/{id}/accept | Accept an offer       | POST   | application/json | application/json    |
+    | offer/{id}/reject | Reject an offer       | POST   | application/json | application/json    |
+    | offer/notify      | Send noti. of offer   | POST   | application/json | application/json    |
+    | offer/{id}        | Get Offer Details     | GET    | N/A	        | application/json    |
 
 
 ----
-#### Create "Process Offer" Connector API to update offer result ####
-In this lab, we will create a connector API to integrate ICS microservice for updating offer result. The whole process is almost same to the above.
+#### Implement the custom API for the Loyalty Management ####
+Now that you have the API defined, it's time to implement the API with JavaScript code. You can get started by downloading a scaffold that provides stubs for the functions that you need to implement for each endpoint, as well as some sample code.
 
-1. On the navigation pane, select “Applications” -> “Connectors”. Click on the “+ New Connector” green button and select “REST” from the dropdown list.
-![](../common/images/mobile/402-New_Connector.png)
+1. Download prebuilt implementation: We've provided a prebuilt implementation package for you which you can download by right clicking [loyaltymanagementapi_1.0.zip](https://github.com/APACTestDrive/CloudNative_Mobile/blob/MobileLab-short-delta-only/common/assets/mobile/loyaltymanagementapi_1.0.zip?raw=true) and select "Save link as...".
 
-2. Enter `Test Drive ICS Connector API 0X`(0X is the sequence number assigned to you by instructor. - e.g.: 01) as a name for this connector. The API name will be automatically generated for you while you type in the Display API Name. Note that the “API Name” will be used in custom API implementation coding thus is must meet JavaScript variable naming standards. Click on “Create” on the bottom right when you are done.
-![](../common/images/mobile/402-ICS_Connector_API.png)
+2. Unzip the package. Edit `/loyaltymanagementapi/package.json` to add your postfix (e.g.: 01) into the "name", the "TestDriveICSConnectorAPI", "TestDriveACCSPtMgtConnectorAPI", "TestDriveACCSCtdQRConnectorAPI" to match your custom API name and the connector API names as shown in the below diagram.
 
-3. Review the name/description on the general screen and click on the “Next Step” button (“>” on the top right) to move to the next screen.
-![](../common/images/mobile/402-ICS_Connector_API_Review.png)
+![](../common/images/mobile/403-Editing_Package_Json.png)
 
-4. Enter the URL (e.g: `https://integration-<YOUR_ICS_DOMAIN_NAME>.integration.us2.oraclecloud.com/integration/flowapi/rest/<YOUR_INTEGRATION_NAME>/v01/processoffer`. This is the endpoint CREATED by you in the Integrations Lab.) to the REST API into the “Remote URL” textbox. Click on “Next Step”.
-![](../common/images/mobile/402-ICS_Connector_URL_Setting.png)
 
-5. We won’t set any rules here, so just click on “Next Step”.
-![](../common/images/mobile/402-ICS_Connector_Rule_Setting.png)
+3. Edit the implementation.
+   - Open `/loyaltymanagementapi/loyaltymanagementapi.js` with your text editor, replace the whole content with the source code below:
 
-6. MCS supports a wide range of security policies for you to use. For the lab, we will use http basic authentication for security policy setting. Select “oracle/http_basic_auth_over_ssl_client_policy” from “Available Policies” on the left and use the “>” button in the middle to move it to “Selected Policies” on the right.
-![](../common/images/mobile/402-ICS_Connector_Security_Setting.png)
+   - Change the endpoint url to match your own API: Search for `/mobile/custom/LoyaltyManagementAPI` and replace all occurrences with `/mobile/custom/LoyaltyManagementAPI0X`(0X is your own postfix, e.g.: 01).
 
-7. Open CSF-Key dialog for security policy setting: MCS uses the Credential Store Framework (CSF) to manage credentials in a secure form. CSF lets you store, retrieve, update, and delete credentials for a web service and other apps. CSF keys are credentials that certify the authority of users and system components that are used during authentication and authorization. A CSF key uses basic authentication (user name and password) to generate a unique key value.
-![](../common/images/mobile/402-Open_CSF_Key_Dialog.png)
+   - Change the Product Management connector references in the code
+     - Search for `TestDriveACCSPtMgtConnectorAPI` and replace all occurrences with `TestDriveACCSPtMgtConnectorAPI0X` (0X is your own postfix, e.g.: 01).
+     
+   - Change the QR Code connector references in the code
+     - Search for `TestDriveACCSCtdQRConnectorAPI` and replace all occurrences with `TestDriveACCSCtdQRConnectorAPI0X` (0X is your own postfix, e.g.: 01).
+     
+   - Change the Process Offer connector references in the code
+     - Search for `TestDriveICSConnectorAPI` and replace all occurrences with `TestDriveICSConnectorAPI0X` (0X is your own postfix, e.g.: 01).
 
-8. Add CSF-Key: On the popup, click on “Add” and create your own csf-key, enter unique value (e.g.: `ICS_GSE 0X`, 0X is the sequence number assigned to you by instructor. - e.g.: 01) as the "Key Name". Enter "User Name" and "Password". (Thery are provided in the Access Document or by the instructor), and click “Save”. 
 
-![](../common/images/mobile/402-ICS_Add_CSF_Key.png)
+4. Repack and upload: Put `package.json` file and `loyaltymanagementapi.js` file back into the original zip pack, navigate to the 'Implementation' tab of the current custom API, then click on “Upload an implementation archive” and select the updated zip pack `loyaltymanagementapi_1.0.zip`.
 
-9. Select CSF-Key you created: Then click “Select” and it will bring you back to the main screen. 
-![](../common/images/mobile/402-ICS_Select_CSF_Key.png)
+![](../common/images/mobile/403-Upload_Impl_Pack.png)
 
-10. Your newly created csf-key will appear in the csf-key textbox. Click on “Next Step” to move to the next.
-![](../common/images/mobile/402-ICS_CSF_Key_NextStep.png)
+6. When successfully done, you shall get a screen like the following:
+![](../common/images/mobile/403-Impl_Upload_Pack_Success.png)
 
-11. Click on “Save” when prompt for confirmation.
-![](../common/images/mobile/402-Connector_Save.png)
 
-12. Now your connector is ready and you can test it. Select `POST` as the HTTP method, enter `{"customerid": 66890169,  "offerid": 10001,  "productid": 20001,  "accepted": false}` into the "HTTP Body". Select your mobile backend (e.g.: `LoyaltyMgmt_MBE01`) you created from the dropdown list in the “Authentication” section, and click on “Test Endpoint”.
-![](../common/images/mobile/402-ICS_Connector_Test.png)
+----
+#### Allow anonymous access to the custom API for the Loyalty Management ####
+You need to change the security policy to allow anonymous access to the API. Before that, the API is not accessible by anyone. On page level navigation pane, select “Security”. Switch off the 'Login Required' option to allow anonymous access and click “Save”.
+![](../common/images/mobile/403-API_Security_Settings.png)
 
-13. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
-![](../common/images/mobile/402-ICS_Connector_Test_Result.png)
+---
+#### Associate the APIs with the loyalty management MBE ####
+Before you can deploy the custom API, it has to be associated with the mobile backend (e.g.: `LoyaltyMgmt_MBE01`) you created in the previous lab. The mobile backend provides the security context for accessing the API, including the users that have permissions. In this lab, we will assign the complete custom API for "LoyaltyManagementAPI" that we provide.
+
+1. Navigate to the MBE (e.g.: `LoyaltyMgmt_MBE01`) you created, and turn to the “APIs” tab. Click “Select APIs”.
+![](../common/images/mobile/403-Select_API_MBE.png)
+
+
+2. Enter `LoyaltymanagementAPI0X`(replace **“0X”** with your own postfix)  and click the  “+” icon to select the API.
+![](../common/images/mobile/403-Select_Your_API.png)
+
+
+3. You will see it got added to the right.
+![](../common/images/mobile/403-Added_API_ToMBE.png)
+
+
+4. Please see the result as below:
+![](../common/images/mobile/403-API_AddToMBE_Result.png)
+
+
+---
+#### Test the Custom API for loyalty management ####
+
+Now you can test your custom API.
+
+1. Finding your base URI and endpoint URI(e.g.: `https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI01/offer`), let’s take `Get offer details` endpoint as an example.
+![](../common/images/mobile/403-Test_Get_URL.png)
+
+2. [Install Postman and use Chrome to access.](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) and launch Postman to test `Get offer details` API.
+![](../common/images/mobile/403-Test_Postman_UI.png)
+
+3. Change the endpoint URI parameter placeholder with `10001`, as is shown below then choose `Basic Auth` from Authorization type dropdown list.
+![](../common/images/mobile/403-Test_Postman_Setting.png)
+
+4. Enter MCS username and password (MCS credential in the Access Document), and click on “Update Request”.
+![](../common/images/mobile/403-Test_MCS_Credential.png)
+
+5. Click on “Headers” and you can see the “Authorization” header has been generated for you based on your settings in the “Authorization” tab.
+![](../common/images/mobile/403-Test_Authorization_Header.png)
+
+6. Add 2 headers, one is `Oracle-Mobile-Backend-ID`, value is the actual MBE id that you can find in the settings tab of your MBE. The other one is `Accept`:`application/json`.
+![](../common/images/mobile/403-MBE_Settings_ID.png)
+
+![](../common/images/mobile/403-Test_Adding_2Headers.png)
+
+7. Click on “Send” and you shall see the response at the bottom of the page as below.
+![](../common/images/mobile/403-Test_Result.png)
 
 
 You have finished this lab successfully.
 
-[Procced to Next - 403: Develop Custom APIs and Custom Code to extend mobile services](403-MobileLab.md)
+[Procced to Next - 404: Set up Push Notification and Test Push Notification to mobile app](404-MobileLab.md)
 
 or
 

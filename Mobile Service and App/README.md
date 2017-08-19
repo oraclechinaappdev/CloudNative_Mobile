@@ -34,27 +34,23 @@ If you want to know about more details on the above mobile services, please refe
 The hard part of mobile development is integration and managing all server-side services. In this exercise, you will see how easily you can enable/develop mobile services like push notification, API creation and integrations with external services to implement a mobile application called "Cafe Supremo" for loyalty management using Oracle MCS (Mobile Cloud Service).
 
 For the loyalty management mobile application, you can make it all work and play nicely together using platform APIs (out of box mobile services) and custom APIs for external integrations by doing the below jobs through this lab.
-- Provide a server-side container for groupings of APIs and other resources that you create to support a specific set of applications by just creating a MBE (Mobile Back End).
-- Create connectors for custom APIs to integrate external services like QR code creation and offer information query provided by ACCS as microservices.
-- Create custom REST APIs and code to build up a library of services for Cafe Supremo mobile application, java application to get offer request, microservices to get QR code, etc.
-- Set up Push Notification to send offer information to the user of the Cafe Supremo mobile application and test Push Notification. In the lab, we are going to support Android to shorten the lab time even though Oracle MCS can support iOS and Windows, too.
-- Track customer behaviors like "Offer Accept by users" using custom analytics report. **[Note]** this section is optional. If time is not available, you can skip this part.
+- Import MBE (Mobile BackEnd) package and configure connectors to integrate external services, including the microservices on ACCS to query offers and generate QR code, and the service on ICS to accept or reject offer and update the existing CRM.
+- Verify the endpoints and the implementation of the custom API. The custom API is imported in the MBE package, and leverage the connectors to interact with the external services.
+- Set up Push Notification, and configure the Cafe Supremo mobile app to work with the MBE imported.
+- Track customer behaviors like "Offer Accept by users" using custom analytics report. **[Note]** this section is optional. You can skip this section first, and come back after you complete all the other sections.
 
 ![](../common/images/mobile/CTD_About_Lab_Mobile.PNG)
 
 
 ### Prerequisites ###
 - Bring your Android phone.
-- During this lab, you need to paste some key values you will create into a JSON file. 
-Please download a JSON file called "Mobile_App_Settings_Sample.json". It can be downloaded by right clicking on [this link](../common/assets/mobile/Mobile_App_Settings_Sample.json) and select "Save link as..." for your use in the lab. When you fill out all the information like "baseUrl", "applicationKey", "backendId" and "anonymousToken", you will create a QR code using [a QR code generator](http://www.qr-code-generator.com/). For now, save it to your local PC.
-- A mobile application called "Cafe_Supremo.apk" on you Android phone. 
-
-You can download it by right clicking on [this link](../common/assets/mobile/Cafe_Supremo.apk?raw=true). Select "Save link as..." to download and save it to your local PC. 
-If you have an QR code scanner on your phone, you can install the mobile application by scanning the following QRcode from your Android phone.
+- Make sure you receive the MBE package file "package-LoyaltyMgmt_MBE0X.zip" from the instructor. "0X" in the file name should matches the postfix assigned to you in the access document. If you don't have the MBE package file or the file name doesn't match the postfix assigned to you, please contact the instructor to get the right file.
+- In the end of this lab, you will configure your mobile application to work with the MBE created by yourself. You will collect all the settings in a file "Mobile_App_Settings_Sample.json". You can download an example of this file by right clicking on [this link](../common/assets/mobile/Mobile_App_Settings_Sample.json) and select "Save link as...". Once you collect all the settings in this file, you will create a QR code to represent the settings by using the [online QR code generator](http://www.qr-code-generator.com/).
+- Install "Cafe Supremo" mobile application on you Android phone. If you have QR code scanner installed on your phone, install the mobile application by scanning the following QR code from your phone.
 
    ![](../common/images/mobile/401-Install_App_QRcode.png)
 
-Or, follow below instructions to install the mobile application.
+Otherwise, download the app file by right clicking on [this link](../common/assets/mobile/Cafe_Supremo.apk?raw=true). Select "Save link as..." to download it. Follow below instructions to install the mobile application.
 
 1. Connect your device to your computer and copy an Android APK file called “Cafe_Supremo.apk” to SD card or internal storage of your device.
 
@@ -86,25 +82,21 @@ Or, follow below instructions to install the mobile application.
 # Lab Exercise: #
 Let's explore the Mobile Service and Application Lab. Please click the below link to start your lab.
 
-## 401: Create MBE (Mobile Back End) for mobile applications ##
+## 401: Import MBE package and configure connectors for external services ##
 
 [Click Here.](401-MobileLab.md)
 
-## 402: Create a connector for external services ##
+## 402: Verify customer APIs and implementation ##
 
 [Click Here.](402-MobileLab.md)
 
-## 403: Develop Custom APIs and Custom Code to extend mobile services ##
+## 403: Set up Push Notification and configure the mobile app ##
 
 [Click Here.](403-MobileLab.md)
 
-## 404: Set up Push Notification and Test Push Notification to mobile app ##
+## 404: Track customer behaviors [Optional] ##
 
 [Click Here.](404-MobileLab.md)
-
-## 405: Track customer behaviors [Optional] ##
-
-[Click Here.](405-MobileLab.md)
 
 or
 
