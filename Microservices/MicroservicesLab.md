@@ -66,7 +66,7 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 2. In the New Job popup window, enter `Offer REST API Build` for Job Name and click **Save**.
 
 ```diff
--Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
+-Please BE CAREFUL that you have not added extra white space before or after the information
 ```
 
 ![](images/006.newbuildjob.png)
@@ -113,7 +113,7 @@ You might need to wait for a few minutes before the build job to get started.
 
 ![](images/016.running.png)
 
-12. The build will take serval minutes to complete. Wait for the build to complete before continue to the next step - ** as we need the build artifact to create the deployment configuration**.
+12. The build will take serval minutes to complete. Wait for the build to complete before continue to the next step - **as we need the build artifact to create the deployment configuration**.
 
 ![](images/017.complete.png)
 
@@ -142,7 +142,7 @@ You might need to wait for a few minutes before the build job to get started.
 
 	- **Data Center:** `your datacenter, e.g. em2, em3, etc`
 	- **Identity Domain:** `your identity domain`, e.g. gse00012345, etc
-	- **Username:** `username to login to MyService`, e.g. cloud.admin, john.dunbar, etc - that is the username you are using.
+	- **Username:** `username to login to MyService`, e.g. lisa.jones, etc - that is the username you are using.
 	- **Password:** `password of the cloud user`, that is the password you are using
 
 ![](images/021.accsconn.png)
@@ -294,7 +294,7 @@ This Lab assumes your have direct connection to public Internet, i.e. **NOT behi
 
 ![](images/111.open.png)
 
-3. Click **oracle** in the left hand side and click **[Create Folder]** at the top right hand corner
+3. Select a desired folder to store the source code in your local harddisk, e.g. **d:\oracle** in the left hand side and click **[Create Folder]** at the top right hand corner - `this will create a new folder under the folder you've selected`.
 
 ![](images/112.createfolder.png)
 
@@ -412,10 +412,6 @@ This Lab assumes your have direct connection to public Internet, i.e. **NOT behi
   - **Target Branch:** `master`
   -	**Review Branch:** `ChangeURL`
 
-```diff
--Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
-```
-
 ![](images/146.createreq.png)
 
 7. Enter for following information into **Details** and click **Next**
@@ -477,6 +473,10 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 3. In the New Job popup window, enter `QR Code Generator Build` for Job Name and click **Save**.
 
+```diff
+-Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
+```
+
 ![](images/163.newjob.png)
 
 4. You are now placed into the job configuration screen.
@@ -517,11 +517,11 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 ![](images/172.queue.png)
 
-- building, please wait - it might takes a few minutes before the job change form queued to running
+Building stage: please wait - it might takes a few minutes before the job change form queued to running
 
 ![](images/173.building.png)
 
-13. The build will take serval minutes to complete. Wait for the build to complete before continue to the next step - ** as we need the build artifact to create the deployment configuration**.
+13. The build will take serval minutes to complete. Wait for the build to complete before continue to the next step - **as we need the build artifact to create the deployment configuration**.
 
 ![](images/174.buildsuccess.png)
 
@@ -545,7 +545,7 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 4. **As you have created the deployment in the Offer REST API
 Microservice, you can REUSE the same target**.
 
-  In the **Deployment Target**, choose the **SAME** one you created above. It should be something similar to `Application Container Cloud` **em2 / your-identity-domain / your-user-name**
+   In the **Deployment Target**, choose the **SAME** one you created above. It should be something similar to `Application Container Cloud` **em2 / your-identity-domain / your-user-name**
 
 ![](images/184.dc.png)
 
