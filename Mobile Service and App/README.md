@@ -86,7 +86,7 @@ Let's explore the Mobile Service and Application Lab. Please click the below lin
 
 [Click Here.](401-MobileLab.md)
 
-## 402: Verify customer APIs and implementation ##
+## 402: Verify custom APIs and implementation ##
 
 [Click Here.](402-MobileLab.md)
 

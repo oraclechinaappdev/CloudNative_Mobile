@@ -1,50 +1,81 @@
 # ORACLE Cloud Test Drive #
 -----
-## 403: Develop Custom APIs and Custom Code to extend mobile services ##
+## 403: Set up Push Notification and configure the mobile app ##
 
 ### Introduction ###
-![](../common/images/mobile/mcsgs_dt_003_customapi.png)
-
-You can create custom REST APIs to build up a library of services that can be used by your mobile applications. Custom APIs are particularly useful for aggregating data from other sources, adding any relevant business logic, and returning results in a mobile-friendly way for mobile applications.
-![](../common/images/mobile/mcsgc_dt_004_api.png)
+You can use the Notifications service (part of MCS platform APIs) to send notifications to users of the apps registered in a mobile backend. Once you have the mobile backend set up for notifications, the process of sending the notifications is the same for both iOS, Android, and Windows apps. You set up notifications by obtaining the appropriate vendor certificates and registering them with the app's mobile backend. In addition, you can write your own code in the mobile app to process the push notification. MCS can also exposed the push notification service to other applications, so that applications, e.g. the Java App for campaign management, can send out push notification to end user by calling the push notification service exposed by MCS.
+![](../common/images/mobile/mcsgs_dt_006_notifications.png)
 
 ### About the Exercise Today ###
-In the previous lab, we've created 3 connector APIs to integrate with external services for offer information query, QR code creation and offer result update. As you might remember, those connector APIs are not directly exposed to mobile applications. Once you create connector APIs to access the services, you can use them in custom APIs (e.g. Loyalty Management API), which you can then call from your mobile applications or external systems using standard REST calls. So, in this lab, we will create a custom API for 3 connector APIs.
-
 In this exercise, we will:
-- Create the custom API and define its endpoints for loyalty management. We need the custom API with several endpoints for offer information query, QR code creation and offer result (e.g. reject or accept) update.
-- Implement the custom API: In this lab, we will provide code snippets for API implementation. Just follow the instructions and you can make it.
-- Set up Security for the custom API
-- Associate the APIs with the loyalty management MBE.
-- Test the Custom API for loyalty management
+- Create a notifications profile and register the Cafe Supremo app
+- Prepare the Cafe Supremo application to receive notifications
+- Test Notification
 
 ### Prerequisites ###
-- Loyalty management MBE created in the previous lab. (401 lab)
-- 3 Connector APIs we created in the previous lab (402 lab)
-- A RAML file for the custom API with some of endpoints for your use. It can be downloaded by right clicking on [this link](https://raw.githubusercontent.com/APACTestDrive/CloudNative_Mobile/MobileLab-short-delta-only/common/assets/mobile/loyaltymanagementapi.raml) and select "Save link as..." for your use in the lab.
-- Chrome Postman to test custom APIs
-- Any text file editor
+- Cafe Supremo application binary (Will be provided by instructor)
+- Android device to install Cafe Supremo application
 
 ----
-#### Create the custom API and define its endpoints for loyalty management ####
-In this lab, you will create a custom API for loyalty management. In fact, we need to define several endpoints for the custom API for offer information query, QR code creation and offer result update. Creating endpoints are the same jobs. For your convenience, we will create our own custom API using a RAML file for other endpoints and then manually create one additional endpoint. So, here you will create one endpoint for the query of the specific offer information.
+#### Create a notifications profile and register the Cafe Supremo app ####
+In this lab, you will create a notifications profile and register the client application (Cafe Supremo mobile application) to associate google credentials.
 
-1. From the navigation pane, select “Applications” -> “APIs”, click on “+ New API” and select “API” from the dropdown list.
-![](../common/images/mobile/403-New_API.png)
+1. Create a client (Register the app in MCS as a client) to receive notifications.
+    - Navigate through “Applications” -> “Mobile Backends”, select your mobile backend, and click on “Open” to open your MBE.
+![](../common/images/mobile/401-Select_MBE.png)
 
-2. Click on “Upload a RAML document” link and choose the RAML file (`loyaltymanagementapi.raml`) you downloaded in the Prerequisites section.
-![](../common/images/mobile/403-RAML_upload.png)
 
-3. When uploaded successfully, enter name and description and click on “Create” as below:
-    + **API Display Name**: `Loyalty Management API 0X` (0X is the sequence number assigned to you by instructor. - e.g.: 01)
-    + **API Name**: `LoyaltyManagementAPI0X`
-    + **API Short Description**: `Custom API for Loyalty Management API 0X`
-Click on “Create” on the bottom right.
+   - Switch to “Clients” tab and click on “New Client”.
 
-![](../common/images/mobile/403-Create_Custom_API_with_RAML.png)
+![](../common/images/mobile/401-Create_Client.png)
 
-4. **Copy the values of "API Name" and replace the value of properties called "API" in the "Mobile_App_Settings_Sample.json" file from Lab 401.**  Save the JSON file for later use.
 
+   - Enter `MyAndroidClient0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Client Display Name", `1.0.0` as the "App Version", and `com.oraclecorp.internal.ent3.apacTestDrv` as the "Package Name". Click on “Create”. This will bring you to the client settings screen.
+
+![](../common/images/mobile/401-Client_Settings.png)
+
+
+2. On the "Settings" screen, **Copy the values of "Application Key" and replace the value of properties called "applicationKey" in the "Mobile_App_Settings_Sample.json" file from Lab 401 with the copied value.**  Save the JSON file for later use.
+
+```
+{
+      "baseUrl": "https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com:443",
+      "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
+            --> Replce the value inside double quotes with the value of "Application Key" in you JSON file.
+      "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
+      "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
+      "API":"LoyaltyManagementAPI01",
+      "senderID":"925757644219"
+}
+
+```
+
+![](../common/images/mobile/401-Client_Setting_Tab.png)
+
+
+3. Create a profile to store google credentials like API Key and Sender ID.
+
+   - Select the "Profiles" tab and click on "New Profile" to create a profile.
+
+![](../common/images/mobile/401-Create_New_Profile.png)
+
+
+   - Enter `FCM0X` (change `0X` to your assigned postfix by instructor, e.g: 01) as the "Name. Paste `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the Sender ID. (We generated them for Cafe Supremo mobile application from Google.), and click on “Create”.
+
+![](../common/images/mobile/401-Profile_Setting.png)
+
+
+   - Click on “Select Profile”.
+![](../common/images/mobile/401-Selected_Profile.png)
+
+
+   - Now your client is ready. Navigate to "Applications" -> "Mobile Backends" and select your MBE. On the client setting screen, you can see your mobile client with Notifications Enabled.
+![](../common/images/mobile/401-Review_MobileApp_Profile.png)
+
+---
+#### Prepare the Cafe Supremo application to receive notifications ####
+
+1. Before running notification test, you were told to prepare a file called **Mobile_App_Settings_Sample.json** like below format:    
 ```
 {
       "baseUrl": "https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com:443",
@@ -52,161 +83,88 @@ Click on “Create” on the bottom right.
       "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
       "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
       "API":"LoyaltyManagementAPI0X",
-            --> Replace the value inside double quotes with the value of "API Name" in previous step.
       "senderID":"925757644219"
 }
-
 ```
+We will use it shortly.
 
-5. Define additional endpoint for the Loyalty Management API
-   - Now the custom API just created is automatically open for you. Switch to the “Endpoints” tab to define the additional endpoint.
-![](../common/images/mobile/403-Define_Additional_Endpoint.png)
+2. From your web browser, go to `http://www.qr-code-generator.com/`, click on `Text` button and the **Free text** text area is shown.
 
-   - Adding resource: Click on “+ New Resource”.
-![](../common/images/mobile/403-Endpoint_Add_Resource.png)
+![](../common/images/mobile/01.qr.site.png)
 
-   - The new resource is added to the bottom of the existing endpoints page. Scroll down to the end.
-![](../common/images/mobile/403-Locate_Added_Endpoint.png)
+3. Copy **your own** JSON file content from step 2 above, paste it into the **Free text** text area, then click `Create QR code` button. A QR code image will be generated on the right hand side of window.
 
-   - Enter `offer/{id}` as the “Resource Path” and `Offer` as the “Display Name” and click on “Methods”. This endpoint (a URI resource) is for getting the specific offer information by offer ID.
-![](../common/images/mobile/403-New_Resource.png)
-
-   - Adding method: you can see that {id} entered in previous step has be recognized as a URI Resource Path Parameter “id”. Click on “+ Add Method” and select “GET”.
-![](../common/images/mobile/403-Adding_Method.png)
-
-   - Enter `Get offer details` as the “Description” and `Get offer details` as the “Display Name” for the method. Click on “Responses” link at the bottom.
-![](../common/images/mobile/403-Adding_Method_Info.png)
-
-   - Adding response: Click on "Add Response".
-   ![](../common/images/mobile/403-Adding_Response_Add.png)
-
-    - Adding response media type: Click on "Add Media Type".
-   ![](../common/images/mobile/403-Adding_Response_Add_Media_Type.png)
-
-    - Adding sample response: MCS will to create a mockup implementation for this endpoint method using the sample body when provided. This is the one of good features to enable parallel development of mobile application without external services. Make sure the "Media Type" dropdown is set to "application/json" and then in the "Example" text area, paste the following code:
-   
-   ```
-	{
-		"id": 10001,
-		"name": "Our new aroma roast",
-		"points": 10000,
-		"message": "Try special brew today and enjoy 10% off with 10,000 points",
-		"productid": 20001,
-		"productname": "Aroma Beans",
-		"productprice": 21,
-		"productimage": "20001.jpg",
-		"productdesc": "Blend of incomparable Balance of sweetness, aroma and body. Composed of 50% Arabica and 50% Robusta."
-	}
-	
-   ```
-
-    - Scroll to the top of the page and click on “Save”.
-    
-     ![](../common/images/mobile/403-Adding_Sample_Response.png)
-
-    - For your information: Now we have created all endpoints for the Loyalty Management Custom APIs. The below is the list of endpoints for your reference.
-
-    | Resource Path     | Display Name          | Method | Request Type     | Response Media Type |
-    | ----------------- | --------------------- | ------ | ---------------- | ------------------- |
-    | offer/{id}/qr	    | Offer QR code         | GET    | N/A	        | image/png           |
-    | offer	            | Offers	            | GET    | N/A	        | application/json    |
-    | offer/{id}/accept | Accept an offer       | POST   | application/json | application/json    |
-    | offer/{id}/reject | Reject an offer       | POST   | application/json | application/json    |
-    | offer/notify      | Send noti. of offer   | POST   | application/json | application/json    |
-    | offer/{id}        | Get Offer Details     | GET    | N/A	        | application/json    |
+![](../common/images/mobile/02.qr.result.png)
 
 
-----
-#### Implement the custom API for the Loyalty Management ####
-Now that you have the API defined, it's time to implement the API with JavaScript code. You can get started by downloading a scaffold that provides stubs for the functions that you need to implement for each endpoint, as well as some sample code.
+You can keep this browser open, or save the image for later use.
 
-1. Download prebuilt implementation: We've provided a prebuilt implementation package for you which you can download by right clicking [loyaltymanagementapi_1.0.zip](https://github.com/APACTestDrive/CloudNative_Mobile/blob/MobileLab-short-delta-only/common/assets/mobile/loyaltymanagementapi_1.0.zip?raw=true) and select "Save link as...".
+4. From your mobile device, open the app 'Cafe Supremo'.
 
-2. Unzip the package. Edit `/loyaltymanagementapi/package.json` to add your postfix (e.g.: 01) into the "name", the "TestDriveICSConnectorAPI", "TestDriveACCSPtMgtConnectorAPI", "TestDriveACCSCtdQRConnectorAPI" to match your custom API name and the connector API names as shown in the below diagram.
+![](../common/images/mobile/03.mobile.app.png)
 
-![](../common/images/mobile/403-Editing_Package_Json.png)
+5. Once app started and login page shown, click on the hamburger menu on top left corner.
 
+![](../common/images/mobile/04.mobile.menu.png)
 
-3. Edit the implementation.
-   - Open `/loyaltymanagementapi/loyaltymanagementapi.js` with your text editor, replace the whole content with the source code below:
+6. On expanded menu, click `Settings`
 
-   - Change the endpoint url to match your own API: Search for `/mobile/custom/LoyaltyManagementAPI` and replace all occurrences with `/mobile/custom/LoyaltyManagementAPI0X`(0X is your own postfix, e.g.: 01).
+![](../common/images/mobile/05.mobile.settings.png)
 
-   - Change the Product Management connector references in the code
-     - Search for `TestDriveACCSPtMgtConnectorAPI` and replace all occurrences with `TestDriveACCSPtMgtConnectorAPI0X` (0X is your own postfix, e.g.: 01).
-     
-   - Change the QR Code connector references in the code
-     - Search for `TestDriveACCSCtdQRConnectorAPI` and replace all occurrences with `TestDriveACCSCtdQRConnectorAPI0X` (0X is your own postfix, e.g.: 01).
-     
-   - Change the Process Offer connector references in the code
-     - Search for `TestDriveICSConnectorAPI` and replace all occurrences with `TestDriveICSConnectorAPI0X` (0X is your own postfix, e.g.: 01).
+7. On Settings page opened, click `Read Settings from QRCode` button at middle.
 
+![](../common/images/mobile/06.mobile.qr.png)
 
-4. Repack and upload: Put `package.json` file and `loyaltymanagementapi.js` file back into the original zip pack, navigate to the 'Implementation' tab of the current custom API, then click on “Upload an implementation archive” and select the updated zip pack `loyaltymanagementapi_1.0.zip`.
+8. When the QR scanner running, face your mobile device towards the QR code image (from step 4).  
+You may need to adjust the distance between your mobile device and your screen until the scanner camera can recognize the QR image.
 
-![](../common/images/mobile/403-Upload_Impl_Pack.png)
+![](../common/images/mobile/07.mobile.cam.png)
 
-6. When successfully done, you shall get a screen like the following:
-![](../common/images/mobile/403-Impl_Upload_Pack_Success.png)
+9. On successful QR scanning, all property settings in your JSON file will be automatically filled into the mobile app Setting page like below. (You may need to expand `MCS Mobile Backend Preferences`)
 
+![](../common/images/mobile/08.mobile.qr.result.png)
 
-----
-#### Allow anonymous access to the custom API for the Loyalty Management ####
-You need to change the security policy to allow anonymous access to the API. Before that, the API is not accessible by anyone. On page level navigation pane, select “Security”. Switch off the 'Login Required' option to allow anonymous access and click “Save”.
-![](../common/images/mobile/403-API_Security_Settings.png)
+Click `Save settings and logout` button. You will then be returned to home screen.
+
+10. Enter the mobile app **Username** and **Password** provided by instructor, then click `Login` button.
+
+![](../common/images/mobile/09.mobile.login.png)
+
+11. Upon successful login, the welcome page is shown. Your mobile device is now ready to receive push notification of campaign offer.
+
+![](../common/images/mobile/10.mobile.welcome.png)
 
 ---
-#### Associate the APIs with the loyalty management MBE ####
-Before you can deploy the custom API, it has to be associated with the mobile backend (e.g.: `LoyaltyMgmt_MBE01`) you created in the previous lab. The mobile backend provides the security context for accessing the API, including the users that have permissions. In this lab, we will assign the complete custom API for "LoyaltyManagementAPI" that we provide.
+#### Test Notification ####
+1. Switch to “Notifications” tab and click on the icon below “4 TEST”.
 
-1. Navigate to the MBE (e.g.: `LoyaltyMgmt_MBE01`) you created, and turn to the “APIs” tab. Click “Select APIs”.
-![](../common/images/mobile/403-Select_API_MBE.png)
-
-
-2. Enter `LoyaltymanagementAPI0X`(replace **“0X”** with your own postfix)  and click the  “+” icon to select the API.
-![](../common/images/mobile/403-Select_Your_API.png)
+![](../common/images/mobile/401-Test_Notification.png)
 
 
-3. You will see it got added to the right.
-![](../common/images/mobile/403-Added_API_ToMBE.png)
+2. Click on "Manage Devices".
+
+![](../common/images/mobile/401-Test_Manage_Devices.png)
 
 
-4. Please see the result as below:
-![](../common/images/mobile/403-API_AddToMBE_Result.png)
+3. You shall see devices that has been registered to this mobile backend. Click on “Close” and go back to the “Test” screen.
+
+![](../common/images/mobile/401-Manage_Devices.png)
 
 
----
-#### Test the Custom API for loyalty management ####
+4. Enter a notification `You can use your points to buy products! – 10001` with send option `Now` and click on “Send”. Note you will be getting errors if no devices registered yet.
 
-Now you can test your custom API.
-
-1. Finding your base URI and endpoint URI(e.g.: `https://mcs-<YOUR_MCS_DOMAIN_NAME>.mobileenv.us2.oraclecloud.com/mobile/custom/LoyaltyManagementAPI01/offer`), let’s take `Get offer details` endpoint as an example.
-![](../common/images/mobile/403-Test_Get_URL.png)
-
-2. [Install Postman and use Chrome to access.](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) and launch Postman to test `Get offer details` API.
-![](../common/images/mobile/403-Test_Postman_UI.png)
-
-3. Change the endpoint URI parameter placeholder with `10001`, as is shown below then choose `Basic Auth` from Authorization type dropdown list.
-![](../common/images/mobile/403-Test_Postman_Setting.png)
-
-4. Enter MCS username and password (MCS credential in the Access Document), and click on “Update Request”.
-![](../common/images/mobile/403-Test_MCS_Credential.png)
-
-5. Click on “Headers” and you can see the “Authorization” header has been generated for you based on your settings in the “Authorization” tab.
-![](../common/images/mobile/403-Test_Authorization_Header.png)
-
-6. Add 2 headers, one is `Oracle-Mobile-Backend-ID`, value is the actual MBE id that you can find in the settings tab of your MBE. The other one is `Accept`:`application/json`.
-![](../common/images/mobile/403-MBE_Settings_ID.png)
-
-![](../common/images/mobile/403-Test_Adding_2Headers.png)
-
-7. Click on “Send” and you shall see the response at the bottom of the page as below.
-![](../common/images/mobile/403-Test_Result.png)
+![](../common/images/mobile/401-Notification_Test_Screen.png)
 
 
-You have finished this lab successfully.
+5. If you have one device registered, you shall see a success message pop up on top of the page and the notification shall appear in the notification area of your device.
 
-[Procced to Next - 404: Set up Push Notification and Test Push Notification to mobile app](404-MobileLab.md)
+![](../common/images/mobile/401-MCS_Notification_Result.png)
+
+
+![](../common/images/mobile/401-MobileApp_Notification_Result.png)
+
+
+[Procced to Next - 405: Track customer behaviors](405-MobileLab.md)
 
 or
 

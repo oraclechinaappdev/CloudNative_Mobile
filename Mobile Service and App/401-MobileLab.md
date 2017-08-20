@@ -6,9 +6,9 @@
 ### Introduction ###
 ![](../common/images/mobile/402-Connectors_Overview.png)
 
-Connectors allow you to declaratively create APIs that simplify access to and standardize use of backend systems (such as enterprise middleware) and web services. Oracle MCS provides different types of connectors to simplify integration with different types of backend systems, including REST connector, SOAP connector, Oracle Integration Cloud Service (ICS) connector, and Oracle Fusion Application connector. In this lab, we will use the REST connector to integrate with the three REST services that are created in the microservices and integration labs.
+Connectors allow you to declaratively create APIs that simplify access to and standardize use of backend systems (such as enterprise middleware) and web services. Oracle MCS provides different types of connectors to simplify integration with different types of backend systems, including REST connector, SOAP connector, Oracle Integration Cloud Service (ICS) connector, and Oracle Fusion Application connector. In this lab, you will use the REST connector to integrate with the three REST services that are created in the microservices and integration labs.
 
-Once connectors have been created, they can be used in custom APIs (e.g. the Loyalty Mgmt APi that we will create later), and exposed to mobile applications.
+Once connectors have been created, they can be used in custom APIs (e.g. the Loyalty Mgmt APi that you will create later), and exposed to mobile applications.
 
 ![](../common/images/mobile/402-Connectors_Mechanism.png)
 
@@ -39,7 +39,7 @@ To create the above 3 Connectors, you will:
 
 ![](../common/images/mobile/401-New_Import_Package.png)
 
-5. Click on "Choose a package file " and select the MBE package file "package-LoyaltyMgmt_MBEXX.zip" with the correct postfix assigned to you.
+5. Click on "Choose a package file " and select the MBE package file "package-LoyaltyMgmt_MBE0X.zip" with the correct postfix assigned to you.
 
 ![](../common/images/mobile/401-Import_Package_Select_File.png)
 
@@ -47,7 +47,7 @@ To create the above 3 Connectors, you will:
 
 ![](../common/images/mobile/401-Import_Package_File_Validated.png)
 
-7. On the 'confirm' step, the contents of the package are shown. The package should include Mobile Backend 'LoyaltyMgmt_MBEXX', Client 'MyAndroidClientXX', API 'LoyaltyMgmtXX', API implementation 'LoyaltyMgmt03', and 3 connectors 'GenerateQRCodeXX', 'ProcessOfferXX', and 'QueryOffers03'. Make sure the postfix is correct in each object to be imported. Click 'Next'
+7. On the 'confirm' step, the contents of the package are shown. The package should include Mobile Backend 'LoyaltyMgmt_MBE0X', Client 'MyAndroidClient0X', API 'LoyaltyMgmt0X', API implementation 'LoyaltyMgmt03', and 3 connectors 'GenerateQRCode0X', 'ProcessOffer0X', and 'QueryOffers03'. Make sure the postfix is correct in each object to be imported. Click 'Next'
 
 ![](../common/images/mobile/401-Import_Package_Confirm.png)
 
@@ -55,7 +55,7 @@ To create the above 3 Connectors, you will:
 
 ![](../common/images/mobile/401-Import_Package_Results.png)
 
-9. On the 'Policies' step, select the policy '*.connector/GenerateQRCodeXX(1.0).Connector_Endpoint' and click on 'Edit'.
+9. On the 'Policies' step, select the policy '*.connector/GenerateQRCode0X(1.0).Connector_Endpoint' and click on 'Edit'.
 
 ![](../common/images/mobile/401-Import_Package_Select_GenerateQRCode_Endpoint.png)
 
@@ -63,7 +63,7 @@ To create the above 3 Connectors, you will:
 
 ![](../common/images/mobile/401-Import_Package_Update_GenerateQRCode_Endpoint.png)
 
-11. Back in the 'Policies' step, select the policy '*.connector/QueryOffersXX(1.0).Connector_Endpoint' and click on 'Edit'.
+11. Back in the 'Policies' step, select the policy '*.connector/QueryOffers0X(1.0).Connector_Endpoint' and click on 'Edit'.
 
 ![](../common/images/mobile/401-Import_Package_Select_QueryOffers_Endpoint.png)
 
@@ -72,11 +72,11 @@ To create the above 3 Connectors, you will:
 ![](../common/images/mobile/401-Import_Package_Update_QueryOffers_Endpoint.png)
 
 
-13. Back in the 'Policies' step, select the policy '*.connector/ProcessOfferXX(1.0).Connector_Endpoint' and click on 'Edit'.
+13. Back in the 'Policies' step, select the policy '*.connector/ProcessOffer0X(1.0).Connector_Endpoint' and click on 'Edit'.
 
 ![](../common/images/mobile/401-Import_Package_Select_ProcessOffer_Endpoint.png)
 
-14. Set a custom value as the full service URL of the 'Process Offer' service deployed on ICS, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.us2.oraclecloud.com/integration/flowapi/rest/CXX_ICS_INTMGT/v01/processoffer`. Click 'Save'.
+14. Set a custom value as the full service URL of the 'Process Offer' service deployed on ICS, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.us2.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. Click 'Save'.
 
 ![](../common/images/mobile/401-Import_Package_Update_ProcessOffer_Endpoint.png)
 
@@ -92,7 +92,7 @@ The 'Process Offer' service deployed on ICS is configured to use 'Basic Authenti
 
 ![](../common/images/mobile/401-CSF_Navigate_To_CSF.png)
 
-2. In the "CSF Keys & Certificates" box, under tab "CSF Keys", select the key "ICSXX" (XX is the postfix assigned to you), set "Short Description" to be "ICSXX" (XX is the postfix assigned to you), and set the user name and password to be the credential of the ICS domain, that you use in the "integrations" lab. Click "Save and Close" button.
+2. In the "CSF Keys & Certificates" box, under tab "CSF Keys", select the key "ICS0X" (0X is the postfix assigned to you), set "Short Description" to be "ICS0X" (0X is the postfix assigned to you), and set the user name and password to be the credential of the ICS domain, that you use in the "integrations" lab. Click "Save and Close" button.
 
 ![](../common/images/mobile/401-CSF_Update_CSF.png)
 
@@ -100,19 +100,19 @@ The 'Process Offer' service deployed on ICS is configured to use 'Basic Authenti
 
 Once the connectors have been imported and configured completely, you can test the connector. In this lab, you will test the connector 'Process Offer'.
 
-1. On the navigation pane, select “Applications” -> “Connectors”. Enter "XX" (XX is the postfix assigned to you) to search for the connectors created by you. Select "Process Offer XX" (XX is the postfix assigned to you) and click on "Open".
+1. On the navigation pane, select “Applications” -> “Connectors”. Enter "0X" (0X is the postfix assigned to you) to search for the connectors created by you. Select "Process Offer 0X" (0X is the postfix assigned to you) and click on "Open".
 
 ![](../common/images/mobile/401-Test_Connector_Open_ProcessOffer.png)
 
-2. In 'General' step, make sure that the 'API Name' is set as 'ProcessOfferXX' (XX is the postfix assigned to you), and click 'Next'.
+2. In 'General' step, make sure that the 'API Name' is set as 'ProcessOffer0X' (0X is the postfix assigned to you), and click 'Next'.
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_General.png)
 
-3. In 'Descriptor' step, make sure that the 'Remote URL' is set to the full service URL of the 'Process Offer' service on ICS, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.us2.oraclecloud.com/integration/flowapi/rest/CXX_ICS_INTMGT/v01/processoffer`. Click 'Next'.
+3. In 'Descriptor' step, make sure that the 'Remote URL' is set to the full service URL of the 'Process Offer' service on ICS, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.us2.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. Click 'Next'.
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Descriptor.png)
 
 4. In 'Rules' step, click 'Next' as no rule is used. 
 
-5. In 'Security' step, make sure that security policy "oracle/http_basic_auth_over_ssl_client_policy" is selected, and the csf-key is set to 'ICSXX' (XX is the postfix assigned to you). Click 'Next'.
+5. In 'Security' step, make sure that security policy "oracle/http_basic_auth_over_ssl_client_policy" is selected, and the csf-key is set to 'ICS0X' (0X is the postfix assigned to you). Click 'Next'.
 
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Security.png)
 
@@ -124,7 +124,7 @@ Once the connectors have been imported and configured completely, you can test t
 
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Test_1.png)
 
-8. Select your mobile backend (e.g.: `LoyaltyMgmt_MBEXX`) you created from the dropdown list in the “Authentication” section, and click on “Test Endpoint”.
+8. Select your mobile backend (e.g.: `LoyaltyMgmt_MBE0X`) you created from the dropdown list in the “Authentication” section, and click on “Test Endpoint”.
 
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Test_2.png)
 
@@ -134,7 +134,7 @@ Once the connectors have been imported and configured completely, you can test t
 
 You have finished this lab successfully.
 
-[Procced to Next - 402: Verify customer APIs and implementation](402-MobileLab.md)
+[Procced to Next - 402: Verify custom APIs and implementation](402-MobileLab.md)
 
 or
 
