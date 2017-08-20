@@ -25,7 +25,7 @@ To create the above 3 Connectors, you will:
 
 #### Import the MBE package ####
 
-1. Sign in to Mobile Cloud Service by using the **Mobile Cloud Service \(MCS\)** identity domain Id and credential in the Access Document. 
+1. Sign in to Mobile Cloud Service by using the **Mobile Cloud Service \(MCS\)** identity domain Id and credential in the Access Document. You should use the **Admin User** to sign to the Mobile Cloud Service, and use the **Mobile User** to sign to the Cafe Supremo Mobile App.
 
 2. In the dashboard screen, click on "Mobile Environment Service".
 ![](../common/images/mobile/400-MobileEnvService.png)
