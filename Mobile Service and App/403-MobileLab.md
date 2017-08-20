@@ -73,45 +73,58 @@ You mobile app should be configured to work with your mobile backend before you 
 ![](../common/images/mobile/02.qr.result.png)
 
 7. From your mobile device, open the app 'Cafe Supremo'.
-![](../common/images/mobile/03.mobile.app.png)
+
+   ![](../common/images/mobile/03.mobile.app.png)
 
 8. **DO NOT LOGIN.**  Click on the hamburger menu on top left corner, and click "Settings".
-![](../common/images/mobile/05.mobile.settings.png)
+
+   ![](../common/images/mobile/05.mobile.settings.png)
 
 9. On Settings page opened, click `Read Settings from QRCode` button at middle.
-![](../common/images/mobile/06.mobile.qr.png)
+
+   ![](../common/images/mobile/06.mobile.qr.png)
 
 10. When the QR scanner running, face your mobile device towards the QR code image you created in step 6. You may need to adjust the distance between your mobile device and your screen until the scanner camera can recognize the QR image.
-![](../common/images/mobile/07.mobile.cam.png)
+
+   ![](../common/images/mobile/07.mobile.cam.png)
 
 11. On successful QR code scanning, all settings in your JSON file will be automatically filled into the mobile app Setting page like below. Click `Save settings and logout` button. You will then be returned to home screen.
-![](../common/images/mobile/08.mobile.qr.result.png)
+
+   ![](../common/images/mobile/08.mobile.qr.result.png)
 
 12. The "Username" and "Password" in the login form have been pre-filled as what you have in the settings in your JSON file. If the user name and password are correct, click `Login` button to login. Otherwise, you can type in the user name and password manually.
-![](../common/images/mobile/09.mobile.login.png)
+
+   ![](../common/images/mobile/09.mobile.login.png)
 
 13. Upon successful login, the welcome page is shown. Your mobile device is now ready to receive push notification of campaign offer.
-![](../common/images/mobile/10.mobile.welcome.png)
+
+   ![](../common/images/mobile/10.mobile.welcome.png)
 
 ---
 #### Test Notification ####
 1. Switch to “Notifications” tab in your mobile backend and click on the icon below “4 TEST”.
-![](../common/images/mobile/403-Navigate_To_Notification.png)
+
+   ![](../common/images/mobile/403-Navigate_To_Notification.png)
 
 2. Click on "Manage Devices".
-![](../common/images/mobile/403-Test_Manage_Devices.png)
+
+   ![](../common/images/mobile/403-Test_Manage_Devices.png)
 
 3. You shall see devices that has been registered to this mobile backend. Click on “Close” and go back to the “Test” screen.
-![](../common/images/mobile/403-Manage_Devices.png)
+
+   ![](../common/images/mobile/403-Manage_Devices.png)
 
 4. Before sending the notification, make sure your "Cafe Supremo" mobile app is running in the **Background** on your Android device.
 
 5. Enter a notification `You can use your points to buy products! – 10001` with send option `Now` and click on “Send”. Note you will be getting errors if no devices registered yet.
-![](../common/images/mobile/403-Notification_Test_Screen.png)
 
-5. If you have at least one device registered, you shall see a success message pop up on top of the page and the notification shall appear in the notification area of your device.
-![](../common/images/mobile/403-Notification_Sent.png)
-![](../common/images/mobile/401-MobileApp_Notification_Result.png)
+   ![](../common/images/mobile/403-Notification_Test_Screen.png)
+
+6. If you have at least one device registered, you shall see a success message pop up on top of the page and the notification shall appear in the notification area of your device.
+
+   ![](../common/images/mobile/403-Notification_Sent.png)
+
+   ![](../common/images/mobile/401-MobileApp_Notification_Result.png)
 
 
 [Procced to Next - 404: Track customer behaviors (Optional)](404-MobileLab.md)

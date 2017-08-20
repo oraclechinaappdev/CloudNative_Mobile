@@ -53,22 +53,28 @@ For the loyalty management mobile application, you can make it all work and play
 Otherwise, download the app file by right clicking on [this link](../common/assets/mobile/Cafe_Supremo.apk?raw=true). Select "Save link as..." to download it. Follow below instructions to install the mobile application.
 
 1. Connect your device to your computer and copy an Android APK file called “Cafe_Supremo.apk” to SD card or internal storage of your device.
-![](../common/images/mobile/401-Install_App_1.png)
+
+   ![](../common/images/mobile/401-Install_App_1.png)
 
 2. Enable Unknown Sources in your Android device: Go to "Settings" >>" Security ">> Check the box "Unknown sources". (FYI, the menu will be slightly different by Android versions.)
-![](../common/images/mobile/401-Install_App_2.png)
+
+   ![](../common/images/mobile/401-Install_App_2.png)
 
 3. Open a file manager on your Android device. 
-![](../common/images/mobile/401-Install_App_3.png)
+
+   ![](../common/images/mobile/401-Install_App_3.png)
 
 4. Go to the same location where you put the “Cafe_Supremo.apk” file and Click the file to install. The below image shows Android APK files in case you put them in the folder called “Download”.
-![](../common/images/mobile/401-Install_App_4.png)
+
+   ![](../common/images/mobile/401-Install_App_4.png)
 
 5. Press “Install” button.
-![](../common/images/mobile/401-Install_App_5.png)
+
+   ![](../common/images/mobile/401-Install_App_5.png)
 
 6. Allow all permissions the “Café Supremo” mobile application requires by clicking “CONFIRM” button. Now you have finished the installation of the mobile application.
-![](../common/images/mobile/401-Install_App_6.png)
+
+   ![](../common/images/mobile/401-Install_App_6.png)
 
 
 ---
