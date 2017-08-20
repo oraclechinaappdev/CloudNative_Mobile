@@ -47,7 +47,8 @@ In this lab, you will check the endpoints, security setting and implementation o
     | offer/{id}        | Get Offer Details     | GET    | N/A	        | application/json    |
 
 6. You can define security policies to allow users and roles to access this API. In this lab, we allow anonymous access to this API. Switch to the “Security” tab, make sure the 'Login Required' option is switched off, so the API allows anonymous access.
-![](../common/images/mobile/402-API_Verify_Security.png)
+
+   ![](../common/images/mobile/402-API_Verify_Security.png)
 
 7. After the custom API has been defined, a mock service will be generated automatically to allow mobile developers to start using the API, without waiting for service developer to complete implementing the service. In this lab, the API implementation has been imported together with the MBE package. Switch to the “Implementation” tab, click to expand the "Dependencies for LoyaltyMgmt0X". Make sure that the implementation called "LoyaltyMgmt0X" is set to 'Default', and you can find connectors "GenerateQRCode0X", "QueryOffers0X" and "ProcessOffer0X" in the dependency list (0X is the postfix assigned to you).
 ![](../common/images/mobile/402-API_Verify_Implementation.png)

@@ -98,7 +98,8 @@ Once the connectors have been imported and configured completely, you can test t
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Security.png)
 
 6. Click 'Yes' to save.
-![](../common/images/mobile/401-Test_Connector_ProcessOffer_Save.png)
+
+   ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Save.png)
 
 7. In 'Test' step, select `POST` as the HTTP method, enter `{"customerid": 66890169,  "offerid": 10001,  "productid": 20001,  "accepted": false}` into the "HTTP Body".
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Test_1.png)
