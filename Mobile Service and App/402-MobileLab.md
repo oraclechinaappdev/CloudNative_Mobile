@@ -1,6 +1,6 @@
 # ORACLE Cloud Test Drive #
 -----
-## 402: Verify custom APIs and implementation ##
+## 402: Verify and test custom APIs and implementation ##
 
 ### Introduction ###
 ![](../common/images/mobile/mcsgs_dt_003_customapi.png)
@@ -29,7 +29,7 @@ In this lab, you will check the endpoints, security setting and implementation o
 2. Make sure that the value of the "API Name" is "LoyaltyMgmt0X" (0X is the postfix assigned to you).
 ![](../common/images/mobile/402-API_Verify_API_Name.png)
 
-3. **Copy the values of "API Name" and replace the value of the property "API" in the "Mobile_App_Settings_Sample.json" file.**  Save the file for later use.
+3. Copy the values of "API Name" and replace the value of the property "API" in the "Mobile_App_Settings_Sample.json" file.  Save the file for later use.
 ![](../common/images/mobile/402-API_Copy_To_Json.png)
 
 4. Switch to the “Endpoints” tab, a list of endpoints defined in this custom API are shown. Switch to 'Compact Mode' by clicking on the 'Compact Mode' button. You can check all the list of endpoints in compact mode.

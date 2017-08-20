@@ -1,6 +1,6 @@
 {
       "baseUrl": "<MCS_BASE_URL>",
-      "applicationKey": "<APPLICATION_KEY>",
+      "applicationKey": "d7b6d8b9-c489-4b48-a661-0fb82c8628e7",
       "backendId": "<MOBILE_BACKEND_ID>",
       "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
       "API":"LoyaltyMgmt03",
