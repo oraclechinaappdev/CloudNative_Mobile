@@ -36,7 +36,8 @@ In this lab, you will create a notifications profile and associate the that with
 ![](../common/images/mobile/403-Begin_New_Profile.png)
 
 6. Enter `FCM0X` (change `0X` to the postfix assigned to you, e.g: 03) as the "Name. Paste `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the Sender ID. Keep `Google Messaging (GCM or FCM)` as the "Notification Service" and `XMPP` as the "Send Method", and click on “Create”. (These are the keys that are generated from Google.)
-![](../common/images/mobile/403-Create_New_Profile.png)
+
+   ![](../common/images/mobile/403-Create_New_Profile.png)
 
 7. The notification profile has been created and associated with the your client "MyAndroidClient0X". Click on the link "< LoyaltyMgmt_MBE0X" in the navigation bar to navigate back to the mobile backend.
 ![](../common/images/mobile/403-Profile_Navigate_Back.png)
@@ -53,6 +54,7 @@ You mobile app should be configured to work with your mobile backend before you 
 ![](../common/images/mobile/403-MBE_Settings.png)
 
 2. Copy the values from the mobile backend settings and replace the value of the target property in the "Mobile_App_Settings_Sample.json" file.  You should copy and replace the following properties.
+
 | From Property in MBE Settings | To Property in JSON File |
 |-------------------------------|--------------------------|
 | Mobile Backend ID             | backendId                |
