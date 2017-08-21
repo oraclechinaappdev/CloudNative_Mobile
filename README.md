@@ -1,4 +1,4 @@
-![](common/images/CTD_introduction.PNG)
+![](common/images/CTD_introduction_India_Delhi.png)
 ---
 # ORACLE Cloud Test Drive #
 
@@ -31,9 +31,10 @@ More specifically, following topics are currently included in this project:
 ## Mobile Service and Application ##
 [Mobile Service and Application lab](https://github.com/APACTestDrive/CloudNative_Mobile/tree/master/Mobile%20Service%20and%20App) shows you how to create mobile services for mobile applications and to connect backend services using Oracle Mobile Cloud Service (MCS). This lab is composed of: 
 + Backgrounds on Mobile Service - Challenges and solutions, About Oracle Mobile Cloud Service (MCS) etc.
++ Import a mobile backend package to Oracle Mobile Cloud Service (MCS).
++ Create connectors to integrate with external services for offer information query, QR code creation, etc.
++ Create a Custom API and Custom Code to integrate with external services.
 + Set up Push Notification and Send Notification to mobile app.
-+ Develop a Custom API and Custom Code to interact external services.
-+ Develop a Custom API to interact external services for offer information query, QR code creation, etc.
 + Create Custom Analytics Report to track “Offer Completion by User”
 At the end of this lab, we will give you End to End demo on Loyalty Management based on all the labs we’ve done. 
 
