@@ -45,33 +45,33 @@ To create the above 3 Connectors, you will:
 7. On the 'confirm' step, the contents of the package are shown. The package should include Mobile Backend 'LoyaltyMgmt_MBE0X', Client 'MyAndroidClient0X', API 'LoyaltyMgmt0X', API implementation 'LoyaltyMgmt03', and 3 connectors 'GenerateQRCode0X', 'ProcessOffer0X', and 'QueryOffers03'. Make sure the postfix is correct in each object to be imported. Click 'Next'
 ![](../common/images/mobile/401-Import_Package_Confirm.png)
 
-8. On the 'Import Results' step, verify all objects have been imported successully, except the user realm 'Default' which already exists. Click 'Next'.
+8. On the 'Import Results' step, verify all objects have been imported successfully, except the user realm 'Default' which already exists. Click 'Next'.
 ![](../common/images/mobile/401-Import_Package_Results.png)
 
 9. On the 'Policies' step, select the policy '*.connector/GenerateQRCode0X(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_GenerateQRCode_Endpoint.png)
 
-10. Set a custom value as the Host URL of the QR code service deployed on ACCS, e.g. `https://qrcodegenerator-<ACCS_DOMAIN_NAME>.apaas.em3.oraclecloud.com`. Click 'Save'.
+10. Set a custom value as the Host URL of the QR code service deployed on ACCS, e.g. `https://qrcodegenerator-<ACCS_DOMAIN_NAME>.apaas.<DATACENTER>.oraclecloud.com`. Click 'Save'.
 ![](../common/images/mobile/401-Import_Package_Update_GenerateQRCode_Endpoint.png)
 
 11. Back in the 'Policies' step, select the policy '*.connector/QueryOffers0X(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_QueryOffers_Endpoint.png)
 
-12. Set a custom value as the Host URL of the offer service deployed on ACCS, e.g. `https://offer-<ACCS_DOMAIN_NAME>.apaas.em3.oraclecloud.com`. Click 'Save'.
+12. Set a custom value as the Host URL of the offer service deployed on ACCS, e.g. `https://offer-<ACCS_DOMAIN_NAME>.apaas.<DATACENTER>.oraclecloud.com`. Click 'Save'.
 ![](../common/images/mobile/401-Import_Package_Update_QueryOffers_Endpoint.png)
 
 13. Back in the 'Policies' step, select the policy '*.connector/ProcessOffer0X(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_ProcessOffer_Endpoint.png)
 
-14. Set a custom value as the full service URL of the 'Process Offer' service deployed on ICS, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.us2.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. Click 'Save'.
+14. Set a custom value as the full service URL of the 'Process Offer' service deployed on ICS, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.<DATACENTER>.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. Click 'Save'.
 ![](../common/images/mobile/401-Import_Package_Update_ProcessOffer_Endpoint.png)
 
-15. Back in the 'Policies' step, verify that you have successfully set new values for all three connector endpoint policies, and clieck 'Update' to complete importing the package.
+15. Back in the 'Policies' step, verify that you have successfully set new values for all three connector endpoint policies, and click 'Update' to complete importing the package.
 ![](../common/images/mobile/401-Import_Package_Complete_Update_Policies.png)
 
 
 #### Configure credential to access 'Process Offer' service on ICS ####
-The 'Process Offer' service deployed on ICS is configured to use 'Basic Authentication' in the 'integrations' lab. To integrate with the 'Process Offer' service, you should configure the ICS credential on MCS so that the connector on MCS is authorzied to access the 'Process Offer' on ICS.
+The 'Process Offer' service deployed on ICS is configured to use 'Basic Authentication' in the 'integrations' lab. To integrate with the 'Process Offer' service, you should configure the ICS credential on MCS so that the connector on MCS is authorized to access the 'Process Offer' on ICS.
 
 1. From the navigation pane, click on “Administration” to open the "Administration" page. Scroll down to the bottom and click on "Keys & Certificates" to open the "CSF Keys & Certificates" box.
 ![](../common/images/mobile/401-CSF_Navigate_To_CSF.png)
