@@ -48,7 +48,7 @@ For the loyalty management mobile application, you can make it all work and play
 - In the end of this lab, you will configure your mobile application to work with the MBE created by yourself. You will collect all the settings in a file "Mobile_App_Settings_Sample.json". You can download an example of this file by right clicking on [this link](../common/assets/mobile/Mobile_App_Settings_Sample.json) and select "Save link as...". Once you collect all the settings in this file, you will create a QR code to represent the settings by using the [online QR code generator](http://www.qr-code-generator.com/).
 - Install "Cafe Supremo" mobile application on you Android phone. If you have QR code scanner installed on your phone, install the mobile application by scanning the following QR code from your phone.
 
-   ![](../common/images/mobile/401-Install_App_QRcode.png)
+   ![](../common/images/mobile/400-Install_App_QRcode.png)
 
 Otherwise, download the app file by right clicking on [this link](../common/assets/mobile/Cafe_Supremo.apk?raw=true). Select "Save link as..." to download it. Follow below instructions to install the mobile application.
 
