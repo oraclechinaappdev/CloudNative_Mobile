@@ -1,4 +1,4 @@
-![](common/images/CTD_introduction.PNG)
+![](common/images/CTD_introduction_India_Delhi.png)
 ---
 # ORACLE Cloud Test Drive #
 
