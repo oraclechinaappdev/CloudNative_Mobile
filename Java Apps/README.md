@@ -44,14 +44,16 @@ All components are available in a project, which is a collection of features and
 
 ### This tutorial demonstrates how to: ###
 - Create Oracle Developer Cloud Service (DevCS) Loyalty Management Application Project using Initial [GitHub](https://github.com) repository
-- Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service 
+- Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service
 - Continuous Integration & Delivery (CICD): Using Brackets, Commit and Push Code Change to Oracle Developer Cloud Service
 
 ### Prerequisites ###
 
 - The following lab requires Oracle Public Cloud account that will be supplied by instructor.  
 - You will also need to install a lightweight IDE - [Brackets](http://brackets.io/). Brackets installer will be provided by instructor or you can download from [GitHub HERE](https://github.com/adobe/brackets/releases).  
-*[Click HERE for Brackets installation detail](brackets.md)
+- You need to have a Git Client. If you are already using Github Desktop, Eclipse or other IDE, you probably have Git already. Git installer will be provided by the instructor or you can download from [here](https://git-scm.com/downloads)
+- *[Click HERE for Brackets installation detail](brackets.md)*
+- *[Click HERE for Git installation details](gitclient.md)*
 
 # Lab Exercise: #
 
