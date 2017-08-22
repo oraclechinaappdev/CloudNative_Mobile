@@ -298,7 +298,7 @@ In this exercise, we will:
 
 46. The integration service is now ready for testing.
 
-[Procced to Next - 304: Testing the service and Monitoring with ICS Dashboards](304-IntegrationsLab.md)
+[Procced to Next - 304: Testing the service and Monitoring with ICS Dashboards](L304-IntegrationsLab.md)
 
 or
 
