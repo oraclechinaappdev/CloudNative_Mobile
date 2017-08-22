@@ -244,6 +244,14 @@ https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/pt
 
 ![](images/038.browser.png)
 
+```diff
++you might want to copy your OWN URLs for Offer API, e.g.
++   https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ptmgt/v1/offers/
++   https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/
++and put it in, e.g. Notepad
++   You will need to use it later, e.g. Lab 401.
+```
+
 3. You should be able to get offer details from the Microservice.
 
 ![](images/039.result.png)
@@ -624,6 +632,14 @@ Microservice, you can REUSE the same target**.
 5. the QR Code in the browser will look like this
 
 ![](images/195.codepic.png)
+
+```diff
++you might want to copy your OWN URLs for QR Code API
++   https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ctdqr/v1/offer/
++   https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com
++and put it in, e.g. Notepad
++   You will need to use it later, e.g. Lab 304 Step 27.
+```
 
 **OPTIONAL STEP:** if you use a QR Code reader (e.g. Mobile App), you can decode the QR Code
 
