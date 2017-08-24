@@ -12,7 +12,7 @@ In this exercise, we will:
 
 ### Prerequisites ###
 - Oracle Public Cloud Service account including Integration Cloud Service
-- A Java Archive File (JAR) name as `XXX_ICS_INTMGT_01_lab.iar` distributed by instructor
+- An Integration Archive File (IAR) name as `XXX_ICS_INTMGT_01_lab.iar` distributed by instructor
 
 #### Import Integration Cloud Service Project Artifact ####
 
@@ -32,7 +32,7 @@ Alternatively, you can go to **Integrations** Summary Page by click the hamburge
 
 ![](images/302/02.integration_import.png)
 
-3. Browse and open your machine local directory to select the *JAR* file provided by instructor previously, then click `Import` button.
+3. Browse and open your machine local directory to select the *IAR* file provided by instructor previously, then click `Import` button.
 
 ![](images/302/02.integration_import1.png)
 
