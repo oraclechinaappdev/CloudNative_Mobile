@@ -1,4 +1,4 @@
-![](common/images/CTD_introduction_Tw_Taipei.png)
+![](common/images/CTD_introduction_CN.png)
 ---
 # 甲骨文云试驾 #
 
