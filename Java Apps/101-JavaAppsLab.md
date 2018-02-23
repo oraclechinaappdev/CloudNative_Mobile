@@ -1,92 +1,92 @@
 # ORACLE Cloud Test Drive #
 -----
-## 101: Create Oracle Developer Cloud Service Loyalty Management application project using initial GitHub repository ##
+## 101: 使用初始GitHub存储库创建Oracle开发人员云服务忠诚度管理应用程序项目 ##
 
-### Introduction ###
-This tutorial demonstrates how to:
-- Create Oracle Developer Cloud Service project using existing external Git repository - GitHub
+### 介绍 ###
+本教程演示如何:
+- 使用现有的外部Git存储库创建Oracle开发人员云服务项目 - GitHub
 
-### About the Exercise Today ###
-In this exercise, we will:
-- Create a new Developer Cloud Service Project for the Loyalty Management System
-- Create a new Developer Cloud Service Git Repository to store the Loyalty Management Java Application Source Code
-- Clone an external Git repository, which is stored in Github, to the Developer Cloud Service Git Repository create above
+### 关于今天的运动 ###
+在这个练习中，我们会:
+- 为忠诚度管理系统创建一个新的开发者云服务项目
+- 创建一个新的开发人员云服务Git存储库来存储忠诚度管理Java应用程序源代码
+- 将存储在Github中的外部Git存储库克隆到上面的Developer Cloud Service Git存储库创建中
 
-### Prerequisites ###
-- Oracle Public Cloud Service account including Developer Cloud Service (Check with instructor if you don't have one)
+### 先决条件 ###
+- 包含开发人员云服务的Oracle公有云服务帐户（如果您没有，请与教师联系）
 
 ----
 
-#### Sign In to Oracle Cloud ####
+#### 登录到Oracle Cloud ####
 
-1. Open a browser and go to [cloud.oracle.com](https://cloud.oracle.com). Click **Sign In**.
+1. 打开浏览器并转到 [cloud.oracle.com](https://cloud.oracle.com). 点击 **Sign In**.
 ![cloud.oracle.com](images/sign-in/sign.01.cloud.oracle.com.png)
 
-2. Select `Traditional Cloud Account`, then select    
+2. 根据你的环境的数据中心选择 `Traditional Cloud Account`, 然后选择    
     `Public Cloud Service - EMEA`   
 or    
     `Public Cloud Servce - US`    
-according to the datacenter of your environment.  Click **My Services** button.
+  点击 **My Services** 按钮.
 ![](images/sign-in/sign.02.select.datacenter1.png)
 
-3. Enter the **Developer Cloud Service \(DevCS\)** identity domain and click **Go**. The identity domain and associated credential should be provided by instructor.
+3.进入 **Developer Cloud Service \(DevCS\)** 身份领域并且点击 **Go**. 身份领域和相关凭证应由教师提供.
 ![](images/sign-in/sign.03.identity.domain.png)
 
-4. Enter the DevCS username and password of user with Service Administrator role. Click **Sign In**.
+4. 输入带有Service Administrator 角色的用户  DevCS username and password . 点击 **Sign In**.
 ![](images/sign-in/sign.04.credentials.png)
 
-5. After a successful login you will see your Dashboard.  
-On the Dashboard there are predefined tiles for different services. If the **Developer Cloud Service** tile doesn't appear, click **Customize Dashboard** and mark the **developer** service to show on the dashboard.
+5.成功登录后，您将看到您的仪表板.  
+在仪表板上，有不同服务的预定义图块. 如果 **Developer Cloud Service** 标题没有出现, 点击 **Customize Dashboard** 并且标记 **developer** 服务以便在仪表板上显示.
 ![](images/sign-in/sign.05.dashboard.new.png)
 ![](images/sign-in/sign.06.customize.png)
 
-#### Create Oracle Developer Cloud Service project ####
+#### 创建Oracle开发人员云服务项目 ####
 
-6. Now, find the Developer Service tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
+6.现在，找到Developer Service磁贴，然后点击汉堡包图标.在下拉菜单中点击 **Open Service Console**.
 
 ![](images/101/01.dashboard.new.png)
 
-7. Log in to Oracle Developer Cloud Service and create a new project.
+7. 登陆进入 Oracle Developer Cloud Service 并创建一个新项目.
 
 ![alt text](images/101/02.new.project.png)
 
-8. Enter the name of the project and set the desired properties.   
+8. 输入项目的名称并设置所需的属性.   
 	**Name:** `APAC Cloud Test Drive`   
 	**Description:** `APAC Cloud Test Drive project hub`   
 	and click **Next**
 
 ![](images/101/02.new.project.detail.png)
 
-9. Select *Empty Project* as template and click **Next**
+9. 选择 *Empty Project*作为模板并点击 **Next**
 
 ![](images/101/03.emptyproject.png)
 
-10. Choose `MARKDOWN` as Wiki Markup and click **Finish**
+10. 选择 `MARKDOWN`作为Wiki标记并单击 **Finish**
 
 ![](images/101/04.finish.png)
 
-11. **Wait** for the Developer Cloud Service Project got provisioned.
+11. **等待** 为开发人员云服务项目进行了预配置.
 
 ![](images/101/05.wait.png)
 
-12. You will see the project main screen once the project is ready. In the right hand pane, make sure you are in the `Repositories` tab. Click the [ **+ New Repository** ] button to create a new Git repository.
+12. 项目准备就绪后，您将看到项目主屏幕. 在右侧窗格中,确保你在 `Repositories` 标签. 点击 [ **+ New Repository** ] 按钮 去创建新的 Git 仓库.
 
 ![](images/101/06.newrepo.png)
 
-13. Enter the following information for the New Repository   
+13.为New Repository输入以下信息   
    Name: `LoyaltyManagement`   
 	 Initial content: select `Import existing repository`   
-   Enter or copy the `https://github.com/APACTestDrive/LoyaltyManagement.git` as the repository address.   
-Click the [ **Create** ] button
+   进入并且复制 `https://github.com/APACTestDrive/LoyaltyManagement.git` 作为存储库地址.   
+点击 [ **Create** ] 按钮
 
 ![](images/101/07.repoinfo.png)
 
-14. You have now created a new Git repository with source code stored within the Developer Cloud Service that is based on an existing repository.
+14. 您现在已经创建了一个新的Git存储库，其中存储了基于现有存储库的开发人员云服务中的源代码.
 
 ![](images/101/08.repocreated.png)
 
 
-You have finished this lab section.
+您已完成本实验部分.
 
 [Procced to Next - 102: Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service](102-JavaAppsLab.md)
 
