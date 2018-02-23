@@ -36,32 +36,32 @@
 
 ![alt text](images/102/07.job.scm.png "Configure source control")
 
-5. Click **Triggers** tab to configure *SCM polling*. Select **Based on SCM polling schedule**. This ensures if any files in the source code repository has changed then the build will be fired.
+5. 单击 **Triggers** 选项卡以配置**SCM polling schedule**. 选择 **Based on SCM polling schedule**. 这确保了如果源代码库中的任何文件已经改变，那么构建将被触发。
 
 ![alt text](images/102/07.scm.trigger.png "Configure source control")
 
-6. Change to **Build Steps** tab and add **Maven 3** build step. Enter **clean install** as Goals and **loyalty/pom.xml** to POM File field. (In case if Build Steps tab just shows **Loading...** for a long time, save the Build configuration then re-open and continue.)
+6. 更改为 **Build Steps** 选项卡并添加**Maven 3**构建步骤. 输入 **clean install** 作为目标 和输入 **loyalty/pom.xml** 到 POM File field. (如果“构建步骤”选项卡长时间显示正在**加载...** ，请保存构建配置，然后重新打开并继续。)
 
 ![alt text](images/102/08.job.maven.png "Add build step")
 
-7. Finally change to Post Build tab and check in the **Archive the artifacts** option. Enter **loyalty/target/\*.war** into **Files To Archive** field.
+7. 最后切换到Post Build选项卡，并检入 **Archive the artifacts** 选项. 输入 **loyalty/target/\*.war** 到 **Files To Archive** 字段.
 
 ![alt text](images/102/09.job.post.png "Post build")
 
-8. Click on **Save** to update the new job configurations. To check the build job click on **Build Now** on the job's detail page. Once the job is done check the archived artifacts. It should be the following: `loyalty.war`
+8. 点击**Save** 以更新新的作业配置. 要检查构建作业 请在作业的详细信息页面上单击**Build Now**. 一旦工作完成，检查存档的工件。 它应该是以下内容: `loyalty.war`
 
 ![alt text](images/102/10.build.artifacts.png "Build artifacts")
 
-Please note the build job contains an extra build step which packs the master loyalty management webapp source artifact into a JEE Web Application Archive (WAR) file loyalty.war. This archive is the desired format to deploy a Java Web application to JCS.
+请注意构建作业包含一个额外的构建步骤，将主要忠诚度管理Web应用程序源文件打包成一个JEE Web应用程序归档（WAR）文件loyalty.war。 该归档文件是将Java Web应用程序部署到JCS所需的格式。
 
-#### Configure Java Cloud service deployment ####
+#### 配置Java云服务部署 ####
 
-9. Now create deployment configuration which enable direct deployment to Java Cloud Service after a successful build job.
-Change to **Deploy** page in DevCS and create **New Configuration** 
+9. 现在，创建部署配置，以便在成功构建作业后直接部署到Java Cloud Service。 
+在DevCS切换到 **Deploy** 页  并且创建 **New Configuration** 
 
 ![alt text](images/102/11.new.deploy.png "New deploy configuration")
 
-10. Set the following properties.
+10.	设置以下属性.
 
 - **Configuration Name**: any name to identify deployment configuration - we use **loyalty**.
 - **Application Name**: application name in JCS. This will determine the application's URL context path - we use **loyalty**.
