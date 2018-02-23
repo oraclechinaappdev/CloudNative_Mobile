@@ -1,15 +1,15 @@
 # ORACLE Cloud Test Drive #
 -----
-## 103: Continuous Integration & Delivery (CICD): Using Brackets, Commit and Push Code Change to Oracle Developer Cloud Service ##
+## 103:持续集成和交付（CI/CD）：使用Brackets，提交和推送代码更改到Oracle开发云服务 ##
 
-### Introduction ###
-You can access Oracle Developer Cloud Service projects from Integrated Development Environments (IDEs) or text editors such as Brackets, Oracle Enterprise Pack for Eclipse (OEPE), Oracle JDeveloper, and NetBeans IDE. The Brackets can connect and exchange with Oracle Developer Cloud Service, which conveniently exposes the most common cloud development tasks from within the editor. 
+### 介绍 ###
+您可以从集成开发环境（IDE）或文本编辑器（如Brackets，Oracle Enterprise Pack for Eclipse（OEPE），Oracle JDeveloper和NetBeans IDE）访问Oracle开发云服务项目。 支架可以与Oracle开发云服务进行连接和交换，从而方便地在编辑器中公开最常见的云开发任务。
 
-This tutorial demonstrates how to:
-- Perform a simple continuous integration and delivery using Oracle Developer Cloud Service with Brackets
+本教程演示如何:
+- 使用带有Brackets的Oracle开发云服务执行简单的持续集成和交付
 
-### About the Exercise Today ###
-In this exercise, we will:
+### 关于今天的练习 ###
+在这个练习中，我们将:
 - Connect Oracle Developer Cloud Service from Brackets, checkout and update project source code
 - Commit and push updated source code from Brackets back to Developer Cloud Service
 - Review the continuous integration and delivery result made by Developer Cloud Service
