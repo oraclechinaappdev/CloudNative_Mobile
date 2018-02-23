@@ -187,91 +187,91 @@ Update: July 5, 2017
 
 ![](images/024.json.png)
 
-10. After fill in the above information, click **Save** button.
+10. 填写完上述信息后，点击**Save** 按钮.
 
 ![](images/025.deploysave.png)
 
-11. In your deployment job, click the gear drop down and select **Start**
+11. 在部署作业中，单击齿轮下拉菜单并选择**Start **
 
 ![](images/026.deploystart.png)
 
-12. The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment succeeded**. Ask for help from your instructor if the deployment fails.
+12. 部署作业将被放入队列进行处理。 等待直到消息 **Starting application** 变成 **Last deployment succeeded**.如果部署失败，请向导师寻求帮助。
 
 ![](images/027.deploysuccess.png)
 
-## 1.3 Login to Oracle Application Container Cloud Service
+## 1.3  登录到Oracle Application Container Cloud Service
 
-1. Navigate back to the Oracle Public Cloud MyService. Click **Dashboard** to return back to main Cloud Service Dashboard.
+1. 导航回到Oracle公有云MyService。. 点击 **Dashboard** 返回到主要Cloud Service仪表板.
 
 ![](images/028.dashboard.png)
 
-2. On the Application Container Cloud Service (ACCS) click the humburger button and select **Open Service Console**
+2. 在应用程序容器云服务（ACCESS）上，单击汉堡按钮并选择**Open Service Console**
 
 ![](images/029.accsgoto.png)
 
-3. On the ACCS Service Console you can view all the deployed applications including our newly create **Offer**.
+3. 在ACCS服务控制台上，您可以查看所有已部署的应用程序，包括我们新创建的 **Offer**.
 
 ![](images/030.accsconsole.png)
 
-## 1.4 CHECK ACCS Service Binding to DBCS
+## 1.4 检查ACCS服务绑定到DBCS
 
-1. Click the **[ Offer ]** to see the ACCS application Details
+1. 单击 **[ Offer ]** 查看ACCS应用程序详细信息
 
 ![](images/031.accsoffer.png)
 
-2. Check the 2nd Tab, **Deployments**
+2. 检查第二个选项卡，部署
 
 ![](images/032.bindings.png)
 
-3. In the **Service Bindings** section, you SHOULD see the database binding. **You do NOT need to change anything.**
+3. 在 **Service Bindings** 部分, 你应该看到数据库绑定。 ** 你不需要改变任何东西** 
 
 ![](images/033.addbinding.png)
 
 
-## 1.5 Verify the Working Service
+## 1.5 验证工作的服务
 
-1. In you application panel, you should see the base URL of your application. Something like https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com
+1. 在您的应用程序面板中，您应该看到您的应用程序的基本URL。就像 https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com
 
 ![](images/037.url.png)
 
-2. Copy and paste the URL into the address bar of a new tab to bring up the application.
+2.将该网址复制并粘贴到新选项卡的地址栏中，以启动该应用程序.
 
-  Be reminded that you will need the REST endpoint and the **offer id** in order to generate a QR code.
+ 请注意，您需要REST端点和**Offer ID** 才能生成QR码。
 
-  The final URL should looks like this
+ 最终的网址应该如下所示
 
 https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ptmgt/v1/offers/10001
 
 ![](images/038.browser.png)
 
 ```diff
-+ you might want to copy your OWN URLs for Offer API, e.g.
++ 您可能需要复制您提供API的OWN网址，例如.
 +   https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ptmgt/v1/offers/
 +   https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/
-+ and put it in, e.g. Notepad
-+   You will need to use it later, e.g. Lab 401.
++ 并放入，例如 记事本
++   您需要稍后使用，例如 Lab 401.
 ```
 
-3. You should be able to get offer details from the Microservice.
+3. 你应该能够从微服务获得提供的细节.
 
 ![](images/039.result.png)
 
-4. Configuration! You've completed the frist microservice. Let's move on the the QR Code Microservice, which is actually very similar to this Part 1.
+4. 恭喜！ 你已经完成了第一个微服务。 让我们继续看QR码微服务，它实际上与第1部分非常相似。
 
-# 2. Create QR Code Generator Microservice
+# 2. 创建QR码生成器 微服务
 
-## 2.1 Create Initial Git Repository - QR Code Generator
+## 2.1 创建初始 Git仓库 - Offer REST API
 
-1. Login to Developer Cloud Service if you haven't done so.
-2. In the left hand navigation panel, click **Project**
+1. 如果您尚未登录到开发者云服务，请登录。.
+2. 2.	在左侧导航面板中，单击**Project**
 
 ![](images/101.project.png)
 
-3. On the right side in the **REPOSITORIES** section, click on **New Repository** to create a new Git Repository.
+3. 3.	在REPOSITORIES部分的右侧，单击New Repository创建一个新的Git Repository。.
 
 ![](images/102.newrepo.png)
 
-4. In the New Repository wizard enter the following information and click **Create**.
+4. 4.	在New Repository向导中输入以下信息，然后单击**Create**.
 
   - **Name:** `QRCodeMicroservice`
   - **Description:** `Microservice to generate Offer QR Code. The QR Code will contains an URL of the actual Offer.`
@@ -279,20 +279,20 @@ https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/pt
   - **Enter the URL:** `https://github.com/APACTestDrive/QRCodeMicroservice.git`
 
 ```diff
--Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
+-请注意，复制粘贴时，您没有在信息之前或之后添加额外的空白区域
 ```
 
 ![](images/103.repoclone.png)
 
-5. You have now created a new Git repository stored within the Developer Cloud Service that is based on an existing repository
+5. 现在，您已经在Developer Cloud Service中创建了一个新的Git存储库，该存储库基于现有的存储库。
 
 ![](images/104.repocreated.png)
 
-## 2.2 Modify the sample program code to reflect your own environment
+## 2.2 修改示例程序代码以反映您自己的环境
 
-### 2.2.1 Clone Project to Bracket Text Editor
+### 2.2.1 克隆项目到 Bracket 文本编辑器
 
-This Lab assumes your have direct connection to public Internet, i.e. **NOT behind proxy**
+本实验室假定您已经直接连接到公共互联网，即不在代理之后
 
 1. Start Brackets Text Editor, by double click the **Brackets** desktop icon, [Start] Menu button, or the correspond short-cut in your computer.
 
