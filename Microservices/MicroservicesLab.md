@@ -89,11 +89,11 @@ Update: July 5, 2017
 
 ![](images/010.steps.png)
 
-7. 在Command textarea中，输入：npm install
+7.  在Command textarea中，输入：npm install
 
 ![](images/011.npm.png)
 
-8. 点击Post Build选项卡。 检查存档的文物。 对于要归档的文件，请输入** / target / *并验证GZIP被选择为压缩类型。
+8.  点击Post Build选项卡。 检查存档的文物。 对于要归档的文件，请输入** / target / *并验证GZIP被选择为压缩类型。
 
 ![](images/012.post.png)
 
