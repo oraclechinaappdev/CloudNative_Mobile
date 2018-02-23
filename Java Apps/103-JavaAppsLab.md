@@ -10,54 +10,53 @@
 
 ### 关于今天的练习 ###
 在这个练习中，我们将:
-- Connect Oracle Developer Cloud Service from Brackets, checkout and update project source code
-- Commit and push updated source code from Brackets back to Developer Cloud Service
-- Review the continuous integration and delivery result made by Developer Cloud Service
+- 从Brackets连接Oracle开发云服务，检出并更新项目源代码
+- 提交并将更新后的Brackets源代码返回到开发云服务
+- 查看Developer Cloud Service所做的持续集成和交付结果
 
-### Prerequisites ###
+### 先决条件 ###
 + [Create Oracle Developer Cloud Service project for Loyalty Management JEE application and deployed to Java Cloud Service WebLogic Server Container](102-JavaAppsLab.md)
 + [Installed Brackets and Git extension](brackets.md)
 
 ----
 
-#### Connect and Obtain Source Code from Developer Cloud Service ####
+#### 连接并从Developer Cloud Service获取源代码 ####
 
-1. Start the Brackets Text Editor, in the `File` pull-down menu, choose `Open Folder`.
+1. 启动Brackets 文本编辑器, 在 `File` 下拉菜单, 选择 `Open Folder`.
 
 ![](images/103/02.openfolder.png)
 
-2. Navigate to select target destination directory to store JEE source code, for example: `D:\oracle`
-   Create a `New Folder`, then name the new folder as `LoyaltyManagement`.  
-   Keep the `LoyaltyManagement` folder selected and click `Select Folder` button at bottom.
+2. 导航到选择目标目标目录以存储JEE源代码, 例如: `D:\oracle`
+   创建一个 `New Folder`,然后将该新文件夹命名为 `LoyaltyManagement`.  
+   保持 `LoyaltyManagement` 文件夹被选中 并点击底部的 `Select Folder` 按钮.
 
 ![](images/103/03.selectfolder.png)
 
-3. Back in Developer Cloud Service dashboard, in your **LoyaltyManagement** Git Repository. Click HTTP to display the Git HTTP URL, click the square `Copy` button on the right to copy the URL.
+3. 返回到开发云服务仪表板中的, 在你的 **LoyaltyManagement** Git 仓库.点击HTTP显示Git HTTP URL, 点击右边的方块复制按钮复制URL。
 
 ![](images/103/04.devcs.git.png)
 
-4. Back in the Bracket editor, click on GIT icon on the right hand side of the editor.
+4. 回到Bracket编辑器，点击编辑器右侧的GIT图标。
 
 ![](images/103/05.brackets.git.png)
 
-5. In the Git panel, click `Clone`.
+5. 在“Git”面板中，单击“克隆”。
 
 ![](images/103/06.brackets.clone.png)
 
-6. Paste the GIT URL that you copied from Developer Cloud Service. Username should be populated automatically. Enter the password and select `Save credentials to remote url`.  
-Click `OK` button at the bottom.
+6. 粘贴您从Developer Cloud Service复制的GIT URL. 用户名应该自动填充. 输入密码并选择将凭证保存到远程URL。点击底部的确定按钮。
 
 ![](images/103/07.brackets.clone1.png)
 
-7. Wait for Brackets to clone your remote project to local folder.
+7. 等待Brackets将您的远程项目克隆到本地文件夹.
 
 ![](images/103/08.brackets.clone2.png)
 
-8. You now have a local copy of the Git Repository.
+8. 你现在有一个Git仓库的本地副本。
 
 ![](images/103/09.brackets.clone3.png)
 
-#### Commit and Push Code Changes ####
+#### 提交和推送代码更改 ####
 
 9. Expand the left nagivation tree and open `welcome.jsp` file (Under loyalty->src->main->webapp->jsp).  
 On the main window, locate line 73 of welcome.jsp source code.
