@@ -58,62 +58,61 @@
 
 #### 提交和推送代码更改 ####
 
-9. Expand the left nagivation tree and open `welcome.jsp` file (Under loyalty->src->main->webapp->jsp).  
-On the main window, locate line 73 of welcome.jsp source code.
+9. 展开左侧导航树并打开welcome.jsp文件（在loyalty-> src-> main-> webapp-> jsp下）。在主窗口中，找到welcome.jsp源代码的第73行
 
 ![](images/103/10.brackets.change.png)
 
-14. Modify the following part:
+10. 修改以下部分：
 
   	<h2>Welcome to the Loyalty Manager !!</h2>
 
-To what you would like to see on the page. For example:
+到你想在页面上看到， 例如：
 
 	<h2><font color="red">APAC Test Drive</font> - Welcome to the Loyalty Manager !!</h2>
 
 ![](images/103/11.brackets.change1.png)
 
-15. Save the file. (Press `Ctrl-S` or choose from pull-down menu `File` > `Save`)
+11. 保存文件。 （按Ctrl-S或从下拉菜单File> Save中选择）
 
 ![](images/103/12.brackets.save.png)
 
-16. Check the box next to Commit to select all modified files - this means the checkbox below (welcome.jsp) will automatically be checked.  
-Click `Commit` button.
+12. 选中提交旁边的复选框，选择所有已修改的文件 - 这意味着下面的复选框（welcome.jsp）将自动被选中。
+    点击提交按钮。
 
 ![](images/103/13.brackets.commit.png)
 
-17. In the pop-up enter the comment: `Changed header` and then click `OK` button. This will commit the changes to your LOCAL GIT REPOSITORY.
+13. 在弹出的输入评论：更改标题，然后单击确定按钮。 这将会改变你的LOCAL GIT REPOSITORY。
 
 ![](images/103/14.brackets.commit1.png)
 
-18. Click `Git Push` icon.
+14. 点击Git Push图标。
 
 ![](images/103/15.brackets.commit2.png)
 
-19. In the pop-up window, leave all defaults and click `OK` button at the bottom.
+15. 在弹出窗口中，保留所有默认值，然后单击底部的确定按钮。
 
 ![](images/103/15.brackets.commit3.png)
 
-20. Once Git Push completes, click `OK` button.
+16. 一旦Git推完成，点击确定按钮。
 
 ![](images/103/16.brackets.done.png)
 
-#### Continuous Integration & Delivery (CICD) ####
+#### 持续集成和交付(CI/CD) ####
 
-18. Now change back to the browser and check the Build page in the Oracle Developer Cloud Service project. You should see that a new build (in our case: *LoyaltyManagementBuild*) has been fired by the Git changes.
+18. 	现在回到浏览器并检查Oracle Developer Cloud Service项目中的Build页面。你应该看到一个新的构建（在我们的例子中：LoyaltyManagementBuild）已经被Git变更触发了.
 
 ![](images/103/21.png)
 
-19. Once the job is done change to the tab to Deploy and you can see that a new deployment has been started too. If you remember the Deployment was configured to redeploy every time when a new successful build artifact is ready.
+19. 作业完成后，切换到“部署”选项卡，您可以看到新部署也已启动。 如果您还记得部署已配置为每当新的成功构建工件准备就绪时重新部署。
 
 ![](images/103/22.png)
 
-20. Now check the changes of the home page of the Loyalty Management application. You should see the changes (red text) on the application's home page.  
-    The Loyalty Management application URL should be in the format of:  
+20. 	现在检查忠诚度管理应用程序主页的变化。 您应该在应用程序的主页上看到更改（红色文本）。
+    忠诚度管理应用程序的URL应采用以下格式:  
 	`https://**<JCS WLS instance IP Adress>**/loyalty/jsp/welcome.jsp`, the JCS WLS instance IP address is the same as **Deploy to JCS** target in DevCS.
 
 ![](images/103/23.png)
 
-You have finished this lab section.
+你已经完成了这个实验部分。
 
 [Back to JavaAppsLab Home](README.md)
