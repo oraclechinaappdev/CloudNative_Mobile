@@ -1,42 +1,42 @@
 Update: July 5, 2017
 
-## 0.1 Introduction
+## 0.1 介绍
 
-This lab is part of the APAC Cloud Test Drive and is the 2nd lab about creating microservices
+此实验室是亚太地区云测试驱动器的一部分，是关于创建微服务的第二个实验室
 
-## 0.2 Objectives
+## 0.2 目标
 
-- Import Code from external Git Repository
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Services
+- 从外部的Git仓库导入代码
+- 使用开发人员云服务和Oracle应用程序容器云服务构建和部署项目
 
-## 0.3 Required Artifacts
+## 0.3 所需的工件
 
-- The following lab requires an Oracle Public Cloud account that will either be applied by yourself or supplied by your instructor.
-- IDE environment and GIT client in your local computer in the **previous lab**. The instructions assume you are using Brackets Editor in your local host computer. **The details of installing Brackets Editor are covered in the previous lab** and can also be found [here](../Java%20Apps/brackets.md).
+- 以下实验需要Oracle公有云帐户，该帐户将由您自己应用或由您的教师提供.
+- IDE环境和GIT客户端在您的本地计算机上的实验室。 说明假定您在本地主机中使用“Brackets编辑器”。 前面的实验中已经介绍了安装Brackets Editor的细节，在这里也可以找到[here](../Java%20Apps/brackets.md).
 
-## 0.4 Special Notes
+## 0.4 特别提示
 
-- Please be careful when you copy-n-paste. Additional **WHITE SPACE** *before* or *after* the information you've copied might cause error.
+- 复制粘贴时请注意。 在复制信息之前或之后的其他WHITE SPACE可能会导致错误.
 
-# 1. Create Offer REST API Microservice
+# 1. 创建Offer REST API微服务
 
-## 1.1 Create Initial Git Repository - Offer REST API
+## 1.1 创建初始 Git仓库 - Offer REST API
 
-1. Login to Developer Cloud Service if you haven't done so. If you are in the Cloud Dashboard, you can use Developer Cloud Service Hamburger Menu to navigate to DevCS.
+1. 如果您尚未登录到开发者云服务，请登录。 如果您位于Cloud Dashboard中，则可以使用Developer Cloud Service汉堡菜单导航到DevCS.
 
 ![](images/001.dashboard.png)
 
-2. The Developer Cloud Service landing page should show the project we've created in the previous lab. Just click the project name and navigate to the project main page.
+2. 开发者云服务登陆页面应该显示我们在之前的实验中创建的项目。 只需点击项目名称，然后导航到项目主页面.
 
 ![](images/001.landing.png)
 
-3. **If you are already in Developer Cloud Service, you can go to project main page by clicking `Project` in the `left hand navigation panel`**  
+3. **如果您已经在Developer Cloud Service中，则可以通过单击左侧导航面板中的“项目”来转到项目主页面**  
 
 ![](images/002.createrepo.png)
 
-4. On the right side in the **REPOSITORIES** section, click on **New Repository** to create a new Git Repository.
+4. 在REPOSITORIES部分的右侧，单击New Repository创建一个新的Git Repository.
 
-5. In the New Repository wizard enter the following information and click **Create**.
+5. 5.	在New Repository向导中输入以下信息，然后单击**Create**.
 
 	- **Name:** `OfferMicroservice`
 	- **Description:** `Microservice to provide REST API of Offer Details`
@@ -44,130 +44,130 @@ This lab is part of the APAC Cloud Test Drive and is the 2nd lab about creating 
 	- **Enter the URL:** `https://github.com/APACTestDrive/OfferMicroservice.git`
 
 ```diff
--Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
+-请注意，复制粘贴时，您没有在信息之前或之后添加额外的空白区域
 ```
 
 ![](images/003.newrepo.png)
 
-6. You have now created a new Git repository stored within the Developer Cloud Service that is based on an existing repository
+6. 现在，您已经在Developer Cloud Service中创建了一个新的Git存储库，该存储库基于现有的存储库
 
 ![](images/004.repo.png)
 
-## 1.2 Create Default Build and Deployment Process - Offer REST API
+## 1.2 创建默认的构建和部署过程 – offer REST API
 
-Now that we have the source code in our Developer Cloud Service managed Git Repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will setup a **shell script** build process in this section.
+现在，我们在开发人员云服务托管的Git存储库中有源代码，我们需要创建一个构建过程，只要向主分支提交，就会触发这个过程。 我们将在本节中设置一个**shell Script**构建过程。.
 
-### 1.2.1 Create Default Build Process - Offer REST API
+### 1.2.1创建默认构建过程 - 提供REST API
 
-1. Click **Build** on the navigation panel to access the build page and click **[+ New Job]**
+1. 单击导航面板上的**Build**以访问构建页面，然后单击 **[+ New Job]**
 
 ![](images/005.navibuild.png)
 
-2. In the New Job popup window, enter `Offer REST API Build` for Job Name and click **Save**.
+2. 在New Job弹出窗口中，输入Offer REST API Build for Job Name，然后单击Save.
 
 ```diff
--Please BE CAREFUL that you have not added extra white space before or after the information
+-请注意，您没有在信息之前或之后添加额外的空白区域
 ```
 
 ![](images/006.newbuildjob.png)
 
-3. You are now placed into the job configuration screen.
+3. 现在被放入作业配置屏幕.
 
 ![](images/007.newjob.png)
 
-4. Click the **Source Control** tab. Select **Git** radio button. In the Repositories section, select **OfferMicroservice.git** from the URL drop down.
+4. 单击源代码管理选项卡。 选择Git单选按钮。 在存储库部分，从URL下拉列表中选择OfferMicroservice.git.
 
 ![](images/008.srcctrl.png)
 
-  **Note:** Make sure you select the Git repository for the Offer REST API Microservice.
+  ****注意**：请确保您为Offer REST API Microservice选择了Git存储库.
 
-5. Click **Triggers** tab. Check **Based on SCM polling schedule**.
+5. 点击触发器标签。 检查基于SCM轮询时间表.
 
 ![](images/009.trigger.png)
 
-6. Click the **Build Steps** tab, click **Add Build Step** and select **Execute shell**.
+6. 单击Build Steps选项卡，单击Add Build Step并选择Execute shell.
 
 ![](images/010.steps.png)
 
-7. In the Command textarea, enter: `npm install`
+7. 在Command textarea中，输入：npm install
 
 ![](images/011.npm.png)
 
-8. Click the **Post Build** tab. Check **Archive the artifacts**. For File to Archive, enter `**/target/*` and verify **GZIP** is chosen as the Compression Type.
+8. 点击Post Build选项卡。 检查存档的文物。 对于要归档的文件，请输入** / target / *并验证GZIP被选择为压缩类型。
 
 ![](images/012.post.png)
 
-9. Click **Save** to complete the configuration.
+9. 单击保存以完成配置.
 
 ![](images/013.save.png)
 
-10. A build should start automatically within 1-2 minutes. If it does not start automatically, click on the **[ Build Now ]** button.
+10. 构建应该在1-2分钟内自动启动。 如果没有自动启动，请点击 **[Build Now]** 按钮.
 
 ![](images/014.buildnow.png)
 
-11. The status will change to something similar to the following diagrams.
+11. 状态将改变为类似于下面的图表.
 
 ![](images/015.queue.png)
 
-You might need to wait for a few minutes before the build job to get started.
+在构建作业开始之前，您可能需要等待几分钟。
 
 ![](images/016.running.png)
 
-12. The build will take serval minutes to complete. Wait for the build to complete before continue to the next step - **as we need the build artifact to create the deployment configuration**.
+12. 构建将需要几分钟才能完成。在继续下一步之前，等待构建完成 - **因为我们需要构建工件来创建部署配置**。
 
 ![](images/017.complete.png)
 
-### 1.2.2 Create Default Deployment Process - Offer REST API
+### 1.2.2 创建默认部署流程 - 提供REST API
 
-1. Click **Deploy** to access the Deployments page and click the **[+ New Configuration]** button.
+1. 1.	单击部署访问部署页面，然后单击 **[+ New Configuration]** 按钮。.
 
 ![](images/018.navideploy.png)
 
-2. Enter the following data:
+2. 输入以下数据:
 
 	- **Configuration Name:** OfferAPIDeploy
 	- **Application Name:** offer
 
 ```diff
--Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
+-请注意，在复制粘贴时，您没有在信息的前面或后面添加额外的空白区域
 ```
 
 ![](images/019.deployname.png)
 
-3. Next to the right hand side of **Deployment Target**, click the **[New]** button and select **Application Container Cloud...**
+3. 在**Deployment Target**的右侧旁边 , 点击 **[New]** 按钮 并且选择 **Application Container Cloud...**
 
 ![](images/020.deployaccs.png)
 
-4. Enter the following information and click **Test Connection**.
+4. 4.	输入以下信息并单击**Test Connection**.
 
-	- **Data Center:** `your datacenter, e.g. em2, em3, etc`
-	- **Identity Domain:** `your identity domain`, e.g. gse00012345, etc
-	- **Username:** `username to login to MyService`, e.g. lisa.jones, etc - that is the username you are using.
-	- **Password:** `password of the cloud user`, that is the password you are using
+	- **Data Center:** `你的数据中心, e.g. em2, em3, etc`
+	- **Identity Domain:** `你的身份域`, e.g. gse00012345, etc
+	- **Username:** `登陆MyService的用户名`, e.g. lisa.jones, etc - that is the username you are using.
+	- **Password:** `用户的密码`, 即您使用的密码
 
 ![](images/021.accsconn.png)
 
-5. If successful, click **[Use Connection]** button  
+5. 如果成功，请单击 **[Use Connection]** 按钮 
 
 ![](images/022.useconn.png)
 
-6. In the ACCS Properties, set
+6. 在“ACCS属性”中设置
 
 	- **Runtime** to `Node`
 	- **Subscription** to `Hourly`
 	- Set **Type** to `Automatic` and **CHECK** Deploy stable build only
 
-  **DOUBLE check the Runtime is Node**
+  **再次检查 Runtime 是Node**
 
 ![](images/023.deploynodejs.png)
 
-7. Select from the **Job**, this name should match the build job above, e.g. `Offer REST API Build`
+7. 从**Job**中选择，该名称应该与上面的构建作业匹配，例如 提供REST API构建`
 
-8. Select from the **Artifact**, this name should match the archive artifact above and the package.json of your source code, e.g. `target/offer.zip`  
+8.从Artifact中选择，该名称应与上面的存档工件和源代码的package.json相匹配，例如target/ offer.zip。
 
 ![](images/024.deployjobname.png)
 
-9. **Check** the `Include ACCS Deployment` box and add the following json.
+9.  **检查** the `Include ACCS Deployment` box 然后添加下面的json.
 
 ```json
 {
