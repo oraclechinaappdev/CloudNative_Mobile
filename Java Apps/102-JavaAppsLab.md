@@ -1,41 +1,38 @@
 # ORACLE Cloud Test Drive #
 -----
-## 102: Define Continuous Integration 'Build' and 'Deploy' Configuration in Oracle Developer Cloud Service ##
+## 102: 在Oracle Developer Cloud Service中定义持续集成“构建”和“部署”配置 ##
 
-### Introduction ###
-This tutorial demonstrates how to:
-- Deploy Loyalty Management application to Java Cloud Service using Oracle Developer Cloud Service 
-The Loyalty Management application is a JEE web application built with simple JSP pages, for enabling marketing manager to create offer campaigns.  
+### 2.2.1	介绍 ###
+本教程演示如何:
+- 使用Oracle开发云服务将忠诚度管理应用程序部署到Java Cloud Service,忠诚度管理应用程序是一个使用简单JSP页面构建的JEE Web应用程序，用于使营销经理能够创建优惠活动。  
 
-### About the Exercise Today ###
-In this exercise, we will:
-- Configure Build Job for the Loyalty Management - A JEE application
-- Configure Java Cloud Service - WebLogic Server deployment in Developer Cloud Service
-- Build and Deploy Loyalty Management Application using Developer Cloud Service
+### 关于练习 ###
+在这个练习中，我们将:
+- 为忠诚度管理配置构建作业 - 一个JEE应用程序
+- 配置Java Cloud Service - Developer Cloud Service中的WebLogic Server部署
+- 使用开发云服务构建和部署忠诚度管理应用程序
 
-### Prerequisites ###
-+ Oracle Public Cloud Service account including Developer Cloud Service and Java Cloud Service
-+ [Create Oracle Developer Cloud Service project for Loyalty Management JEE application](101-JavaAppsLab.md)
+### 先决条件 ###
++ Oracle公有云服务帐户，包括开发云服务和Java云服务
++ [为忠诚度管理JEE应用程序创建Oracle开发者云服务项目](101-JavaAppsLab.md)
 
 ----
 
-#### Configure build job for Loyalty Management application ###
+#### 2.2.4.1	配置忠诚度管理应用程序的构建作业 ###
 
-1. Following from previous lab 101, once the project provisioning is ready let's create the build job to compile and package the Loyalty Management - JEE application to the desired format for Java Cloud Service.
+1. 继上一个实验101之后，一旦项目供应就绪，我们就可以创建构建作业，将忠诚度管理 - JEE应用程序编译并打包为Java云服务所需的格式.
 
-2. Select **Build** item on the left side menu and click the **New Job** button.
+2. 选择左侧菜单上的Build条目，然后单击New Job按钮.
 
 ![alt text](images/102/05.new.job.png "Create new build job")
 
-3. Enter name *LoyaltyManagementBuild* for the new job. Select the *Create a free-style job* option and save.
-On the Main configuration page of the newly created job make sure **Default (The default Java version in the executing environment)** is the selected JDK.
+3. 为新工作输入名字LoyaltyManagementBuild。 选择创建一个自由风格的作业选项并保存。 在新创建的作业的主配置页面上，确保**默认（执行环境中的默认Java版本）**是选定的JDK。.
 
 ![alt text](images/102/06.job.main.png "Configure job")
 
-4. Change to the **Source Control** tab and select **Git**. 
-In the git's properties section select the only one available Git repository which is provided in the list.
-In the Branches section, add and select **master** option in the list. This is to make sure only **master** branch version will be used.
-Leave the advanced settings default.
+4. 切换到 **Source Control** 标签页并且选择 **Git**. 
+在git的属性部分中，选择列表中提供的唯一一个可用的Git存储库.
+在分支部分，在列表中添加并选择**master**选项。 这是为了确保只有**Master**分支版本将被使用。 保留高级设置默认。
 
 ![alt text](images/102/07.job.scm.png "Configure source control")
 
