@@ -73,45 +73,45 @@
 #### 配置凭证以访问ICS上的“Process Offer”服务 ####
 部署在ICS上的“Process Offer”服务被配置为在“集成”实验室中使用“基本身份验证”。 要与“Process Offer”服务集成，您应该在MCS上配置ICS凭证，以便MCS上的连接器有权访问ICS上的“Process Offer”。
 
-1. 在导航窗格上，选择“应用程序” - >“连接器”。 输入“0X”（0X是分配给您的后缀）来搜索由您创建的连接器。 选择“Process Offer 0X”（0X是分配给你的后缀）并点击“打开”。
+1. 从导航窗格中，单击“管理”打开“管理”页面。 向下滚动到底部并点击“钥匙和证书”打开“CSF钥匙和证书”框
 ![](../common/images/mobile/401-CSF_Navigate_To_CSF.png)
 
-2. 在“常规”步骤中，确保“API名称”设置为“ProcessOffer0X”（0X是分配给您的后缀），然后单击“下一步”。
+2. 在“CSF Keys＆Certificates”框中的“CSF Keys”选项卡下，选择“ICS0X”（0X是分配给您的后缀），将“Short Description”设置为“ICS0X”（0X是分配给的后缀 您），并将用户名和密码设置为您在“集成”实验室中使用的ICS域的凭证。 点击“保存并关闭”按钮。
 ![](../common/images/mobile/401-CSF_Update_CSF.png)
 
-#### Test the connector 'Process Offer' ####
+#### 测试连接器'Process Offer' ####
 
-Once the connectors have been imported and configured completely, you can test the connector. In this lab, you will test the connector 'Process Offer'.
+一旦连接器完全导入并完成配置，您就可以测试连接器。 在本实验中，您将测试连接器的“Process Offer”。
 
-1. On the navigation pane, select “Applications” -> “Connectors”. Enter "0X" (0X is the postfix assigned to you) to search for the connectors created by you. Select "Process Offer 0X" (0X is the postfix assigned to you) and click on "Open".
+1. 在导航窗格上，选择“应用程序” - >“连接器”。 输入“0X”（0X是分配给您的后缀）来搜索由您创建的连接器。 选择“Process Offer 0X”（0X是分配给你的后缀）并点击“打开”
 ![](../common/images/mobile/401-Test_Connector_Open_ProcessOffer.png)
 
-2. In 'General' step, make sure that the 'API Name' is set as 'ProcessOffer0X' (0X is the postfix assigned to you), and click 'Next'.
+2. 在“常规”步骤中，确保“API名称”设置为“ProcessOffer0X”（0X是分配给您的后缀），然后单击“下一步”。
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_General.png)
 
-3. In 'Descriptor' step, make sure that the 'Remote URL' is set to the full service URL of the 'Process Offer' service on ICS, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.us2.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. Click 'Next'.
+3. 在“描述符”步骤中，确保将“远程URL”设置为ICS上“流程提供”服务的完整服务URL，例如. `https://integration-<ICS_DOMAIN_NAME>.integration.us2.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. 点击下一步'.
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Descriptor.png)
 
-4. In 'Rules' step, click 'Next' as no rule is used. 
+4. 在“规则”步骤中，单击“下一步”，因为没有使用规则. 
 
-5. In 'Security' step, make sure that security policy "oracle/http_basic_auth_over_ssl_client_policy" is selected, and the csf-key is set to 'ICS0X' (0X is the postfix assigned to you). Click 'Next'.
+5. 在“安全”步骤中，确保选择安全策略“oracle / http_basic_auth_over_ssl_client_policy”，并将csf-key设置为“ICS0X”（0X是分配给您的后缀）。 点击下一步.
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Security.png)
 
-6. Click 'Yes' to save.
+6. 点击“是”保存.
 
    ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Save.png)
 
-7. In 'Test' step, select `POST` as the HTTP method, enter `{"customerid": 66890169,  "offerid": 10001,  "productid": 20001,  "accepted": false}` into the "HTTP Body".
+7. 在“Test”步骤中，选择POST作为HTTP方法，在“HTTP Body”中输入 `{"customerid": 66890169,  "offerid": 10001,  "productid": 20001,  "accepted": false}` .
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Test_1.png)
 
-8. Select your mobile backend (e.g.: `LoyaltyMgmt_MBE0X`) you created from the dropdown list in the “Authentication” section, and click on “Test Endpoint”.
+8. 从“身份验证”部分的下拉列表中选择您创建的移动后端（例如：LoyaltyMgmt_MBE0X），然后单击“测试端点”.
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Test_2.png)
 
-9. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
+9. 您将在页面底部看到一个HTTP 200 OK响应，并将其全部设置.
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Test_Result.png)
 
 
-You have finished this lab successfully.
+你已经成功完成了这个实验.
 
 [Procced to Next - 402: Verify and test custom APIs and implementation](402-MobileLab.md)
 
