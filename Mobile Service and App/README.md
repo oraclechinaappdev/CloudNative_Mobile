@@ -45,34 +45,34 @@
 ### 先决条件 ###
 - 带上你的Android手机.
 - 确保您从教师处收到MBE包文件“package-LoyaltyMgmt_MBE0X.zip”。 文件名中的“0X”应与访问文档中分配给您的后缀匹配。 如果您没有MBE包文件，或者文件名与分配给您的后缀不匹配，请联系指导员以获取正确的文件.
-- In the end of this lab, you will configure your mobile application to work with the MBE created by yourself. You will collect all the settings in a file "Mobile_App_Settings_Sample.json". You can download an example of this file by right clicking on [this link](../common/assets/mobile/Mobile_App_Settings_Sample.json) and select "Save link as...". Once you collect all the settings in this file, you will create a QR code to represent the settings by using the [online QR code generator](http://www.qr-code-generator.com/).
+- 在本实验结束时，您将配置您的移动应用程序以使用您自己创建的MBE.您将收集文件“Mobile_App_Settings_Sample.json”中的所有设置. 您可以通过右键单击此链接[this link](../common/assets/mobile/Mobile_App_Settings_Sample.json) 载该文件的示例，然后选择“将链接另存为...”.一旦你收集了这个文件中的所有设置，你将创建一个二维码来表示使用 [online QR code generator](http://www.qr-code-generator.com/) 的设置.
 - 在您的Android手机上安装“Cafe Supremo”移动应用程序。 如果您的手机上安装了QR码扫描器，请通过扫描手机中的以下二维码来安装移动应用程序。
 
    ![](../common/images/mobile/400-Install_App_QRcode.png)
 
 否则，请通过右键单击此[this link](../common/assets/mobile/Cafe_Supremo.apk?raw=true).  选择“保存链接为...”下载。 按照以下说明安装移动应用程序。
 
-1. Connect your device to your computer and copy an Android APK file called “Cafe_Supremo.apk” to SD card or internal storage of your device.
+1. 将设备连接到电脑，然后将名为“Cafe_Supremo.apk”的Android APK文件复制到设备的SD卡或内部存储器中.
 
    ![](../common/images/mobile/401-Install_App_1.png)
 
-2. Enable Unknown Sources in your Android device: Go to "Settings" >>" Security ">> Check the box "Unknown sources". (FYI, the menu will be slightly different by Android versions.)
+2. 在您的Android设备中启用未知来源：转到“设置”>>“安全”>>选中“未知来源”框。 （仅供参考，Android版本的菜单略有不同。）
 
    ![](../common/images/mobile/401-Install_App_2.png)
 
-3. Open a file manager on your Android device. 
+3. 在Android设备上打开文件管理器 
 
    ![](../common/images/mobile/401-Install_App_3.png)
 
-4. Go to the same location where you put the “Cafe_Supremo.apk” file and Click the file to install. The below image shows Android APK files in case you put them in the folder called “Download”.
+4. 转到放置“Cafe_Supremo.apk”文件的相同位置，然后单击要安装的文件。 下面的图片显示Android APK文件，以防您将其放在名为“下载”的文件夹中.
 
    ![](../common/images/mobile/401-Install_App_4.png)
 
-5. Press “Install” button.
+5. 按“安装”按钮。
 
    ![](../common/images/mobile/401-Install_App_5.png)
 
-6. Allow all permissions the “Café Supremo” mobile application requires by clicking “CONFIRM” button. Now you have finished the installation of the mobile application.
+6. 通过点击“CONFIRM”按钮，允许“CaféSupremo”移动应用程序需要的所有权限。 现在您已经完成了移动应用程序的安装。
 
    ![](../common/images/mobile/401-Install_App_6.png)
 
