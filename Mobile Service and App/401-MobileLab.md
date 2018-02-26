@@ -6,58 +6,58 @@
 ### Introduction ###
 ![](../common/images/mobile/402-Connectors_Overview.png)
 
-Connectors allow you to declaratively create APIs that simplify access to and standardize use of backend systems (such as enterprise middleware) and web services. Oracle MCS provides different types of connectors to simplify integration with different types of backend systems, including REST connector, SOAP connector, Oracle Integration Cloud Service (ICS) connector, and Oracle Fusion Application connector. In this lab, you will use the REST connector to integrate with the three REST services that are created in the microservices and integration labs.
+连接器允许您声明性地创建API，以简化对后端系统（如企业中间件）和Web服务的使用的访问和标准化。 Oracle MCS提供了不同类型的连接器，以简化与不同类型的后端系统（包括REST连接器，SOAP连接器，Oracle集成云服务（ICS）连接器和Oracle Fusion Application连接器）的集成。 在本实验中，您将使用REST连接器来集成在微服务和集成实验室中创建的三个REST服务。
 
-Once connectors have been created, they can be used in custom APIs (e.g. the Loyalty Mgmt APi that you will create later), and exposed to mobile applications.
+一旦创建了连接器，就可以将其用于自定义API（例如，稍后将创建的Loyalty Mgmt APi），并将其暴露给移动应用程序。
 
 ![](../common/images/mobile/402-Connectors_Mechanism.png)
 
-### About the Exercise Today ###
-There are 3 connectors to be created in this lab, 2 of them integrate with the microservices on ACCS to query offers and generate QR code, while the last connector integrates with the service on ICS to accept or reject offer and update the existing CRM.
+### 关于本实验 ###
+在这个实验中有3个连接器被创建，其中2个与ACCS上的微服务集成以查询报价并生成QR码，而最后一个连接器与ICS上的服务集成以接受或拒绝报价并更新现有的CRM。
 
-To create the above 3 Connectors, you will:
-- Import the MBE package, which include the 3 connectors, together with the custom API and mobile backend that you will verify and configure later.
-- Configure the connectors to use the correct URLs and credential to integrate with the backend services.
-- Take "Process Offer" connector as an example, test and verify the result of the connector
+要创建上述3个连接器，您将：:
+- 导入包含3个连接器的MBE软件包，以及稍后将验证和配置的自定义API和移动后端r.
+- 配置连接器以使用正确的URL和凭证与后端服务集成.
+- 以“Process Offer”连接器为例，测试并验证连接器的结果
 
-### Prerequisites ###
-- Completed 'microservices' and 'integration' labs to expose services on ACCS and ICS respectively.
+### 先决条件 ###
+- 完成“微服务”和“集成”实验室，分别在ACCS和ICS上提供服务.
 
-#### Import the MBE package ####
+#### 导入MBE包 ####
 
-1. Sign in to Mobile Cloud Service by using the **Mobile Cloud Service \(MCS\)** identity domain Id and credential in the Access Document. You should use the **Admin User** to sign to the Mobile Cloud Service, and use the **Mobile User** to sign to the Cafe Supremo Mobile App.
+1. 通过访问文档中的移动云服务（MCS）身份域ID和凭证登录到Mobile Cloud Service。 您应该使用管理员用户签署移动云服务，并使用移动用户签署到Cafe Supremo移动应用程序.
 
-2. In the dashboard screen, click on "Mobile Environment Service".
+2. 在仪表板屏幕中，点击“移动环境服务”.
 ![](../common/images/mobile/400-MobileEnvService.png)
 
-3. In the service details screen, click on the link of "Service Instance URL" to access the MCS Portal.
+3. 在服务详细信息屏幕上，单击“服务实例URL”链接访问MCS门户.
 ![](../common/images/mobile/400-MCS_ServiceInstanceURL.png)
 
-4. In MCS Portal, click on the hamburger icon located at the left top corner of the service introduction page. From the navigation pane, select “Applications” -> “Packages”, and click on the “New Import” green button.
+4. 在MCS Portal中，点击位于服务介绍页面左上角的汉堡包图标。 从导航窗格中，选择“应用程序” - >“包”，然后单击“新导入”绿色按钮.
 ![](../common/images/mobile/401-New_Import_Package.png)
 
-5. Click on "Choose a package file " and select the MBE package file "package-LoyaltyMgmt_MBE0X.zip" with the correct postfix assigned to you.
+5. 点击“选择一个包文件”，并选择正确的后缀分配给你的MBE包文件“package-LoyaltyMgmt_MBE0X.zip”.
 ![](../common/images/mobile/401-Import_Package_Select_File.png)
 
-6. Once the file has been uploaded, click 'Next'.
+6. 文件上传完成后，点击“下一步”.
 ![](../common/images/mobile/401-Import_Package_File_Validated.png)
 
-7. On the 'confirm' step, the contents of the package are shown. The package should include Mobile Backend 'LoyaltyMgmt_MBE0X', Client 'MyAndroidClient0X', API 'LoyaltyMgmt0X', API implementation 'LoyaltyMgmt03', and 3 connectors 'GenerateQRCode0X', 'ProcessOffer0X', and 'QueryOffers03'. Make sure the postfix is correct in each object to be imported. Click 'Next'
+7. 7.	在“确认”步骤中，显示包的内容。 该软件包应该包括Mobile Backend'LoyaltyMgmt_MBE0X'，客户'MyAndroidClient0X'，API'LoyaltyMgmt0X'，API实现'LoyaltyMgmt03'，以及3个连接器'GenerateQRCode0X'，'ProcessOffer0X'和'QueryOffers03'。 确保每个要导入的对象中的后缀都是正确的。 点击下一步
 ![](../common/images/mobile/401-Import_Package_Confirm.png)
 
-8. On the 'Import Results' step, verify all objects have been imported successfully, except the user realm 'Default' which already exists. Click 'Next'.
+8. 在“导入结果”步骤中，验证所有对象都已成功导入，但用户领域“Default”已经存在。 点击下一步'。
 ![](../common/images/mobile/401-Import_Package_Results.png)
 
-9. On the 'Policies' step, select the policy '*.connector/GenerateQRCode0X(1.0).Connector_Endpoint' and click on 'Edit'.
+9. 在“策略”步骤中，选择策略“* .connector / GenerateQRCode0X（1.0）.Connector_Endpoint”，然后单击“编辑”.
 ![](../common/images/mobile/401-Import_Package_Select_GenerateQRCode_Endpoint.png)
 
-10. Set a custom value as the Host URL of the QR code service deployed on ACCS, e.g. `https://qrcodegenerator-<ACCS_DOMAIN_NAME>.apaas.<DATACENTER>.oraclecloud.com`. Click 'Save'.
+10.将自定义值设置为部署在ACCS上的QR码服务的主机URL，例如 `https://qrcodegenerator-<ACCS_DOMAIN_NAME>.apaas.<DATACENTER>.oraclecloud.com`. 点击“保存”.
 ![](../common/images/mobile/401-Import_Package_Update_GenerateQRCode_Endpoint.png)
 
-11. Back in the 'Policies' step, select the policy '*.connector/QueryOffers0X(1.0).Connector_Endpoint' and click on 'Edit'.
+11. 回到“策略”步骤，选择策略'* .connector / QueryOffers0X（1.0）.Connector_Endpoint'并点击'编辑'.
 ![](../common/images/mobile/401-Import_Package_Select_QueryOffers_Endpoint.png)
 
-12. Set a custom value as the Host URL of the offer service deployed on ACCS, e.g. `https://offer-<ACCS_DOMAIN_NAME>.apaas.<DATACENTER>.oraclecloud.com`. Click 'Save'.
+12. 12.	将自定义值设置为部署在ACCS上的要约服务的主机URL，例如 `https://offer-<ACCS_DOMAIN_NAME>.apaas.<DATACENTER>.oraclecloud.com`. 点击“保存”
 ![](../common/images/mobile/401-Import_Package_Update_QueryOffers_Endpoint.png)
 
 13. Back in the 'Policies' step, select the policy '*.connector/ProcessOffer0X(1.0).Connector_Endpoint' and click on 'Edit'.
