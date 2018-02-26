@@ -81,19 +81,19 @@
 # Lab Exercise: #
 Let's explore the Mobile Service and Application Lab. Please click the below link to start your lab.
 
-## 401: Import MBE package and configure connectors for external services ##
+## 401: 导入MBE包并为外部服务配置连接器 ##
 
 [Click Here.](401-MobileLab.md)
 
-## 402: Verify and test custom APIs and implementation ##
+## 402: 验证并测试自定义的API和实现 ##
 
 [Click Here.](402-MobileLab.md)
 
-## 403: Set up Push Notification and configure the mobile app ##
+## 403: 设置推送通知并配置移动应用程序 ##
 
 [Click Here.](403-MobileLab.md)
 
-## 404: Track customer behaviors [Optional] ##
+## 404: 跟踪客户行为[可选] ##
 
 [Click Here.](404-MobileLab.md)
 
