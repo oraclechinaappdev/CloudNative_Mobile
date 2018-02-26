@@ -1,7 +1,7 @@
 
 # ORACLE Cloud Test Drive #
 -----
-## 401: Import MBE package and configure connectors for external services ##
+## 401: 导入MBE包并为外部服务配置连接器 ##
 
 ### Introduction ###
 ![](../common/images/mobile/402-Connectors_Overview.png)
@@ -57,26 +57,26 @@
 11. 回到“策略”步骤，选择策略'* .connector / QueryOffers0X（1.0）.Connector_Endpoint'并点击'编辑'.
 ![](../common/images/mobile/401-Import_Package_Select_QueryOffers_Endpoint.png)
 
-12. 12.	将自定义值设置为部署在ACCS上的要约服务的主机URL，例如 `https://offer-<ACCS_DOMAIN_NAME>.apaas.<DATACENTER>.oraclecloud.com`. 点击“保存”
+12. 将自定义值设置为部署在ACCS上的要约服务的主机URL，例如 `https://offer-<ACCS_DOMAIN_NAME>.apaas.<DATACENTER>.oraclecloud.com`. 点击“保存”
 ![](../common/images/mobile/401-Import_Package_Update_QueryOffers_Endpoint.png)
 
-13. Back in the 'Policies' step, select the policy '*.connector/ProcessOffer0X(1.0).Connector_Endpoint' and click on 'Edit'.
+13. 回到“策略”步骤，选择策略'* .connector / ProcessOffer0X（1.0）.Connector_Endpoint'并点击'编辑'.
 ![](../common/images/mobile/401-Import_Package_Select_ProcessOffer_Endpoint.png)
 
-14. Set a custom value as the full service URL of the 'Process Offer' service deployed on ICS, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.<DATACENTER>.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. Click 'Save'.
+14. 将自定义值设置为部署在ICS上的“Process Offer”服务的完整服务网址，例如. `https://integration-<ICS_DOMAIN_NAME>.integration.<DATACENTER>.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. 点击“保存”.
 ![](../common/images/mobile/401-Import_Package_Update_ProcessOffer_Endpoint.png)
 
-15. Back in the 'Policies' step, verify that you have successfully set new values for all three connector endpoint policies, and click 'Update' to complete importing the package.
+15. 返回到“策略”步骤，验证是否已成功为所有三个连接器端点策略设置了新值，然后单击“更新”完成导入包。
 ![](../common/images/mobile/401-Import_Package_Complete_Update_Policies.png)
 
 
-#### Configure credential to access 'Process Offer' service on ICS ####
-The 'Process Offer' service deployed on ICS is configured to use 'Basic Authentication' in the 'integrations' lab. To integrate with the 'Process Offer' service, you should configure the ICS credential on MCS so that the connector on MCS is authorized to access the 'Process Offer' on ICS.
+#### 配置凭证以访问ICS上的“Process Offer”服务 ####
+部署在ICS上的“Process Offer”服务被配置为在“集成”实验室中使用“基本身份验证”。 要与“Process Offer”服务集成，您应该在MCS上配置ICS凭证，以便MCS上的连接器有权访问ICS上的“Process Offer”。
 
-1. From the navigation pane, click on “Administration” to open the "Administration" page. Scroll down to the bottom and click on "Keys & Certificates" to open the "CSF Keys & Certificates" box.
+1. 在导航窗格上，选择“应用程序” - >“连接器”。 输入“0X”（0X是分配给您的后缀）来搜索由您创建的连接器。 选择“Process Offer 0X”（0X是分配给你的后缀）并点击“打开”。
 ![](../common/images/mobile/401-CSF_Navigate_To_CSF.png)
 
-2. In the "CSF Keys & Certificates" box, under tab "CSF Keys", select the key "ICS0X" (0X is the postfix assigned to you), set "Short Description" to be "ICS0X" (0X is the postfix assigned to you), and set the user name and password to be the credential of the ICS domain, that you use in the "integrations" lab. Click "Save and Close" button.
+2. 在“常规”步骤中，确保“API名称”设置为“ProcessOffer0X”（0X是分配给您的后缀），然后单击“下一步”。
 ![](../common/images/mobile/401-CSF_Update_CSF.png)
 
 #### Test the connector 'Process Offer' ####
