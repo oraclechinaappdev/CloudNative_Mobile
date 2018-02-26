@@ -1,56 +1,56 @@
 
 # ORACLE Cloud Test Drive #
 
-## Introduction ##
-We have huge reliance on mobile services for our daily life. Due to this trend, enterprises are eager to build more and more mobile applications for better customer experiences, operational excellences and higher business values in their businesses. Therefore, we can say that Mobile is the key of Digital Transformation. And mobile application development in businesses is much more of a reality – Let's see what challenges of mobile application development in terms of business and technical view are.
+## 介绍 ##
+我们在日常生活中非常依赖移动服务。 由于这一趋势，企业迫切希望能够建立更多的移动应用程序，以改善客户体验，实现卓越运营并在业务中实现更高的业务价值。 因此，可以说移动是数字化转型的关键。 移动应用程序开发更加符合实际 - 让我们看看移动应用程序开发在业务和技术方面面临的挑战是什么。
 
-### Technical Challenges in Mobile ###
-As well as Business Challenges, enterprises have some of difficulties in developing mobile applications. To develop mobile applications, we need to have the expertise in:
-+ Developing to and supporting multiple platforms (Android, iOS, Windows, etc.)
-+ Prepare environments for dev, test and production
-+ How to monitor and analyze mobile services
-+ Security and identity protocols and policies to different backends
-+ Integration with a variety of backends
-+ What tools do you use to build them?
+### 移动技术的挑战 ###
+除了业务挑战，企业在开发移动应用程序方面还有一些困难。 要开发移动应用程序，我们需要具备以下方面的专业知识:
++ 开发并支持多种平台（Android，iOS，Windows等）
++ 为开发，测试和生产准备环境
++ 如何监控和分析移动服务
++ 到不同的后端的安全和身份协议和政策
++ 与各种后端整合
++ 你用什么工具来构建它们?
 ![](../common/images/mobile/Technical_Challenges_in_Mobile.PNG)
 
-## Oracle Mobile Solution Strategy ##
-To overcome the above challenges, Oracle encourages developers to use any of the popular tools available – whether it’s native development with iOS and Android, to 3rd party and open frameworks like Ionic, Angular, Sencha, and Xamarin. We call it "Mobile Client Agnostic". Oracle also incorporate mobile services that offer data sync, storage, location services, messaging, access to local services like camera, contacts, GPS, etc. There’s a trend towards low code, no code development - Oracle supports this trendy tool called MAX (Mobile Application Accelerator) as part of Mobile Cloud Service (MCS).
+## Oracle移动解决方案战略 ##
+为了克服上述挑战，Oracle鼓励开发人员使用任何可用的流行工具 - 无论是iOS和Android的本地开发，还是第三方和开放式框架，如Ionic，Angular，Sencha和Xamarin。 我们称之为“移动客户端不可知论者”。 甲骨文还整合了提供数据同步，存储，位置服务，消息传递，访问本地服务（如相机，通讯录，GPS等）的移动服务。低代码，无代码开发的趋势 - Oracle支持这种名为MAX（Mobile 应用程序加速器）作为移动云服务（MCS）的一部分。
 ![](../common/images/mobile/Oracle_Mobile_Solution_Strategy.PNG)
 
-In summary, Oracle provides end to end solution to give you overcoming notable business and technical challenges.
+总之，Oracle提供了端到端的解决方案，可以帮助您克服重大的业务和技术挑战
 
-### Oracle Mobile Services ###
-Here you can see which mobile services are ready for you through just accessing Oracle MCS (Mobile Cloud Service) as below:
-+ Out of the box mobile services (Platform APIs): We are providing prebuilt, tested and optimized mobile services like analytics, push notification, offline data synchronization, location, object storage, database, app polices, API management, integration management, security and user management, and more features like intelligent bot are coming.
-+ In addition to the Platform APIs, you can develop custom APIs and code to extend your mobile services. (e.g.: SNS integration, Google Map integration, external system integration, etc.) In other words, mobile applications can call custom APIs as wells as platform APIs to interact various data sources.
-+ For client IDEs to develop mobile applications, we can support any IDE as well as mobile frameworks like Oracle MAX (Low code development), JET (JavaScript-based Hybrid App Dev.) and MAF (Java-based Hybrid App Dev.)
+### Oracle移动服务 ###
+在这里您可以通过访问Oracle MCS（移动云服务）来查看哪些移动服务已经准备就绪，如下所示:
++ 开箱即用的移动服务（平台API）：我们提供分析，推送通知，离线数据同步，位置，对象存储，数据库，应用策略，API管理，集成管理，安全性和用户等预构建，测试和优化的移动服务 管理，以及智能机器人等更多功能即将到来.
++ 除了平台API之外，您还可以开发定制的API和代码来扩展您的移动服务。 （例如：SNS集成，Google Map集成，外部系统集成等）。换句话说，移动应用程序可以调用自定义API以及平台API来交互各种数据源.
++ 对于客户端IDE来开发移动应用程序，我们可以支持任何IDE以及像Oracle MAX（低代码开发），JET（基于JavaScript的混合应用程序开发）和MAF（基于Java的混合应用程序开发）的移动框架
 
 ![](../common/images/mobile/Oracle_Mobile_Services.PNG)
 
-If you want to know about more details on the above mobile services, please refer to [the following link](https://docs.oracle.com/en/cloud/paas/mobile-cloud/index.html).
+如果您想了解更多有关上述移动服务的详细信息，请参阅 [the following link](https://docs.oracle.com/en/cloud/paas/mobile-cloud/index.html).
 
-### About the Exercise Today ###
-The hard part of mobile development is integration and managing all server-side services. In this exercise, you will see how easily you can enable/develop mobile services like push notification, API creation and integrations with external services to implement a mobile application called "Cafe Supremo" for loyalty management using Oracle MCS (Mobile Cloud Service).
+### 关于练习 ###
+移动开发的难点在于整合和管理所有的服务器端服务。 在本练习中，您将看到如何轻松地启用/开发移动服务，如推送通知，API创建和与外部服务的集成，以实现使用Oracle MCS（移动云服务）进行忠诚度管理的“Cafe Supremo”移动应用程序.
 
-For the loyalty management mobile application, you can make it all work and play nicely together using platform APIs (out of box mobile services) and custom APIs for external integrations by doing the below jobs through this lab.
-- Import MBE (Mobile BackEnd) package and configure connectors to integrate external services, including the microservices on ACCS to query offers and generate QR code, and the service on ICS to accept or reject offer and update the existing CRM.
-- Verify the endpoints and the implementation of the custom API. The custom API is imported in the MBE package, and leverage the connectors to interact with the external services.
-- Set up Push Notification, and configure the Cafe Supremo mobile app to work with the MBE imported.
-- Track customer behaviors like "Offer Accept by users" using custom analytics report. **[Note]** this section is optional. You can skip this section first, and come back after you complete all the other sections.
+对于忠诚度管理移动应用程序，您可以使用平台API（开箱即用的移动服务）和自定义API（通过本实验室的下列作业）进行外部集成，使其一切工作并良好地一起玩.
+- 导入MBE（Mobile BackEnd）包并配置连接器以集成外部服务，包括ACCS上的微服务以查询提供并生成QR代码，以及ICS上的服务接受或拒绝报价并更新现有的CRM.
+- 验证端点和自定义API的实现。 自定义API被导入到MBE包中，并利用连接器与外部服务进行交互.
+- 设置推送通知，并将Cafe Supremo移动应用程序配置为使用导入的MBE.
+- 跟踪客户的行为，如“用户提供接受”使用自定义分析报告。 [注]这部分是可选的。 您可以先跳过此部分，然后在完成所有其他部分之后再回来.
 
 ![](../common/images/mobile/CTD_About_Lab_Mobile.PNG)
 
 
-### Prerequisites ###
-- Bring your Android phone.
-- Make sure you receive the MBE package file "package-LoyaltyMgmt_MBE0X.zip" from the instructor. "0X" in the file name should matches the postfix assigned to you in the access document. If you don't have the MBE package file or the file name doesn't match the postfix assigned to you, please contact the instructor to get the right file.
+### 先决条件 ###
+- 带上你的Android手机.
+- 确保您从教师处收到MBE包文件“package-LoyaltyMgmt_MBE0X.zip”。 文件名中的“0X”应与访问文档中分配给您的后缀匹配。 如果您没有MBE包文件，或者文件名与分配给您的后缀不匹配，请联系指导员以获取正确的文件.
 - In the end of this lab, you will configure your mobile application to work with the MBE created by yourself. You will collect all the settings in a file "Mobile_App_Settings_Sample.json". You can download an example of this file by right clicking on [this link](../common/assets/mobile/Mobile_App_Settings_Sample.json) and select "Save link as...". Once you collect all the settings in this file, you will create a QR code to represent the settings by using the [online QR code generator](http://www.qr-code-generator.com/).
-- Install "Cafe Supremo" mobile application on you Android phone. If you have QR code scanner installed on your phone, install the mobile application by scanning the following QR code from your phone.
+- 在您的Android手机上安装“Cafe Supremo”移动应用程序。 如果您的手机上安装了QR码扫描器，请通过扫描手机中的以下二维码来安装移动应用程序。
 
    ![](../common/images/mobile/400-Install_App_QRcode.png)
 
-Otherwise, download the app file by right clicking on [this link](../common/assets/mobile/Cafe_Supremo.apk?raw=true). Select "Save link as..." to download it. Follow below instructions to install the mobile application.
+否则，请通过右键单击此[this link](../common/assets/mobile/Cafe_Supremo.apk?raw=true).  选择“保存链接为...”下载。 按照以下说明安装移动应用程序。
 
 1. Connect your device to your computer and copy an Android APK file called “Cafe_Supremo.apk” to SD card or internal storage of your device.
 
