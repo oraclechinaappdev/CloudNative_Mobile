@@ -1,26 +1,26 @@
 # ORACLE Cloud Test Drive #
 -----
-## 302: Import and Define Connections for CRM Customer Activity Service and REST Service Exposure ##
+## 302: 导入和定义CRM客户活动服务和REST服务暴露的连接 ##
 
-### Introduction ###
-This tutorial demonstrates how to:
-- Import and define ICS connections for a REST trigger service exposure and invoke an external SOAP service
+### 介绍 ###
+本教程演示如何:
+- 为REST触发器服务公开导入和定义ICS连接并调用外部SOAP服务
 
-### About the Exercise Today ###
-In this exercise, we will:
-- Using the web-based click and configure techniques to import and define ICS connection resources: **SOAP** and **REST** respectively.
+### 关于今天的练习 ###
+在这个练习中，我们将:
+- 使用基于Web的点击和配置技术分别导入和定义ICS连接资源：SOAP和REST.
 
-### Prerequisites ###
-- Oracle Public Cloud Service account including Integration Cloud Service
-- An Integration Archive File (IAR) name as `XXX_ICS_INTMGT_01_lab.iar` distributed by instructor
+### 先决条件 ###
+- Oracle公有云服务帐户，包括集成云服务
+- 由教师分发的集成档案文件（IAR）名称为XXX_ICS_INTMGT_01_lab.iar
 
-#### Import Integration Cloud Service Project Artifact ####
+#### 导入集成云服务项目工件 ####
 
-1. Go to **Integrations** Summary Page by click on the `Integrations` blue icon.
+1. 点击集成蓝色图标，进入集成摘要页面.
 
 ![](images/302/01.home_integrate.png)
 
-Alternatively, you can go to **Integrations** Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Integrations`.
+或者，您也可以点击左上角的汉堡包图标进入集成摘要页面，点击设计器，然后点击集成。
 
 ![](images/302/02.home_hamburger.png)
 
@@ -28,106 +28,105 @@ Alternatively, you can go to **Integrations** Summary Page by click the hamburge
 
 ![](images/302/01.home_hamburger_integrate.png)
 
-2. Click `Import` on the top right corner, the **Import Integration?** dialog window appears. Click `Browse` button.
+2. 点击右上角的导入，导入集成？ 出现对话窗口。 点击浏览按钮
 
 ![](images/302/02.integration_import.png)
 
-3. Browse and open your machine local directory to select the *IAR* file provided by instructor previously, then click `Import` button.
+3. 浏览并打开机器本地目录以选择先前由教师提供的IAR文件，然后单击导入按钮.
 
 ![](images/302/02.integration_import1.png)
 
-4. You should find a green dialog text area about **Integration was imported successfully** and the newly imported entity named **XXX_ICS_INTMGT (1.0)** shown on the integration list.
+4. 您应该找到一个关于集成已导入成功的绿色对话框文本区域和集成列表中显示的名为XXX_ICS_INTMGT（1.0）的新导入实体.
 
 ![](images/302/02.integration_import2.png)
 
-You have successfully imported a set of partial pre-built artifacts. We will walk-thru what has been built and complete the remaining part.  
+您已成功导入一组部分预构建的工件。 我们将穿过已经建成的东西，完成剩下的部分。
 
-#### Define SOAP Connection for CRM Customer Activity Service ####
+#### 定义CRM客户活动服务的SOAP连接 ####
 
-5. Go to **Connections** Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Connections`.
+5. 点击左上角的汉堡包图标，点击设计器，然后点击连接.
 
 ![](images/302/04.home_hamburger_connections.png)
 
-6. In the home page of **Connections**, you should be able to locate the newly imported connection entities named as **XXX_CRM_CustomerService** and **XXX_ICSINTMGT_ProcessOffer** respectively.
+6. 在Connections的主页中，您应该能够找到分别名为XXX_CRM_CustomerService和XXX_ICSINTMGT_ProcessOffer的新导入的连接实体.
 
 ![](images/302/05.connection_import.png)
 
-7. Next, on the row of **XXX_CRM_CustomerService** Connection, click the hamburger menu icon at the right side and select `Edit` like below.
+7. 接下来，在XXX_CRM_CustomerService连接的行上，点击右侧的汉堡包菜单图标，然后选择如下所示的编辑.
 
 ![](images/302/05.connection_import1.png)
 
-8. The **XXX_CRM_CustomerService** Connection detail page is shown. As stated, this is a *SOAP* protocol based connection which will *Invoke* a service endpoint. We are going to define this connection detail.
+8. 显示XXX_CRM_CustomerService连接详细信息页面。 如前所述，这是一个基于SOAP协议的连接，它将调用一个服务端点。 我们将要定义这个连接细节.
 
 ![](images/302/07.connection_initial.png)
 
-9. Scroll down to **Connection Properties** section, click `Configure Connectivity` button.
+9. 向下滚动到连接属性部分，单击配置连接按钮.
 
 ![](images/302/05.connection_import2.png)
 
-10. The **Connection Properties** dialog window is shown. Fill in the **WSDL URL** by providing **Property Value** in the format of:
+10. 显示连接属性对话窗口。 通过提供以下格式的属性值来填写WSDL URL:
     * **http://\<Your Java Cloud Service Instance IP Address\>/crm/CustomerServicePort?WSDL**  
-	*\*If you forget your JCS instance IP address, [Click Here!](../../Java%20Apps/java.cloud.md)*  
-	Leave other properties **empty** as they are optional and not required in this lab exercise.
+	*\*如果您忘记了您的JCS实例IP地址，请点击这里 [Click Here!](../../Java%20Apps/java.cloud.md)*  
+	将其他属性留空，因为它们是可选的，在本练习中不需要.
 	
 ![](images/302/08.connection_properties.png)
 
-11. Leave other property settings unchanged. Click `OK` button to save changes made.  
-Notice that `No Security Policy` is selected as this is required by the endpoint interface.  
+11. 保持其他属性设置不变。 单击确定按钮保存所做的更改.  
+请注意，没有选择安全策略，因为这是端点接口所要求的.  
 
-12. From the top of **SOAP Connection** page, click `Test` from top right corner, the test **Confirmation** dialog window is shown.  
-	Click `Validate and Test` button.
+12. 在SOAP Connection页面的顶部，点击右上角的Test，显示Test Confirmation对话窗口.  
+	点击验证和测试按钮.
 
 ![](images/302/10.connection_test.png)
 
-13. You should find a green dialog text area about **Connection was tested successfully**.
+13. 你应该找到一个关于连接测试成功的绿色对话框.
 
 ![](images/302/11.connection_testresult.png)
 
-14. Next, click `Save` from top right corner.
+14. 接下来，点击右上角的保存.
 
 ![](images/302/12.connection_save.png)
 
-15. The **Save Changes?** dialog window appears to warn about reactivating integrations, just click `Save` to confirm and close the dialog.
+15. 保存更改？ 出现对话窗口警告重新激活集成，只需点击保存确认并关闭对话框
 
 ![](images/302/12.connection_save1.png)
 
-16. You should find a green dialog text area about **Connection was saved successfully**.  
-    Click `Close` to exit and back to **Connection** Summary Page.
+16. 您应该找到一个关于连接已成功保存的绿色对话框文本区域.  
+    单击关闭退出并返回到连接摘要页面.
 
 ![](images/302/13.connection_saveresult.png)
 
-17. A *SOAP Connection* to CRM Customer Service was updated and ready to be \*invoked\*.  
+17. 与CRM客户服务的SOAP连接已更新并准备好被*调用*.  
 
-#### Define REST Connection for ICS Service Exposure ####
+#### 定义ICS服务暴露的REST连接 ####
 
-18. Now we are going to update the **XXX_ICSINTMGT_ProcessOffer** connection.  
-    However, this time the *Connection* is **NOT** to \*invoke\* any endpoint service, but instead it is a *\*trigger\** which is being called by a front client, i.e. A mobile client *triggers* to this *REST* connection service.  
-	
-	Make sure you are still on **Connections** Summary Page. If not, follow step 1 previously.  
-	On the row of **XXX_ICSINTMGT_ProcessOffer** Connection, click the hamburger menu icon at the right side and select `Edit` like below.
+18. 现在我们要更新XXX_ICSINTMGT_ProcessOffer连接.  
+    但是，这次Connection并不是要调用任何端点服务，而是由前端客户端调用的* trigger *，即移动客户端触发这个REST连接服务。
+确保你仍然在Connections Summary Page上。 如果不是，请先按照步骤1操作。
+在XXX_ICSINTMGT_ProcessOffer连接的行上，单击右侧的汉堡包菜单图标，然后选择如下所示的编辑
+
 	
 ![](images/302/14.connection_rest.png)
 
-19. This time, the **XXX_ICSINTMGT_ProcessOffer** Connection detail page is shown and is more simpler due to the *REST Trigger* type connection.
+19. 这一次显示了XXX_ICSINTMGT_ProcessOffer连接详细信息页面，由于REST触发器类型的连接，该页面更简单.
 
 ![](images/302/16.connection_initial1.png)
 
-20. From **REST Connection** page, click `Test` from top right corner.  
-    You should find a green dialog text area about **Connection was tested successfully**.
+20. 在“REST连接”页面上，单击右上角的“测试”.
+你应该找到一个关于连接测试成功的绿色对话框。
 
 ![](images/302/18.connection_test1.png)
 
-21. Next, click `Save` from top right corner.  
-Similarly, the **Save Changes?** dialog window appears to warn about reactivating integrations, click `Save` to confirm and close the dialog again.
+21. 接下来，点击右上角的保存。 
+同样，保存更改？ 出现对话窗口警告重新激活集成，单击保存确认并再次关闭对话框。
 
 ![](images/302/20.connection_save2.png)
 
-22. You should find a green dialog text area about **Connection was saved successfully**.  
-    Click `Close` to exit and back to **Connection** Summary Page.
-
+22. 您应该找到一个关于连接已成功保存的绿色对话框文本区域  
+    单击关闭退出并返回到连接摘要页面。
 ![](images/302/19.connection_save1.png)
 
-23. Two *Connections* are just made ready, the **SOAP Connection - \*Invoke\* to CRM Customer Service** and **REST Connection - \*Trigger\* to ICS for Process Offer** respectively.
+23. 两个连接只是准备就绪，SOAP连接 - *调用* CRM客户服务和REST连接 - *触发* ICS处理优惠分别。
 
 [Procced to Next - 303: Complete an Integration - An Orchestration Integration Flow](303-IntegrationsLab.md)
 
