@@ -294,127 +294,127 @@ https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/pt
 
 本实验室假定您已经直接连接到公共互联网，即不在代理之后
 
-1. Start Brackets Text Editor, by double click the **Brackets** desktop icon, [Start] Menu button, or the correspond short-cut in your computer.
+1. 通过双击Brackets 桌面图标，[开始]菜单按钮或计算机中对应的快捷方式，启动Brackets 文本编辑器。
 
 ![](images/110.startbrackets.png)
 
-2. In the **File** pull-down menu, choose **Open Folder**
+2. 在文件下拉菜单中，选择打开文件夹
 
 ![](images/111.open.png)
 
-3. Select a desired folder to store the source code in your local harddisk, e.g. **d:\oracle** in the left hand side and click **[Create Folder]** at the top right hand corner - `this will create a new folder under the folder you've selected`.
+3. 选择所需的文件夹以将源代码存储在本地硬盘中，例如 d：\ oracle，点击右上角的[创建文件夹] - 这将在您选择的文件夹下创建一个新的文件夹。
 
 ![](images/112.createfolder.png)
 
-4. Enter **QRCodeMicroservice** as the folder name. Then Click any space (e.g. in the size column) next to the name
+4. 4.	输入QRCodeMicroservice作为文件夹名称。 然后单击名称旁边的任何空格（例如，在大小列中）
 
 ![](images/113.gotofolder.png)
 
-5. Click **[ Open ]** button to open the newly created project folder.
+5. 点击[打开]按钮打开新创建的项目文件夹。
 
 ![](images/114.opennew.png)
 
-6. Back in **Developer Cloud Service**, in your **QRCodeMicroservice Git Repository**. Click **HTTP** to display the Git HTTP URL, click the **Copy** button to copy the URL.
+6. 回到Developer Cloud Service，在你的QRCodeMicroservice Git Repository中。 点击HTTP显示Git HTTP URL，点击Copy按钮复制URL。
 
 ![](images/115.copyurl.png)
 
-7. Back in the Bracket editor, click on **GIT** icon on the right hand side of the editor.
+7. 回到Bracket编辑器，点击编辑器右侧的GIT图标。
 
 ![](images/116.gitbutton.png)
 
-8. In the Git panel, click **[ Clone ]**
+8. 在Git面板中，点击[Clone]
 
 ![](images/117.gitclone.png)
 
-9. Paste the GIT URL that you copied from Developer Cloud Service. Username should be populated automatically. Enter the password and select **Save credentials to remote url**
+9. 粘贴您从Developer Cloud Service复制的GIT URL。 用户名应该自动填充。 输入密码并选择将凭证保存到远程URL
 
-10. Click **[OK]** button
+10. 点击 [OK] 按钮
 
 ![](images/118.gitlogin.png)
 
-11. Wait for Brackets to clone your remote project to local folder.
+11. 等待Brackets 将您的远程项目克隆到本地文件夹。
 
 ![](images/119.gitwaitclone.png)
 
-12. You now have a local copy of the Git Repository.
+12. 你现在有一个Git仓库的本地副本。
 
 ![](images/120.cloned.png)
 
-### 2.2.2 Edit the source code to fit your environment
+### 2.2.2 编辑源代码以适合您的环境
 
-1. Open the server.js file (double click) in Brackets
+1. 在Brackets中打开server.js文件（双击）
 
 ![](images/121.openjs.png)
 
-2. In line 12, change the URL to your identity domain, i.e. what you have used in **Section 1.5**. As you can see, this is the URL of the **Offer REST API Microservice**
+2. 在第12行中，将URL更改为您的身份域，即您在第1.5节中使用的内容。 如您所见，这是Offer REST API Microservice的URL
 
 ![](images/122.line12.png)
 
-3. Save the file. (**Ctrl-S** or choose from pull-down menu **File > Save**)
+3. 保存文件。 （Ctrl-S或从下拉菜单中选择File> Save）
 
 ![](images/123.save.png)
 
-### 2.2.3 Create a new Branch and Commit
+### 2.2.3 创建一个新的分支并且提交
 
-1. In the left hand navigation panel, select **master** and click **Create new branch...**
+1. 在左侧导航面板中，选择主控并单击创建新分支...
 
 ![](images/124.branch.png)
 
-2. In the pop-up window, enter `ChangeURL` for branch name and click **Ok**
+2. 在弹出窗口中，输入ChangeURL作为分支名称，然后单击确定
 
 ![](images/125.changeurl.png)
 
-3. Check the box next to **Commit** to select all modified files - this means the checkbox below (server.js) will automatically be checked.
+3. 选中提交旁边的复选框，选择所有已修改的文件 - 这意味着下面的复选框（server.js）将被自动选中。
 
 ![](images/126.commitcheck.png)
 
-4. Click **Commit**
+4. 点击提交
 
 ![](images/127.commit.png)
 
-5. In the pop-up enter the **comment** `modify source code to use correct URL` and click **OK**. This will commit the changes to your LOCAL GIT REPOSITORY. (You can ignore the code inspection problems. You can review the code changes before confirmation)
+5. 在弹出的输入注释“modify source code to use correct URL”，然后单击确定。 这将会改变你的LOCAL GIT REPOSITORY。 （您可以忽略代码检查问题，您可以在确认之前查看代码更改）
 
 ![](images/128.commitmsg.png)
 
-6. Click **Git Push** icon.
+6. 点击Git Push图标。
 
 ![](images/129.push.png)
 
-7. In the pop-up window, leave all defaults and click **Ok**.
+7. 在弹出窗口中，保留所有默认值，然后单击确定。
 
 ![](images/130.pushok.png)
 
-8. Once Git Push completes, click **Ok**
+8. 一旦Git推完成，点击确定
 
 ![](images/131.pushdone.png)
 
-9. You have push the changes to Developer Cloud Service. If you like, you can go to **Developer Cloud Service** to check the pushed branch. You will something like this.
+9. 您已将更改推送到开发人员云服务。 如果你愿意，你可以去Developer Cloud Service检查推送的分支。 你会这样的。
 
 ![](images/132.newbranch.png)
 
-### 2.2.4 Create Merge Request in Developer Cloud Service to uptake the code
+### 2.2.4 在开发者云服务中创建合并请求并更新代码。
 
-1. In Developer Cloud Service, click on **Code** tab. If you are not viewing the QRCodeMicroservice repo, change to the QRCode Repo.  
+1. 在开发人员云服务中，单击代码选项卡。 如果您没有查看QRCodeMicroservice仓库，请更改为QRCode仓库。  
 
 ![](images/141.checkbranch.png)
 
-2. Select ChangeURL branch
+2. 选择ChangeURL分支
 
 ![](images/142.changeurlbranch.png)
 
-3. Once you are in the ChangeURL branch. You should be able to view the recent commit that we made to branch from Brackets.
+3. 一旦你在ChangeURL分支。 你应该能够查看我们最近从Brackets分支的提交。
 
 ![](images/143.changes.png)
 
-4. Now, a merge request can be created to merge the code - click on **Merge Requests** to go the merge request panel.
+4. 现在，可以创建合并请求来合并代码 - 单击合并请求以进入合并请求面板。
 
 ![](images/144.mergereq.png)
 
-5. and then click on the **New Merge Request** button.
+5. 然后单击新建合并请求按钮。
 
 ![](images/145.newmerge.png)
 
-6. Enter the following information into the new merge request and click **Next**
+6. 在新的合并请求中输入以下信息，然后单击下一步
 
   - **Repository:** `QRCodeMicroservice.git`
   - **Target Branch:** `master`
@@ -422,64 +422,62 @@ https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/pt
 
 ![](images/146.createreq.png)
 
-7. Enter for following information into **Details** and click **Next**
+7. 输入以下信息到详细信息中，然后单击下一步
 
   - **Summary:** `Merge Request for branch ChangeURL`
   - **Reviewers:** `Choose the user you are working on` (e.g. Cloud Admin, John Dunbar, etc)
 
 ![](images/147.req2.png)
 
-8. Review the request and click **[+ Create]** button.
+8. 查看请求并单击[+Create]按钮。
 
 ![](images/148.reqcreate.png)
 
-9. Now, the merge request has been created. We will approve the request in the next section.
+9. 现在，合并请求已经创建。 我们将在下一部分中批准这个请求。
 
-### 2.2.5 Merge the Branch
+### 2.2.5 合并分支
 
-1. click on the **Merge Request**. Select the request we just created and we can review the request.
+1. 点击合并请求。 选择我们刚刚创建的请求，我们可以查看请求。
 
 ![](images/151.requestdetails.png)
 
-2. Once the request has loaded, select **Change Files** tab. Review the changes. You can add your comment before approve the request.
+2. 请求加载后，选择更改文件选项卡。 查看更改。 您可以在批准请求之前添加您的评论。
 
 ![](images/152.changedfiles.png)
 
-3. if you like you can click the **[Approve]** button to add comments
+3. 如果你喜欢，你可以点击[批准]按钮添加评论
 
 ![](images/153.approve.png)
 
-4. Enter some comments, e.g. `approved` and click **OK**.
+4. 输入一些意见，例如 批准，然后单击确定。
 
 ![](images/154.approvmsg.png)
 
-5. You can see the request is now approved by reviewer. Click **Merge** button to proceed merging
-
+5. 您可以看到请求现在已被审阅者批准。 单击合并按钮继续合并
 ![](images/155.clickmerge.png)
 
-6. leave the defaults OR enter your desired comment. If you check **Delete branch**, the ChangeURL branch will be deleted after the merging. Click on **Create a Merge Commit** button.
+6. 保留默认值或输入您想要的评论。 如果选中删除分支，则合并后将删除ChangeURL分支。 点击创建一个合并提交按钮。
 
 ![](images/156.commitmerge.png)
 
-7. Now the code merge had been committed and we can build the microservice. 	
+7. 现在代码合并已经提交，我们可以构建微服务。	
 
 ![](images/157.merged.png)
 
-## 2.3 Create Default Build and Deployment Process - QR Code Generator
+## 2.3 创建默认的构建和部署过程 - QR码生成器
+现在，我们在开发人员云服务托管的Git存储库中有源代码，我们需要创建一个构建过程，只要向主分支提交，就会触发这个过程。 我们将在本节中设置一个shell脚本构建过程。
 
-Now that we have the source code in our Developer Cloud Service managed Git Repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will setup a **shell script** build process in this section.
+### 2.3.1 创建默认的构建流程 - QR码生成器
 
-### 2.3.1 Create Default Build Process - QR Code Generator
-
-1. Click **Build** on the navigation panel to access the build page
+1. 单击导航面板上的“Build”以访问生成页面
 
 ![](images/161.navibuild.png)
 
-2. Click **[+ New Job]**
+2. 点击 [+ New Job]
 
 ![](images/162.createnewbuild.png)
 
-3. In the New Job popup window, enter `QR Code Generator Build` for Job Name and click **Save**.
+3. 在新建作业弹出窗口中，输入作业名称的QR Code Generator Build，然后单击保存。
 
 ```diff
 -Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
@@ -487,77 +485,76 @@ Now that we have the source code in our Developer Cloud Service managed Git Repo
 
 ![](images/163.newjob.png)
 
-4. You are now placed into the job configuration screen.
+4. 您现在被放入作业配置屏幕。
 
 ![](images/164.buildscreen.png)
 
-5. Click the **Source Control** tab. Select **Git** radio button. In the Repositories section, select **QRCodeMicroservice.git** from the URL drop down.
+5. 单击源代码管理选项卡。 选择Git单选按钮。 在存储库部分，从URL下拉列表中选择QRCodeMicroservice.git。
 
-	**Note:** Make sure you select the Git repository for the QR Code Microservice.
+	**注意:** 确保你选择了QR Code Microservice的Git仓库。.
 
 ![](images/165.srcctrl.png)
 
-6. Click **Triggers** tab. Check **Based on SCM polling schedule**.
+6. 点击Triggers标签。 检查基于SCM轮询时间表。
 
 ![](images/166.trigger.png)
 
-7. Click the **Build Steps** tab, click **Add Build Step** and select **Execute shell**.
+7. 单击Build Steps选项卡，单击Add Build Step并选择Execute shell。
 
 ![](images/167.stage.png)
 
-8. In the Command textarea, enter: `npm install`
+8. 在Command textarea中，输入：npm install
 
 ![](images/168.npm.png)
 
-9. Click the **Post Build** tab. Check **Archive the artifacts**. For File to Archive, enter `**/target/*` and verify **GZIP** is chosen as the Compression Type.
+9. 点击Post Build选项卡。 检查存档的文物。 对于要归档的文件，请输入** / target / *并验证GZIP被选择为压缩类型。
 
 ![](images/169.pb1.png)
 
-10. Click **Save** to complete the configuration.
+10. 单击保存以完成配置。
 
 ![](images/170.pbsave.png)
 
-11. A build should start automatically within 1-2 minutes. If it does not start automatically, click on the **[ Build Now ]** button.
+11. 构建应该在1-2分钟内自动启动。 如果没有自动启动，请点击[Build Now]按钮。
 
 ![](images/171.now.png)
 
-12. The status will change to something similar to the following diagram.
+12. 状态将改变为类似于下图。
 
 ![](images/172.queue.png)
 
-Building stage: please wait - it might takes a few minutes before the job change form queued to running
+构建阶段：请等待 - 可能需要几分钟时间才能将作业更改表格排队等待运行
 
 ![](images/173.building.png)
 
-13. The build will take serval minutes to complete. Wait for the build to complete before continue to the next step - **as we need the build artifact to create the deployment configuration**.
+13. 构建将需要几分钟才能完成。 在继续下一步之前，等待构建完成 - 因为我们需要构建工件来创建部署配置。
 
 ![](images/174.buildsuccess.png)
 
-### 2.3.2 Create Default Deployment Process - QR Code Generator
+### 2.3.2 创建默认的部署过程 - QR码生成器
 
-1. Click **Deploy** to access the Deployments page
+1. 单击部署访问部署页面
 
 ![](images/181.navideploy.png)
 
-2. Click the **[+ New Configuration]** button.
+2. 点击 [+ New Configuration] 按钮
 
 ![](images/182.newdeploy.png)
 
-3. Enter the following data:
+3. 输入以下数据：
 
   - **Configuration Name:** QRCodeGeneratorDeploy
   - **Application Name:** qrcodegenerator
 
 ![](images/183.createdeploy.png)
 
-4. **As you have created the deployment in the Offer REST API
-Microservice, you can REUSE the same target**.
+4. 由于您在Offer REST API Microservice中创建了部署，因此可以重新使用同一个目标。
 
-   In the **Deployment Target**, choose the **SAME** one you created above. It should be something similar to `Application Container Cloud` **em2 / your-identity-domain / your-user-name**
+  在部署目标中，选择上面创建的相同的Deploy Target。 它应该与Application Container Cloud em2 / your-identity-domain / your-user-name类似
 
 ![](images/184.dc.png)
 
-5. A window **Deploy to Application Container Cloud** will popup, confirm the information and **ENTER the password**, then click **[Test Connection]** button.   
+5. 窗口部署到应用程序容器云将弹出，确认信息并输入密码，然后单击[测试连接]按钮。   
 
   - **Data Center:** `your datacenter, e.g. em2, em3, etc`
   - **Identity Domain:** `your identity domain, e.g. gse00012345, etc`
@@ -566,25 +563,25 @@ Microservice, you can REUSE the same target**.
 
 ![](images/185.test.png)
 
-6. Once test is success, click **Use Connection**
+6. 一旦测试成功，请点击使用连接
 
 ![](images/186.testgood.png)
 
-7. In the ACCS Properties, set
+7. 在“ACCS属性”中设置
 
   - **Runtime** to `Node`
   - **Subscription** to `Hourly`
   - Set **Type** to `Automatic` and **CHECK** `Deploy stable build only`
 
-**MAKE sure you select Node as the Runtime**
+**确保您选择Node作为Runtime**
 
 ![](images/187.choosenode.png)
 
-8. Select from the **Job**, this name should match the build job above, e.g. `QR Code Generator Build`. Select from the **Artifact**, this name should match the archive artifact above and the package.json of your source code, e.g. `target/qrcodegenerator.zip`  
+8. 从作业中选择，该名称应该与上面的构建作业匹配，例如QR Code Generator Build。 从工件中选择，该名称应与上面的存档工件和源代码的package.json相匹配，例如target/qrcodegenerator.zip 
 
 ![](images/188.choosejob.png)
 
-9. Check `Include ACCS Deployment` box and enter the following json
+9. 选中Include ACCS Deployment框，然后输入下面的json
 
 ```json
 {
@@ -595,56 +592,55 @@ Microservice, you can REUSE the same target**.
 
 ![](images/024.json.11.png)
 
-10. After fill in the above information, click **Save** button.
+10. 填写完上述信息后，点击保存按钮。
 
 ![](images/189.depsave.png)
 
-11. In your deployment job, click the gear drop down and select **Start**
+11. 在部署作业中，单击齿轮下拉菜单并选择“开始”
 
 ![](images/190.start.png)
 
-12. The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment succeeded**. Ask for help from your instructor if the deployment fails.
-
+12. 部署作业将被放入队列进行处理。 等待直到消息启动应用程序更改为上次部署成功。 如果部署失败，请向导师寻求帮助。
 ![](images/191.deployed.png)
 
-## 2.4 Login to Oracle Application Container Cloud Service
+## 2.4 登录到Oracle Application Container Cloud Service
 
-1. Navigate back to the Oracle Public Cloud tab. Click **Dashboard** to return back to main Cloud Service Dashboard.
+1. 导航回到Oracle公有云选项卡。 点击信息中心返回到主要Cloud Service仪表板。
 
-2. On the Application Container Cloud Service (ACCS) click the humburger button and select **Open Service Console**
+2. 在应用程序容器云服务（ACCESS）上，单击汉堡按钮并选择打开服务控制台
 
 ![](images/192.accs.png)
 
-3. On the ACCS Service Console you can view all the deployed applications including our newly create **qrcodegenerator**.
+3. 在ACCS服务控制台上，您可以查看所有已部署的应用程序，包括我们新创建的qrcodegenerator。
 
 ![](images/193.accsqr.png)
 
-4. Copy the URL and paste it into the address bar of a new tab to bring up the application.
+4. 复制URL并将其粘贴到新选项卡的地址栏中以调出应用程序。
 
-  Be reminded that you will need the REST endpoint and the **offer id** in order to generate a QR code.
+  请注意，您需要REST端点和商品ID才能生成QR码。
 
-  The final URL should looks like this
+  最终的网址应该如下所示
 
 	https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ctdqr/v1/offer/10001
 
 ![](images/194.qrurl.png)		
 
-5. the QR Code in the browser will look like this
+5. 浏览器中的QR码将如下所示
 
 ![](images/195.codepic.png)
 
 ```diff
-+ you might want to copy your OWN URLs for QR Code API
++ 您可能需要复制你的QR码API的网址
 +   https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ctdqr/v1/offer/
 +   https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com
-+ and put it in, e.g. Notepad
-+   You will need to use it later, e.g. Lab 304 Step 27.
++ 并放入，例如 记事本
++   您需要稍后使用，例如 实验室304步骤27。
 ```
 
-**OPTIONAL STEP:** if you use a QR Code reader (e.g. Mobile App), you can decode the QR Code
+**可选步骤：** 如果您使用QR码阅读器（例如移动应用程序），则可以解码QR码
 
 ![](images/196.reader.png)
 
-# Congratulation! You've completed the Microservice Lab.
+# 恭喜！ 你已经完成了微服务实验室。
 
 [go back to the Cloud Test Drive Main Page](../README.md)
