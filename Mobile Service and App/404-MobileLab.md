@@ -19,13 +19,13 @@ MCS根据事件创建分析报告，描述用户如何与移动应用程序交�
 - 了解如何检查MCS（移动云服务）中引发的事件
 
 ### Prerequisites ###
-- Loyalty management MBE created in the previous lab.
-- Cafe Supremo Mobile Application installation on your Android device
+- 查看移动应用程序的源代码片段来引发事件.
+- 了解如何检查MCS（移动云服务）中引发的事件
 
 ----
 
-#### How to raise events from mobile applications ####
-In this lab, you will not code for mobile application to create events. However, we'd like to give some ideas of how you can develop mobile application to create custom events. Oracle provides Event APIs as part of client SDK to create events upon offer accept/reject to raise events. The name of events could be any string you like, and you can add your custom attributes into the “properties” field which will be visible in the report creation wizard in MCS. Please refer to the below snippet of mobile client code to get an idea of how you can raise events from mobile applications.
+#### 如何从移动应用程序中引发事件 ####
+在本实验中，您将不会编写移动应用程序来创建事件。 不过，我们想就如何开发移动应用程序来创建自定义事件提供一些想法。 Oracle提供事件API作为客户端SDK的一部分，在提供接受/拒绝事件时创建事件。 事件的名称可以是您喜欢的任何字符串，您可以将自定义属性添加到“属性”字段中，该字段将在MCS中的报告创建向导中可见。 请参阅下面的移动客户端代码片段，以了解如何从移动应用程序中引发事件。
 
     ```
     service.post('/mobile/custom/LoyaltyMgmt0X/offer/:id/accept', function (req, res) {
@@ -78,37 +78,39 @@ In this lab, you will not code for mobile application to create events. However,
     ```
 
 ---
-#### How to check raised events in MCS ####
-While MCS displays data gathered from all of the mobile backends by default, you can use the mobile and environment menus to isolate the activity for a particular mobile backend within a specific environment. MCS shows reports for all versions of a selected mobile backend, or API. Let's see how you can check raised events from mobile applications.
+#### 如何检查MCS中引发的事件 ####
+虽然MCS默认显示从所有移动后端收集的数据，但您可以使用移动和环境菜单来隔离特定环境中特定移动后端的活动。 MCS显示所选移动后端或API的所有版本的报告。 我们来看看如何从移动应用程序中检查引发的事件。
 
-1. Navigate through “Analytics” -> “Events”, click on the “Select an event” dropdown list. When the Events are created via Events API as in previous step, you will see the events in the list. Select “AcceptOffer”.
+1. 浏览“分析” - >“事件”，点击“选择一个事件”下拉列表。 如上一步，通过事件API创建事件时，您将在列表中看到事件。 选择“AcceptOffer”。
 ![](../common/images/mobile/404-Analytics_Event_Check.png)
 
 
-2. Now, you can see the reports for API Calls Count let you view the traffic for one, or many, APIs for a selected period of time. The report includes both successful and failed calls.
+2. 现在，您可以看到“API调用计数”的报告让您查看一个或多个API在一段选定时间段内的流量。 该报告包括成功和失败的调用.
 ![](../common/images/mobile/404-Analytics_Event_Count.png)
 
 
-3. You can also see the report for the select API ("AcceptOffer") by using filters like custom properties you defined in mobile applications as below:
+3. 您还可以使用像在移动应用程序中定义的自定义属性那样的过滤器来查看选择API（“AcceptOffer”）的报告，如下所示：
+点击“+”按钮为您的报告选择一个过滤器：
+:
     - Click "+" button to select a filter for your report.
     ![](../common/images/mobile/404-Analytics_Event_View_Filter.png)
 
-    - Select the "userName".
+    - 选择“用户名”.
     ![](../common/images/mobile/404-Analytics_Event_View2.png)
 
-    - Choose the mobile user name for your report.
+    - 为您的报告选择移动用户名称.
     ![](../common/images/mobile/404-Analytics_Event_View3.png)
 
-    - Click the "Done".
+    - 点击“完成”.
     ![](../common/images/mobile/404-Analytics_Event_View4.png)
 
-    - Now you can see the "AcceptOffer" event raised by the user you selected.
+    - 现在您可以看到您选择的用户引发的“AcceptOffer”事件。
     ![](../common/images/mobile/404-Analytics_Event_View5.png)
 
-4. Create reports based on Events and filter: You can keep an eye on the usage and health of your mobile applications on an ongoing basis by creating a suite of custom reports that you can run whenever you want. MCS enables you to create these reports by saving any filter definitions that you apply to the event, user, session, platform, and funnel reports. Click "My Reports" to see the reports you created.
+4. 基于事件和过滤器创建报告：通过创建一套您可以随时运行的自定义报告，您可以持续关注移动应用程序的使用情况和健康状况。 MCS使您可以通过保存适用于事件，用户，会话，平台和渠道报告的任何过滤器定义来创建这些报告。 点击“我的报告”查看您创建的报告。
 ![](../common/images/mobile/404-Analytics_Event_Report_Creation.png)
 
 
-Congratulation! You have finished this lab section.
+恭喜！ 你已经完成了这个实验部分。
 
 [Back to Mobile Service and Application Home](README.md)
