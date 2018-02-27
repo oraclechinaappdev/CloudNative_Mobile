@@ -1,41 +1,40 @@
 # ORACLE Cloud Test Drive #
 -----
-## 403: Set up Push Notification and configure the mobile app ##
+## 403: 设置推送通知并配置移动应用程序 ##
 
-### Introduction ###
-You can use the Notifications service (part of MCS platform APIs) to send notifications to users of the apps registered in a mobile backend. Once you have the mobile backend set up for notifications, the process of sending the notifications is the same for both iOS, Android, and Windows apps. You set up notifications by obtaining the appropriate vendor certificates and registering them with the app's mobile backend. In addition, you can write your own code in the mobile app to process the push notification. MCS can also exposed the push notification service to other applications, so that applications, e.g. the Java App for campaign management, can send out push notification to end user by calling the push notification service exposed by MCS.
+### 介绍 ###
+您可以使用通知服务（MCS平台API的一部分）将通知发送给在移动后端注册的应用程序的用户。 将移动后端设置为通知后，发送通知的过程对于iOS，Android和Windows应用程序都是相同的。 您通过获取适当的供应商证书并将其注册到应用程序的移动后端来设置通知。 另外，您可以在移动应用程序中编写自己的代码来处理推送通知。 MCS还可以将推送通知服务暴露给其他应用程序，以便应用程序 用于活动管理的Java应用程序可以通过调用MCS公开的推送通知服务向最终用户发送推送通知.
 ![](../common/images/mobile/mcsgs_dt_006_notifications.png)
 
-### About the Exercise Today ###
-In this exercise, we will:
-- Create a notifications profile
-- Configure the mobile app to work with your Mobile Backend
-- Test Notification
+### 关于该练习 ###
+在这个练习中，我们将:
+- 创建通知配置文件
+- 配置移动应用程序以使用您的移动后端
+- 测试通知
 
-### Prerequisites ###
-- Installed Cafe Supremo app on your Android device
+### 先决条件 ###
+- 在Android设备上安装了Cafe Supremo应用程序
 
 ----
-#### Create a notifications profile ####
-A notification profile defines the certificate or keys that is required by push notification providers to send out push notifications. 
-In this lab, you will create a notifications profile and associate the that with the client application (Cafe Supremo mobile application), so that MCS can send push notification to the Cafe Supremo mobile application.
+#### 创建通知配置文件 ####
+通知配置文件定义推送通知提供程序发送推送通知所需的一个或多个证书。 在本实验中，您将创建一个通知配置文件并将其与客户端应用程序（Cafe Supremo移动应用程序）相关联，以便MCS可以向Cafe Supremo移动应用程序发送推送通知。
 
-1. On the navigation pane, select “Applications” -> “Mobile Backends”. Enter "0X" (0X is the postfix assigned to you) to search for the mobile backend imported by you. Select "LoyaltyMgmt_MBE0X" (0X is the postfix assigned to you) and click on "Open".
+1. 在导航窗格中，选择“应用程序” - >“移动后端”。 输入“0X”（0X是分配给您的后缀）来搜索您导入的移动后端。 选择“LoyaltyMgmt_MBE0X”（0X是分配给你的后缀）并点击“打开”。
 ![](../common/images/mobile/403-Navigate_To_MBE.png)
 
-2. Switch to "Clients" tab, you should see a client called "MyAndroidClient0X" (0X is the postfix assigned to you) imported by you. There is no notification profile associated with the client. Click on the client "MyAndroidClient0X".
+2. 切换到“客户”选项卡，您应该看到一个名为“MyAndroidClient0X”的客户端（0X是分配给您的后缀）由您导入。 没有与客户端关联的通知配置文件。 点击客户端“MyAndroidClient0X”。
 ![](../common/images/mobile/403-Select_Client.png)
 
-3. The settings of the client is displayed. Scroll down to check the "Application Key" of the client.
+3. 显示客户端的设置。 向下滚动查看客户端的“应用程序密钥”。
 ![](../common/images/mobile/403-Client_Settings.png)
 
-4. **Copy the values of "Application Key" and replace the value of the property "applicationKey" in the "Mobile_App_Settings_Sample.json" file.**  Save the file for later use.
+4. 复制“应用程序密钥”的值并替换“Mobile_App_Settings_Sample.json”文件中的属性“applicationKey”的值。 保存文件供以后使用。
 ![](../common/images/mobile/403-Copy_ApplicationKey_To_Json.png)
 
-5. Switch to the "Profiles" tab of the "MyAndroidClient0X" client, and click on "New Profile" button to create the notification profile.
+5. 切换到“MyAndroidClient0X”客户端的“配置文件”选项卡，然后单击“新建配置文件”按钮来创建通知配置文件。
 ![](../common/images/mobile/403-Begin_New_Profile.png)
 
-6. Enter `FCM0X` (change `0X` to the postfix assigned to you, e.g: 03) as the "Name. Paste `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the Sender ID. Keep `Google Messaging (GCM or FCM)` as the "Notification Service" and `XMPP` as the "Send Method", and click on “Create”. (These are the keys that are generated from Google.)
+6.输入FCM0X（0X改变分配给您的后缀，例如：03）作为名称，粘贴 `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the Sender ID. Keep `Google Messaging (GCM or FCM)` as the "Notification Service" and `XMPP` as the "Send Method", and click on “Create”. (These are the keys that are generated from Google.)
 
    ![](../common/images/mobile/403-Create_New_Profile.png)
 
