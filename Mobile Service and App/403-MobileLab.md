@@ -34,25 +34,25 @@
 5. 切换到“MyAndroidClient0X”客户端的“配置文件”选项卡，然后单击“新建配置文件”按钮来创建通知配置文件。
 ![](../common/images/mobile/403-Begin_New_Profile.png)
 
-6.输入FCM0X（0X改变分配给您的后缀，例如：03）作为名称，粘贴 `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the Sender ID. Keep `Google Messaging (GCM or FCM)` as the "Notification Service" and `XMPP` as the "Send Method", and click on “Create”. (These are the keys that are generated from Google.)
+6.输入FCM0X（0X改变分配给您的后缀，例如：03）作为名称，粘贴 `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` 作为 Sender ID. 保持 `Google Messaging (GCM or FCM)` 作为 "Notification Service" 和 `XMPP` as the "Send Method", 然后点击“创建”（这是Google生成的密钥）。
 
    ![](../common/images/mobile/403-Create_New_Profile.png)
 
-7. The notification profile has been created and associated with the your client "MyAndroidClient0X". Click on the link "< LoyaltyMgmt_MBE0X" in the navigation bar to navigate back to the mobile backend.
+7. 他的通知配置文件已经创建并与您的客户端“MyAndroidClient0X”相关联。 点击导航栏中的<LoyaltyMgmt_MBE0X>链接返回到移动后端。
 ![](../common/images/mobile/403-Profile_Navigate_Back.png)
 
-8. Verify that your client is "Notification Enabled".
+8. 验证您的客户端是“启用通知”
 ![](../common/images/mobile/403-Client_Notification_Enabled.png)
 
 
 ---
-#### Configure the mobile app to work with your Mobile Backend ####
-You mobile app should be configured to work with your mobile backend before you can run any testing on the app. You will use the file **Mobile_App_Settings_Sample.json** to collect the settings that is needed to configure the mobile app.
+#### 配置移动应用程序以使用您的移动后端 ####
+您应该将移动应用配置为与您的移动后端一起工作，然后才能在应用上运行任何测试。 您将使用文件Mobile_App_Settings_Sample.json收集配置移动应用程序所需的设置。
 
-1. Switch to the "Settings" tab of your mobile backend, and find the values of "Mobile Backend ID", "Anonymous Key" and "Base URL" in the mobile backend settings.
+1. 切换到移动后台的“设置”标签，在移动后台设置中查找“Mobile Backend ID”，“ Anonymous Key”和“Base URL”的值。
 ![](../common/images/mobile/403-MBE_Settings.png)
 
-2. Copy the values from the mobile backend settings and replace the value of the target property in the "Mobile_App_Settings_Sample.json" file.  You should copy and replace the following properties.
+2. 复制移动后端设置中的值，并替换“Mobile_App_Settings_Sample.json”文件中的目标属性的值。 您应该复制并替换以下属性。
 
 | From Property in MBE Settings | To Property in JSON File |
 |-------------------------------|--------------------------|
@@ -60,66 +60,66 @@ You mobile app should be configured to work with your mobile backend before you 
 | Anonymous Key                 | anonymousToken           |
 | Base URL                      | baseUrl                  |
 
-3. Copy the values of the mobile user name and password to replace the values of the "LoginUser" and "LoginPassword" property in the "Mobile_App_Settings_Sample.json" file.  This allows the Cafe Supremo mobile app to set the "LoginUser" and "LoginPassword" as default user name and password in the login form of the mobile app. Finally your "Mobile_App_Settings_Sample.json" file should be like this.
+3. 复制移动用户名和密码的值，以替换“Mobile_App_Settings_Sample.json”文件中的“LoginUser”和“LoginPassword”属性的值。 这允许Cafe Supremo移动应用程序在移动应用程序的登录表单中将“LoginUser”和“LoginPassword”设置为默认的用户名和密码。 最后你的“Mobile_App_Settings_Sample.json”文件应该是这样的。
 ![](../common/images/mobile/403-Final_JSON.png)
 
-4. The Cafe Supremo mobile app allows reading new settings by scanning a QR code. You will generate a QR code with the settings in the "Mobile_App_Settings_Sample.json" file, and scan the QR code from the mobile app. 
+4. Cafe Supremo移动应用程序允许通过扫描QR码来读取新的设置。 您将使用“Mobile_App_Settings_Sample.json”文件中的设置生成QR码，并从移动应用扫描QR码。 
 
-5. From your web browser, go to `http://www.qr-code-generator.com/`, click on `Text` button and the **Free text** text area is shown.
+5. 从您的网络浏览器，去http://www.qr-code-generator.com/ ， 点击文本按钮，显示自由文本文本区域
 ![](../common/images/mobile/01.qr.site.png)
 
-6. Copy the settings in **your own** "Mobile_App_Settings_Sample.json" file and paste it into the **Free text** text area, then click `Create QR code` button. A QR code image will be generated on the right hand side of window.
+6. 将设置复制到您自己的“Mobile_App_Settings_Sample.json”文件中，并将其粘贴到自由文本文本区域，然后单击创建QR代码按钮。 QR码图像将在窗口的右侧生成。
 ![](../common/images/mobile/02.qr.result.png)
 
-7. From your mobile device, open the app 'Cafe Supremo'.
+7. 从您的移动设备上，打开应用程序' Cafe Supremo'
 
    ![](../common/images/mobile/03.mobile.app.png)
 
-8. **DO NOT LOGIN.**  Click on the hamburger menu on top left corner, and click "Settings".
+8. 不要登录。 点击左上角的汉堡包菜单，然后点击“设置”
 
    ![](../common/images/mobile/05.mobile.settings.png)
 
-9. On Settings page opened, click `Read Settings from QRCode` button at middle.
+9. 在打开的“设置”页面上，单击中间QRCode按钮的“读取设置”按钮
 
    ![](../common/images/mobile/06.mobile.qr.png)
 
-10. When the QR scanner running, face your mobile device towards the QR code image you created in step 6. You may need to adjust the distance between your mobile device and your screen until the scanner camera can recognize the QR image.
+10. 当QR扫描仪运行时，将您的移动设备朝向步骤6中创建的QR码图像。您可能需要调整移动设备和屏幕之间的距离，直到扫描仪摄像头能够识别QR图像。
 
    ![](../common/images/mobile/07.mobile.cam.png)
 
-11. On successful QR code scanning, all settings in your JSON file will be automatically filled into the mobile app Setting page like below. Click `Save settings and logout` button. You will then be returned to home screen.
+11. 在成功扫描QR码后，您的JSON文件中的所有设置将自动填充到下面的移动应用程序设置页面中。 点击保存设置和注销按钮。 然后您将返回到主屏幕。
 
    ![](../common/images/mobile/08.mobile.qr.result.png)
 
-12. The "Username" and "Password" in the login form have been pre-filled as what you have in the settings in your JSON file. If the user name and password are correct, click `Login` button to login. Otherwise, you can type in the user name and password manually.
+12. 登录表单中的“用户名”和“密码”已经预先填写好，就像你在JSON文件中的设置一样。 如果用户名和密码正确，点击登录按钮登录。 否则，您可以手动输入用户名和密码。
 
    ![](../common/images/mobile/09.mobile.login.png)
 
-13. Upon successful login, the welcome page is shown. Your mobile device is now ready to receive push notification of campaign offer.
+13. 登录成功后，显示欢迎页面。 您的移动设备现在准备好接收推广活动提供的通知。
 
    ![](../common/images/mobile/10.mobile.welcome.png)
 
 ---
-#### Test Notification ####
-1. Switch to “Notifications” tab in your mobile backend and click on the icon below “4 TEST”.
+#### 测试通知 ####
+1. 切换到手机后台的“通知”标签，并点击“4 TEST”下方的图标.
 
    ![](../common/images/mobile/403-Navigate_To_Notification.png)
 
-2. Click on "Manage Devices".
+2. 点击“管理设备”.
 
    ![](../common/images/mobile/403-Test_Manage_Devices.png)
 
-3. You shall see devices that has been registered to this mobile backend. Click on “Close” and go back to the “Test” screen.
+3. 您将看到已注册到此移动后端的设备。 点击“关闭”并返回到“测试”屏幕。
 
    ![](../common/images/mobile/403-Manage_Devices.png)
 
-4. Before sending the notification, make sure your "Cafe Supremo" mobile app is running in the **Background** on your Android device.
+4. 在发送通知之前，请确保您的“Cafe Supremo”移动应用程序正在Android设备的后台运行.
 
-5. Enter a notification `You can use your points to buy products! – 10001` with send option `Now` and click on “Send”. Note you will be getting errors if no devices registered yet.
+5. 输入通知” You can use your points to buy products! – 10001”发送选项现在，点击“发送”。 请注意，如果没有设备注册，您将会收到错误信息。
 
    ![](../common/images/mobile/403-Notification_Test_Screen.png)
 
-6. If you have at least one device registered, you shall see a success message pop up on top of the page and the notification shall appear in the notification area of your device.
+6. 如果您至少注册了一个设备，则会在页面顶部弹出一个成功消息，通知将显示在设备的通知区域中.
 
    ![](../common/images/mobile/403-Notification_Sent.png)
 
