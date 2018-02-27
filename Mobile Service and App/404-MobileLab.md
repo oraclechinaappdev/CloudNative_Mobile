@@ -1,21 +1,22 @@
 # ORACLE Cloud Test Drive #
 -----
-## 404: Track customer behaviors [Optional] ##
+## 404: 跟踪客户行为[可选] ##
 
-### Introduction ###
+### 介绍 ###
 ![](../common/images/mobile/404-Analytics_Overview.png)
 
-Oracle Mobile Cloud Service (MCS) provides an Analytics API to help you measure patterns in application performance and usage. As a business development manager or mobile program manager, you can use analytics to find out how to improve your applications.
+Oracle移动云服务（MCS）提供了一个分析API，可帮助您衡量应用程序性能和使用情况中的模式。作为业务开发经理或移动计划经理，您可以使用分析来了解如何改进您的应用程序。
 
-MCS creates analytics reports from events, which describe how users interact with the mobile application. A mobile application developer can track the mobile app’s entire usage by raising events in the mobile application code. In this lab, we will see how to track events like "AcceptOffer" and "RejectOffer". Mobile backends receive events from the REST calls made from mobile applications. A mobile application makes a single call, which includes a JSON payload that describes the events along with such contextual information like a user’s location, the start and end of a user session, and details about the user’s mobile device. You can craft the payload yourself if you use straight REST calls, or use the mobile client SDK to construct one for you.
+MCS根据事件创建分析报告，描述用户如何与移动应用程序交互。移动应用程序开发人员可以通过在移动应用程序代码中引发事件来跟踪移动应用程序的全部用法在这个实验中，我们将看到如何跟踪“AcceptOffer”和“RejectOffer”等事件。移动后端接收来自移动应用程序的REST调用的事件。一个移动应用程序进行一次调用，其中包括一个JSON有效负载，用于描述事件以及诸如用户的位置，用户会话的开始和结束以及用户的移动设备的详细信息等上下文信息。如果您使用直接REST调用，或者使用移动客户端SDK为您构建一个负载，则可以自己制作有效负载。
+
 
 ![](../common/images/mobile/404-Analytics_Mechanism.png)
 
 
-### About the Exercise Today ###
-In this exercise, we will:
-- See the snippet of mobile application's source code to raise events
-- See how to check raised events in MCS (Mobile Cloud Service)
+### 关于本练习 ###
+在这个练习中，我们将:
+- 查看移动应用程序的源代码片段来引发事件
+- 了解如何检查MCS（移动云服务）中引发的事件
 
 ### Prerequisites ###
 - Loyalty management MBE created in the previous lab.
