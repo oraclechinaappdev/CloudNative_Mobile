@@ -1,55 +1,57 @@
 # ORACLE Cloud Test Drive #
 -----
-## 501: Update Settings for Sending Push Notification from JEE Application to Mobile Cloud Service ##
+## 501: 更新从JEE应用程序发送推送通知到移动云服务的设置 ##
 
-### Introduction ###
-On the completion of Lab 4 - Mobile Service and App, you should be able to run the 'Cafe Supremo' app on Android device and configured all necessary mobile backend services. Customer using Cafe Supremo app can logon, explore personalized promotion and menu.  
-Rather than having the customer periodically checks the latest new promotion offer, the company wants to actively notify customers. An app-based push notification will be sent to those who already installed the 'Cafe Supremo' app, upon a new offer is created by marketing manager. Therefore, we will need to connect the Loyalty Management JEE application to Mobile Cloud Service (MCS) by calling a messaging notification API.
+### 介绍 ###
+
+在实验室4 - 移动服务和应用程序完成后，您应该能够在Android设备上运行“咖啡厅Supremo”应用程序，并配置所有必要的移动后端服务。 使用Cafe Supremo应用程序的客户可以登录，探索个性化的推广和菜单。
+客户不是定期检查最新的促销优惠，而是积极地通知客户。 一个基于应用程序的推送通知将发送给那些已经安装了“咖啡厅Supremo”应用程序，由市场营销经理创建一个新的报价。 因此，我们需要通过调用消息通知API将忠诚度管理JEE应用程序连接到移动云服务（MCS）。
+
 
 ![](images/501/final.scope.work.png)
 
-### About the Exercise Today ###
-In this exercise, we will:
-- Modify the Push Notification settings in the JEE Application
-- Call MCS API to send push notification from JEE application to mobile device
+### 关于本练习 ###
+在这个练习中，我们将:
+- 修改JEE应用程序中的推送通知设置
+- 调用MCS API将推送通知从JEE应用程序发送到移动设备
 
-### Prerequisites ###
-+ Completion of all previous 4 lab exercises: [Java Apps](../Java%20Apps/README.md), [Microservices](../Microservices/README.md), [Integration](../Integrations/README.md) and [Mobile](Mobile%20Service%20and%20App/README.md)
+### 先决条件 ###
++ 先前完成的所有4个实验练习: [Java Apps](../Java%20Apps/README.md), [Microservices](../Microservices/README.md), [Integration](../Integrations/README.md) and [Mobile](Mobile%20Service%20and%20App/README.md)
 
 
 ----
 
-#### Prepare Mobile Device to Receive Push Notification ####
+#### 准备移动设备以接收推送通知 ####
 
-1. By the end of previous lab [404: Set up Push Notification and Test Push Notification to mobile app](../Mobile Service and App/404-MobileLab.md), you should be able to receive notification message pop-up from your mobile device upon **Test Notifications** from MCS like below. (Please check with instructor if you cannot complete lab exercise 404)
+1. 在上一个实验 [404: Set up Push Notification and Test Push Notification to mobile app](../Mobile Service and App/404-MobileLab.md)结束时, 您应该能够从您的 移动设备通过来自MCS的测试通知，如下所示。 （如果不能完成实验练习404，请与指导老师核对）
 
 ![](../common/images/mobile/401-MCS_Notification_Result.png)
 ![](../common/images/mobile/401-MobileApp_Notification_Result.png)
 
-2. Launch the mobile app and enter the **Username** and **Password** provided by instructor, then click `Login` button.
+2. 启动移动应用程序并输入教师提供的用户名和密码，然后单击登录按钮.
 
 ![](images/501/09.mobile.login.png)
 
-3. Upon successful login, the welcome page is shown. Your mobile device is now ready to receive push notification of campaign offer.
+3. 登录成功后，显示欢迎页面。 您的移动设备现在准备好接收推广活动提供的通知.
 
 ![](images/501/10.mobile.welcome.png)
 
-#### Modify Java App Push Notification Configuration
+#### 修改Java应用程序推送通知配置
 
-1. Go to home page of the Loyalty Management application. The Loyalty Management application URL should be in the format of:  
+1. 转到忠诚度管理应用程序的主页。 忠诚度管理应用程序的URL应采用以下格式:  
 `https://**<JCS WLS instance IP Adress>**/loyalty/jsp/welcome.jsp`  
 
-  Click the [ **Configure Push Notification** ] URL at the bottom of the page
+  点击页面底部的 [ **Configure Push Notification** ] URL
 
 ![](images/501/101.javaapp.png)
 
-2. Update the MCS Notification Setting with respect to your environment - the values are available in the Mobile_App_Settings_Sample.json you've prepared previously in Step 2 of Lab 404.
+2. 根据您的环境更新MCS通知设置 - 这些值可以在您之前在实验404步骤2中准备的Mobile_App_Settings_Sample.json中找到.
     - MCS Base URL: `your MCS baseUrl, https://{your-mcs-instance}.mobileenv.us2.oraclecloud.com:443`     
     - Mobile Backend ID: `backendId in the json file`    
     - MCS Anonymous Key: `anonymousToken in the json file`    
     - Custom API Name: `API in the json file, LoyaltyMAnagementAPIXX`    
 
-    Your json file should looks similar to this - **of course the vales are different**
+   你的json文件应该看起来类似于这个 - 当然值是不同的
     ```json
     {
           "baseUrl": "https://<Your Mobile Cloud Service Identity Domain Name>.mobileenv.us2.oraclecloud.com:443",
@@ -61,21 +63,21 @@ In this exercise, we will:
     }
     ```
 
-    When Copy-n-Paste to the web form, be careful
-      - do NOT add white space   
-      - you copy and paste the **COMPLETE** value     
-  Click [ **SAVE** ] button to save your new settings.
+    复制粘贴到Web表单时，请小心
+      - 不要添加空格   
+      - 您复制并粘贴全部的值    
+  点击 [ **SAVE** ]按钮保存您的新设置.
 
 ![](images/501/102.push.png)
 
-3. Once the Push Notification Settings are saved, you can proceed to next lab.
+3. 一旦推送通知设置被保存，您可以继续下一个实验室.
 
 ![](images/501/103.save.png)
 
 
-Your Loyalty Management JEE Application is now ready to create campaign offer and notify customer mobile device.
+您的忠诚度管理JEE应用程序现在可以创建活动报价并通知客户移动设备。
 
-You have finished this lab section.
+你已经完成了这个实验部分。
 
 [Procced to Next - 502: End-to-End Testing](502-PuttingAllTogetherLab.md)
 
