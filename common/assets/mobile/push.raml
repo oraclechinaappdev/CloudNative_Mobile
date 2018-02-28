@@ -1,0 +1,54 @@
+#%RAML 0.8
+title: push
+version: 1.0
+baseUri: /mobile/custom/push
+protocols: [HTTPS]
+mediaType: "application/json"
+/notifyAll:
+  displayName: push
+  description: |
+    push notification
+    
+  post:
+    description: |
+      push notification
+      
+    protocols: [HTTPS]
+    queryParameters:
+      title:
+        displayName: title
+        type: string
+        required: true
+      description:
+        displayName: description
+        type: string
+        required: true
+/notifyByTag:
+  displayName: push by tag
+  description: |
+    push notification by tag
+    
+  post:
+    description: |
+      push notification
+      
+    protocols: [HTTPS]
+    queryParameters:
+      tag:
+        displayName: tag
+        description: |
+          this parameter is required. 
+          
+        type: string
+        example: |
+          user_group_001
+          
+        required: true
+      title:
+        displayName: title
+        type: string
+        required: true
+      description:
+        displayName: description
+        type: string
+        required: true
